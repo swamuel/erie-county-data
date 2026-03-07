@@ -46,6 +46,33 @@ def value_to_color(value, national_avg, reverse=False, spread=0.25):
         g = 255
     return [r, g, 0, 160]
 
+# Load all benchmarks
+@st.cache_data
+def load_benchmarks():
+    national = pd.read_csv("data/raw/benchmarks_national.csv")
+    pennsylvania = pd.read_csv("data/raw/benchmarks_pennsylvania.csv")
+    erie = pd.read_csv("data/raw/benchmarks_erie.csv")
+    pa_counties = pd.read_csv("data/raw/benchmarks_pa_counties.csv")
+    return national, pennsylvania, erie, pa_counties
+
+national_bm, pennsylvania_bm, erie_bm, pa_counties_bm = load_benchmarks()
+
+def get_benchmark(benchmark_type, year, comparison_county=None):
+    if benchmark_type == "National":
+        row = national_bm[national_bm["year"] == year]
+    elif benchmark_type == "Pennsylvania":
+        row = pennsylvania_bm[pennsylvania_bm["year"] == year]
+    elif benchmark_type == "Erie County":
+        row = erie_bm[erie_bm["year"] == year]
+    elif benchmark_type == "Compare to Another County" and comparison_county:
+        row = pa_counties_bm[
+            (pa_counties_bm["name"] == comparison_county) &
+            (pa_counties_bm["year"] == year)
+        ]
+    else:
+        return None
+    return row.iloc[0] if len(row) > 0 else None
+
 # Sidebar controls
 st.sidebar.title("Controls")
 
@@ -61,9 +88,37 @@ layer_options = {
 
 selected_layer = st.sidebar.selectbox("Census Layer", list(layer_options.keys()))
 column, reverse = layer_options[selected_layer]
-show_comparison = st.sidebar.toggle("Show vs National Average", value=False, key="comparison_toggle")
-show_routes = st.sidebar.checkbox("Show EMTA Routes", value=True)
 
+# Benchmark selector
+st.sidebar.markdown("---")
+st.sidebar.subheader("Benchmark")
+
+benchmark_type = st.sidebar.selectbox(
+    "Compare tracts against",
+    ["National", "Pennsylvania", "Erie County", "Compare to Another County"]
+)
+
+comparison_county = None
+if benchmark_type == "Compare to Another County":
+    county_list = sorted(pa_counties_bm["name"].unique().tolist())
+    comparison_county = st.sidebar.selectbox("Select County", county_list)
+
+# Get benchmark values
+benchmark = get_benchmark(benchmark_type, year, comparison_county)
+
+# Show benchmark values in sidebar
+if benchmark is not None:
+    st.sidebar.markdown("---")
+    st.sidebar.subheader("Benchmark Values")
+    st.sidebar.markdown(f"**{benchmark_type if benchmark_type != 'Compare to Another County' else comparison_county}** ({year})")
+    st.sidebar.markdown(f"Median Income: ${benchmark['median_household_income']:,.0f}")
+    st.sidebar.markdown(f"Poverty Rate: {benchmark['poverty_rate']}%")
+    st.sidebar.markdown(f"Rent Burden: {benchmark['rent_burden_rate']}%")
+    st.sidebar.markdown(f"No Vehicle: {benchmark['no_vehicle_rate']}%")
+
+st.sidebar.markdown("---")
+show_comparison = st.sidebar.toggle("Show vs Benchmark", value=False, key="comparison_toggle")
+show_routes = st.sidebar.checkbox("Show EMTA Routes", value=True)
 # Filter and merge data
 df_year = census[census["year"] == year].copy()
 df_year["tract_code"] = df_year["tract_code"].astype(str).str.zfill(6)
@@ -79,7 +134,7 @@ merged = merged.merge(sh_year[["tract_code", "food_insecurity_rate",
 
 # Calculate colors
 benchmark_row = benchmarks[benchmarks["year"] == year]
-national_avg = benchmark_row[column].values[0] if len(benchmark_row) > 0 else None
+national_avg = benchmark[column] if benchmark is not None else None
 merged["color"] = merged[column].apply(
     lambda x: value_to_color(x, national_avg, reverse)
 )
@@ -88,8 +143,8 @@ merged["color"] = merged[column].apply(
 if show_comparison:
     for col in ["median_household_income", "poverty_rate", "rent_burden_rate",
                 "no_vehicle_rate", "unemployment_rate", "disability_rate"]:
-        if col in benchmark_row.columns:
-            nat_avg = benchmark_row[col].values[0]
+        if benchmark is not None and col in benchmark.index:
+            nat_avg = benchmark[col]
             merged[f"{col}_diff"] = (merged[col] - nat_avg).round(1)
             merged[f"{col}_diff_str"] = merged[f"{col}_diff"].apply(
                 lambda x: f"+{x}" if x > 0 else str(x)

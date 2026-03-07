@@ -1,5 +1,5 @@
-# National benchmark data from Census ACS 5-Year Estimates
-# Used to anchor color scales in the app
+# Benchmark data from Census ACS 5-Year Estimates
+# Pulls national, state, and Erie County averages for 2019-2023
 
 import requests
 import pandas as pd
@@ -25,43 +25,60 @@ variables = {
 
 get_vars = "NAME," + ",".join(variables.keys())
 
-all_years = []
-
-for year in years:
-    url = f"https://api.census.gov/data/{year}/acs/acs5"
-
-    params = {
-        "get": get_vars,
-        "for": "us:1",
-        "key": api_key
-    }
-
-    response = requests.get(url, params=params)
-    data = response.json()
-
-    df = pd.DataFrame(data[1:], columns=data[0])
-    df = df.rename(columns=variables)
-
-    for col in variables.values():
-        df[col] = pd.to_numeric(df[col], errors="coerce")
-        df[col] = df[col].replace(-666666666, pd.NA)
-
+def calculate_rates(df):
     df["poverty_rate"] = (df["poverty_population"] / df["poverty_total"] * 100).round(1)
     df["bachelors_rate"] = (df["bachelors_degree"] / df["education_total"] * 100).round(1)
     df["rent_burden_rate"] = (df["rent_burdened"] / df["rent_total"] * 100).round(1)
     df["no_vehicle_rate"] = (df["no_vehicle_households"] / df["vehicle_total"] * 100).round(1)
-
     df = df.drop(columns=["poverty_population", "poverty_total",
-                          "bachelors_degree", "education_total",
-                          "rent_burdened", "rent_total",
-                          "no_vehicle_households", "vehicle_total",
-                          "NAME", "us"])
+                           "bachelors_degree", "education_total",
+                           "rent_burdened", "rent_total",
+                           "no_vehicle_households", "vehicle_total"])
+    return df
 
-    df["year"] = year
-    all_years.append(df)
-    print(f"{year} done")
+def pull_geography(geography_params, label):
+    all_years = []
+    for year in years:
+        url = f"https://api.census.gov/data/{year}/acs/acs5"
+        params = {"get": get_vars, "key": api_key}
+        params.update(geography_params)
 
-benchmarks = pd.concat(all_years, ignore_index=True)
-print(benchmarks)
-benchmarks.to_csv("data/raw/national_benchmarks.csv", index=False)
-print("Saved")
+        response = requests.get(url, params=params)
+        data = response.json()
+
+        df = pd.DataFrame(data[1:], columns=data[0])
+        df = df.rename(columns=variables)
+
+        for col in variables.values():
+            df[col] = pd.to_numeric(df[col], errors="coerce")
+            df[col] = df[col].replace(-666666666, pd.NA)
+
+        df = calculate_rates(df)
+        df["year"] = year
+        all_years.append(df)
+        print(f"{label} {year} done")
+
+    return pd.concat(all_years, ignore_index=True)
+
+# National
+national = pull_geography({"for": "us:1"}, "National")
+national["geography"] = "national"
+national["name"] = "United States"
+national.to_csv("data/raw/benchmarks_national.csv", index=False)
+print("National saved\n")
+
+# Pennsylvania
+pennsylvania = pull_geography({"for": "state:42"}, "Pennsylvania")
+pennsylvania["geography"] = "state"
+pennsylvania["name"] = "Pennsylvania"
+pennsylvania.to_csv("data/raw/benchmarks_pennsylvania.csv", index=False)
+print("Pennsylvania saved\n")
+
+# Erie County
+erie = pull_geography({"for": "county:049", "in": "state:42"}, "Erie County")
+erie["geography"] = "county"
+erie["name"] = "Erie County"
+erie.to_csv("data/raw/benchmarks_erie.csv", index=False)
+print("Erie County saved\n")
+
+print("All benchmarks complete")
