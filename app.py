@@ -160,6 +160,13 @@ folium.GeoJson(
     )
 ).add_to(m)
 
+if show_routes:
+    ...
+if show_stops:
+    ...
+if show_pantries:
+    ...
+
 # Render map
 st_folium(m, width=1200, height=600)
 
