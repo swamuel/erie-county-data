@@ -21,8 +21,6 @@ def load_data():
     benchmarks_counties = pd.read_csv("data/raw/benchmarks_pa_counties.csv")
     return census, sh_data, shapes, stops, pantries, benchmarks_national, benchmarks_pa, benchmarks_erie, benchmarks_counties
 
-census, sh_data, shapes, stops, pantries, benchmarks_national, benchmarks_pa, benchmarks_erie, benchmarks_counties = load_data()
-
 @st.cache_data
 def load_boundaries():
     url = "https://www2.census.gov/geo/tiger/TIGER2023/TRACT/tl_2023_42_tract.zip"
@@ -51,34 +49,36 @@ def value_to_color(value, national_avg, reverse=False, spread=0.25):
         g = 255
     return [r, g, 0, 160]
 
-# Load all benchmarks
-@st.cache_data
-def load_benchmarks():
-    national = pd.read_csv("data/raw/benchmarks_national.csv")
-    pennsylvania = pd.read_csv("data/raw/benchmarks_pennsylvania.csv")
-    erie = pd.read_csv("data/raw/benchmarks_erie.csv")
-    pa_counties = pd.read_csv("data/raw/benchmarks_pa_counties.csv")
-    return national, pennsylvania, erie, pa_counties
-
-national_bm, pennsylvania_bm, erie_bm, pa_counties_bm = load_benchmarks()
-
-def get_benchmark(benchmark_type, year, comparison_county=None):
-    if benchmark_type == "National":
-        row = national_bm[national_bm["year"] == year]
-    elif benchmark_type == "Pennsylvania":
-        row = pennsylvania_bm[pennsylvania_bm["year"] == year]
-    elif benchmark_type == "Erie County":
-        row = erie_bm[erie_bm["year"] == year]
-    elif benchmark_type == "Compare to Another County" and comparison_county:
-        row = pa_counties_bm[
-            (pa_counties_bm["name"] == comparison_county) &
-            (pa_counties_bm["year"] == year)
-        ]
+def get_benchmark_row(selected_benchmark, compare_county, year):
+    if selected_benchmark == "National":
+        df = benchmarks_national
+        row = df[df["year"] == year]
+    elif selected_benchmark == "Pennsylvania":
+        df = benchmarks_pa
+        row = df[df["year"] == year]
+    elif selected_benchmark == "Erie County":
+        df = benchmarks_erie
+        row = df[df["year"] == year]
+    elif selected_benchmark == "Compare to Another PA County":
+        df = benchmarks_counties
+        row = df[(df["year"] == year) & (df["name"] == compare_county)]
     else:
-        return None
-    return row.iloc[0] if len(row) > 0 else None
+        row = benchmarks_national[benchmarks_national["year"] == year]
+    return row
 
-# Sidebar controls
+def build_tooltip_line(label, col, show_comparison, benchmark_row):
+    if show_comparison and col in benchmark_row.columns:
+        if col == "median_household_income":
+            return f"{label}: ${{{col}}} ({{{col}_diff_str}} vs benchmark)<br/>"
+        else:
+            return f"{label}: {{{col}}}% ({{{col}_diff_str}}% vs benchmark)<br/>"
+    else:
+        if col == "median_household_income":
+            return f"{label}: ${{{col}}}<br/>"
+        else:
+            return f"{label}: {{{col}}}%<br/>"
+
+# ── SIDEBAR ──────────────────────────────────────────────
 st.sidebar.title("Controls")
 
 year = st.sidebar.selectbox("Year", [2023, 2022, 2021, 2020, 2019])
@@ -94,14 +94,12 @@ layer_options = {
 selected_layer = st.sidebar.selectbox("Census Layer", list(layer_options.keys()))
 column, reverse = layer_options[selected_layer]
 
-# Benchmark selector
 st.sidebar.markdown("---")
 st.sidebar.subheader("Benchmark Context")
 
 benchmark_options = ["National", "Pennsylvania", "Erie County", "Compare to Another PA County"]
 selected_benchmark = st.sidebar.selectbox("Compare tracts against", benchmark_options)
 
-# County comparison dropdown — only shows when relevant
 compare_county = None
 if selected_benchmark == "Compare to Another PA County":
     county_list = sorted(benchmarks_counties["name"].unique().tolist())
@@ -109,6 +107,7 @@ if selected_benchmark == "Compare to Another PA County":
 
 show_comparison = st.sidebar.toggle("Show vs Benchmark in Tooltip", value=False, key="comparison_toggle")
 show_routes = st.sidebar.checkbox("Show EMTA Routes", value=True)
+
 st.sidebar.markdown("---")
 st.sidebar.subheader("Tooltip Variables")
 
@@ -137,8 +136,48 @@ selected_tooltip_vars = st.sidebar.multiselect(
     default=default_variables
 )
 
+st.sidebar.markdown("---")
+st.sidebar.subheader("Analytical Tools")
 
-# Filter and merge data
+tool_options = ["None", "Threshold Filter", "Multi-Variable Query"]
+selected_tool = st.sidebar.selectbox("Select Tool", tool_options)
+
+threshold_direction = None
+threshold_value = None
+highlight_layer = None
+query_conditions = {}
+logic = None
+
+if selected_tool == "Threshold Filter":
+    st.sidebar.markdown(f"Find tracts where **{selected_layer}** is:")
+    threshold_direction = st.sidebar.radio(
+        "Direction",
+        ["Above", "Below"],
+        horizontal=True,
+        key="threshold_direction"
+    )
+
+if selected_tool == "Multi-Variable Query":
+    st.sidebar.markdown("Set conditions for each variable:")
+    logic = st.sidebar.radio(
+        "Match",
+        ["ALL conditions (AND)", "ANY condition (OR)"],
+        horizontal=True,
+        key="query_logic"
+    )
+    for label, col in all_variables.items():
+        with st.sidebar.expander(label):
+            enabled = st.checkbox(f"Include {label}", key=f"enable_{col}")
+            if enabled:
+                direction = st.radio(
+                    "Direction",
+                    ["Above", "Below"],
+                    horizontal=True,
+                    key=f"dir_{col}"
+                )
+                query_conditions[col] = ("direction_placeholder", direction)
+
+# ── DATA ─────────────────────────────────────────────────
 df_year = census[census["year"] == year].copy()
 df_year["tract_code"] = df_year["tract_code"].astype(str).str.zfill(6)
 
@@ -151,27 +190,49 @@ merged = merged.merge(sh_year[["tract_code", "food_insecurity_rate",
                                 "homeownership_rate"]],
                       left_on="TRACTCE", right_on="tract_code", how="left")
 
-# Calculate colors
-# Get correct benchmark based on user selection
-def get_benchmark_row(selected_benchmark, compare_county, year):
-    if selected_benchmark == "National":
-        df = benchmarks_national
-        row = df[df["year"] == year]
-    elif selected_benchmark == "Pennsylvania":
-        df = benchmarks_pa
-        row = df[df["year"] == year]
-    elif selected_benchmark == "Erie County":
-        df = benchmarks_erie
-        row = df[df["year"] == year]
-    elif selected_benchmark == "Compare to Another PA County":
-        df = benchmarks_counties
-        row = df[(df["year"] == year) & (df["name"] == compare_county)]
-    return row
+# Threshold slider - after merged is available
+if selected_tool == "Threshold Filter":
+    col_min = float(merged[column].min())
+    col_max = float(merged[column].max())
+    col_mean = float(merged[column].mean())
 
+    threshold_value = st.sidebar.slider(
+        "Threshold",
+        min_value=col_min,
+        max_value=col_max,
+        value=col_mean,
+        step=(col_max - col_min) / 100
+    )
+
+    matching = merged[
+        merged[column] > threshold_value
+        if threshold_direction == "Above"
+        else merged[column] < threshold_value
+    ]
+    st.sidebar.metric("Matching tracts", len(matching))
+
+# Multi-variable sliders - after merged is available
+if selected_tool == "Multi-Variable Query" and query_conditions:
+    updated_conditions = {}
+    for col, (_, direction) in query_conditions.items():
+        col_min = float(merged[col].min())
+        col_max = float(merged[col].max())
+        col_mean = float(merged[col].mean())
+        threshold = st.sidebar.slider(
+            f"{col} threshold",
+            min_value=col_min,
+            max_value=col_max,
+            value=col_mean,
+            step=(col_max - col_min) / 100,
+            key=f"thresh_{col}"
+        )
+        updated_conditions[col] = (direction, threshold)
+    query_conditions = updated_conditions
+
+# ── BENCHMARKS & COLORS ──────────────────────────────────
 benchmark_row = get_benchmark_row(selected_benchmark, compare_county, year)
 national_avg = benchmark_row[column].values[0] if len(benchmark_row) > 0 else None
 
-# Show benchmark value in sidebar so user knows what they're comparing against
 if national_avg is not None:
     st.sidebar.markdown("---")
     if column == "median_household_income":
@@ -179,12 +240,10 @@ if national_avg is not None:
     else:
         st.sidebar.metric(f"Benchmark: {selected_benchmark}", f"{national_avg}%")
 
-# Calculate colors
 merged["color"] = merged[column].apply(
     lambda x: value_to_color(x, national_avg, reverse)
 )
 
-# Calculate comparison diffs if toggled
 if show_comparison:
     for col in ["median_household_income", "poverty_rate", "rent_burden_rate",
                 "no_vehicle_rate", "unemployment_rate", "disability_rate"]:
@@ -195,10 +254,49 @@ if show_comparison:
                 lambda x: f"+{x}" if x > 0 else str(x)
             )
 
-# Convert to GeoJSON AFTER all columns are added
+# ── ANALYTICAL TOOL FILTERING ────────────────────────────
+if selected_tool == "Threshold Filter" and threshold_value is not None:
+    if threshold_direction == "Above":
+        highlight_mask = merged[column] > threshold_value
+    else:
+        highlight_mask = merged[column] < threshold_value
+
+    merged["color"] = merged.apply(
+        lambda row: row["color"] if highlight_mask[row.name]
+        else [100, 100, 100, 60],
+        axis=1
+    )
+
+elif selected_tool == "Multi-Variable Query" and query_conditions:
+    masks = []
+    for col, (direction, threshold) in query_conditions.items():
+        if direction == "Above":
+            masks.append(merged[col] > threshold)
+        else:
+            masks.append(merged[col] < threshold)
+
+    if masks:
+        if "AND" in logic:
+            final_mask = masks[0]
+            for m in masks[1:]:
+                final_mask = final_mask & m
+        else:
+            final_mask = masks[0]
+            for m in masks[1:]:
+                final_mask = final_mask | m
+
+        st.sidebar.metric("Matching tracts", int(final_mask.sum()))
+
+        merged["color"] = merged.apply(
+            lambda row: row["color"] if final_mask[row.name]
+            else [100, 100, 100, 60],
+            axis=1
+        )
+
+# ── GEOJSON ──────────────────────────────────────────────
 merged_json = json.loads(merged.to_json())
 
-# Build tract layer
+# ── MAP LAYERS ───────────────────────────────────────────
 tract_layer = pdk.Layer(
     "GeoJsonLayer",
     data=merged_json,
@@ -206,11 +304,10 @@ tract_layer = pdk.Layer(
     get_line_color=[255, 255, 255, 50],
     line_width_min_pixels=1,
     pickable=True,
-    auto_highlight=True,
-    highlight_color=[255, 255, 255, 80]
+    auto_highlight=False,
+    highlight_color=[0, 0, 0, 0]
 )
 
-# EMTA Routes
 route_layer = None
 if show_routes:
     route_paths = []
@@ -236,20 +333,7 @@ if show_routes:
         pickable=False
     )
 
-# Tooltip
-# Build tooltip dynamically from selected variables
-def build_tooltip_line(label, col, show_comparison, benchmark_row):
-    if show_comparison and col in benchmark_row.columns:
-        if col == "median_household_income":
-            return f"{label}: ${{{col}}} ({{{col}_diff_str}} vs benchmark)<br/>"
-        else:
-            return f"{label}: {{{col}}}% ({{{col}_diff_str}}% vs benchmark)<br/>"
-    else:
-        if col == "median_household_income":
-            return f"{label}: ${{{col}}}<br/>"
-        else:
-            return f"{label}: {{{col}}}%<br/>"
-
+# ── TOOLTIP ──────────────────────────────────────────────
 tooltip_html = "<b>{NAMELSAD}</b><br/>"
 for label in selected_tooltip_vars:
     col = all_variables[label]
@@ -264,7 +348,8 @@ tooltip = {
         "padding": "10px"
     }
 }
-# Map view
+
+# ── RENDER ───────────────────────────────────────────────
 view_state = pdk.ViewState(
     latitude=42.1167,
     longitude=-80.0,
@@ -272,12 +357,12 @@ view_state = pdk.ViewState(
     pitch=0
 )
 
-# Build layers
 layers = [tract_layer]
+if highlight_layer:
+    layers.append(highlight_layer)
 if route_layer:
     layers.append(route_layer)
 
-# Render
 deck = pdk.Deck(
     layers=layers,
     initial_view_state=view_state,
