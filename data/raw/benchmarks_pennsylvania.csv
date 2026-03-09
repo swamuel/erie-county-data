@@ -1,0 +1,6 @@
+NAME,median_household_income,state,poverty_rate,bachelors_rate,rent_burden_rate,no_vehicle_rate,year,geography,name
+Pennsylvania,61744,42,12.4,19.0,22.7,10.9,2019,state,Pennsylvania
+Pennsylvania,63627,42,12.0,19.5,22.0,10.7,2020,state,Pennsylvania
+Pennsylvania,67587,42,11.8,19.9,22.1,10.6,2021,state,Pennsylvania
+Pennsylvania,73170,42,11.8,20.2,22.3,10.6,2022,state,Pennsylvania
+Pennsylvania,76081,42,11.8,20.6,22.5,10.5,2023,state,Pennsylvania
