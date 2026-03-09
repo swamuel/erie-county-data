@@ -3,7 +3,10 @@ import pandas as pd
 df = pd.read_excel("data/raw/SH_FellowshipData.xlsx")
 
 # Filter to Erie County
-df_erie = df[df["County, State"] == "Erie County, Pennsylvania"].copy()
+df_erie = df[df["County, State"].isin([
+    "Erie County, Pennsylvania",
+    "Crawford County, Pennsylvania"
+])].copy()
 
 # Extract 6-digit tract code from 11-digit FIPS
 df_erie["tract_code"] = df_erie["Tract ID"].astype(str).str[-6:].str.zfill(6)

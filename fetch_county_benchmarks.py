@@ -72,5 +72,6 @@ final = pd.concat(all_years, ignore_index=True)
 print(f"\nTotal rows: {len(final)}")
 print(final[["name", "year", "median_household_income", "poverty_rate"]].head(10))
 
+print("Crawford County saved\n")
 final.to_csv("data/raw/benchmarks_pa_counties.csv", index=False)
 print("Saved")

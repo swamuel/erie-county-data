@@ -26,7 +26,7 @@ def load_data():
 def load_boundaries():
     url = "https://www2.census.gov/geo/tiger/TIGER2023/TRACT/tl_2023_42_tract.zip"
     gdf = gpd.read_file(url)
-    gdf = gdf[gdf["COUNTYFP"] == "049"]
+    gdf = gdf[gdf["COUNTYFP"].isin(["049", "039"])]
     gdf = gdf[gdf["TRACTCE"] != "990000"]
     return gdf
 

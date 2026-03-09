@@ -20,7 +20,7 @@ stops_gdf = gpd.GeoDataFrame(
 # Load tract boundaries
 url = "https://www2.census.gov/geo/tiger/TIGER2023/TRACT/tl_2023_42_tract.zip"
 tracts = gpd.read_file(url)
-tracts = tracts[tracts["COUNTYFP"] == "049"]
+tracts = tracts[tracts["COUNTYFP"].isin(["049", "039"])]
 tracts = tracts[tracts["TRACTCE"] != "990000"]
 
 print(f"Tracts loaded: {len(tracts)}")
