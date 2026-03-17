@@ -1,0 +1,16 @@
+name,address,category,tier,lat,lon,color_r,color_g,color_b,geocode_source
+Wegmans,"6143 Peach St, Erie, PA 16509",Full-Service,premium,42.059697509359,-80.092752419107,34,197,94,census_geocoder
+Erie Food Co-op,"1341 W 26th St, Erie, PA 16508",Full-Service,premium,42.101519483029,-80.101573690663,34,197,94,census_geocoder
+Westside Market,"1119 Powell Ave, Erie, PA 16505",Full-Service,premium,42.092592950101,-80.167800022656,34,197,94,census_geocoder
+Serafins Market,"601 E 24th St, Erie, PA 16503",Full-Service,specialty,42.118445294357,-80.061449311105,16,185,129,census_geocoder
+Giant Eagle,"2067 Interchange Rd, Erie, PA 16509",Full-Service,standard,42.064628318859,-80.101431953152,59,130,246,census_geocoder
+TOPS Markets,"712 W 38th St, Erie, PA 16508",Full-Service,standard,42.096165473845,-80.083175555562,59,130,246,census_geocoder
+ALDI,"2647 W 12th St, Erie, PA 16505",Value & Discount,value,42.10175338954,-80.140057571448,251,191,36,census_geocoder
+Save A Lot,"1512 Peach St, Erie, PA 16501",Value & Discount,value,42.120536654671,-80.081113233066,251,191,36,census_geocoder
+Dollar General,"1414 Peach St, Erie, PA 16501",Discount Variety,dollar,42.12112131288,-80.081507902509,249,115,22,census_geocoder
+Dollar Tree,"3810 Peach St, Erie, PA 16508",Discount Variety,dollar,42.095973991281,-80.082361163124,249,115,22,census_geocoder
+Walmart Supercenter,"2711 Elm St, Erie, PA 16504",Big Box,bigbox,42.121925542987,-80.043028242179,139,92,246,census_geocoder
+Target,"6700 Peach St, Erie, PA 16509",Big Box,bigbox,42.058462763365,-80.091602235009,139,92,246,census_geocoder
+Country Fair,"3826 Peach St, Erie, PA 16508",Convenience & Fuel,convenience,42.095684590251,-80.082517533042,156,163,175,census_geocoder
+Sheetz,"2060 Interchange Rd, Erie, PA 16509",Convenience & Fuel,convenience,42.065293918088,-80.10352784034,156,163,175,census_geocoder
+Speedway,"1502 W 26th St, Erie, PA 16508",Convenience & Fuel,convenience,42.100146664254,-80.105671379114,156,163,175,census_geocoder

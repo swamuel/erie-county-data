@@ -1,0 +1,264 @@
+name,address,primary_category,type,subtype,food_tier,lat,lon,color_r,color_g,color_b,osm_id,osm_type,osm_shop,osm_amenity,brand,opening_hours,website,phone,geocode_source
+Allegheny College,"520, North Main Street, Meadville, PA, 16335",Education & Civic,Higher Education,Community College,,41.6481003,-80.1447283,59,130,246,1150604205,way,,college,,,https://allegheny.edu/,,openstreetmap
+Barber National Institute,"100, Barber Place, Erie, PA, 16507",Education & Civic,Higher Education,Community College,,42.141035,-80.0668673,59,130,246,829728923,way,,college,,,,,openstreetmap
+Erie County Community College,"2403, West 8th Street, Erie, PA, 16505",Education & Civic,Higher Education,Community College,,42.107047,-80.1374036,59,130,246,1138414771,way,,college,,,,,openstreetmap
+Gannon University,"109, University Square, Erie, PA, 16541",Education & Civic,Higher Education,University/College,,42.1281052,-80.0867293,59,130,246,10003127082,node,,university,,,,,openstreetmap
+LECOM Bayfront,"1, Lecom Place, Erie, PA, 16505",Education & Civic,Higher Education,University/College,,42.1244265,-80.1151225,59,130,246,807863366,way,,university,,,,,openstreetmap
+LECOM Education Center,"2951, West 38th Street, Erie, PA, 16506",Education & Civic,Higher Education,University/College,,42.0767237,-80.1313085,59,130,246,1115996262,way,,university,,,,,openstreetmap
+LECOM Erie,"2000, West Grandview Boulevard, Erie, PA, 16509",Education & Civic,Higher Education,University/College,,42.0810805,-80.1077016,59,130,246,824684770,way,,university,,,,,openstreetmap
+Laurel Technical Institute,"11618, Cotton Road, Meadville, PA, 16335",Education & Civic,Higher Education,Community College,,41.6259564,-80.2225211,59,130,246,640904751,way,,college,,,https://www.laurel.edu/,+1-814-724-0700,openstreetmap
+Mercyhurst University,"501, East 38th Street, Erie, PA, 16546",Education & Civic,Higher Education,University/College,,42.1041268,-80.0524637,59,130,246,856437792,way,,university,,,,,openstreetmap
+Penn State Behrend,"4701, College Road, Erie, PA, 16563",Education & Civic,Higher Education,University/College,,42.1179721,-79.9811303,59,130,246,815570148,way,,university,,,https://behrend.psu.edu/,,openstreetmap
+PennWest Edinboro,"219, Meadville Street, Edinboro, PA, 16444",Education & Civic,Higher Education,University/College,,41.8727289,-80.1205146,59,130,246,544926414,way,,university,,,https://www.edinboro.edu/,+1 814-732-2000,openstreetmap
+Albion Area Public Library,"111, East Pearl Street, Albion, PA, 16401",Education & Civic,Library,Public Library,,41.8919606,-80.3612068,59,130,246,1062485622,way,,library,,,http://albionarealibrary.org/,,openstreetmap
+Alexander Findley Community Library,"2883, North Road, Findley Lake, NY, 14736",Education & Civic,Library,Public Library,,42.1236714,-79.7318509,59,130,246,543620462,node,,library,,,,,openstreetmap
+Baron-Forness Library,"200, Tartan Road, Edinboro, PA, 16444",Education & Civic,Library,Public Library,,41.8706636,-80.1212652,59,130,246,544926361,way,,library,,,,+1 814-732-2779,openstreetmap
+Cambridge Springs Public Library,"158, McClellan Street, Cambridge Springs, PA, 16403-1018",Education & Civic,Library,Public Library,,41.8062371,-80.0544566,59,130,246,1089130203,way,,library,,Su off; Mo 12:00-20:00; Tu 10:00-20:00; We 12:00-17:00; Th 10:00-20:00; Fr 12:00-17:00; Sa 10:00-17:00,https://ccfls.org/,,openstreetmap
+Edinboro Branch Library,"413, West Plum Street, Edinboro, PA, 16412",Education & Civic,Library,Public Library,,41.8788166,-80.1418047,59,130,246,7703423183,node,,library,,,,,openstreetmap
+Erie County Public Library,"4212, Iroquois Avenue, Erie, PA, 16511",Education & Civic,Library,Public Library,,42.152774,-80.0130455,59,130,246,7884599344,node,,library,,,,,openstreetmap
+Hammermill Library,"501, East 38th Street, Erie, 16546",Education & Civic,Library,Public Library,,42.105694,-80.0534099,59,130,246,7985655948,node,,library,,,,,openstreetmap
+Hope Childrens Library,"4026, Garden Avenue, Erie, PA, 16508",Education & Civic,Library,Public Library,,42.0836395,-80.1106019,59,130,246,9817364843,node,,library,,,,,openstreetmap
+John M. Lilley Library,"4951, College Drive, Erie, PA, 16563",Education & Civic,Library,Public Library,,42.1202661,-79.9816398,59,130,246,8085723898,node,,library,,,,,openstreetmap
+Lincoln Community Center Library,"1255, Manchester Road, Erie, PA, 16505",Education & Civic,Library,Public Library,,42.0684098,-80.2226328,59,130,246,8308911662,node,,library,,,,,openstreetmap
+McCord Memorial Library,"32, West Main Street, North East, PA, 16428",Education & Civic,Library,Public Library,,42.2158312,-79.8360955,59,130,246,8185014959,node,,library,,,,,openstreetmap
+Meadville Public Library,"848, North Main Street, Meadville, PA, 16335",Education & Civic,Library,Public Library,,41.639752,-80.1499412,59,130,246,1082787675,way,,library,,,,,openstreetmap
+Millcreek Branch Library,"2088, Interchange Road, Erie, PA, 16565",Education & Civic,Library,Public Library,,42.0695592,-80.1041814,59,130,246,7624289416,node,,library,,,,,openstreetmap
+Nash Library,"619, Sassafras Street, Erie, PA, 16541",Education & Civic,Library,Public Library,,42.1276781,-80.0882826,59,130,246,825441237,way,,library,,,,,openstreetmap
+Pelletier Library,PA,Education & Civic,Library,Public Library,,41.6473238,-80.1458346,59,130,246,238609309,way,,library,,,,,openstreetmap
+Raymond M. Blasco Memorial Library,"160, East Front Street, Erie, PA, 16507",Education & Civic,Library,Public Library,,42.1367665,-80.0863573,59,130,246,7570389415,node,,library,,Mo-Th 09:00-20:30; Fr-Sa 09:00-17:00; Su 13:00-17:00,,+1-814-451-6900,openstreetmap
+Rice Avenue Community Public Library,"705, Rice Avenue, Girard, PA, 16417",Education & Civic,Library,Public Library,,42.007064,-80.3245704,59,130,246,8319645171,node,,library,,,,,openstreetmap
+Ripley Public Library,"64, West Main Street, Ripley, NY, 14775",Education & Civic,Library,Public Library,,42.2657918,-79.7125432,59,130,246,543620487,node,,library,,,https://www.ripleylibrary.org/,,openstreetmap
+Saegertown Library,"325, Broad Street, Saegertown, PA, 16433",Education & Civic,Library,Public Library,,41.7203031,-80.1478211,59,130,246,368960575,way,,library,,Mo-Th 12:00-19:00; Fr 09:00-13:00; Sa 09:00-16:00,,+1 814 763 5203,openstreetmap
+Union City Library,,Education & Civic,Library,Public Library,,41.8967592,-79.846764,59,130,246,1151952507,way,,library,,,,,openstreetmap
+Waterford Public Library,"30, South Park Row, Waterford, PA, 16441",Education & Civic,Library,Public Library,,41.9425616,-79.9830154,59,130,246,8075153314,node,,library,,,,,openstreetmap
+Accelerated Learning Academy,"816, North Park Avenue, Erie, PA, 16502",Education & Civic,School,K-12 School,,42.1236715,-80.1034311,59,130,246,9934074329,node,,school,,,,,openstreetmap
+Allegheny College,,Education & Civic,School,K-12 School,,41.6492228,-80.1478379,59,130,246,357275220,node,,school,,,,,openstreetmap
+Ananda Montessori,"17, East Main Street, North East, PA, 16428",Education & Civic,School,K-12 School,,42.2159186,-79.833829,59,130,246,8078188880,node,,school,,,,,openstreetmap
+Asbury Elementary School,"5875, Sterrettania Road, Fairview, PA, 16415",Education & Civic,School,K-12 School,,42.044531,-80.1693946,59,130,246,815586277,way,,school,,,,,openstreetmap
+Aubury School,,Education & Civic,School,K-12 School,,41.9894995,-80.0650543,59,130,246,357331129,node,,school,,,,,openstreetmap
+Audrey Hirt Academic Center,"501, East 38th Street, Erie, PA, 16546",Education & Civic,School,K-12 School,,42.1047914,-80.0514571,59,130,246,7985681783,node,,school,,,,,openstreetmap
+Beech School,,Education & Civic,School,K-12 School,,41.7186673,-80.0736678,59,130,246,357341134,node,,school,,,,,openstreetmap
+Belle Valley Elementary School,"5300, Henderson Road, Erie, PA, 16509",Education & Civic,School,K-12 School,,42.0982705,-80.0264634,59,130,246,819946882,way,,school,,,,,openstreetmap
+Bentley School,,Education & Civic,School,K-12 School,,41.8708895,-79.7833851,59,130,246,357346251,node,,school,,,,,openstreetmap
+Berrie School,,Education & Civic,School,K-12 School,,41.5428316,-80.1375608,59,130,246,357341241,node,,school,,,,,openstreetmap
+Bethel Christian School,"1781, West 38th Street, Erie, PA, 16508",Education & Civic,School,K-12 School,,42.0871414,-80.1058268,59,130,246,812892139,way,,school,,,,,openstreetmap
+Big Road School,,Education & Civic,School,K-12 School,,41.7042216,-80.3306191,59,130,246,357346310,node,,school,,,,,openstreetmap
+Birchard School,,Education & Civic,School,K-12 School,,41.7758898,-80.0706114,59,130,246,357346450,node,,school,,,,,openstreetmap
+Blessed Sacrament School,"2510, Greengarden Boulevard, Erie, PA, 16502",Education & Civic,School,K-12 School,,42.0997762,-80.1100074,59,130,246,870864971,way,,school,,,,,openstreetmap
+Brick Schoolhouse,,Education & Civic,School,K-12 School,,41.5042201,-80.4470133,59,130,246,357347300,node,,school,,,,,openstreetmap
+Brier Hill School,,Education & Civic,School,K-12 School,,41.6448475,-79.859045,59,130,246,847354096,way,,school,,,,,openstreetmap
+Broadford School,,Education & Civic,School,K-12 School,,41.7467229,-80.1364465,59,130,246,357346377,node,,school,,,,,openstreetmap
+Brookhouser Elementary School,,Education & Civic,School,K-12 School,,41.7239446,-80.1661697,59,130,246,357365608,node,,school,,,,,openstreetmap
+Brown School,,Education & Civic,School,K-12 School,,41.5692209,-80.0072802,59,130,246,357341416,node,,school,,,,,openstreetmap
+Byham School,,Education & Civic,School,K-12 School,,41.5911655,-80.1136707,59,130,246,357341424,node,,school,,,,,openstreetmap
+Cambridge Springs Elementary School,,Education & Civic,School,K-12 School,,41.7989596,-80.0652897,59,130,246,357362550,node,,school,,,,,openstreetmap
+Cambridge Springs High School,,Education & Civic,School,K-12 School,,41.7984079,-80.0662222,59,130,246,512413686,way,,school,,,,,openstreetmap
+Cambridge Springs Junior Senior High School,,Education & Civic,School,K-12 School,,41.7997238,-80.0667089,59,130,246,357362555,node,,school,,,,,openstreetmap
+Cambridge Springs Junior/Senior High School,"641, Venango Avenue, Cambridge Springs, PA, 16403",Education & Civic,School,K-12 School,,41.7980999,-80.0671722,59,130,246,878682650,way,,school,,,,,openstreetmap
+Carmelite Monastery,"510, East Gore Road, Erie, PA, 16509",Education & Civic,School,K-12 School,,42.0966495,-80.0497766,59,130,246,849535382,way,,school,,,,,openstreetmap
+Cathedral Preparatory School,"225, West 9th Street, Erie, PA, 16501",Education & Civic,School,K-12 School,,42.1242243,-80.0879232,59,130,246,894364688,way,,school,,,,,openstreetmap
+Center School,,Education & Civic,School,K-12 School,,41.5742208,-80.1547828,59,130,246,357341274,node,,school,,,,,openstreetmap
+Center for Academic Engagement (CAE),"501, East 38th Street, Erie, PA, 16504",Education & Civic,School,K-12 School,,42.1062714,-80.0532382,59,130,246,7985453325,node,,school,,,,,openstreetmap
+Cherrytree School,,Education & Civic,School,K-12 School,,41.5723045,-79.7071791,59,130,246,357280733,node,,school,,,,,openstreetmap
+Cherrytree School Grounds,,Education & Civic,School,K-12 School,,41.5724694,-79.7072884,59,130,246,1234579709,way,,school,,,,,openstreetmap
+Chestnut Hill Elementary School,"1001, West 54th Street, Erie, PA, 16509",Education & Civic,School,K-12 School,,42.0779345,-80.0774919,59,130,246,806573108,way,,school,,,https://ch.mtsd.org/,,openstreetmap
+Child Development Centers,"3808, Caughey Road, Erie, PA, 16506",Education & Civic,School,K-12 School,,42.0720707,-80.1465604,59,130,246,7626141138,node,,school,,,,,openstreetmap
+Christ United Methodist Preschool,"2615, West 32nd Street, Erie, PA, 16506",Education & Civic,School,K-12 School,,42.0848029,-80.1284239,59,130,246,821866599,way,,school,,,,,openstreetmap
+Clark Elementary School,"3650, Depot Road, Erie, PA, 16510",Education & Civic,School,K-12 School,,42.1481914,-79.9408947,59,130,246,827955838,way,,school,,,,,openstreetmap
+Clausen School,,Education & Civic,School,K-12 School,,41.803389,-80.2031146,59,130,246,357346416,node,,school,,,,,openstreetmap
+Cochranton Area Junior Senior High School,,Education & Civic,School,K-12 School,,41.5227433,-80.0543864,59,130,246,998079052,way,,school,,,,,openstreetmap
+Cochranton Elementary School,,Education & Civic,School,K-12 School,,41.5113676,-80.0386036,59,130,246,881798283,way,,school,,,https://www.craw.org/schools/cochranton-elementary-school/index,,openstreetmap
+Coil School,,Education & Civic,School,K-12 School,,41.7547806,-79.7394966,59,130,246,357346262,node,,school,,,,,openstreetmap
+Community Country Day School,"5800, Old Zuck Road, Erie, PA, 16506",Education & Civic,School,K-12 School,,42.0594765,-80.1170378,59,130,246,810333770,way,,school,,,,,openstreetmap
+Conelway School,,Education & Civic,School,K-12 School,,41.9303333,-79.6831066,59,130,246,357281651,node,,school,,,,,openstreetmap
+Conneaut Lake Middle School,,Education & Civic,School,K-12 School,,41.6058875,-80.3239533,59,130,246,357281727,node,,school,,,,,openstreetmap
+Conneaut Valley Elementary School,,Education & Civic,School,K-12 School,,41.7801197,-80.3654788,59,130,246,506117659,way,,school,,,,,openstreetmap
+Conneaut Valley High School,,Education & Civic,School,K-12 School,,41.7754807,-80.3612177,59,130,246,506117661,way,,school,,,,,openstreetmap
+Crawford Christian Academy,,Education & Civic,School,K-12 School,,41.6432922,-80.1414978,59,130,246,10544449978,node,,school,,,https://crawfordchristianacademy.org/,,openstreetmap
+Crawford County Area Vocational Technical School,,Education & Civic,School,K-12 School,,41.6334795,-80.1264857,59,130,246,1032412907,way,,school,,,,,openstreetmap
+Creative Learning Child Care,"2312, West 15th Street, Erie, PA, 16505",Education & Civic,School,K-12 School,,42.1021113,-80.1316351,59,130,246,7902953467,node,,school,,,,,openstreetmap
+Curtis School,,Education & Civic,School,K-12 School,,41.7395,-80.2064482,59,130,246,357346373,node,,school,,,,,openstreetmap
+Cussewago Township School,,Education & Civic,School,K-12 School,,41.8025556,-80.2214484,59,130,246,357346428,node,,school,,,,,openstreetmap
+Davis School,,Education & Civic,School,K-12 School,,41.5933878,-80.0756144,59,130,246,357341442,node,,school,,,,,openstreetmap
+Daytown School,,Education & Civic,School,K-12 School,,41.7697805,-79.708663,59,130,246,357346269,node,,school,,,,,openstreetmap
+Dets School,,Education & Civic,School,K-12 School,,41.5417247,-79.7781101,59,130,246,357342917,node,,school,,,,,openstreetmap
+Diehl Elementary School,"2327, Fairmount Parkway, Erie, PA, 16510",Education & Civic,School,K-12 School,,42.1328944,-80.0235295,59,130,246,858162648,way,,school,,,,,openstreetmap
+Dobbs School,,Education & Civic,School,K-12 School,,41.7658909,-79.8800534,59,130,246,357346214,node,,school,,,,,openstreetmap
+Donation School,,Education & Civic,School,K-12 School,,41.9508882,-79.7272733,59,130,246,357331240,node,,school,,,,,openstreetmap
+Earle C. Davis Primary School,"50, East Division Street, North East, PA, 16428",Education & Civic,School,K-12 School,,42.2198118,-79.8307606,59,130,246,865361933,way,,school,,,,,openstreetmap
+Early Connections,"200, West 11th Street, Erie, PA, 16501",Education & Civic,School,K-12 School,,42.1232384,-80.0860127,59,130,246,10273480290,node,,school,,,,,openstreetmap
+East End Elementary School,,Education & Civic,School,K-12 School,,41.6367216,-80.1383927,59,130,246,357365649,node,,school,,,,,openstreetmap
+East Middle School,"1001, Atkins Street, Erie, PA, 16503",Education & Civic,School,K-12 School,,42.1377209,-80.0600376,59,130,246,814646837,way,,school,,,,,openstreetmap
+Easter Group Daycare,"502, Walnut Street, Erie, PA, 16502",Education & Civic,School,Early Childhood,,42.1235022,-80.0949977,59,130,246,9264598003,node,,kindergarten,,,,+1 814 504 8035,openstreetmap
+Edinboro Elementary School,"5390, Route 6N, Edinboro, PA, 16412",Education & Civic,School,K-12 School,,41.8822761,-80.1493463,59,130,246,824974412,way,,school,,,,,openstreetmap
+Edison Elementary School,"1916, East 7th Street, Erie, PA, 16511",Education & Civic,School,K-12 School,,42.1443979,-80.0422453,59,130,246,842826406,way,,school,,,,,openstreetmap
+Elk Valley Elementary School,"2556, Maple Avenue, Lake City, PA, 16423",Education & Civic,School,K-12 School,,42.0090808,-80.3445471,59,130,246,876634848,way,,school,,,,,openstreetmap
+Ellis School,,Education & Civic,School,K-12 School,,41.636166,-80.1150589,59,130,246,357340773,node,,school,,,,,openstreetmap
+Elm Street School,,Education & Civic,School,K-12 School,,41.6316066,-79.6840854,59,130,246,357284523,node,,school,,,,,openstreetmap
+Emerson School,,Education & Civic,School,K-12 School,,41.8831116,-79.8556077,59,130,246,357331247,node,,school,,,,,openstreetmap
+Erie County Technical School,"8500, Oliver Road, Erie, PA, 16509",Education & Civic,School,K-12 School,,42.0300099,-80.0952575,59,130,246,824715923,way,,school,,,,,openstreetmap
+Erie Day School,"1372, West 6th Street, Erie, PA, 16505",Education & Civic,School,K-12 School,,42.1202834,-80.1158794,59,130,246,832278583,way,,school,,,,,openstreetmap
+Erie High School,"3325, Cherry Street, Erie, PA, 16508",Education & Civic,School,K-12 School,,42.1022995,-80.0812038,59,130,246,828184099,way,,school,,,,,openstreetmap
+Erie Institute of Technology,"940, Millcreek Mall Boulevard, Erie, PA, 16565",Education & Civic,School,K-12 School,,42.0716378,-80.1008643,59,130,246,9777554330,node,,school,,,,,openstreetmap
+Erie Insurance Technical Learning Center,"123, East 7th Street, Erie, PA, 16501",Education & Civic,School,K-12 School,,42.1290553,-80.0821305,59,130,246,9410313056,node,,school,,,,,openstreetmap
+Erie Preparatory Academy,"8155, Oliver Road, Erie, PA, 16509",Education & Civic,School,K-12 School,,42.0449301,-80.081136,59,130,246,988861720,way,,school,,,,,openstreetmap
+Erie Test Center,"155, West 8th Street, Erie, PA, 16501",Education & Civic,School,K-12 School,,42.126078,-80.0872427,59,130,246,8412167260,node,,school,,,,,openstreetmap
+Fairview Elementary School,"5145, Avonia Road, Fairview, PA, 16415",Education & Civic,School,K-12 School,,42.0239877,-80.247295,59,130,246,852775728,way,,school,,,,,openstreetmap
+Fairview High School,"7466, McCray Road, Fairview, PA, 16415",Education & Civic,School,K-12 School,,42.0216796,-80.2456414,59,130,246,852786990,way,,school,,,,,openstreetmap
+Fairview Middle School,"4967, Avonia Road, Fairview, PA, 16415",Education & Civic,School,K-12 School,,42.0256965,-80.2486032,59,130,246,852745769,way,,school,,,,,openstreetmap
+Faith Builders Educational Programs,"28527, Guys Mills Road, Guys Mills, PA, 16327",Education & Civic,School,K-12 School,,41.6324748,-79.9739616,59,130,246,280925605,way,,school,,,https://www.fbep.org,+1 814-789-4518,openstreetmap
+First District Elementary School,,Education & Civic,School,K-12 School,,41.6431266,-80.148088,59,130,246,357365701,node,,school,,,,,openstreetmap
+Fort LeBoeuf High School,"931, North High Street, Waterford, PA, 16441",Education & Civic,School,K-12 School,,41.9521664,-79.9881403,59,130,246,866398494,way,,school,,,,,openstreetmap
+Fort LeBoeuf Middle School,"865, Cherry Street, Waterford, PA, 16441",Education & Civic,School,K-12 School,,41.9495587,-79.9855386,59,130,246,866399257,way,,school,,,,,openstreetmap
+Fortis Institute,"5757, West Ridge Road, Erie, PA, 16506",Education & Civic,School,K-12 School,,42.0604351,-80.2042729,59,130,246,8321600281,node,,school,,,,,openstreetmap
+French Creek Valley Christian School and Day Care,,Education & Civic,School,K-12 School,,41.7259043,-80.1462389,59,130,246,357362570,node,,school,,,,,openstreetmap
+Gamble School,,Education & Civic,School,K-12 School,,41.5375537,-80.4317349,59,130,246,357347281,node,,school,,,,,openstreetmap
+General McLane High School,"11761, Edinboro Road, Edinboro, PA, 16412",Education & Civic,School,K-12 School,,41.9166276,-80.1215062,59,130,246,839932443,way,,school,,,,,openstreetmap
+Gibson School,,Education & Civic,School,K-12 School,,41.6808888,-80.1131137,59,130,246,357340832,node,,school,,,,,openstreetmap
+Gibson School,,Education & Civic,School,K-12 School,,41.8583891,-80.1614468,59,130,246,357346393,node,,school,,,,,openstreetmap
+Gilson Ridge School,,Education & Civic,School,K-12 School,,41.6761699,-79.7000523,59,130,246,357343015,node,,school,,,,,openstreetmap
+Girard High School,"1135, Lake Street, Girard, PA, 16417",Education & Civic,School,K-12 School,,42.0080773,-80.3335918,59,130,246,876616423,way,,school,,,,,openstreetmap
+Grandview Elementary School,"4301, Lancaster Road, Erie, PA, 16506",Education & Civic,School,K-12 School,,42.0714713,-80.133994,59,130,246,814752983,way,,school,,,,,openstreetmap
+Great Lakes Institute Of Technology,"5100, Peach Street, Erie, PA, 16509",Education & Civic,School,K-12 School,,42.0794552,-80.0920024,59,130,246,836899651,way,,school,,,,,openstreetmap
+Grover Cleveland Elementary School,"1540, West 38th Street, Erie, PA, 16508",Education & Civic,School,K-12 School,,42.0908766,-80.1003043,59,130,246,812874224,way,,school,,,,,openstreetmap
+Grubb School,,Education & Civic,School,K-12 School,,41.7192226,-80.1225577,59,130,246,357341123,node,,school,,,,,openstreetmap
+Harborcreek Junior/Senior High School,"6375, Buffalo Road, Harborcreek, PA, 16421",Education & Civic,School,K-12 School,,42.163052,-79.9539755,59,130,246,827929362,way,,school,,,https://www.hcsd.iu5.org/,,openstreetmap
+Harding Elementary School,"820, Lincoln Avenue, Erie, PA, 16505",Education & Civic,School,K-12 School,,42.1123318,-80.1220337,59,130,246,825529109,way,,school,,,https://www.eriesd.org/harding,+1-814-874-6550,openstreetmap
+Hatch School,,Education & Civic,School,K-12 School,,41.6586666,-80.0489461,59,130,246,357340817,node,,school,,,,,openstreetmap
+Hatch School,,Education & Civic,School,K-12 School,,41.7239468,-79.8322756,59,130,246,357342489,node,,school,,,,,openstreetmap
+Hatch School,,Education & Civic,School,K-12 School,,41.6611669,-79.9872782,59,130,246,357342901,node,,school,,,,,openstreetmap
+Hays School,,Education & Civic,School,K-12 School,,41.8783897,-79.6836624,59,130,246,357331229,node,,school,,,,,openstreetmap
+Heavenly Hands Early Learning Child Care Academy,"1001, West 21st Street, Erie, PA, 16502",Education & Civic,School,K-12 School,,42.1080856,-80.0971373,59,130,246,9853303236,node,,school,,,,,openstreetmap
+Himebaugh School,,Education & Civic,School,K-12 School,,41.7731117,-80.1358908,59,130,246,357346435,node,,school,,,,,openstreetmap
+Homan School,,Education & Civic,School,K-12 School,,41.7903339,-80.1303351,59,130,246,357346422,node,,school,,,,,openstreetmap
+Horton School,,Education & Civic,School,K-12 School,,41.8675562,-79.8864415,59,130,246,357346230,node,,school,,,,,openstreetmap
+Hotchkiss School,,Education & Civic,School,K-12 School,,41.7775559,-80.1667248,59,130,246,357346432,node,,school,,,,,openstreetmap
+Huller School,,Education & Civic,School,K-12 School,,41.6292212,-80.2289501,59,130,246,357346345,node,,school,,,,,openstreetmap
+Hydetown Elementary School,,Education & Civic,School,K-12 School,,41.6457053,-79.7191622,59,130,246,4610711741,node,,school,,,,,openstreetmap
+Interior Design Department,"3928, Wayne Street, Erie, PA, 16546",Education & Civic,School,K-12 School,,42.1067971,-80.048751,59,130,246,8300695661,node,,school,,,,,openstreetmap
+Intermediate Elementary School,"50, East Division Street, North East, PA, 16428",Education & Civic,School,K-12 School,,42.2212102,-79.8306337,59,130,246,865361934,way,,school,,,,,openstreetmap
+Iroquois Elementary School,"4231, Morse Street, Erie, PA, 16511",Education & Civic,School,K-12 School,,42.1538877,-80.0122204,59,130,246,845130191,way,,school,,,,,openstreetmap
+Iroquois Junior/Senior High School,"4301, Main Street, Erie, PA, 16511",Education & Civic,School,K-12 School,,42.1500384,-80.0093687,59,130,246,827727593,way,,school,,,,,openstreetmap
+James S. Wilson Middle School,"901, West 54th Street, Erie, PA, 16509",Education & Civic,School,K-12 School,,42.0785223,-80.0757395,59,130,246,806572381,way,,school,,,https://jsw.mtsd.org/,,openstreetmap
+James W. Parker Middle School,"11781, Edinboro Road, Edinboro, PA, 16412",Education & Civic,School,K-12 School,,41.915111,-80.1223854,59,130,246,839932661,way,,school,,,,,openstreetmap
+Janet L. Miller Center for Growth & Academic Excellence,"5999, Station Road, North East, PA, 16428",Education & Civic,School,K-12 School,,42.1895792,-79.831946,59,130,246,8402401676,node,,school,,,,,openstreetmap
+Jefferson Elementary School,"230, East 38th Street, Erie, PA, 16504",Education & Civic,School,K-12 School,,42.1050034,-80.0632337,59,130,246,812931169,way,,school,,,,,openstreetmap
+Jo Anna Connell Elementary School,"1820, East 38th Street, Erie, PA, 16510",Education & Civic,School,K-12 School,,42.117613,-80.0280048,59,130,246,810543437,way,,school,,,https://www.eriesd.org/connell,+18148746785,openstreetmap
+Kiser School,,Education & Civic,School,K-12 School,,41.6014435,-80.0639474,59,130,246,357341451,node,,school,,,,,openstreetmap
+Klein Elementary School,"5325, East Lake Road, Erie, PA, 16511",Education & Civic,School,K-12 School,,42.1701011,-79.9944094,59,130,246,813715472,way,,school,,,,,openstreetmap
+Kreiter School,,Education & Civic,School,K-12 School,,41.6025544,-80.187283,59,130,246,357341317,node,,school,,,,,openstreetmap
+Laird School,,Education & Civic,School,K-12 School,,41.5056089,-80.0939495,59,130,246,357341334,node,,school,,,,,openstreetmap
+Lamb School,,Education & Civic,School,K-12 School,,41.6972795,-79.8903321,59,130,246,357342883,node,,school,,,,,openstreetmap
+Lang School,,Education & Civic,School,K-12 School,,41.7445011,-80.0539447,59,130,246,357341168,node,,school,,,,,openstreetmap
+Leadership Christian Academy,"5900, Sterrettania Road, Fairview, PA, 16415",Education & Civic,School,K-12 School,,42.042496,-80.1750533,59,130,246,893356556,way,,school,,,,,openstreetmap
+Lincoln Elementary School,"831, East 31st Street, Erie, PA, 16504",Education & Civic,School,K-12 School,,42.1143011,-80.0518176,59,130,246,846919967,way,,school,,,,,openstreetmap
+Linesville Conneaut Summit High School,,Education & Civic,School,K-12 School,,41.6544504,-80.4167314,59,130,246,357362577,node,,school,,,,,openstreetmap
+Luther Memorial Academy,"220, West 11th Street, Erie, PA, 16501",Education & Civic,School,K-12 School,,42.123008,-80.0869787,59,130,246,1011261484,way,,school,,,,,openstreetmap
+Macon School,,Education & Civic,School,K-12 School,,41.9153334,-80.0989448,59,130,246,357331146,node,,school,,,,,openstreetmap
+Mallard School,,Education & Civic,School,K-12 School,,41.5708875,-80.0381141,59,130,246,357341410,node,,school,,,,,openstreetmap
+Mallory School,,Education & Civic,School,K-12 School,,41.5225535,-80.1372833,59,130,246,357341224,node,,school,,,,,openstreetmap
+Maplewood Elementary School,,Education & Civic,School,K-12 School,,41.6832787,-79.8933851,59,130,246,884252313,way,,school,,,,,openstreetmap
+Martin School,,Education & Civic,School,K-12 School,,41.5619982,-80.4589579,59,130,246,357347274,node,,school,,,,,openstreetmap
+McCullough School,,Education & Civic,School,K-12 School,,41.695056,-80.0514455,59,130,246,357341115,node,,school,,,,,openstreetmap
+McDaniels School,,Education & Civic,School,K-12 School,,41.5672766,-79.9850577,59,130,246,357342688,node,,school,,,,,openstreetmap
+McDowell Intermediate High School,"3320, Caughey Road, Erie, PA, 16506",Education & Civic,School,K-12 School,,42.0751698,-80.1510124,59,130,246,816531406,way,,school,,,,,openstreetmap
+McDowell Senior High School,"3580, West 38th Street, Erie, PA, 16506",Education & Civic,School,K-12 School,,42.0729119,-80.1496058,59,130,246,816531835,way,,school,,,,,openstreetmap
+McIntyre School,,Education & Civic,School,K-12 School,,41.5550539,-80.3153424,59,130,246,357347305,node,,school,,,,,openstreetmap
+McKean Elementary School,"5120, West Road, McKean, PA, 16426",Education & Civic,School,K-12 School,,41.9979828,-80.1460895,59,130,246,824281496,way,,school,,,,,openstreetmap
+McKinley Elementary School,"933, East 22nd Street, Erie, PA, 16503",Education & Civic,School,K-12 School,,42.1227516,-80.0540714,59,130,246,803479501,way,,school,,,,,openstreetmap
+Meadville Area Middle School,,Education & Civic,School,K-12 School,,41.6346855,-80.1274557,59,130,246,1635426885,node,,school,,,,,openstreetmap
+Meadville Area Senior High School,"930, North Street, Meadville, 16335",Education & Civic,School,K-12 School,,41.6347771,-80.1289481,59,130,246,357362598,node,,school,,,,,openstreetmap
+Melvin School,,Education & Civic,School,K-12 School,,41.664502,-79.8361652,59,130,246,357342461,node,,school,,,,,openstreetmap
+Mercyhurst Learning Center,"4118, Briggs Avenue, Erie, PA, 16546",Education & Civic,School,K-12 School,,42.1046631,-80.0510742,59,130,246,8300728196,node,,school,,,,,openstreetmap
+Mercyhurst Preparatory School,"538, East Grandview Boulevard, Erie, PA, 16504",Education & Civic,School,K-12 School,,42.1009502,-80.0517495,59,130,246,824647441,way,,school,,,,,openstreetmap
+Mill Village Elementary School,"2757, East Center Street, Mill Village, PA, 16427",Education & Civic,School,K-12 School,,41.8756063,-79.9661939,59,130,246,986654327,way,,school,,,,,openstreetmap
+Miller School,,Education & Civic,School,K-12 School,,41.931722,-79.7206067,59,130,246,357331243,node,,school,,,,,openstreetmap
+Mohawk School,,Education & Civic,School,K-12 School,,41.782279,-80.0047765,59,130,246,357346456,node,,school,,,,,openstreetmap
+Montessori In The Woods,"1390, West Townhall Road, Erie, PA, 16509",Education & Civic,School,K-12 School,,42.0321297,-80.0465578,59,130,246,878711774,way,,school,,,,,openstreetmap
+Montessori Regional Charter School,"2549, West 8th Street, Erie, PA, 16505",Education & Civic,School,K-12 School,,42.1051377,-80.1363099,59,130,246,822965149,way,,school,,,,,openstreetmap
+Moore School,,Education & Civic,School,K-12 School,,41.5172756,-80.0620043,59,130,246,357341353,node,,school,,,,,openstreetmap
+Mother Teresa Academy,"160, West 11th Street, Erie, PA, 16501",Education & Civic,School,K-12 School,,42.123875,-80.085487,59,130,246,826588541,way,,school,,,,,openstreetmap
+Mount Pleasant School,,Education & Civic,School,K-12 School,,41.5031104,-79.9214466,59,130,246,357342450,node,,school,,,,,openstreetmap
+Neason Hill Elementary School,"11293`, Williamson Road, meadville, 16335",Education & Civic,School,K-12 School,,41.6228776,-80.1397741,59,130,246,357362595,node,,school,,,,,openstreetmap
+North East High School,"1901, Freeport Road, North East, PA, 16428",Education & Civic,School,K-12 School,,42.2235188,-79.8297304,59,130,246,865358954,way,,school,,,,,openstreetmap
+North East Middle School,"1903, Freeport Road, North East, PA, 16428",Education & Civic,School,K-12 School,,42.2234431,-79.8265193,59,130,246,865363166,way,,school,,,,,openstreetmap
+Northwest Pennsylvania Collegiate Academy,"2825, State Street, Erie, PA, 16508",Education & Civic,School,K-12 School,,42.1109001,-80.0720218,59,130,246,813324492,way,,school,,,,,openstreetmap
+Northwestern Elementary School,"10450, John Williams Avenue, Albion, PA, 16401",Education & Civic,School,K-12 School,,41.8885064,-80.3509891,59,130,246,1005323334,way,,school,,,,,openstreetmap
+Oakes School,,Education & Civic,School,K-12 School,,41.5806107,-79.957557,59,130,246,357343320,node,,school,,,,,openstreetmap
+Our Lady of Mount Carmel Parish School,"1553, East Grandview Boulevard, Erie, PA, 16510",Education & Civic,School,K-12 School,,42.1060285,-80.0295002,59,130,246,823950284,way,,school,,,,,openstreetmap
+Our Lady of Peace School,"2401, West 38th Street, Erie, PA, 16506",Education & Civic,School,K-12 School,,42.0805391,-80.1203106,59,130,246,821884962,way,,school,,,,,openstreetmap
+Oxbow School,,Education & Civic,School,K-12 School,,41.8639453,-79.7481072,59,130,246,357346290,node,,school,,,,,openstreetmap
+Pennsylvania Cyber Charter School,"1980, Edinboro Road, Erie, PA, 16565",Education & Civic,School,K-12 School,,42.065235,-80.0969089,59,130,246,8606783802,node,,school,,,,,openstreetmap
+Perry Elementary School,"955, West 29th Street, Erie, PA, 16508",Education & Civic,School,K-12 School,,42.1017511,-80.09164,59,130,246,823171168,way,,school,,,,,openstreetmap
+Peters School,,Education & Civic,School,K-12 School,,41.5175543,-79.9547802,59,130,246,357342443,node,,school,,,,,openstreetmap
+Pfeiffer-Burleigh Elementary School,"235, East 11th Street, Erie, PA, 16503",Education & Civic,School,K-12 School,,42.1258497,-80.0767053,59,130,246,810837051,way,,school,,,,,openstreetmap
+Pierson School,,Education & Civic,School,K-12 School,,41.6267215,-80.1233925,59,130,246,357340763,node,,school,,,,,openstreetmap
+Plank Road School,,Education & Civic,School,K-12 School,,41.6362169,-80.0131724,59,130,246,357340782,node,,school,,,,,openstreetmap
+Plum Center School,,Education & Civic,School,K-12 School,,41.5803353,-79.8128326,59,130,246,357342910,node,,school,,,,,openstreetmap
+Prather School,,Education & Civic,School,K-12 School,,41.5689475,-79.7461649,59,130,246,357342977,node,,school,,,,,openstreetmap
+Prospect School,,Education & Civic,School,K-12 School,,41.5675541,-80.089504,59,130,246,357341402,node,,school,,,,,openstreetmap
+Putnam School,,Education & Civic,School,K-12 School,,41.6539435,-80.2847847,59,130,246,357346301,node,,school,,,,,openstreetmap
+Quarry School,,Education & Civic,School,K-12 School,,41.5844985,-80.3303426,59,130,246,357347314,node,,school,,,,,openstreetmap
+ReaLife Early Learning Center,"3902, West 38th Street, Erie, PA, 16506",Education & Civic,School,K-12 School,,42.0698325,-80.1562116,59,130,246,8411982858,node,,school,,,,,openstreetmap
+Rice Avenue Middle School,"1100, Rice Avenue, Girard, PA, 16417",Education & Civic,School,K-12 School,,42.008742,-80.3297505,59,130,246,876642806,way,,school,,,,,openstreetmap
+Richmond School,,Education & Civic,School,K-12 School,,41.6528329,-80.1358924,59,130,246,357346356,node,,school,,,,,openstreetmap
+Ripley Central School,,Education & Civic,School,K-12 School,,42.2680556,-79.7102778,59,130,246,357645091,node,,school,,,,,openstreetmap
+Robert Benjamin Wiley Community Charter School,"1446, East Lake Road, Erie, PA, 16507",Education & Civic,School,K-12 School,,42.1420957,-80.055029,59,130,246,844592115,way,,school,,,,,openstreetmap
+Robert Benjamin Wiley Preparatory Charter School,"426, Eagle Point Boulevard, Erie, PA, 16511",Education & Civic,School,K-12 School,,42.1472075,-80.0410078,59,130,246,1134252465,way,,school,,,,,openstreetmap
+Robison Elementary School,"1651, West Robison Road, Erie, PA, 16509",Education & Civic,School,K-12 School,,42.0457853,-80.0671399,59,130,246,866403547,way,,school,,,,,openstreetmap
+Rockdale Center High School,,Education & Civic,School,K-12 School,,41.8045011,-79.9750538,59,130,246,357346218,node,,school,,,,,openstreetmap
+Rockwall School,,Education & Civic,School,K-12 School,,41.6792215,-80.2706172,59,130,246,357346304,node,,school,,,,,openstreetmap
+Rolling Ridge Elementary School,"3700, Ridge Parkway, Erie, PA, 16510",Education & Civic,School,K-12 School,,42.1399024,-79.9970191,59,130,246,853813771,way,,school,,,,,openstreetmap
+Root School,,Education & Civic,School,K-12 School,,41.7475573,-79.9658876,59,130,246,357342906,node,,school,,,,,openstreetmap
+Rosedale School,,Education & Civic,School,K-12 School,,41.540887,-80.0536705,59,130,246,357341380,node,,school,,,,,openstreetmap
+Rung School,,Education & Civic,School,K-12 School,,41.5517206,-80.1231159,59,130,246,357341395,node,,school,,,,,openstreetmap
+Rynd School,,Education & Civic,School,K-12 School,,41.5017471,-80.0189279,59,130,246,271904601,way,,school,,,,,openstreetmap
+Saegertown High School,,Education & Civic,School,K-12 School,,41.7206113,-80.1656141,59,130,246,357362564,node,,school,,,,,openstreetmap
+Saint George School,"1612, Bryant Street, Erie, PA, 16509",Education & Civic,School,K-12 School,,42.0781014,-80.0911459,59,130,246,810065980,way,,school,,,,,openstreetmap
+Saint Gregory Parish School,"136, West Main Street, North East, PA, 16428",Education & Civic,School,K-12 School,,42.2130098,-79.8444648,59,130,246,828494519,way,,school,,,,,openstreetmap
+Saint James School,"2602, Buffalo Road, Erie, PA, 16510",Education & Civic,School,K-12 School,,42.1384948,-80.0219374,59,130,246,827669938,way,,school,,,,,openstreetmap
+Saint Josephs High School,,Education & Civic,School,K-12 School,,41.6286702,-79.681441,59,130,246,357308870,node,,school,,,,,openstreetmap
+Saint Jude School,"606, Lowell Avenue, Erie, PA, 16505",Education & Civic,School,K-12 School,,42.1063677,-80.1451657,59,130,246,878969962,way,,school,,,,,openstreetmap
+Saint Luke School,"425, East 38th Street, Erie, PA, 16504",Education & Civic,School,K-12 School,,42.1052089,-80.0564028,59,130,246,915496176,way,,school,,,,,openstreetmap
+Saint Martin Early Learning Center,"1727, State Street, Erie, PA, 16501",Education & Civic,School,Early Childhood,,42.1188581,-80.0777833,59,130,246,10697042996,node,,kindergarten,,,,,openstreetmap
+Saint Paul's School,"453, West 16th Street, Erie, PA, 16502",Education & Civic,School,K-12 School,,42.1162201,-80.0888863,59,130,246,1148292237,way,,school,,,,,openstreetmap
+Saint Stanislaus School,"507, East 12th Street, Erie, PA, 16503",Education & Civic,School,K-12 School,,42.1274344,-80.0699048,59,130,246,882837570,way,,school,,,,,openstreetmap
+Saint Titus School,,Education & Civic,School,K-12 School,,41.6285226,-79.6821371,59,130,246,357310987,node,,school,,,,,openstreetmap
+Salata Technology Center,"246, West 10th Street, Erie, PA, 16501",Education & Civic,School,K-12 School,,42.123908,-80.0878197,59,130,246,8312890250,node,,school,,,,,openstreetmap
+Sandbank School,,Education & Civic,School,K-12 School,,41.7800555,-80.246449,59,130,246,357346418,node,,school,,,,,openstreetmap
+Second District Elementary School,,Education & Civic,School,K-12 School,,41.6303326,-80.153393,59,130,246,357362601,node,,school,,,,,openstreetmap
+Second District Elementary School,"1216, South Main Street, Meadville, PA, 16335",Education & Civic,School,K-12 School,,41.6303053,-80.1537333,59,130,246,576515764,way,,school,,,,,openstreetmap
+Seneca High School,"10770, Wattsburg Road, Wattsburg, PA, 16442",Education & Civic,School,K-12 School,,42.0532312,-79.9060145,59,130,246,1034538613,way,,school,,,,,openstreetmap
+Sherred Hill School,,Education & Civic,School,K-12 School,,41.8600557,-80.2056147,59,130,246,357346390,node,,school,,,,,openstreetmap
+Shreve School,,Education & Civic,School,K-12 School,,41.8636673,-79.8564413,59,130,246,357346254,node,,school,,,,,openstreetmap
+Shutz School,,Education & Civic,School,K-12 School,,41.6814445,-80.0897799,59,130,246,357341099,node,,school,,,,,openstreetmap
+Sills School,,Education & Civic,School,K-12 School,,41.8806116,-79.8114409,59,130,246,357331250,node,,school,,,,,openstreetmap
+Smith School,,Education & Civic,School,K-12 School,,41.6839437,-80.3042295,59,130,246,357346307,node,,school,,,,,openstreetmap
+South Richmond School,,Education & Civic,School,K-12 School,,41.6908901,-79.9372772,59,130,246,357342852,node,,school,,,,,openstreetmap
+Spencer School,,Education & Civic,School,K-12 School,,41.9344998,-79.6847732,59,130,246,357331189,node,,school,,,,,openstreetmap
+Springfield Elementary School,"11911, Bond Street, East Springfield, PA, 16411",Education & Civic,School,K-12 School,,41.9633407,-80.4041819,59,130,246,876271644,way,,school,,,,,openstreetmap
+Strong Vincent Middle School,"1330, West 8th Street, Erie, PA, 16502",Education & Civic,School,K-12 School,,42.117791,-80.1134522,59,130,246,814646295,way,,school,,,,,openstreetmap
+Sugar Grove School,,Education & Civic,School,K-12 School,,41.522278,-79.8817233,59,130,246,357342990,node,,school,,,,,openstreetmap
+Sugar Lake School,,Education & Civic,School,K-12 School,,41.5569996,-79.9328348,59,130,246,357343326,node,,school,,,,,openstreetmap
+Sugar Run School,,Education & Civic,School,K-12 School,,41.4911646,-80.48257,59,130,246,357345951,node,,school,,,,,openstreetmap
+Third District School,,Education & Civic,School,K-12 School,,41.6500549,-80.1622818,59,130,246,357316193,node,,school,,,,,openstreetmap
+Third District School,,Education & Civic,School,K-12 School,,41.6500667,-80.1625194,59,130,246,1123507891,way,,school,,,,,openstreetmap
+Trace School,,Education & Civic,School,K-12 School,,41.5772763,-80.1953391,59,130,246,357341265,node,,school,,,,,openstreetmap
+Tracy Elementary School,"2624, West 6th Street, Erie, PA, 16505",Education & Civic,School,K-12 School,,42.1089757,-80.1432655,59,130,246,843137040,way,,school,,,,,openstreetmap
+Undergraduate Admissions,"501, East 38th Street, Erie, PA, 16546",Education & Civic,School,K-12 School,,42.1048995,-80.0530457,59,130,246,8607470389,node,,school,,,,,openstreetmap
+Union City Area High School,"105, Concord Street, Union City, PA, 16438",Education & Civic,School,K-12 School,,41.8905285,-79.8403465,59,130,246,986649949,way,,school,,,,,openstreetmap
+Union City Area Middle School,"105, Concord Street, Union City, PA, 16438",Education & Civic,School,K-12 School,,41.8904089,-79.8379811,59,130,246,986649950,way,,school,,,,,openstreetmap
+Union City Area School District Grounds,"91, Miles Street, Union City, PA, 16438",Education & Civic,School,K-12 School,,41.8893633,-79.8442062,59,130,246,986244923,way,,school,,,https://www.ucasd.org/,,openstreetmap
+Valley School,,Education & Civic,School,K-12 School,,41.5703344,-79.8647779,59,130,246,357342923,node,,school,,,,,openstreetmap
+Valor Personal Defense Systems Combat Academy,"76, Mead Avenue, Meadville, PA, 16335",Education & Civic,School,K-12 School,,41.6371054,-80.1602402,59,130,246,8476197990,node,,school,,,,,openstreetmap
+Walnut Creek Middle School,"5901, Sterrettania Road, Fairview, PA, 16415",Education & Civic,School,K-12 School,,42.0434817,-80.1715794,59,130,246,815586634,way,,school,,,,,openstreetmap
+Ward School,,Education & Civic,School,K-12 School,,41.5850541,-80.3497876,59,130,246,357347326,node,,school,,,,,openstreetmap
+Waterford Elementary School,"323, Cherry Street, Waterford, PA, 16441",Education & Civic,School,K-12 School,,41.9445509,-79.9827438,59,130,246,866395701,way,,school,,,,,openstreetmap
+Wattsburg Area Elementary School,"10782, Wattsburg Road, Wattsburg, PA, 16442",Education & Civic,School,K-12 School,,42.0485299,-79.9048678,59,130,246,1034538616,way,,school,,,,,openstreetmap
+Wattsburg Area Middle School,"10774, Wattsburg Road, Wattsburg, PA, 16442",Education & Civic,School,K-12 School,,42.054939,-79.9036719,59,130,246,1034538614,way,,school,,,,,openstreetmap
+Westlake Middle School,"4330, West Lake Road, Erie, PA, 16505",Education & Civic,School,K-12 School,,42.0896817,-80.1836826,59,130,246,812941930,way,,school,,,https://wl.mtsd.org/,,openstreetmap
+Weston School,,Education & Civic,School,K-12 School,,41.8578339,-79.9928312,59,130,246,357346223,node,,school,,,,,openstreetmap
+Whites School,,Education & Civic,School,K-12 School,,41.8692224,-80.1706137,59,130,246,357346385,node,,school,,,,,openstreetmap
+Whitman School,,Education & Civic,School,K-12 School,,41.7200581,-79.8072754,59,130,246,357342479,node,,school,,,,,openstreetmap
+Wilson Middle School,"718, East 28th Street, Erie, PA, 16504",Education & Civic,School,K-12 School,,42.1170354,-80.056875,59,130,246,878958950,way,,school,,,,,openstreetmap
+Zerrer School,,Education & Civic,School,K-12 School,,41.6045036,-79.6825522,59,130,246,357342949,node,,school,,,,,openstreetmap

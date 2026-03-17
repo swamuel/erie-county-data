@@ -1,0 +1,199 @@
+name,address,primary_category,type,subtype,food_tier,lat,lon,color_r,color_g,color_b,osm_id,osm_type,osm_shop,osm_amenity,brand,opening_hours,website,phone,geocode_source
+AAA Animal Clinic,"336, East 12th Street, Erie, PA, 16503",Health,Clinic,Veterinary,,42.1264512,-80.0740188,239,68,68,7580999778,node,,veterinary,,,,,openstreetmap
+AHN Primary Care,"3413, Cherry Street, Erie, PA, 16508",Health,Clinic,Outpatient Clinic,,42.1003154,-80.0817182,239,68,68,8513624671,node,,clinic,,,,,openstreetmap
+AHN Primary Care,"450, Erie Street, Edinboro, PA, 16412",Health,Clinic,Outpatient Clinic,,41.8825074,-80.1274571,239,68,68,13620546662,node,,clinic,,,,,openstreetmap
+Adagio Health,"3530, Peach Street, Erie, PA, 16508",Health,Clinic,Outpatient Clinic,,42.100318,-80.0807479,239,68,68,7902936089,node,,clinic,,,,,openstreetmap
+Adagio Health,,Health,Clinic,Medical Office,,41.8758951,-80.1295423,239,68,68,961733865,way,,doctors,,,,,openstreetmap
+Albion Animal Center,"11, Wells Avenue, Albion, PA, 16401",Health,Clinic,Veterinary,,41.8907109,-80.3614623,239,68,68,1070486001,way,,veterinary,,,,+1-814-756-4441,openstreetmap
+Allegheny Health Nertwork,"1910, Sassafras Street, Erie, PA, 16502",Health,Clinic,Outpatient Clinic,,42.115713,-80.0814305,239,68,68,9227909059,node,,clinic,,,,,openstreetmap
+American Association,"3308, State Street, Erie, PA, 16508",Health,Clinic,Dental Office,,42.1059266,-80.0700828,239,68,68,8497217325,node,,dentist,,,,,openstreetmap
+Anesthesia Consultants of Erie,"444, West 8th Street, Erie, PA, 16502",Health,Clinic,Outpatient Clinic,,42.1240207,-80.0940131,239,68,68,8408626880,node,,clinic,,,,,openstreetmap
+Animal Ark Pet Hospital,"3024, West 12th Street, Erie, PA, 16505",Health,Clinic,Veterinary,,42.0987027,-80.1496194,239,68,68,7575859042,node,,veterinary,,,,,openstreetmap
+Animal Hospital of Meadville,"10696, Mercer Pike, Meadville, PA, 16335",Health,Clinic,Veterinary,,41.6144964,-80.1677141,239,68,68,1070406834,way,,veterinary,,,,+1 814 333 1313,openstreetmap
+Animal Hospital of Waterford,"941, US-19, Waterford, PA, 16441",Health,Clinic,Veterinary,,41.9507354,-79.9906641,239,68,68,9347255918,node,,veterinary,,,https://www.vetsatwaterford.com/,+1-814-796-6115,openstreetmap
+Animal Kingdom Pet Hospital,"2222, East 38th Street, Erie, PA, 16510",Health,Clinic,Veterinary,,42.1201741,-80.0190894,239,68,68,7578534677,node,,veterinary,,,,,openstreetmap
+"Armanini, Kolodychak, & Baslie","4600, Zuck Road, Erie, PA, 16506",Health,Clinic,Medical Office,,42.0730973,-80.1222494,239,68,68,7576246638,node,,doctors,,,,,openstreetmap
+Arthritis Associates of Erie,"3317, Liberty Street, Erie, PA, 16508",Health,Clinic,Medical Office,,42.0996983,-80.0860827,239,68,68,7578398175,node,,doctors,,,,,openstreetmap
+Artistry In Dentistry,"3703, Old French Road, Erie, PA, 16504",Health,Clinic,Dental Office,,42.104849,-80.0616267,239,68,68,8504650998,node,,dentist,,,,,openstreetmap
+Aspen Dental,"7165, Peach Street, Erie, PA, 16509",Health,Clinic,Dental Office,,42.054601,-80.0860073,239,68,68,7571393110,node,,dentist,Aspen Dental,,,,openstreetmap
+Aspen Dental,"11223, Shaw Avenue, Meadville, PA",Health,Clinic,Dental Office,,41.620865,-80.1746286,239,68,68,8476735291,node,,dentist,Aspen Dental,,,,openstreetmap
+Barbara Johnson,"3822, Wayne Street, Erie, PA, 16504",Health,Clinic,Dental Office,,42.1076306,-80.0492052,239,68,68,7897603631,node,,dentist,,,,,openstreetmap
+"Baron Takayuki Denniston, M.D.","4960, Pittsburgh Avenue, Erie, PA, 16509",Health,Clinic,Medical Office,,42.0736218,-80.1111695,239,68,68,12140066561,node,,doctors,,,,,openstreetmap
+Beautiful Smiles,"5125, Zuck Road, Erie, PA, 16506",Health,Clinic,Dental Office,,42.0702657,-80.1175899,239,68,68,7636434043,node,,dentist,,,,,openstreetmap
+Bell Dental Associates,"4820, Buffalo Road, Erie, PA, 16510",Health,Clinic,Dental Office,,42.1513106,-79.9937852,239,68,68,9915210469,node,,dentist,,,,,openstreetmap
+Camboro Veterinary Hospital,"5989, Route 6N, Edinboro, PA, 16412",Health,Clinic,Veterinary,,41.8792856,-80.1734911,239,68,68,824946132,way,,veterinary,,,,,openstreetmap
+Center For Focused Care,"3250, West Lake Road, Erie, PA, 16505",Health,Clinic,Medical Office,,42.1035916,-80.1605387,239,68,68,7862367953,node,,doctors,,,,,openstreetmap
+Central Outreach Wellness Center,"3104, State Street, 16508",Health,Clinic,Outpatient Clinic,,42.10744,-80.0709292,239,68,68,12778651401,node,,clinic,,Mo 09:00-19:00; Tu-Th 09:00-17:00; Fr 10:00-17:00,https://www.centraloutreach.com/location/erie-pa-location,,openstreetmap
+Circulatory Centers of America,"3939, West Ridge Common Drive, Erie, PA, 16506",Health,Clinic,Medical Office,,42.0779012,-80.1621206,239,68,68,8047318802,node,,doctors,,,,,openstreetmap
+Coben Health Center,"4118, Briggs Avenue, Erie, PA, 16546",Health,Clinic,Outpatient Clinic,,42.1047098,-80.0509374,239,68,68,8300728195,node,,clinic,,,,,openstreetmap
+Cochranton,"1009, Water Street, Meadville, PA, 16335",Health,Clinic,Medical Office,,41.6361771,-80.155552,239,68,68,807621446,way,,doctors,,,,,openstreetmap
+Comprehensive Plastic Surgery,"4355, Peach Street, Erie, PA, 16509",Health,Clinic,Medical Office,,42.0885604,-80.0859123,239,68,68,7573303392,node,,doctors,,,,,openstreetmap
+Concentra Urgent Care,"3010, West Lake Road, Erie, PA, 16505",Health,Clinic,Outpatient Clinic,,42.1039686,-80.1526772,239,68,68,7887774615,node,,clinic,,,,,openstreetmap
+Crawford County Humane Society Veterinary Hospital,"1116, Park Avenue, Meadville, PA, 16335",Health,Clinic,Veterinary,,41.6331086,-80.1549981,239,68,68,977616548,way,,veterinary,,,,,openstreetmap
+DaVita Dialysis,"330, Erie Central Mall, Erie, PA, 16501",Health,Clinic,Outpatient Clinic,,42.118512,-80.0814442,239,68,68,7570012627,node,,clinic,DaVita Dialysis,,,,openstreetmap
+DaVita Dialysis,"2042, Edinboro Road, Erie, PA, 16565",Health,Clinic,Outpatient Clinic,,42.0659879,-80.0984101,239,68,68,7571673572,node,,clinic,DaVita Dialysis,,,,openstreetmap
+DaVita Dialysis,"350, East Bayfront Parkway, Erie, PA, 16507",Health,Clinic,Outpatient Clinic,,42.138559,-80.0813278,239,68,68,7813450322,node,,clinic,DaVita Dialysis,,,,openstreetmap
+DaVita Dialysis,"19050, Park Avenue Plaza, Meadville, PA, 16335",Health,Clinic,Outpatient Clinic,,41.6229823,-80.1596992,239,68,68,8475945553,node,,clinic,DaVita Dialysis,,,,openstreetmap
+DaVita Dialysis,"2563, West 8th Street, Erie, PA, 16505",Health,Clinic,Outpatient Clinic,,42.106367,-80.140216,239,68,68,8745826494,node,,clinic,DaVita Dialysis,,,,openstreetmap
+DaVita Dialysis,,Health,Clinic,Outpatient Clinic,,41.6364295,-80.1527634,239,68,68,9099330022,node,,clinic,,,,,openstreetmap
+David F. Dieteman,"3190, Glenwood Park Avenue, Erie, PA, 16508",Health,Clinic,Medical Office,,42.1039711,-80.0756339,239,68,68,8517862929,node,,doctors,,,,,openstreetmap
+Dental Arts of Erie,"4330, Peach Street, Erie, PA, 16509",Health,Clinic,Dental Office,,42.0893372,-80.0862107,239,68,68,7573341393,node,,dentist,,,,,openstreetmap
+Dental Office,,Health,Clinic,Dental Office,,41.6445508,-80.1574705,239,68,68,10174421387,node,,dentist,,,,,openstreetmap
+Dermatology and Skin Surgery Institute,"North Main Street Extension, Meadville, PA, 16335",Health,Clinic,Medical Office,,41.6576778,-80.1394369,239,68,68,1119756544,way,,doctors,,,,,openstreetmap
+Diagnostic X-Ray Service,"1769, West 26th Street, Erie, PA, 16508",Health,Clinic,Outpatient Clinic,,42.0972135,-80.1127202,239,68,68,8532707566,node,,clinic,,,,,openstreetmap
+Doleski & Wolford Orthodontics,"3230, West 38th Street, Erie, PA, 16506",Health,Clinic,Dental Office,,42.0755778,-80.1396912,239,68,68,8288176008,node,,dentist,,,,,openstreetmap
+Doleski & Wolford Ortodontics,"4201, Main Street, Erie, PA, 16511",Health,Clinic,Medical Office,,42.1510703,-80.0127874,239,68,68,7578628925,node,,doctors,,,,,openstreetmap
+Dowd George J,"2209, West Grandview Boulevard, Erie, PA, 16506",Health,Clinic,Medical Office,,42.0762259,-80.1131032,239,68,68,7942627088,node,,doctors,,,,,openstreetmap
+Dr. Bob Allison,"4208, Main Street, Erie, PA, 16511",Health,Clinic,Outpatient Clinic,,42.1515094,-80.0128865,239,68,68,10676572043,node,,clinic,,,,,openstreetmap
+Dr. Fatica,"2702, Zuck Road, Erie, PA, 16506",Health,Clinic,Medical Office,,42.0888713,-80.1317856,239,68,68,7674930383,node,,doctors,,,,,openstreetmap
+Dr. Mitchell S. Humphrey,"3416, State Street, Erie, PA, 16508",Health,Clinic,Medical Office,,42.1051476,-80.0695087,239,68,68,7913631526,node,,doctors,,,,,openstreetmap
+Dr. Patrick A. DeMarco,"3822, Schaper Avenue, Erie, PA, 16508",Health,Clinic,Dental Office,,42.0838979,-80.1135629,239,68,68,8013830868,node,,dentist,,,,,openstreetmap
+"Dr. Richard Brozewicz, DDS","1851, East 38th Street, Erie, PA, 16510",Health,Clinic,Dental Office,,42.1169362,-80.0260783,239,68,68,902738726,way,,dentist,,,,+18148257444,openstreetmap
+"Dr. Robert Romeo, DMD","2634, West 30th Street, Erie, PA, 16506",Health,Clinic,Dental Office,,42.0870459,-80.1307275,239,68,68,13627121874,node,,dentist,,,,,openstreetmap
+Dugan Robert,"926, West 38th Street, Erie, PA, 16508",Health,Clinic,Outpatient Clinic,,42.0951867,-80.0865186,239,68,68,8342978757,node,,clinic,,,,,openstreetmap
+Eastside Medical Center,"2625, Parade Street, Erie, PA, 16504",Health,Clinic,Outpatient Clinic,,42.1145058,-80.064168,239,68,68,7567766714,node,,clinic,,,,,openstreetmap
+Erie Animal Hospital,"3024, West 26th Street, Erie, PA, 16506",Health,Clinic,Veterinary,,42.0871648,-80.140956,239,68,68,7576508856,node,,veterinary,,,,,openstreetmap
+Erie Humane Society Pet Wellness Clinic,"2433, Zimmerly Road, Erie, PA, 16506",Health,Clinic,Veterinary,,42.065719,-80.1120363,239,68,68,812577976,way,,veterinary,,,https://www.eriehumanesociety.org/clinic,+18143159854,openstreetmap
+Erie Oriental Medicine,"2131, West 8th Street, Erie, PA, 16505",Health,Clinic,Outpatient Clinic,,42.1097057,-80.131141,239,68,68,7973638486,node,,clinic,,,,,openstreetmap
+Erie Osteopathic Medicine,"2115, West 38th Street, Erie, PA, 16509",Health,Clinic,Outpatient Clinic,,42.0842433,-80.1140231,239,68,68,8013840202,node,,clinic,,,,,openstreetmap
+Express Care at Saint Vincent - East,"4950, Buffalo Road, Erie, PA, 16510",Health,Clinic,Outpatient Clinic,,42.1526973,-79.9912609,239,68,68,831384893,way,,clinic,,Mo-Fr 09:00-17:00,https://erie.ahn.org/locations/express-care-at-saint-vincent-east,+1-814-898-2576,openstreetmap
+Fairview Family Dental,"7435, West Ridge Road, Fairview, PA, 16415",Health,Clinic,Dental Office,,42.0326347,-80.2537537,239,68,68,7955812302,node,,dentist,,,,,openstreetmap
+Family Dental Care,"4206, East Lake Road, Erie, PA, 16511",Health,Clinic,Dental Office,,42.1581986,-80.0166496,239,68,68,8248211592,node,,dentist,,,,,openstreetmap
+Family Dentisitry,"3805, Raspberry Street, Erie, PA, 16509",Health,Clinic,Dental Office,,42.0934253,-80.0897388,239,68,68,8584197492,node,,dentist,,,,,openstreetmap
+French Creek Dental Group,,Health,Clinic,Dental Office,,41.6395138,-80.1553525,239,68,68,1144218928,way,,dentist,,Mo-Th 08:30-16:00; Fr 08:30-14:00,,+1 814-333-6000,openstreetmap
+Gaudenzia Erie,"141, West 11th Street, Erie, PA, 16501",Health,Clinic,Medical Office,,42.1232047,-80.0845874,239,68,68,7717556242,node,,doctors,,,,,openstreetmap
+Glecos & Glecos,"3408, State Street, Erie, PA, 16508",Health,Clinic,Dental Office,,42.105312,-80.0696902,239,68,68,7913668593,node,,dentist,,,,,openstreetmap
+Glenwood Family Medicine,"213, East 41st Street, Erie, PA, 16504",Health,Clinic,Outpatient Clinic,,42.1000447,-80.060332,239,68,68,7636250410,node,,clinic,,,,,openstreetmap
+Glenwood Pet Hospital,"2233, West 38th Street, Erie, PA, 16506",Health,Clinic,Veterinary,,42.081891,-80.116713,239,68,68,7851491916,node,,veterinary,,,,,openstreetmap
+Grandview Family Practice,"4500, Pine Avenue, Erie, PA, 16504",Health,Clinic,Medical Office,,42.1064287,-80.0357218,239,68,68,7573037651,node,,doctors,,,,,openstreetmap
+Greater Erie Dental Associates,"204, West Plum Street, Edinboro, PA, 16412",Health,Clinic,Dental Office,,41.8763676,-80.1332973,239,68,68,8168673396,node,,dentist,,,,,openstreetmap
+Hammerlee Dental Care,"5158, Peach Street, Erie, PA, 16509",Health,Clinic,Dental Office,,42.0785521,-80.0930022,239,68,68,7573451162,node,,dentist,,,,,openstreetmap
+Internal Medicine Associates,"2931, Peach Street, Erie, PA, 16508",Health,Clinic,Outpatient Clinic,,42.1070425,-80.0761308,239,68,68,8496971327,node,,clinic,,,,,openstreetmap
+Iszkula Orthodontics,"3900, Old Zuck Road, Erie, PA, 16506",Health,Clinic,Dental Office,,42.0791932,-80.1259107,239,68,68,812630726,way,,dentist,,,https://www.eriebraces.com/,+18148335322,openstreetmap
+Izbicki Family Medicine,"3424, Peach Street, Erie, PA, 16508",Health,Clinic,Medical Office,,42.1015895,-80.0797555,239,68,68,7731749776,node,,doctors,,,,,openstreetmap
+Kalata Family Practice,"404, East 8th Street, Erie, PA, 16503",Health,Clinic,Outpatient Clinic,,42.1308994,-80.0751745,239,68,68,7804559619,node,,clinic,,,,,openstreetmap
+Kohler III Joseph J DDS,"219, West 7th Street, Erie, PA, 16501",Health,Clinic,Dental Office,,42.1266297,-80.0889448,239,68,68,7721082526,node,,dentist,,,,,openstreetmap
+Krenk Human Resources,"1334, West 26th Street, Erie, PA, 16508",Health,Clinic,Outpatient Clinic,,42.1017885,-80.1029187,239,68,68,8529292073,node,,clinic,,,,,openstreetmap
+Kupniewski Dentistry,"2330, West 38th Street, Erie, PA, 16506",Health,Clinic,Dental Office,,42.0827662,-80.1198738,239,68,68,8668784697,node,,dentist,,,,,openstreetmap
+LECOM Ambulatory Surgery Center,"5202, Peach Street, Erie, PA, 16509",Health,Clinic,Medical Office,,42.077013,-80.0933034,239,68,68,12802206949,node,,doctors,,,,,openstreetmap
+LECOM Center for Health & Aging,"3910, Schaper Avenue, Erie, PA, 16508",Health,Clinic,Outpatient Clinic,,42.0833824,-80.1132496,239,68,68,9347499005,node,,clinic,,,,,openstreetmap
+LECOM Medical Center,"537, West 18th Street, Erie, PA, 16502",Health,Clinic,Outpatient Clinic,,42.1137527,-80.0898437,239,68,68,7897104250,node,,clinic,,,,,openstreetmap
+LECOM School of Dental Medicine Dental Offices,16509,Health,Clinic,Dental Office,,42.0806898,-80.1081856,239,68,68,12555088801,node,,dentist,,Mo-Fr 08:00-16:30,https://lecom.edu/,+1-814-868-1001,openstreetmap
+Lake Erie Dental,"4944, Peach Street, Erie, PA, 16509",Health,Clinic,Dental Office,,42.0817905,-80.0912229,239,68,68,7573409862,node,,dentist,,,,,openstreetmap
+Landis Sally,"93, West Main Street, North East, PA, 16428",Health,Clinic,Dental Office,,42.2140381,-79.8405163,239,68,68,7734184446,node,,dentist,,,,,openstreetmap
+Lazer Dentistry of East Erie,"1533, East 38th Street, Erie, PA, 16510",Health,Clinic,Dental Office,,42.1144144,-80.0327752,239,68,68,7590311272,node,,dentist,,,,,openstreetmap
+Legacy Dental,"5127, Zuck Road, Erie, PA, 16506",Health,Clinic,Dental Office,,42.0705324,-80.1168654,239,68,68,12142267938,node,,dentist,,,,,openstreetmap
+Life NW PA,,Health,Clinic,Outpatient Clinic,,41.6327978,-80.1539093,239,68,68,9046053288,node,,clinic,,,,,openstreetmap
+Lighthouse Dentistry,"5690, Perry Highway, Erie, PA, 16509",Health,Clinic,Dental Office,,42.0815173,-80.0560582,239,68,68,8321967840,node,,dentist,,,,,openstreetmap
+Lorie R. Marsh Family Dentistry,"4910, Iroquois Avenue, Erie, PA, 16511",Health,Clinic,Dental Office,,42.1566334,-79.992669,239,68,68,8249747088,node,,dentist,,,,,openstreetmap
+MHEDS,"2928, Peach Street, Erie, PA, 16508",Health,Clinic,Outpatient Clinic,,42.1072063,-80.0767245,239,68,68,8496981876,node,,clinic,,,,,openstreetmap
+Maki Kurata Acupuncture,"3330, West 26th Street, Erie, PA, 16506",Health,Clinic,Outpatient Clinic,,42.0844616,-80.1492435,239,68,68,7792415350,node,,clinic,,,,,openstreetmap
+Marvintown Family Practice,"3419, State Street, Erie, PA, 16508",Health,Clinic,Outpatient Clinic,,42.105354,-80.0687007,239,68,68,7913714218,node,,clinic,,,,,openstreetmap
+Meadville Medical Center - Workplace Care,,Health,Clinic,Outpatient Clinic,,41.6212605,-80.1997994,239,68,68,10242974232,node,,clinic,,,,,openstreetmap
+Meadville Medical Center Grove Street,"1034, Grove Street, Meadville, 16335",Health,Clinic,Outpatient Clinic,,41.63374,-80.1458517,239,68,68,551357530,way,,clinic,,Mo-Fr 07:00-19:00,https://www.mmchs.org/Locations/Grove-Street-Facility.aspx,+1 814 333 5810,openstreetmap
+MedExpress Urgent Care,"18471, Smock Highway, Meadville, PA, 16335",Health,Clinic,Outpatient Clinic,,41.6195496,-80.1679301,239,68,68,8476154973,node,,clinic,,,,,openstreetmap
+Medical Center,"600, Wesley Way, Meadville, PA, 16335",Health,Clinic,Outpatient Clinic,,41.6629727,-80.1394654,239,68,68,8766483559,node,,clinic,,,,,openstreetmap
+Mercy Hilltop Center,"3715, Pennsylvania Avenue, Erie, PA, 16504",Health,Clinic,Outpatient Clinic,,42.1115836,-80.0424701,239,68,68,9027224167,node,,clinic,,,,,openstreetmap
+Mercyhurst Sports Medicine Department,"West Main Drive, Erie, PA, 16546",Health,Clinic,Outpatient Clinic,,42.1051571,-80.054926,239,68,68,7985647522,node,,clinic,,,,,openstreetmap
+Millcreek Animal Hospital,"4535, West Ridge Road, Erie, PA, 16506",Health,Clinic,Veterinary,,42.0733562,-80.1786932,239,68,68,8557739583,node,,veterinary,,,,,openstreetmap
+Millcreek Dental Arts,"4020, Sterrettania Road, Erie, PA, 16506",Health,Clinic,Dental Office,,42.0701108,-80.1460988,239,68,68,7626174731,node,,dentist,,,,,openstreetmap
+Minichelli & Moore Dentistry,"2606, Caughey Road, Erie, PA, 16506",Health,Clinic,Dental Office,,42.0811536,-80.1550663,239,68,68,9266954631,node,,dentist,,,,,openstreetmap
+Modern Dental Group,"333, State Street, Erie, PA, 16507",Health,Clinic,Dental Office,,42.1321015,-80.0860702,239,68,68,7570294273,node,,dentist,,,,,openstreetmap
+NeuroRestorative,"7289, West Ridge Road, Fairview, PA, 16415",Health,Clinic,Outpatient Clinic,,42.0347687,-80.2498563,239,68,68,8264191167,node,,clinic,,,,,openstreetmap
+North Coast Foot & Ankle,"5473, Village Common Drive, Erie, PA, 16506",Health,Clinic,Outpatient Clinic,,42.0677987,-80.1135811,239,68,68,7567759815,node,,clinic,,,,,openstreetmap
+North East Animal Hospital,"9280, West Main Street, North East, PA, 16428",Health,Clinic,Veterinary,,42.1945172,-79.8960771,239,68,68,8071407181,node,,veterinary,,,,,openstreetmap
+North East Dental Arts,"90, East Main Street, North East, PA, 16428",Health,Clinic,Dental Office,,42.2178939,-79.828764,239,68,68,8187605068,node,,dentist,,,,,openstreetmap
+North East Family Practice,"115, East Main Street, North East, PA, 16428",Health,Clinic,Outpatient Clinic,,42.2177272,-79.8273926,239,68,68,8187657474,node,,clinic,,,,,openstreetmap
+Northwest PA Pet Emergency Center,"429, West 38th Street, Erie, PA, 16508",Health,Clinic,Veterinary,,42.0968981,-80.0787025,239,68,68,7573516702,node,,veterinary,,,,,openstreetmap
+O'Leary Dental Group,"111, West Main Street, Girard, PA, 16417",Health,Clinic,Dental Office,,42.0000094,-80.3179172,239,68,68,8262802944,node,,dentist,,,,,openstreetmap
+Orlando Family Dentistry,"3235, West 38th Street, Erie, PA, 16506",Health,Clinic,Dental Office,,42.0747408,-80.1398031,239,68,68,8288188525,node,,dentist,,,,,openstreetmap
+Orthopaedic Solutions of Pennsylvania,"224, West 26th Street, Erie, PA, 16508",Health,Clinic,Medical Office,,42.1104639,-80.0783662,239,68,68,7850607871,node,,doctors,,,,,openstreetmap
+Orthopedic Associates of Meadville,"11277, Vernon Place, Meadville, PA, 16335",Health,Clinic,Dental Office,,41.6211334,-80.1995587,239,68,68,8199346511,node,,dentist,,,,,openstreetmap
+Osteopathic Cardiology Associates,"4002, Schaper Avenue, Erie, PA, 16508",Health,Clinic,Medical Office,,42.082915,-80.1130156,239,68,68,8013813500,node,,doctors,,,,,openstreetmap
+Passnire Family Dentistry,"4801, Peach Street, Erie, PA, 16509",Health,Clinic,Dental Office,,42.0834545,-80.0885335,239,68,68,7573380632,node,,dentist,,,,,openstreetmap
+Peach Street Dental & Dentures,"7040, Peach Street, Erie, PA, 16509",Health,Clinic,Dental Office,,42.0546558,-80.0883774,239,68,68,7571595940,node,,dentist,,,,,openstreetmap
+Perfect Smile Dental,"6660, Peach Street, Erie, PA, 16509",Health,Clinic,Dental Office,,42.0568376,-80.0930953,239,68,68,7571595502,node,,dentist,,,,,openstreetmap
+Pinecrest Family Practice,"3515, Pine Avenue, Erie, PA, 16504",Health,Clinic,Outpatient Clinic,,42.1098532,-80.0534891,239,68,68,7573076047,node,,clinic,,,,,openstreetmap
+Pinecrest Family Practice,"3125, French Street, Erie, PA, 16504",Health,Clinic,Outpatient Clinic,,42.1077723,-80.0687048,239,68,68,10594430933,node,,clinic,,,,,openstreetmap
+Pink or Blue 4D Ultrasound Studio,"2340, West Grandview Boulevard, Erie, PA, 16506",Health,Clinic,Medical Office,,42.0761065,-80.1163829,239,68,68,13149765803,node,,doctors,,,,,openstreetmap
+Plaza Dental Associates,"702, West 34th Street, Erie, PA, 16508",Health,Clinic,Dental Office,,42.099704,-80.0855886,239,68,68,7578424866,node,,dentist,,Mo 07:30-19:30; Tu 07:30-19:00; We 07:30-17:00; Th 07:30-17:00; Fr 07:30-16:00,,,openstreetmap
+Premier Surgical Center,"2350, Village Common Drive, Erie, PA, 16506",Health,Clinic,Medical Office,,42.0681886,-80.1113072,239,68,68,1170335380,way,,doctors,,,,,openstreetmap
+Presque Isle Medical Technologies,"2440, West 8th Street, Erie, PA, 16505",Health,Clinic,Outpatient Clinic,,42.1077143,-80.1383197,239,68,68,7854771123,node,,clinic,,,,,openstreetmap
+Primary Care Associates of Erie,"5035, Peach Street, Erie, PA, 16509",Health,Clinic,Outpatient Clinic,,42.0806216,-80.0896376,239,68,68,9552919772,node,,clinic,,,,,openstreetmap
+Rebecca's Personal Care Home,"47, West Street, North East, PA, 16428",Health,Clinic,Medical Office,,42.2098277,-79.8449053,239,68,68,7734710447,node,,doctors,,,,,openstreetmap
+Reichel Dental,"3208, State Street, Erie, PA, 16508",Health,Clinic,Dental Office,,42.1065241,-80.0705652,239,68,68,8497407810,node,,dentist,,,,,openstreetmap
+Saegertown Medical Associates,,Health,Clinic,Outpatient Clinic,,41.7190559,-80.1481411,239,68,68,1094661450,way,,clinic,,,,,openstreetmap
+Saint Vincent Family Medicine,"2828, Sterrettania Road, Erie, PA, 16506",Health,Clinic,Outpatient Clinic,,42.0858395,-80.1395523,239,68,68,7833191150,node,,clinic,,,,,openstreetmap
+Saint Vincent Family Medicine,"2501, West 12th Street, Erie, PA, 16505",Health,Clinic,Outpatient Clinic,,42.1021208,-80.1348064,239,68,68,9573426340,node,,clinic,,,,,openstreetmap
+Saint Vincent Urgent Care,"4247, West Ridge Road, Erie, PA, 16506",Health,Clinic,Outpatient Clinic,,42.0764289,-80.1708503,239,68,68,7617021958,node,,clinic,,,,,openstreetmap
+Sant Ram,"2123, West 8th Street, Erie, PA, 16505",Health,Clinic,Medical Office,,42.1097964,-80.1308933,239,68,68,7973596012,node,,doctors,,,,,openstreetmap
+Sarbak Family Dentist,"936, West 38th Street, Erie, PA, 16508",Health,Clinic,Dental Office,,42.095003,-80.086815,239,68,68,8342978781,node,,dentist,,,,,openstreetmap
+Shoreline Primary Care,"2820, West 12th Street, Erie, PA, 16505",Health,Clinic,Medical Office,,42.100373,-80.1447598,239,68,68,7575927735,node,,doctors,,,,,openstreetmap
+"Spartansburg Regional Medical Center, John Balmer, DO","132, Mechanic Street",Health,Clinic,Medical Office,,41.823397,-79.6880306,239,68,68,2527534519,node,,doctors,,,,,openstreetmap
+Stairways Dental,"2922, State Street, Erie, PA, 16508",Health,Clinic,Dental Office,,42.1086758,-80.0718584,239,68,68,8497594092,node,,dentist,,,,,openstreetmap
+Summit Dental Associates,"1341, West 26th Street, Erie, PA, 16508",Health,Clinic,Dental Office,,42.1012897,-80.1015247,239,68,68,8528974112,node,,dentist,,,,,openstreetmap
+Summit Pet Hospital & Care Center,"7091, Edinboro Road, Erie, PA, 16509",Health,Clinic,Veterinary,,42.0517308,-80.1064468,239,68,68,8290820508,node,,veterinary,,,,,openstreetmap
+The ANNA Wellness Center,"5617, West Ridge Road, Erie, PA, 16506",Health,Clinic,Veterinary,,42.0622612,-80.2009321,239,68,68,8321604101,node,,veterinary,,,,,openstreetmap
+The Animal Clinic,"8465, Peach Street, Erie, PA, 16509",Health,Clinic,Veterinary,,42.0398649,-80.0694295,239,68,68,7593238743,node,,veterinary,,,,,openstreetmap
+Tri-State Pain Institute,"5442, Peach Street, Erie, PA, 16509",Health,Clinic,Outpatient Clinic,,42.0744115,-80.0943026,239,68,68,8957997593,node,,clinic,,,,,openstreetmap
+Tucker Dental Excellence,"3736, Sterrettania Road, Erie, PA, 16506",Health,Clinic,Dental Office,,42.0743636,-80.144198,239,68,68,7593418334,node,,dentist,,,,,openstreetmap
+Twinbrook Veterinary Hospital,"5065, Buffalo Road, Erie, PA, 16510",Health,Clinic,Veterinary,,42.1532976,-79.9863142,239,68,68,7573201370,node,,veterinary,,,,,openstreetmap
+UPMC Children's Community Pediatrics,"902, West Erie Plaza Drive, Erie, PA, 16505",Health,Clinic,Outpatient Clinic,,42.1073626,-80.1345108,239,68,68,12504552254,node,,clinic,,,,,openstreetmap
+UPMC Health Plan,"380, East Bayfront Parkway, Erie, PA, 16507",Health,Clinic,Outpatient Clinic,,42.1386463,-80.0804981,239,68,68,8753646600,node,,clinic,,,,,openstreetmap
+UPMC Home Healthcare,"244, Erie Central Mall, Erie, PA, 16501",Health,Clinic,Outpatient Clinic,,42.1189345,-80.0811016,239,68,68,7570030584,node,,clinic,,,,,openstreetmap
+UPMC Medical Center,"1330, West 26th Street, Erie, PA, 16508",Health,Clinic,Outpatient Clinic,,42.1019215,-80.1023988,239,68,68,8228475066,node,,clinic,,,,,openstreetmap
+UPMC Outpatient Center,"5241, Buffalo Road, Erie, PA, 16510",Health,Clinic,Outpatient Clinic,,42.1553811,-79.9818734,239,68,68,7600774808,node,,clinic,,,,,openstreetmap
+UPMC Outpatient Center,"3330, Peach Street, Erie, PA, 16508",Health,Clinic,Outpatient Clinic,,42.1024896,-80.0794299,239,68,68,7731737110,node,,clinic,,,,,openstreetmap
+UPMC Outpatient Center,"215, Holland Street, Erie, PA, 16507",Health,Clinic,Outpatient Clinic,,42.1344639,-80.0833026,239,68,68,8118644713,node,,clinic,,,,,openstreetmap
+UPMC Outpatient Center,"7287, West Ridge Road, Fairview, PA, 16415",Health,Clinic,Outpatient Clinic,,42.0360804,-80.2482662,239,68,68,8158336088,node,,clinic,,,,,openstreetmap
+UPMC Outpatient Center,"2060, North Pearl Street, North East, PA, 16428",Health,Clinic,Outpatient Clinic,,42.2212164,-79.838063,239,68,68,8184792038,node,,clinic,,,,,openstreetmap
+UPMC Outpatient Center,"991, Peach Street, Waterford, PA, 16441",Health,Clinic,Outpatient Clinic,,41.9520889,-79.9912464,239,68,68,13618296029,node,,clinic,,,,,openstreetmap
+UPMC Primary & Specialty Care,"1600, Peninsula Drive, Erie, PA, 16505",Health,Clinic,Outpatient Clinic,,42.0963087,-80.1443901,239,68,68,8177416646,node,,clinic,,,,,openstreetmap
+UPMC Primary Care,"1101, Peninsula Drive, Erie, PA, 16505",Health,Clinic,Outpatient Clinic,,42.1010978,-80.1456231,239,68,68,7890391708,node,,clinic,,,,,openstreetmap
+UPMC-GoHealth Urgent Care,"7200, Peach Street, Erie, PA, 16509",Health,Clinic,Outpatient Clinic,,42.0523992,-80.0885055,239,68,68,7570686278,node,,clinic,,,,,openstreetmap
+UPMC-GoHealth Urgent Care,"5039, Peach Street, Erie, PA, 16509",Health,Clinic,Outpatient Clinic,,42.0803222,-80.089746,239,68,68,13197815984,node,,clinic,,,,,openstreetmap
+USA Vein Clinics,"2057, West 8th Street, Erie, PA, 16505",Health,Clinic,Medical Office,,42.1101911,-80.1297698,239,68,68,7977104217,node,,doctors,,,,,openstreetmap
+Union Orthotics & Prosthetics,"1910, West 26th Street, Erie, PA, 16508",Health,Clinic,Dental Office,,42.0965125,-80.1159313,239,68,68,8583418572,node,,dentist,,,,,openstreetmap
+Urgent Care Associates of Erie,"2861, West 26th Street, Erie, PA, 16506",Health,Clinic,Outpatient Clinic,,42.0880373,-80.1362984,239,68,68,12551425906,node,,clinic,,,,,openstreetmap
+Van Damia Dental,"2181, Keystone Drive, Erie, PA, 16509",Health,Clinic,Dental Office,,42.0548215,-80.0903985,239,68,68,7715028060,node,,dentist,,,,,openstreetmap
+Veterinary Clinic,Hydetown Road,Health,Clinic,Veterinary,,41.6336495,-79.6952831,239,68,68,639546976,way,,veterinary,,,,,openstreetmap
+Veterinary Hospital,,Health,Clinic,Veterinary,,41.6139019,-80.2464851,239,68,68,1121094828,way,,veterinary,,,,,openstreetmap
+Wayne Primary Care,"650, East Avenue, Erie, PA, 16503",Health,Clinic,Outpatient Clinic,,42.137094,-80.0633152,239,68,68,8238047002,node,,clinic,,,,,openstreetmap
+West County Dental,"7686, West Ridge Road, Fairview, PA, 16415",Health,Clinic,Dental Office,,42.0277172,-80.2599087,239,68,68,8397546068,node,,dentist,,,,,openstreetmap
+West Ridge Family Dental,"5712, West Ridge Road, Erie, PA, 16506",Health,Clinic,Dental Office,,42.0623034,-80.2038189,239,68,68,8321467830,node,,dentist,,,,,openstreetmap
+Williams Dental Laboratory,"151, West 18th Street, Erie, PA, 16501",Health,Clinic,Dental Office,,42.1167998,-80.0808198,239,68,68,9848671896,node,,dentist,,,,,openstreetmap
+"Willis G. Gardot, Jr.","2609, West 8th Street, Erie, PA, 16505",Health,Clinic,Dental Office,,42.1059911,-80.1412645,239,68,68,8745826462,node,,dentist,,,,,openstreetmap
+Winslow Health Center,PA,Health,Clinic,Medical Office,,41.6476781,-80.1485394,239,68,68,367961494,node,,doctors,,,,,openstreetmap
+Woodcock Vet,,Health,Clinic,Veterinary,,41.6994832,-80.1122048,239,68,68,1189931479,way,,veterinary,,,,,openstreetmap
+Woodland Family Dentistry,"2021, West 8th Street, Erie, PA, 16505",Health,Clinic,Dental Office,,42.1107996,-80.1285752,239,68,68,8315701683,node,,dentist,,,,,openstreetmap
+AHN Cancer Institute,"2508, Myrtle Street, Erie, PA, 16544",Health,Hospital,Acute Care Hospital,,42.1101282,-80.0806444,239,68,68,8435416613,node,,hospital,,,,,openstreetmap
+Erie Veterans Medical Center,"135, East 38th Street, Erie, PA, 16504",Health,Hospital,Acute Care Hospital,,42.1021643,-80.0635238,239,68,68,817655762,way,,hospital,,,,,openstreetmap
+LECOM Medical Center & Behavioral Health Pavilion,"5515, Peach Street, Erie, PA, 16509",Health,Hospital,Acute Care Hospital,,42.0736072,-80.0917003,239,68,68,839078049,way,,hospital,,,,,openstreetmap
+Meadville Medical Center,"751, Liberty Street, Meadville, PA, 16335",Health,Hospital,Acute Care Hospital,,41.6418533,-80.1456257,239,68,68,551357528,way,,hospital,,24/7,https://www.mmchs.org/,+1 814 333 5000,openstreetmap
+Saint Vincent Hospital,"232, West 25th Street, Erie, PA, 16544",Health,Hospital,Acute Care Hospital,,42.1114269,-80.0795164,239,68,68,841418769,way,,hospital,,,,,openstreetmap
+Saint Vincent Surgery Center,"312, West 25th Street, Erie, PA, 16544",Health,Hospital,Acute Care Hospital,,42.1106922,-80.0809926,239,68,68,8435416614,node,,hospital,,,,,openstreetmap
+Select Specialty Hospital,"252, West 11th Street, Erie, PA, 16501",Health,Hospital,Acute Care Hospital,,42.1229589,-80.0877053,239,68,68,1011265592,way,,hospital,,,,,openstreetmap
+Shriners Hospitals for Children,"1645, West 8th Street, Erie, PA, 16505",Health,Hospital,Acute Care Hospital,,42.1131303,-80.1198103,239,68,68,825528971,way,,hospital,Shriners Hospitals for Children,,,,openstreetmap
+Sterrettania Medical Center,"4000, Sterrettania Road, Erie, PA, 16506",Health,Hospital,Acute Care Hospital,,42.071204,-80.1454589,239,68,68,7626162251,node,,hospital,,,,,openstreetmap
+Titusville Area Hospital,"406, West Oak Street, Titusville",Health,Hospital,Acute Care Hospital,,41.6337763,-79.6798813,239,68,68,356640784,way,,hospital,,24/7,https://www.titusvillehospital.org/,+1 814 827 1851,openstreetmap
+UPMC Hamot,"201, State Street, Erie, PA, 16550",Health,Hospital,Acute Care Hospital,,42.1338083,-80.0866452,239,68,68,1020093270,way,,hospital,,,,,openstreetmap
+UPMC Hillman Cancer Center,"2500, West 12th Street, Erie, PA, 16505",Health,Hospital,Acute Care Hospital,,42.1037403,-80.1370193,239,68,68,7600984051,node,,hospital,,,,,openstreetmap
+CVS Pharmacy,"410, East 12th Street, Erie, PA, 16503",Health,Pharmacy,Retail Pharmacy,,42.1272689,-80.0723472,239,68,68,6773155989,node,,pharmacy,CVS Pharmacy,Mo-Su 08:00-21:00,https://www.cvs.com/store-locator/erie-pa-pharmacies/410-east-12th-street-erie-pa-16503/storeid=4082,+1-814-456-7071,openstreetmap
+CVS Pharmacy,,Health,Pharmacy,Retail Pharmacy,,41.6399281,-80.1478254,239,68,68,6980832850,node,,pharmacy,CVS Pharmacy,,https://www.cvs.com/store-locator/meadville-pa-pharmacies/392-north-st-meadville-pa-16335/storeid=5099,,openstreetmap
+CVS Pharmacy,"3800, Pine Avenue, Erie, PA, 16504",Health,Pharmacy,Retail Pharmacy,,42.1079908,-80.0496595,239,68,68,7573083706,node,,pharmacy,CVS Pharmacy,,https://www.cvs.com/store-locator/erie-pa-pharmacies/3800-pine-ave-erie-pa-16504/storeid=3168,,openstreetmap
+CVS Pharmacy,"1216, West 6th Street, Erie, PA, 16507",Health,Pharmacy,Retail Pharmacy,,42.1201104,-80.1116033,239,68,68,7721909286,node,,pharmacy,CVS Pharmacy,,https://www.cvs.com/store-locator/erie-pa-pharmacies/1216-west-6th-st-erie-pa-16507/storeid=11421,,openstreetmap
+CVS Pharmacy,"1111, Peninsula Drive, Erie, PA, 16505",Health,Pharmacy,Retail Pharmacy,,42.1005552,-80.1454051,239,68,68,7890365298,node,,pharmacy,CVS Pharmacy,,https://www.cvs.com/store-locator/erie-pa-pharmacies/1111-peninsula-dr-erie-pa-16505/storeid=2678,,openstreetmap
+CVS Pharmacy,"124, Erie Street, Edinboro, PA, 16412",Health,Pharmacy,Retail Pharmacy,,41.8753918,-80.1310082,239,68,68,8173673086,node,,pharmacy,CVS Pharmacy,,https://www.cvs.com/store-locator/edinboro-pa-pharmacies/124-erie-st-edinboro-pa-16412/storeid=5095,,openstreetmap
+CVS Pharmacy,"118, West Main Street, North East, PA, 16428",Health,Pharmacy,Retail Pharmacy,,42.2139468,-79.8428568,239,68,68,828486027,way,,pharmacy,CVS Pharmacy,,https://www.cvs.com/store-locator/north-east-pa-pharmacies/118-w-main-st-north-east-pa-16428/storeid=5088,,openstreetmap
+Colonial Family Pharmacy,"5702, Peach Street, Erie, PA, 16509",Health,Pharmacy,Retail Pharmacy,,42.0703008,-80.0936143,239,68,68,7576291992,node,,pharmacy,,,,,openstreetmap
+Colonial Family Pharmacy,"3822, Colonial Avenue, Erie, PA, 16506",Health,Pharmacy,Retail Pharmacy,,42.0682445,-80.1572677,239,68,68,8412236814,node,,pharmacy,,,,,openstreetmap
+Giant Eagle Pharmacy,"606, Erie Street, Edinboro, PA, 16412",Health,Pharmacy,Retail Pharmacy,,41.8884974,-80.1265342,239,68,68,11769289100,node,,pharmacy,,,,,openstreetmap
+Girard Pharmacy,"83, West Main Street, Girard, PA, 16417",Health,Pharmacy,Retail Pharmacy,,42.0001975,-80.3177102,239,68,68,8262802922,node,,pharmacy,,,,,openstreetmap
+Medicap Pharmacy,"1896, East Lake Road, Erie, PA, 16511",Health,Pharmacy,Retail Pharmacy,,42.1455558,-80.0437627,239,68,68,7862558847,node,,pharmacy,,,,,openstreetmap
+Millrun Community Pharmacy,"404, North Street, Meadville, PA, 16335",Health,Pharmacy,Retail Pharmacy,,41.6398396,-80.1467217,239,68,68,380300372,way,,pharmacy,,,,,openstreetmap
+Northwest Pharmacy,,Health,Pharmacy,Retail Pharmacy,,41.5265086,-80.0535557,239,68,68,10236381844,node,,pharmacy,,,,,openstreetmap
+Spartansburg Pharmacy,,Health,Pharmacy,Retail Pharmacy,,41.8243929,-79.687281,239,68,68,1132788869,way,,pharmacy,,,,,openstreetmap
+The Apothecary,"945, Market Street, Meadville, PA, 16335",Health,Pharmacy,Retail Pharmacy,,41.6376749,-80.1535888,239,68,68,987837321,way,,pharmacy,,,,,openstreetmap
+Walgreens,,Health,Pharmacy,Retail Pharmacy,,41.6406846,-80.1478003,239,68,68,6980832849,node,,pharmacy,Walgreens,,,,openstreetmap
+Walgreens,"3727, Peach Street, Erie, PA, 16508",Health,Pharmacy,Retail Pharmacy,,42.0974634,-80.081099,239,68,68,7731537720,node,,pharmacy,Walgreens,,,,openstreetmap
+Waterford Pharmacy,"216, High Street, Waterford, PA, 16441",Health,Pharmacy,Retail Pharmacy,,41.9417726,-79.9841376,239,68,68,8075201262,node,,pharmacy,,,,,openstreetmap
