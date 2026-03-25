@@ -1385,6 +1385,233 @@ with tab_food:
             map_style=MAP_STYLE
         ), height=600)
 
+    # ── Pantry Detail Section ─────────────────────────────────────────────────────
+    # Add this to the bottom of your Food Access tab block in app_v2.py
+    # Requires these imports at the top of app_v2.py (add if not already present):
+    #   import plotly.graph_objects as go
+    #   from plotly.subplots import make_subplots
+
+    st.markdown("---")
+    st.subheader("Food Pantry & Program Activity")
+    st.caption("Monthly reporting data from Second Harvest Food Bank partner agencies.")
+
+
+    # ── Load data ─────────────────────────────────────────────────────────────────
+    @st.cache_data
+    def load_pantry_data():
+        monthly = pd.read_csv("data/processed/pantry_agency_monthly.csv", parse_dates=["date"])
+        index = pd.read_csv("data/processed/pantry_agency_index.csv")
+        return monthly, index
+
+
+    pantry_monthly, pantry_index = load_pantry_data()
+
+    # ── County filter ─────────────────────────────────────────────────────────────
+    pantry_county = st.radio(
+        "Filter by county",
+        options=["Erie", "Crawford", "Both"],
+        horizontal=True,
+        key="pantry_county_filter"
+    )
+
+    if pantry_county == "Both":
+        filtered_index = pantry_index.copy()
+    else:
+        filtered_index = pantry_index[pantry_index["county"] == pantry_county]
+
+    # ── Build grouped dropdown options ────────────────────────────────────────────
+    # Format: {program_type: [(display_label, agency_ref+program_type key), ...]}
+    PROGRAM_LABELS = {
+        "Food Pantry/TEFAP": "Food Pantry (TEFAP)",
+        "Food Pantry/No TEFAP": "Food Pantry (No TEFAP)",
+        "Produce Express": "Produce Express",
+        "BackPacks": "Backpack Program",
+        "School Pantry": "School Pantry",
+        "Non-Emerg. Meal/Snack": "Meal / Snack Program",
+        "Kids Cafe": "Kids Cafe",
+        "Original": "Other",
+    }
+
+    # Build a flat list of options grouped by program type
+    # Streamlit selectbox doesn't support true grouping, so we use divider labels
+    options = ["— Select a pantry or program —"]
+    option_keys = [None]  # parallel list mapping option index to (agency_ref, program_type)
+
+    for prog_type in PROGRAM_LABELS.keys():
+        group = filtered_index[filtered_index["program_type"] == prog_type].sort_values("agency_name")
+        if group.empty:
+            continue
+        # Group header (non-selectable visual divider)
+        header = f"── {PROGRAM_LABELS[prog_type]} ──"
+        options.append(header)
+        option_keys.append(None)
+        for _, row in group.iterrows():
+            county_tag = f" ({row['county']})" if pantry_county == "Both" else ""
+            label = f"  {row['agency_name']}{county_tag}"
+            options.append(label)
+            option_keys.append((row["agency_ref"], row["program_type"]))
+
+    selected_idx = st.selectbox(
+        "Select a program",
+        range(len(options)),
+        format_func=lambda i: options[i],
+        key="pantry_selector"
+    )
+
+    selected_key = option_keys[selected_idx]
+
+    # ── Detail panel ──────────────────────────────────────────────────────────────
+    if selected_key is not None:
+        sel_ref, sel_prog = selected_key
+
+        # Get agency info
+        agency_info = pantry_index[
+            (pantry_index["agency_ref"] == sel_ref) &
+            (pantry_index["program_type"] == sel_prog)
+            ].iloc[0]
+
+        # Get monthly data
+        agency_monthly = pantry_monthly[
+            (pantry_monthly["agency_ref"] == sel_ref) &
+            (pantry_monthly["program_type"] == sel_prog)
+            ].sort_values("date")
+
+        # ── Header ────────────────────────────────────────────────────────────────
+        st.markdown(f"### {agency_info['agency_name']}")
+
+        col1, col2, col3 = st.columns(3)
+        col1.metric("Program Type", PROGRAM_LABELS.get(sel_prog, sel_prog))
+        col2.metric("County", agency_info["county"])
+        col3.metric(
+            "Reporting Period",
+            f"{pd.to_datetime(agency_info['first_month']).strftime('%b %Y')} – "
+            f"{pd.to_datetime(agency_info['last_month']).strftime('%b %Y')}"
+        )
+
+        # ── Summary stats ─────────────────────────────────────────────────────────
+        total_served = int(agency_monthly["total_individuals"].sum())
+        avg_monthly = agency_monthly["total_individuals"].mean()
+        peak_row = agency_monthly.loc[agency_monthly["total_individuals"].idxmax()]
+        peak_month = peak_row["date"].strftime("%b %Y")
+        peak_val = int(peak_row["total_individuals"])
+
+        s1, s2, s3 = st.columns(3)
+        s1.metric("Total Individuals Served", f"{total_served:,}")
+        s2.metric("Avg per Month", f"{avg_monthly:,.0f}")
+        s3.metric("Peak Month", f"{peak_month} ({peak_val:,})")
+
+        # ── Line chart: monthly individuals served ────────────────────────────────
+        st.markdown("#### Monthly Individuals Served")
+
+        line_fig = go.Figure()
+        line_fig.add_trace(go.Scatter(
+            x=agency_monthly["date"],
+            y=agency_monthly["total_individuals"],
+            mode="lines+markers",
+            line=dict(color="#2d6a4f", width=2),
+            marker=dict(size=6),
+            name="Individuals Served",
+            hovertemplate="%{x|%b %Y}: %{y:,} individuals<extra></extra>"
+        ))
+        x_min = agency_monthly["date"].min()
+        x_max = agency_monthly["date"].max()
+
+        line_fig.update_layout(
+            height=300,
+            margin=dict(t=20, b=20, l=20, r=20),
+            xaxis_title=None,
+            yaxis_title="Individuals",
+            xaxis=dict(
+                range=[x_min, x_max],
+                tickmode="array",
+                tickvals=agency_monthly["date"].tolist(),
+                tickformat="%b %Y",
+            ),
+            plot_bgcolor="rgba(0,0,0,0)",
+            paper_bgcolor="rgba(0,0,0,0)",
+            yaxis=dict(gridcolor="rgba(200,200,200,0.3)"),
+        )
+        st.plotly_chart(line_fig, use_container_width=True)
+
+        # ── Stacked bar: age group breakdown ─────────────────────────────────────
+        # Only show if at least some age group data exists
+        has_age_data = agency_monthly[["children", "adults", "seniors"]].sum().sum() > 0
+
+        if has_age_data:
+            st.markdown("#### Individuals Served by Age Group")
+
+            bar_fig = go.Figure()
+            bar_fig.add_trace(go.Bar(
+                x=agency_monthly["date"],
+                y=agency_monthly["children"],
+                name="Children (0–17)",
+                marker_color="#52b788",
+                hovertemplate="%{x|%b %Y}: %{y:,} children<extra></extra>"
+            ))
+            bar_fig.add_trace(go.Bar(
+                x=agency_monthly["date"],
+                y=agency_monthly["adults"],
+                name="Adults (18–59)",
+                marker_color="#2d6a4f",
+                hovertemplate="%{x|%b %Y}: %{y:,} adults<extra></extra>"
+            ))
+            bar_fig.add_trace(go.Bar(
+                x=agency_monthly["date"],
+                y=agency_monthly["seniors"],
+                name="Seniors (60+)",
+                marker_color="#1b4332",
+                hovertemplate="%{x|%b %Y}: %{y:,} seniors<extra></extra>"
+            ))
+            bar_fig.update_layout(
+                barmode="stack",
+                height=300,
+                margin=dict(t=20, b=20, l=20, r=20),
+                xaxis_title=None,
+                yaxis_title="Individuals",
+                plot_bgcolor="rgba(0,0,0,0)",
+                paper_bgcolor="rgba(0,0,0,0)",
+                yaxis=dict(gridcolor="rgba(200,200,200,0.3)"),
+                xaxis=dict(
+                    range=[x_min, x_max],
+                    tickmode="array",
+                    tickvals=agency_monthly["date"].tolist(),
+                    tickformat="%b %Y",
+                ),
+                legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="left", x=0)
+            )
+            st.plotly_chart(bar_fig, use_container_width=True)
+        else:
+            st.info("Age group breakdown not available for this program type.")
+
+        has_new_hh_data = agency_monthly["new_households"].sum() > 0
+
+        if has_new_hh_data:
+            st.markdown("#### New Households per Month")
+            st.caption("First-time households — an indicator of whether demand is expanding.")
+
+            hh_fig = go.Figure()
+            hh_fig.add_trace(go.Bar(
+                x=agency_monthly["date"],
+                y=agency_monthly["new_households"],
+                marker_color="#52b788",
+                hovertemplate="%{x|%b %Y}: %{y:,} new households<extra></extra>"
+            ))
+            hh_fig.update_layout(
+                height=280,
+                margin=dict(t=20, b=20, l=20, r=20),
+                xaxis=dict(
+                    range=[x_min, x_max],
+                    tickmode="array",
+                    tickvals=agency_monthly["date"].tolist(),
+                    tickformat="%b %Y",
+                ),
+                yaxis_title="Households",
+                plot_bgcolor="rgba(0,0,0,0)",
+                paper_bgcolor="rgba(0,0,0,0)",
+                yaxis=dict(gridcolor="rgba(200,200,200,0.3)"),
+            )
+            st.plotly_chart(hh_fig, use_container_width=True)
+
 # ═══════════════════════════════════════════════════════
 # TAB 5 — HEALTH
 # ═══════════════════════════════════════════════════════

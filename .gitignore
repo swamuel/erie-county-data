@@ -1,3 +1,6 @@
 .env
 SH_FellowshipData.xlsx
 .idea/
+PantryData.csv
+pantry_agency_index.csv
+pantry_agency_monthly.csv

@@ -1,0 +1,1442 @@
+agency_name,agency_ref,county,program_type,date,adults,children,new_households,seniors,total_individuals
+Adagio Health FP - Erie,01807,Erie,Food Pantry/No TEFAP,2025-06-30,3.0,0.0,0.0,0.0,3.0
+Associated Charities - FP,01431,Crawford,Food Pantry/TEFAP,2024-07-31,231.0,146.0,195.0,116.0,493.0
+Associated Charities - FP,01431,Crawford,Food Pantry/TEFAP,2024-08-31,254.0,153.0,63.0,135.0,542.0
+Associated Charities - FP,01431,Crawford,Food Pantry/TEFAP,2024-09-30,269.0,180.0,35.0,131.0,580.0
+Associated Charities - FP,01431,Crawford,Food Pantry/TEFAP,2024-10-31,299.0,172.0,38.0,143.0,614.0
+Associated Charities - FP,01431,Crawford,Food Pantry/TEFAP,2024-11-30,361.0,243.0,44.0,156.0,760.0
+Associated Charities - FP,01431,Crawford,Food Pantry/TEFAP,2024-12-31,280.0,190.0,15.0,140.0,610.0
+Associated Charities - FP,01431,Crawford,Food Pantry/TEFAP,2025-01-31,271.0,172.0,20.0,135.0,578.0
+Associated Charities - FP,01431,Crawford,Food Pantry/TEFAP,2025-02-28,235.0,150.0,10.0,129.0,514.0
+Associated Charities - FP,01431,Crawford,Food Pantry/TEFAP,2025-03-31,212.0,128.0,13.0,143.0,483.0
+Associated Charities - FP,01431,Crawford,Food Pantry/TEFAP,2025-04-30,299.0,139.0,32.0,149.0,588.0
+Associated Charities - FP,01431,Crawford,Food Pantry/TEFAP,2025-05-31,256.0,158.0,21.0,158.0,572.0
+Associated Charities - FP,01431,Crawford,Food Pantry/TEFAP,2025-06-30,275.0,164.0,23.0,150.0,589.0
+BP - Asbury Elementary - SHBP,02087,Erie,BackPacks,2024-07-31,0.0,3.0,0.0,0.0,0.0
+BP - Asbury Elementary - SHBP,02087,Erie,BackPacks,2024-08-31,0.0,3.0,0.0,0.0,0.0
+BP - Asbury Elementary - SHBP,02087,Erie,BackPacks,2024-10-31,0.0,15.0,0.0,0.0,0.0
+BP - Asbury Elementary - SHBP,02087,Erie,BackPacks,2024-11-30,0.0,15.0,0.0,0.0,0.0
+BP - Asbury Elementary - SHBP,02087,Erie,BackPacks,2024-12-31,0.0,20.0,0.0,0.0,0.0
+BP - Asbury Elementary - SHBP,02087,Erie,BackPacks,2025-01-31,0.0,14.0,0.0,0.0,0.0
+BP - Asbury Elementary - SHBP,02087,Erie,BackPacks,2025-02-28,0.0,13.0,0.0,0.0,0.0
+BP - Asbury Elementary - SHBP,02087,Erie,BackPacks,2025-03-31,0.0,20.0,0.0,0.0,0.0
+BP - Asbury Elementary - SHBP,02087,Erie,BackPacks,2025-04-30,0.0,20.0,0.0,0.0,0.0
+BP - Asbury Elementary - SHBP,02087,Erie,BackPacks,2025-05-31,0.0,15.0,0.0,0.0,0.0
+BP - Belle Valley School - SHBP,02081,Erie,BackPacks,2024-07-31,0.0,7.0,0.0,0.0,0.0
+BP - Belle Valley School - SHBP,02081,Erie,BackPacks,2024-08-31,0.0,7.0,0.0,0.0,0.0
+BP - Belle Valley School - SHBP,02081,Erie,BackPacks,2024-10-31,0.0,93.0,0.0,0.0,0.0
+BP - Belle Valley School - SHBP,02081,Erie,BackPacks,2024-11-30,0.0,93.0,0.0,0.0,0.0
+BP - Belle Valley School - SHBP,02081,Erie,BackPacks,2024-12-31,0.0,97.0,0.0,0.0,0.0
+BP - Belle Valley School - SHBP,02081,Erie,BackPacks,2025-01-31,0.0,99.0,0.0,0.0,0.0
+BP - Belle Valley School - SHBP,02081,Erie,BackPacks,2025-02-28,0.0,98.0,0.0,0.0,0.0
+BP - Belle Valley School - SHBP,02081,Erie,BackPacks,2025-03-31,0.0,98.0,0.0,0.0,0.0
+BP - Belle Valley School - SHBP,02081,Erie,BackPacks,2025-04-30,0.0,96.0,0.0,0.0,0.0
+BP - Belle Valley School - SHBP,02081,Erie,BackPacks,2025-05-31,0.0,96.0,0.0,0.0,0.0
+BP - Cochranton Elementary - SHBP,02118,Crawford,BackPacks,2024-10-31,0.0,24.0,0.0,0.0,0.0
+BP - Cochranton Elementary - SHBP,02118,Crawford,BackPacks,2024-11-30,0.0,27.0,0.0,0.0,0.0
+BP - Cochranton Elementary - SHBP,02118,Crawford,BackPacks,2024-12-31,0.0,27.0,0.0,0.0,0.0
+BP - Cochranton Elementary - SHBP,02118,Crawford,BackPacks,2025-01-31,0.0,27.0,0.0,0.0,0.0
+BP - Cochranton Elementary - SHBP,02118,Crawford,BackPacks,2025-02-28,0.0,31.0,0.0,0.0,0.0
+BP - Cochranton Elementary - SHBP,02118,Crawford,BackPacks,2025-03-31,0.0,31.0,0.0,0.0,0.0
+BP - Cochranton Elementary - SHBP,02118,Crawford,BackPacks,2025-04-30,0.0,29.0,0.0,0.0,0.0
+BP - Cochranton Elementary - SHBP,02118,Crawford,BackPacks,2025-05-31,0.0,29.0,0.0,0.0,0.0
+BP - Community Country Day School - SHBP,02114,Erie,BackPacks,2024-10-31,0.0,25.0,0.0,0.0,0.0
+BP - Community Country Day School - SHBP,02114,Erie,BackPacks,2024-11-30,0.0,25.0,0.0,0.0,0.0
+BP - Community Country Day School - SHBP,02114,Erie,BackPacks,2024-12-31,0.0,25.0,0.0,0.0,0.0
+BP - Community Country Day School - SHBP,02114,Erie,BackPacks,2025-01-31,0.0,25.0,0.0,0.0,0.0
+BP - Community Country Day School - SHBP,02114,Erie,BackPacks,2025-02-28,0.0,25.0,0.0,0.0,0.0
+BP - Community Country Day School - SHBP,02114,Erie,BackPacks,2025-03-31,0.0,30.0,0.0,0.0,0.0
+BP - Community Country Day School - SHBP,02114,Erie,BackPacks,2025-04-30,0.0,30.0,0.0,0.0,0.0
+BP - Community Country Day School - SHBP,02114,Erie,BackPacks,2025-05-31,0.0,30.0,0.0,0.0,0.0
+BP - Countryside Estates - SHBP,02116,Erie,BackPacks,2024-07-31,0.0,90.0,0.0,0.0,0.0
+BP - Countryside Estates - SHBP,02116,Erie,BackPacks,2024-08-31,0.0,90.0,0.0,0.0,0.0
+BP - Diehl Elementary School - SHBP,02042,Erie,BackPacks,2024-10-31,0.0,160.0,0.0,0.0,0.0
+BP - Diehl Elementary School - SHBP,02042,Erie,BackPacks,2024-11-30,0.0,155.0,0.0,0.0,0.0
+BP - Diehl Elementary School - SHBP,02042,Erie,BackPacks,2024-12-31,0.0,155.0,0.0,0.0,0.0
+BP - Diehl Elementary School - SHBP,02042,Erie,BackPacks,2025-01-31,0.0,153.0,0.0,0.0,0.0
+BP - Diehl Elementary School - SHBP,02042,Erie,BackPacks,2025-02-28,0.0,155.0,0.0,0.0,0.0
+BP - Diehl Elementary School - SHBP,02042,Erie,BackPacks,2025-03-31,0.0,155.0,0.0,0.0,0.0
+BP - Diehl Elementary School - SHBP,02042,Erie,BackPacks,2025-04-30,0.0,154.0,0.0,0.0,0.0
+BP - Diehl Elementary School - SHBP,02042,Erie,BackPacks,2025-05-31,0.0,154.0,0.0,0.0,0.0
+BP - Edison Elementary School - SHBP,02024,Erie,BackPacks,2024-10-31,0.0,130.0,0.0,0.0,0.0
+BP - Edison Elementary School - SHBP,02024,Erie,BackPacks,2024-11-30,0.0,144.0,0.0,0.0,0.0
+BP - Edison Elementary School - SHBP,02024,Erie,BackPacks,2024-12-31,0.0,144.0,0.0,0.0,0.0
+BP - Edison Elementary School - SHBP,02024,Erie,BackPacks,2025-01-31,0.0,152.0,0.0,0.0,0.0
+BP - Edison Elementary School - SHBP,02024,Erie,BackPacks,2025-02-28,0.0,154.0,0.0,0.0,0.0
+BP - Edison Elementary School - SHBP,02024,Erie,BackPacks,2025-03-31,0.0,156.0,0.0,0.0,0.0
+BP - Edison Elementary School - SHBP,02024,Erie,BackPacks,2025-04-30,0.0,150.0,0.0,0.0,0.0
+BP - Edison Elementary School - SHBP,02024,Erie,BackPacks,2025-05-31,0.0,150.0,0.0,0.0,0.0
+BP - Fairview Elementary - SHBP,02113,Erie,BackPacks,2024-10-31,0.0,18.0,0.0,0.0,0.0
+BP - Fairview Elementary - SHBP,02113,Erie,BackPacks,2024-11-30,0.0,15.0,0.0,0.0,0.0
+BP - Fairview Elementary - SHBP,02113,Erie,BackPacks,2024-12-31,0.0,17.0,0.0,0.0,0.0
+BP - Fairview Elementary - SHBP,02113,Erie,BackPacks,2025-01-31,0.0,15.0,0.0,0.0,0.0
+BP - Fairview Elementary - SHBP,02113,Erie,BackPacks,2025-02-28,0.0,17.0,0.0,0.0,0.0
+BP - Fairview Elementary - SHBP,02113,Erie,BackPacks,2025-03-31,0.0,17.0,0.0,0.0,0.0
+BP - Fairview Elementary - SHBP,02113,Erie,BackPacks,2025-04-30,0.0,17.0,0.0,0.0,0.0
+BP - Fairview Elementary - SHBP,02113,Erie,BackPacks,2025-05-31,0.0,17.0,0.0,0.0,0.0
+BP - First District Elementary - SHBP,02117,Crawford,BackPacks,2024-10-31,0.0,135.0,0.0,0.0,0.0
+BP - First District Elementary - SHBP,02117,Crawford,BackPacks,2024-11-30,0.0,138.0,0.0,0.0,0.0
+BP - First District Elementary - SHBP,02117,Crawford,BackPacks,2024-12-31,0.0,143.0,0.0,0.0,0.0
+BP - First District Elementary - SHBP,02117,Crawford,BackPacks,2025-01-31,0.0,144.0,0.0,0.0,0.0
+BP - First District Elementary - SHBP,02117,Crawford,BackPacks,2025-02-28,0.0,144.0,0.0,0.0,0.0
+BP - First District Elementary - SHBP,02117,Crawford,BackPacks,2025-03-31,0.0,144.0,0.0,0.0,0.0
+BP - First District Elementary - SHBP,02117,Crawford,BackPacks,2025-04-30,0.0,138.0,0.0,0.0,0.0
+BP - First District Elementary - SHBP,02117,Crawford,BackPacks,2025-05-31,0.0,138.0,0.0,0.0,0.0
+BP - Grandview Elementary - SHBP,02053,Erie,BackPacks,2024-10-31,0.0,23.0,0.0,0.0,0.0
+BP - Grandview Elementary - SHBP,02053,Erie,BackPacks,2024-11-30,0.0,28.0,0.0,0.0,0.0
+BP - Grandview Elementary - SHBP,02053,Erie,BackPacks,2024-12-31,0.0,28.0,0.0,0.0,0.0
+BP - Grandview Elementary - SHBP,02053,Erie,BackPacks,2025-01-31,0.0,37.0,0.0,0.0,0.0
+BP - Grandview Elementary - SHBP,02053,Erie,BackPacks,2025-02-28,0.0,39.0,0.0,0.0,0.0
+BP - Grandview Elementary - SHBP,02053,Erie,BackPacks,2025-03-31,0.0,35.0,0.0,0.0,0.0
+BP - Grandview Elementary - SHBP,02053,Erie,BackPacks,2025-04-30,0.0,33.0,0.0,0.0,0.0
+BP - Grandview Elementary - SHBP,02053,Erie,BackPacks,2025-05-31,0.0,35.0,0.0,0.0,0.0
+BP - Grover Cleveland - SHBP,02112,Erie,BackPacks,2024-07-31,0.0,90.0,0.0,0.0,0.0
+BP - Grover Cleveland - SHBP,02112,Erie,BackPacks,2024-10-31,0.0,122.0,0.0,0.0,0.0
+BP - Grover Cleveland - SHBP,02112,Erie,BackPacks,2024-11-30,0.0,118.0,0.0,0.0,0.0
+BP - Grover Cleveland - SHBP,02112,Erie,BackPacks,2024-12-31,0.0,118.0,0.0,0.0,0.0
+BP - Grover Cleveland - SHBP,02112,Erie,BackPacks,2025-01-31,0.0,125.0,0.0,0.0,0.0
+BP - Grover Cleveland - SHBP,02112,Erie,BackPacks,2025-02-28,0.0,125.0,0.0,0.0,0.0
+BP - Grover Cleveland - SHBP,02112,Erie,BackPacks,2025-03-31,0.0,125.0,0.0,0.0,0.0
+BP - Grover Cleveland - SHBP,02112,Erie,BackPacks,2025-04-30,0.0,122.0,0.0,0.0,0.0
+BP - Grover Cleveland - SHBP,02112,Erie,BackPacks,2025-05-31,0.0,122.0,0.0,0.0,0.0
+BP - Harding Elementary - SHBP,02027,Erie,BackPacks,2024-07-31,0.0,35.0,0.0,0.0,0.0
+BP - Harding Elementary - SHBP,02027,Erie,BackPacks,2024-10-31,0.0,160.0,0.0,0.0,0.0
+BP - Harding Elementary - SHBP,02027,Erie,BackPacks,2024-11-30,0.0,160.0,0.0,0.0,0.0
+BP - Harding Elementary - SHBP,02027,Erie,BackPacks,2024-12-31,0.0,160.0,0.0,0.0,0.0
+BP - Harding Elementary - SHBP,02027,Erie,BackPacks,2025-01-31,0.0,160.0,0.0,0.0,0.0
+BP - Harding Elementary - SHBP,02027,Erie,BackPacks,2025-02-28,0.0,160.0,0.0,0.0,0.0
+BP - Harding Elementary - SHBP,02027,Erie,BackPacks,2025-03-31,0.0,160.0,0.0,0.0,0.0
+BP - Harding Elementary - SHBP,02027,Erie,BackPacks,2025-04-30,0.0,160.0,0.0,0.0,0.0
+BP - Harding Elementary - SHBP,02027,Erie,BackPacks,2025-05-31,0.0,160.0,0.0,0.0,0.0
+BP - Iroquois Elementary - SHBP,02102,Erie,BackPacks,2024-10-31,0.0,140.0,0.0,0.0,0.0
+BP - Iroquois Elementary - SHBP,02102,Erie,BackPacks,2024-11-30,0.0,141.0,0.0,0.0,0.0
+BP - Iroquois Elementary - SHBP,02102,Erie,BackPacks,2024-12-31,0.0,142.0,0.0,0.0,0.0
+BP - Iroquois Elementary - SHBP,02102,Erie,BackPacks,2025-01-31,0.0,140.0,0.0,0.0,0.0
+BP - Iroquois Elementary - SHBP,02102,Erie,BackPacks,2025-02-28,0.0,141.0,0.0,0.0,0.0
+BP - Iroquois Elementary - SHBP,02102,Erie,BackPacks,2025-03-31,0.0,142.0,0.0,0.0,0.0
+BP - Iroquois Elementary - SHBP,02102,Erie,BackPacks,2025-04-30,0.0,142.0,0.0,0.0,0.0
+BP - Iroquois Elementary - SHBP,02102,Erie,BackPacks,2025-05-31,0.0,142.0,0.0,0.0,0.0
+BP - Jefferson Elementary - SHBP,02029,Erie,BackPacks,2024-10-31,0.0,110.0,0.0,0.0,0.0
+BP - Jefferson Elementary - SHBP,02029,Erie,BackPacks,2024-11-30,0.0,110.0,0.0,0.0,0.0
+BP - Jefferson Elementary - SHBP,02029,Erie,BackPacks,2024-12-31,0.0,110.0,0.0,0.0,0.0
+BP - Jefferson Elementary - SHBP,02029,Erie,BackPacks,2025-01-31,0.0,110.0,0.0,0.0,0.0
+BP - Jefferson Elementary - SHBP,02029,Erie,BackPacks,2025-02-28,0.0,110.0,0.0,0.0,0.0
+BP - Jefferson Elementary - SHBP,02029,Erie,BackPacks,2025-03-31,0.0,110.0,0.0,0.0,0.0
+BP - Jefferson Elementary - SHBP,02029,Erie,BackPacks,2025-04-30,0.0,110.0,0.0,0.0,0.0
+BP - Jefferson Elementary - SHBP,02029,Erie,BackPacks,2025-05-31,0.0,110.0,0.0,0.0,0.0
+BP - Joanna Connell Elementary - SHBP,02030,Erie,BackPacks,2024-10-31,0.0,70.0,0.0,0.0,0.0
+BP - Joanna Connell Elementary - SHBP,02030,Erie,BackPacks,2024-11-30,0.0,70.0,0.0,0.0,0.0
+BP - Joanna Connell Elementary - SHBP,02030,Erie,BackPacks,2024-12-31,0.0,70.0,0.0,0.0,0.0
+BP - Joanna Connell Elementary - SHBP,02030,Erie,BackPacks,2025-01-31,0.0,117.0,0.0,0.0,0.0
+BP - Joanna Connell Elementary - SHBP,02030,Erie,BackPacks,2025-02-28,0.0,121.0,0.0,0.0,0.0
+BP - Joanna Connell Elementary - SHBP,02030,Erie,BackPacks,2025-03-31,0.0,125.0,0.0,0.0,0.0
+BP - Joanna Connell Elementary - SHBP,02030,Erie,BackPacks,2025-05-31,0.0,125.0,0.0,0.0,0.0
+BP - Lincoln Elementary - SHBP,02031,Erie,BackPacks,2024-07-31,0.0,20.0,0.0,0.0,0.0
+BP - Lincoln Elementary - SHBP,02031,Erie,BackPacks,2024-10-31,0.0,121.0,0.0,0.0,0.0
+BP - Lincoln Elementary - SHBP,02031,Erie,BackPacks,2024-11-30,0.0,121.0,0.0,0.0,0.0
+BP - Lincoln Elementary - SHBP,02031,Erie,BackPacks,2024-12-31,0.0,120.0,0.0,0.0,0.0
+BP - Lincoln Elementary - SHBP,02031,Erie,BackPacks,2025-01-31,0.0,122.0,0.0,0.0,0.0
+BP - Lincoln Elementary - SHBP,02031,Erie,BackPacks,2025-02-28,0.0,123.0,0.0,0.0,0.0
+BP - Lincoln Elementary - SHBP,02031,Erie,BackPacks,2025-03-31,0.0,123.0,0.0,0.0,0.0
+BP - Lincoln Elementary - SHBP,02031,Erie,BackPacks,2025-04-30,0.0,117.0,0.0,0.0,0.0
+BP - Lincoln Elementary - SHBP,02031,Erie,BackPacks,2025-05-31,0.0,118.0,0.0,0.0,0.0
+BP - McKinley School - SHBP,02022,Erie,BackPacks,2024-10-31,0.0,40.0,0.0,0.0,0.0
+BP - McKinley School - SHBP,02022,Erie,BackPacks,2024-11-30,0.0,42.0,0.0,0.0,0.0
+BP - McKinley School - SHBP,02022,Erie,BackPacks,2024-12-31,0.0,42.0,0.0,0.0,0.0
+BP - McKinley School - SHBP,02022,Erie,BackPacks,2025-01-31,0.0,44.0,0.0,0.0,0.0
+BP - McKinley School - SHBP,02022,Erie,BackPacks,2025-02-28,0.0,44.0,0.0,0.0,0.0
+BP - McKinley School - SHBP,02022,Erie,BackPacks,2025-03-31,0.0,44.0,0.0,0.0,0.0
+BP - McKinley School - SHBP,02022,Erie,BackPacks,2025-04-30,0.0,44.0,0.0,0.0,0.0
+BP - McKinley School - SHBP,02022,Erie,BackPacks,2025-05-31,0.0,44.0,0.0,0.0,0.0
+BP - Mill Village Elementary - SHBP,02074,Erie,BackPacks,2024-10-31,0.0,10.0,0.0,0.0,0.0
+BP - Mill Village Elementary - SHBP,02074,Erie,BackPacks,2024-11-30,0.0,10.0,0.0,0.0,0.0
+BP - Mill Village Elementary - SHBP,02074,Erie,BackPacks,2024-12-31,0.0,9.0,0.0,0.0,0.0
+BP - Mill Village Elementary - SHBP,02074,Erie,BackPacks,2025-01-31,0.0,9.0,0.0,0.0,0.0
+BP - Mill Village Elementary - SHBP,02074,Erie,BackPacks,2025-02-28,0.0,9.0,0.0,0.0,0.0
+BP - Mill Village Elementary - SHBP,02074,Erie,BackPacks,2025-03-31,0.0,9.0,0.0,0.0,0.0
+BP - Mill Village Elementary - SHBP,02074,Erie,BackPacks,2025-04-30,0.0,9.0,0.0,0.0,0.0
+BP - Mill Village Elementary - SHBP,02074,Erie,BackPacks,2025-05-31,0.0,9.0,0.0,0.0,0.0
+BP - Neason Hill Elementary - SHBP,02121,Crawford,BackPacks,2024-10-31,0.0,102.0,0.0,0.0,0.0
+BP - Neason Hill Elementary - SHBP,02121,Crawford,BackPacks,2024-11-30,0.0,102.0,0.0,0.0,0.0
+BP - Neason Hill Elementary - SHBP,02121,Crawford,BackPacks,2024-12-31,0.0,104.0,0.0,0.0,0.0
+BP - Neason Hill Elementary - SHBP,02121,Crawford,BackPacks,2025-01-31,0.0,104.0,0.0,0.0,0.0
+BP - Neason Hill Elementary - SHBP,02121,Crawford,BackPacks,2025-02-28,0.0,104.0,0.0,0.0,0.0
+BP - Neason Hill Elementary - SHBP,02121,Crawford,BackPacks,2025-03-31,0.0,88.0,0.0,0.0,0.0
+BP - Neason Hill Elementary - SHBP,02121,Crawford,BackPacks,2025-04-30,0.0,88.0,0.0,0.0,0.0
+BP - Neason Hill Elementary - SHBP,02121,Crawford,BackPacks,2025-05-31,0.0,88.0,0.0,0.0,0.0
+BP - North East Elementary Center - SHBP,02105,Erie,BackPacks,2024-10-31,0.0,50.0,0.0,0.0,0.0
+BP - North East Elementary Center - SHBP,02105,Erie,BackPacks,2024-11-30,0.0,50.0,0.0,0.0,0.0
+BP - North East Elementary Center - SHBP,02105,Erie,BackPacks,2024-12-31,0.0,60.0,0.0,0.0,0.0
+BP - North East Elementary Center - SHBP,02105,Erie,BackPacks,2025-01-31,0.0,60.0,0.0,0.0,0.0
+BP - North East Elementary Center - SHBP,02105,Erie,BackPacks,2025-02-28,0.0,60.0,0.0,0.0,0.0
+BP - North East Elementary Center - SHBP,02105,Erie,BackPacks,2025-03-31,0.0,60.0,0.0,0.0,0.0
+BP - North East Elementary Center - SHBP,02105,Erie,BackPacks,2025-04-30,0.0,60.0,0.0,0.0,0.0
+BP - North East Elementary Center - SHBP,02105,Erie,BackPacks,2025-05-31,0.0,60.0,0.0,0.0,0.0
+BP - Northwestern Elementary - SHBP,02100,Erie,BackPacks,2024-07-31,0.0,28.0,0.0,0.0,0.0
+BP - Northwestern Elementary - SHBP,02100,Erie,BackPacks,2024-08-31,0.0,28.0,0.0,0.0,0.0
+BP - Northwestern Elementary - SHBP,02100,Erie,BackPacks,2024-10-31,0.0,61.0,0.0,0.0,0.0
+BP - Northwestern Elementary - SHBP,02100,Erie,BackPacks,2024-11-30,0.0,62.0,0.0,0.0,0.0
+BP - Northwestern Elementary - SHBP,02100,Erie,BackPacks,2024-12-31,0.0,62.0,0.0,0.0,0.0
+BP - Northwestern Elementary - SHBP,02100,Erie,BackPacks,2025-01-31,0.0,62.0,0.0,0.0,0.0
+BP - Northwestern Elementary - SHBP,02100,Erie,BackPacks,2025-02-28,0.0,62.0,0.0,0.0,0.0
+BP - Northwestern Elementary - SHBP,02100,Erie,BackPacks,2025-03-31,0.0,62.0,0.0,0.0,0.0
+BP - Northwestern Elementary - SHBP,02100,Erie,BackPacks,2025-04-30,0.0,62.0,0.0,0.0,0.0
+BP - Northwestern Elementary - SHBP,02100,Erie,BackPacks,2025-05-31,0.0,62.0,0.0,0.0,0.0
+BP - Perry Elementary - SHBP,02033,Erie,BackPacks,2024-10-31,0.0,170.0,0.0,0.0,0.0
+BP - Perry Elementary - SHBP,02033,Erie,BackPacks,2024-11-30,0.0,170.0,0.0,0.0,0.0
+BP - Perry Elementary - SHBP,02033,Erie,BackPacks,2024-12-31,0.0,170.0,0.0,0.0,0.0
+BP - Perry Elementary - SHBP,02033,Erie,BackPacks,2025-01-31,0.0,170.0,0.0,0.0,0.0
+BP - Perry Elementary - SHBP,02033,Erie,BackPacks,2025-02-28,0.0,170.0,0.0,0.0,0.0
+BP - Perry Elementary - SHBP,02033,Erie,BackPacks,2025-03-31,0.0,170.0,0.0,0.0,0.0
+BP - Perry Elementary - SHBP,02033,Erie,BackPacks,2025-04-30,0.0,170.0,0.0,0.0,0.0
+BP - Perry Elementary - SHBP,02033,Erie,BackPacks,2025-05-31,0.0,170.0,0.0,0.0,0.0
+BP - Pfeiffer Burleigh - SHBP,02034,Erie,BackPacks,2024-10-31,0.0,230.0,0.0,0.0,0.0
+BP - Pfeiffer Burleigh - SHBP,02034,Erie,BackPacks,2024-11-30,0.0,230.0,0.0,0.0,0.0
+BP - Pfeiffer Burleigh - SHBP,02034,Erie,BackPacks,2024-12-31,0.0,230.0,0.0,0.0,0.0
+BP - Pfeiffer Burleigh - SHBP,02034,Erie,BackPacks,2025-01-31,0.0,230.0,0.0,0.0,0.0
+BP - Pfeiffer Burleigh - SHBP,02034,Erie,BackPacks,2025-02-28,0.0,230.0,0.0,0.0,0.0
+BP - Pfeiffer Burleigh - SHBP,02034,Erie,BackPacks,2025-03-31,0.0,230.0,0.0,0.0,0.0
+BP - Pfeiffer Burleigh - SHBP,02034,Erie,BackPacks,2025-04-30,0.0,230.0,0.0,0.0,0.0
+BP - Pfeiffer Burleigh - SHBP,02034,Erie,BackPacks,2025-05-31,0.0,230.0,0.0,0.0,0.0
+BP - Robert Benjamin Wiley - SHBP,02056,Erie,BackPacks,2024-10-31,0.0,16.0,0.0,0.0,0.0
+BP - Robert Benjamin Wiley - SHBP,02056,Erie,BackPacks,2024-11-30,0.0,17.0,0.0,0.0,0.0
+BP - Robert Benjamin Wiley - SHBP,02056,Erie,BackPacks,2024-12-31,0.0,17.0,0.0,0.0,0.0
+BP - Robert Benjamin Wiley - SHBP,02056,Erie,BackPacks,2025-01-31,0.0,17.0,0.0,0.0,0.0
+BP - Robert Benjamin Wiley - SHBP,02056,Erie,BackPacks,2025-02-28,0.0,17.0,0.0,0.0,0.0
+BP - Robert Benjamin Wiley - SHBP,02056,Erie,BackPacks,2025-03-31,0.0,16.0,0.0,0.0,0.0
+BP - Robert Benjamin Wiley - SHBP,02056,Erie,BackPacks,2025-04-30,0.0,16.0,0.0,0.0,0.0
+BP - Robert Benjamin Wiley - SHBP,02056,Erie,BackPacks,2025-05-31,0.0,16.0,0.0,0.0,0.0
+BP - Robison Elementary - SHBP,02072,Erie,BackPacks,2024-10-31,0.0,25.0,0.0,0.0,0.0
+BP - Robison Elementary - SHBP,02072,Erie,BackPacks,2024-11-30,0.0,25.0,0.0,0.0,0.0
+BP - Robison Elementary - SHBP,02072,Erie,BackPacks,2024-12-31,0.0,25.0,0.0,0.0,0.0
+BP - Robison Elementary - SHBP,02072,Erie,BackPacks,2025-01-31,0.0,25.0,0.0,0.0,0.0
+BP - Robison Elementary - SHBP,02072,Erie,BackPacks,2025-02-28,0.0,25.0,0.0,0.0,0.0
+BP - Robison Elementary - SHBP,02072,Erie,BackPacks,2025-03-31,0.0,25.0,0.0,0.0,0.0
+BP - Robison Elementary - SHBP,02072,Erie,BackPacks,2025-04-30,0.0,25.0,0.0,0.0,0.0
+BP - Robison Elementary - SHBP,02072,Erie,BackPacks,2025-05-31,0.0,25.0,0.0,0.0,0.0
+BP - Sarah Reed - SHBP,02055,Erie,BackPacks,2024-07-31,0.0,50.0,0.0,0.0,0.0
+BP - Sarah Reed - SHBP,02055,Erie,BackPacks,2024-08-31,0.0,50.0,0.0,0.0,0.0
+BP - Sarah Reed - SHBP,02055,Erie,BackPacks,2024-10-31,0.0,14.0,0.0,0.0,0.0
+BP - Sarah Reed - SHBP,02055,Erie,BackPacks,2024-11-30,0.0,15.0,0.0,0.0,0.0
+BP - Sarah Reed - SHBP,02055,Erie,BackPacks,2024-12-31,0.0,15.0,0.0,0.0,0.0
+BP - Sarah Reed - SHBP,02055,Erie,BackPacks,2025-01-31,0.0,15.0,0.0,0.0,0.0
+BP - Sarah Reed - SHBP,02055,Erie,BackPacks,2025-02-28,0.0,15.0,0.0,0.0,0.0
+BP - Sarah Reed - SHBP,02055,Erie,BackPacks,2025-03-31,0.0,15.0,0.0,0.0,0.0
+BP - Sarah Reed - SHBP,02055,Erie,BackPacks,2025-04-30,0.0,15.0,0.0,0.0,0.0
+BP - Sarah Reed - SHBP,02055,Erie,BackPacks,2025-05-31,0.0,15.0,0.0,0.0,0.0
+BP - Second District Elementary - SHBP,02119,Crawford,BackPacks,2024-10-31,0.0,142.0,0.0,0.0,0.0
+BP - Second District Elementary - SHBP,02119,Crawford,BackPacks,2024-11-30,0.0,144.0,0.0,0.0,0.0
+BP - Second District Elementary - SHBP,02119,Crawford,BackPacks,2024-12-31,0.0,144.0,0.0,0.0,0.0
+BP - Second District Elementary - SHBP,02119,Crawford,BackPacks,2025-01-31,0.0,146.0,0.0,0.0,0.0
+BP - Second District Elementary - SHBP,02119,Crawford,BackPacks,2025-02-28,0.0,146.0,0.0,0.0,0.0
+BP - Second District Elementary - SHBP,02119,Crawford,BackPacks,2025-03-31,0.0,146.0,0.0,0.0,0.0
+BP - Second District Elementary - SHBP,02119,Crawford,BackPacks,2025-04-30,0.0,150.0,0.0,0.0,0.0
+BP - Second District Elementary - SHBP,02119,Crawford,BackPacks,2025-05-31,0.0,139.0,0.0,0.0,0.0
+BP - Springfield Elementary - SHBP,02057,Erie,BackPacks,2024-07-31,0.0,27.0,0.0,0.0,0.0
+BP - Springfield Elementary - SHBP,02057,Erie,BackPacks,2024-08-31,0.0,27.0,0.0,0.0,0.0
+BP - Springfield Elementary - SHBP,02057,Erie,BackPacks,2024-10-31,0.0,56.0,0.0,0.0,0.0
+BP - Springfield Elementary - SHBP,02057,Erie,BackPacks,2024-11-30,0.0,56.0,0.0,0.0,0.0
+BP - Springfield Elementary - SHBP,02057,Erie,BackPacks,2024-12-31,0.0,56.0,0.0,0.0,0.0
+BP - Springfield Elementary - SHBP,02057,Erie,BackPacks,2025-01-31,0.0,56.0,0.0,0.0,0.0
+BP - Springfield Elementary - SHBP,02057,Erie,BackPacks,2025-02-28,0.0,56.0,0.0,0.0,0.0
+BP - Springfield Elementary - SHBP,02057,Erie,BackPacks,2025-03-31,0.0,56.0,0.0,0.0,0.0
+BP - Springfield Elementary - SHBP,02057,Erie,BackPacks,2025-04-30,0.0,56.0,0.0,0.0,0.0
+BP - Springfield Elementary - SHBP,02057,Erie,BackPacks,2025-05-31,0.0,56.0,0.0,0.0,0.0
+BP - Tracy Elementary - SHBP,02078,Erie,BackPacks,2024-07-31,0.0,15.0,0.0,0.0,0.0
+BP - Tracy Elementary - SHBP,02078,Erie,BackPacks,2024-08-31,0.0,15.0,0.0,0.0,0.0
+BP - Tracy Elementary - SHBP,02078,Erie,BackPacks,2024-10-31,0.0,54.0,0.0,0.0,0.0
+BP - Tracy Elementary - SHBP,02078,Erie,BackPacks,2024-11-30,0.0,52.0,0.0,0.0,0.0
+BP - Tracy Elementary - SHBP,02078,Erie,BackPacks,2024-12-31,0.0,49.0,0.0,0.0,0.0
+BP - Tracy Elementary - SHBP,02078,Erie,BackPacks,2025-01-31,0.0,49.0,0.0,0.0,0.0
+BP - Tracy Elementary - SHBP,02078,Erie,BackPacks,2025-02-28,0.0,49.0,0.0,0.0,0.0
+BP - Tracy Elementary - SHBP,02078,Erie,BackPacks,2025-03-31,0.0,49.0,0.0,0.0,0.0
+BP - Tracy Elementary - SHBP,02078,Erie,BackPacks,2025-04-30,0.0,56.0,0.0,0.0,0.0
+BP - Tracy Elementary - SHBP,02078,Erie,BackPacks,2025-05-31,0.0,60.0,0.0,0.0,0.0
+BP - Union City Elementary - SHBP,02111,Erie,BackPacks,2024-10-31,0.0,81.0,0.0,0.0,0.0
+BP - Union City Elementary - SHBP,02111,Erie,BackPacks,2024-11-30,0.0,81.0,0.0,0.0,0.0
+BP - Union City Elementary - SHBP,02111,Erie,BackPacks,2024-12-31,0.0,80.0,0.0,0.0,0.0
+BP - Union City Elementary - SHBP,02111,Erie,BackPacks,2025-01-31,0.0,78.0,0.0,0.0,0.0
+BP - Union City Elementary - SHBP,02111,Erie,BackPacks,2025-02-28,0.0,80.0,0.0,0.0,0.0
+BP - Union City Elementary - SHBP,02111,Erie,BackPacks,2025-03-31,0.0,79.0,0.0,0.0,0.0
+BP - Union City Elementary - SHBP,02111,Erie,BackPacks,2025-04-30,0.0,78.0,0.0,0.0,0.0
+BP - Union City Elementary - SHBP,02111,Erie,BackPacks,2025-05-31,0.0,78.0,0.0,0.0,0.0
+BP - Waterford Elementary - SHBP,02073,Erie,BackPacks,2024-10-31,0.0,24.0,0.0,0.0,0.0
+BP - Waterford Elementary - SHBP,02073,Erie,BackPacks,2024-11-30,0.0,25.0,0.0,0.0,0.0
+BP - Waterford Elementary - SHBP,02073,Erie,BackPacks,2024-12-31,0.0,24.0,0.0,0.0,0.0
+BP - Waterford Elementary - SHBP,02073,Erie,BackPacks,2025-01-31,0.0,24.0,0.0,0.0,0.0
+BP - Waterford Elementary - SHBP,02073,Erie,BackPacks,2025-02-28,0.0,25.0,0.0,0.0,0.0
+BP - Waterford Elementary - SHBP,02073,Erie,BackPacks,2025-03-31,0.0,25.0,0.0,0.0,0.0
+BP - Waterford Elementary - SHBP,02073,Erie,BackPacks,2025-04-30,0.0,25.0,0.0,0.0,0.0
+BP - Waterford Elementary - SHBP,02073,Erie,BackPacks,2025-05-31,0.0,23.0,0.0,0.0,0.0
+BP - West End Elementary - SHBP,02120,Crawford,BackPacks,2024-10-31,0.0,75.0,0.0,0.0,0.0
+BP - West End Elementary - SHBP,02120,Crawford,BackPacks,2024-11-30,0.0,69.0,0.0,0.0,0.0
+BP - West End Elementary - SHBP,02120,Crawford,BackPacks,2024-12-31,0.0,68.0,0.0,0.0,0.0
+BP - West End Elementary - SHBP,02120,Crawford,BackPacks,2025-01-31,0.0,72.0,0.0,0.0,0.0
+BP - West End Elementary - SHBP,02120,Crawford,BackPacks,2025-02-28,0.0,72.0,0.0,0.0,0.0
+BP - West End Elementary - SHBP,02120,Crawford,BackPacks,2025-03-31,0.0,72.0,0.0,0.0,0.0
+BP - West End Elementary - SHBP,02120,Crawford,BackPacks,2025-04-30,0.0,64.0,0.0,0.0,0.0
+BP - West End Elementary - SHBP,02120,Crawford,BackPacks,2025-05-31,0.0,61.0,0.0,0.0,0.0
+Bethany Outreach - FP,01521,Erie,Food Pantry/TEFAP,2024-07-31,454.0,464.0,324.0,145.0,1063.0
+Bethany Outreach - FP,01521,Erie,Food Pantry/TEFAP,2024-08-31,448.0,397.0,128.0,149.0,994.0
+Bethany Outreach - FP,01521,Erie,Food Pantry/TEFAP,2024-10-31,527.0,455.0,147.0,172.0,1154.0
+Bethany Outreach - FP,01521,Erie,Food Pantry/TEFAP,2024-11-30,443.0,328.0,108.0,130.0,901.0
+Bethany Outreach - FP,01521,Erie,Food Pantry/TEFAP,2024-12-31,400.0,336.0,47.0,118.0,854.0
+Bethany Outreach - FP,01521,Erie,Food Pantry/TEFAP,2025-01-31,374.0,310.0,52.0,98.0,782.0
+Bethany Outreach - FP,01521,Erie,Food Pantry/TEFAP,2025-02-28,404.0,356.0,56.0,105.0,865.0
+Bethany Outreach - FP,01521,Erie,Food Pantry/TEFAP,2025-03-31,445.0,393.0,69.0,117.0,955.0
+Bethany Outreach - FP,01521,Erie,Food Pantry/TEFAP,2025-04-30,510.0,448.0,70.0,118.0,1076.0
+Bethany Outreach - FP,01521,Erie,Food Pantry/TEFAP,2025-05-31,430.0,380.0,53.0,122.0,932.0
+Bethany Outreach - FP,01521,Erie,Food Pantry/TEFAP,2025-06-30,391.0,320.0,49.0,105.0,816.0
+Bethesda Youth Services-Youth Rehab,04005,Crawford,Non-Emerg. Meal/Snack,2024-12-31,0.0,0.0,0.0,0.0,26.0
+Blessed Sacrament - FP,01009,Erie,Food Pantry/TEFAP,2024-07-31,67.0,29.0,2.0,20.0,116.0
+Blessed Sacrament - FP,01009,Erie,Food Pantry/TEFAP,2024-08-31,70.0,27.0,5.0,22.0,118.0
+Blessed Sacrament - FP,01009,Erie,Food Pantry/TEFAP,2024-09-30,75.0,30.0,3.0,23.0,128.0
+Blessed Sacrament - FP,01009,Erie,Food Pantry/TEFAP,2024-10-31,154.0,61.0,5.0,44.0,258.0
+Blessed Sacrament - FP,01009,Erie,Food Pantry/TEFAP,2024-11-30,81.0,33.0,2.0,24.0,138.0
+Blessed Sacrament - FP,01009,Erie,Food Pantry/TEFAP,2024-12-31,88.0,33.0,3.0,25.0,146.0
+Blessed Sacrament - FP,01009,Erie,Food Pantry/TEFAP,2025-01-31,88.0,36.0,1.0,25.0,149.0
+Blessed Sacrament - FP,01009,Erie,Food Pantry/TEFAP,2025-02-28,88.0,36.0,0.0,25.0,149.0
+Blessed Sacrament - FP,01009,Erie,Food Pantry/TEFAP,2025-03-31,72.0,29.0,4.0,29.0,130.0
+Blessed Sacrament - FP,01009,Erie,Food Pantry/TEFAP,2025-04-30,68.0,28.0,2.0,30.0,126.0
+Blessed Sacrament - FP,01009,Erie,Food Pantry/TEFAP,2025-05-31,68.0,28.0,0.0,30.0,126.0
+Blessed Sacrament - FP,01009,Erie,Food Pantry/TEFAP,2025-06-30,68.0,28.0,0.0,30.0,126.0
+CSFP - DOOR DASH ERIE COUNTY,11209,Erie,Original,2024-10-31,83.0,23.0,0.0,21.0,0.0
+Cathedral of St Paul - FP,01278,Erie,Food Pantry/TEFAP,2024-07-31,77.0,69.0,119.0,83.0,229.0
+Cathedral of St Paul - FP,01278,Erie,Food Pantry/TEFAP,2024-08-31,86.0,65.0,35.0,94.0,245.0
+Cathedral of St Paul - FP,01278,Erie,Food Pantry/TEFAP,2024-09-30,87.0,67.0,26.0,80.0,234.0
+Cathedral of St Paul - FP,01278,Erie,Food Pantry/TEFAP,2024-10-31,105.0,70.0,29.0,88.0,263.0
+Cathedral of St Paul - FP,01278,Erie,Food Pantry/TEFAP,2024-11-30,99.0,79.0,23.0,90.0,268.0
+Cathedral of St Paul - FP,01278,Erie,Food Pantry/TEFAP,2024-12-31,50.0,37.0,9.0,52.0,139.0
+Cathedral of St Paul - FP,01278,Erie,Food Pantry/TEFAP,2025-01-31,84.0,65.0,16.0,69.0,218.0
+Cathedral of St Paul - FP,01278,Erie,Food Pantry/TEFAP,2025-02-28,77.0,72.0,18.0,72.0,221.0
+Cathedral of St Paul - FP,01278,Erie,Food Pantry/TEFAP,2025-03-31,100.0,93.0,25.0,74.0,267.0
+Cathedral of St Paul - FP,01278,Erie,Food Pantry/TEFAP,2025-04-30,102.0,55.0,21.0,68.0,225.0
+Cathedral of St Paul - FP,01278,Erie,Food Pantry/TEFAP,2025-05-31,113.0,77.0,32.0,78.0,268.0
+Cathedral of St Paul - FP,01278,Erie,Food Pantry/TEFAP,2025-06-30,125.0,76.0,24.0,81.0,282.0
+Center For Family Services - FP,01255,Crawford,Food Pantry/TEFAP,2024-08-31,830.0,534.0,56.0,467.0,1830.0
+Center For Family Services - FP,01255,Crawford,Food Pantry/TEFAP,2024-09-30,827.0,538.0,58.0,439.0,1804.0
+Center For Family Services - FP,01255,Crawford,Food Pantry/TEFAP,2024-10-31,869.0,573.0,55.0,456.0,1898.0
+Center For Family Services - FP,01255,Crawford,Food Pantry/TEFAP,2024-11-30,761.0,477.0,59.0,449.0,1687.0
+Center For Family Services - FP,01255,Crawford,Food Pantry/TEFAP,2024-12-31,1032.0,632.0,51.0,602.0,2266.0
+Center For Family Services - FP,01255,Crawford,Food Pantry/TEFAP,2025-01-31,730.0,456.0,46.0,603.0,1789.0
+Center For Family Services - FP,01255,Crawford,Food Pantry/TEFAP,2025-02-28,682.0,426.0,48.0,342.0,1450.0
+Center For Family Services - FP,01255,Crawford,Food Pantry/TEFAP,2025-03-31,738.0,466.0,44.0,452.0,1656.0
+Center For Family Services - FP,01255,Crawford,Food Pantry/TEFAP,2025-04-30,742.0,438.0,39.0,437.0,1617.0
+Center For Family Services - FP,01255,Crawford,Food Pantry/TEFAP,2025-05-31,738.0,452.0,42.0,441.0,1631.0
+Center For Family Services - FP,01255,Crawford,Food Pantry/TEFAP,2025-06-30,821.0,519.0,53.0,414.0,1754.0
+Centerville Fellowship Church - FP,07002,Crawford,Produce Express,2024-07-31,70.0,48.0,56.0,29.0,147.0
+Centerville Fellowship Church - FP,07002,Crawford,Produce Express,2024-08-31,72.0,52.0,1.0,26.0,150.0
+Centerville Fellowship Church - FP,07002,Crawford,Produce Express,2024-09-30,72.0,49.0,0.0,28.0,149.0
+Centerville Fellowship Church - FP,07002,Crawford,Produce Express,2024-10-31,73.0,51.0,0.0,28.0,152.0
+Centerville Fellowship Church - FP,07002,Crawford,Produce Express,2024-11-30,80.0,56.0,0.0,28.0,164.0
+Centerville Fellowship Church - FP,07002,Crawford,Produce Express,2024-12-31,72.0,56.0,0.0,24.0,152.0
+Centerville Fellowship Church - FP,07002,Crawford,Produce Express,2025-01-31,63.0,43.0,3.0,18.0,124.0
+Centerville Fellowship Church - FP,07002,Crawford,Produce Express,2025-02-28,68.0,46.0,1.0,22.0,136.0
+Centerville Fellowship Church - FP,07002,Crawford,Produce Express,2025-03-31,74.0,54.0,0.0,27.0,155.0
+Centerville Fellowship Church - FP,07002,Crawford,Produce Express,2025-04-30,77.0,52.0,0.0,28.0,157.0
+Centerville Fellowship Church - FP,07002,Crawford,Produce Express,2025-05-31,73.0,48.0,0.0,23.0,144.0
+Centerville Fellowship Church - FP,07002,Crawford,Produce Express,2025-06-30,69.0,44.0,0.0,22.0,135.0
+Christian Cupboard - FP,01052,Erie,Food Pantry/TEFAP,2024-07-31,115.0,60.0,145.0,125.0,300.0
+Christian Cupboard - FP,01052,Erie,Food Pantry/TEFAP,2024-08-31,111.0,70.0,27.0,121.0,302.0
+Christian Cupboard - FP,01052,Erie,Food Pantry/TEFAP,2024-09-30,126.0,63.0,23.0,127.0,316.0
+Christian Cupboard - FP,01052,Erie,Food Pantry/TEFAP,2024-10-31,130.0,57.0,15.0,131.0,318.0
+Christian Cupboard - FP,01052,Erie,Food Pantry/TEFAP,2024-11-30,154.0,75.0,20.0,147.0,376.0
+Christian Cupboard - FP,01052,Erie,Food Pantry/TEFAP,2024-12-31,151.0,75.0,12.0,137.0,363.0
+Christian Cupboard - FP,01052,Erie,Food Pantry/TEFAP,2025-01-31,105.0,59.0,2.0,106.0,270.0
+Christian Cupboard - FP,01052,Erie,Food Pantry/TEFAP,2025-02-28,121.0,60.0,6.0,117.0,298.0
+Christian Cupboard - FP,01052,Erie,Food Pantry/TEFAP,2025-03-31,113.0,54.0,5.0,113.0,280.0
+Christian Cupboard - FP,01052,Erie,Food Pantry/TEFAP,2025-04-30,131.0,62.0,10.0,129.0,322.0
+Christian Cupboard - FP,01052,Erie,Food Pantry/TEFAP,2025-05-31,113.0,58.0,6.0,119.0,290.0
+Christian Cupboard - FP,01052,Erie,Food Pantry/TEFAP,2025-06-30,128.0,61.0,11.0,125.0,314.0
+Church of the Nativity - FP,01474,Erie,Food Pantry/TEFAP,2024-07-31,27.0,8.0,0.0,7.0,44.0
+Church of the Nativity - FP,01474,Erie,Food Pantry/TEFAP,2024-08-31,31.0,14.0,2.0,8.0,53.0
+Church of the Nativity - FP,01474,Erie,Food Pantry/TEFAP,2024-09-30,32.0,14.0,2.0,9.0,55.0
+Church of the Nativity - FP,01474,Erie,Food Pantry/TEFAP,2024-10-31,36.0,14.0,1.0,9.0,59.0
+Church of the Nativity - FP,01474,Erie,Food Pantry/TEFAP,2024-11-30,42.0,19.0,5.0,10.0,71.0
+Church of the Nativity - FP,01474,Erie,Food Pantry/TEFAP,2024-12-31,34.0,12.0,0.0,10.0,56.0
+Church of the Nativity - FP,01474,Erie,Food Pantry/TEFAP,2025-01-31,29.0,14.0,1.0,8.0,51.0
+Church of the Nativity - FP,01474,Erie,Food Pantry/TEFAP,2025-02-28,35.0,12.0,1.0,10.0,57.0
+Church of the Nativity - FP,01474,Erie,Food Pantry/TEFAP,2025-03-31,28.0,13.0,0.0,10.0,51.0
+Church of the Nativity - FP,01474,Erie,Food Pantry/TEFAP,2025-04-30,35.0,16.0,3.0,10.0,61.0
+Church of the Nativity - FP,01474,Erie,Food Pantry/TEFAP,2025-05-31,24.0,15.0,0.0,11.0,50.0
+Church of the Nativity - FP,01474,Erie,Food Pantry/TEFAP,2025-06-30,33.0,28.0,4.0,12.0,73.0
+Clark Elementary - SCHOOL PANTRY,09765,Erie,BackPacks,2024-10-31,0.0,20.0,0.0,0.0,0.0
+Clark Elementary - SCHOOL PANTRY,09765,Erie,BackPacks,2024-11-30,0.0,20.0,0.0,0.0,0.0
+Clark Elementary - SCHOOL PANTRY,09765,Erie,BackPacks,2024-12-31,0.0,21.0,0.0,0.0,0.0
+Clark Elementary - SCHOOL PANTRY,09765,Erie,BackPacks,2025-01-31,0.0,21.0,0.0,0.0,0.0
+Clark Elementary - SCHOOL PANTRY,09765,Erie,BackPacks,2025-02-28,0.0,19.0,0.0,0.0,0.0
+Clark Elementary - SCHOOL PANTRY,09765,Erie,BackPacks,2025-03-31,0.0,19.0,0.0,0.0,0.0
+Clark Elementary - SCHOOL PANTRY,09765,Erie,BackPacks,2025-04-30,0.0,23.0,0.0,0.0,0.0
+Clark Elementary - SCHOOL PANTRY,09765,Erie,BackPacks,2025-05-31,0.0,23.0,0.0,0.0,0.0
+Community of Caring - FP,01021,Erie,Food Pantry/TEFAP,2024-07-31,55.0,48.0,0.0,31.0,134.0
+Community of Caring - FP,01021,Erie,Food Pantry/TEFAP,2024-08-31,68.0,50.0,1.0,33.0,151.0
+Community of Caring - FP,01021,Erie,Food Pantry/TEFAP,2024-09-30,69.0,68.0,0.0,33.0,209.0
+Community of Caring - FP,01021,Erie,Food Pantry/TEFAP,2024-10-31,86.0,72.0,1.0,33.0,191.0
+Community of Caring - FP,01021,Erie,Food Pantry/TEFAP,2024-11-30,28.0,25.0,0.0,31.0,84.0
+Community of Caring - FP,01021,Erie,Food Pantry/TEFAP,2024-12-31,52.0,52.0,0.0,17.0,121.0
+Community of Caring - FP,01021,Erie,Food Pantry/TEFAP,2025-01-31,68.0,66.0,0.0,26.0,160.0
+Community of Caring - FP,01021,Erie,Food Pantry/TEFAP,2025-02-28,70.0,67.0,0.0,25.0,162.0
+Community of Caring - FP,01021,Erie,Food Pantry/TEFAP,2025-03-31,65.0,77.0,0.0,22.0,164.0
+Community of Caring - FP,01021,Erie,Food Pantry/TEFAP,2025-04-30,63.0,73.0,0.0,28.0,164.0
+Community of Caring - FP,01021,Erie,Food Pantry/TEFAP,2025-06-30,87.0,86.0,6.0,30.0,204.0
+Community of Caring Diabetic - FP,01266,Erie,Food Pantry/TEFAP,2024-07-31,8.0,0.0,0.0,23.0,31.0
+Community of Caring Diabetic - FP,01266,Erie,Food Pantry/TEFAP,2024-08-31,11.0,2.0,0.0,22.0,35.0
+Community of Caring Diabetic - FP,01266,Erie,Food Pantry/TEFAP,2024-09-30,7.0,0.0,0.0,25.0,32.0
+Community of Caring Diabetic - FP,01266,Erie,Food Pantry/TEFAP,2024-10-31,6.0,0.0,0.0,26.0,32.0
+Community of Caring Diabetic - FP,01266,Erie,Food Pantry/TEFAP,2024-11-30,4.0,0.0,0.0,31.0,50.0
+Community of Caring Diabetic - FP,01266,Erie,Food Pantry/TEFAP,2024-12-31,6.0,0.0,0.0,22.0,28.0
+Community of Caring Diabetic - FP,01266,Erie,Food Pantry/TEFAP,2025-01-31,14.0,0.0,0.0,23.0,37.0
+Community of Caring Diabetic - FP,01266,Erie,Food Pantry/TEFAP,2025-02-28,7.0,0.0,1.0,27.0,34.0
+Community of Caring Diabetic - FP,01266,Erie,Food Pantry/TEFAP,2025-03-31,7.0,0.0,1.0,12.0,19.0
+Community of Caring Diabetic - FP,01266,Erie,Food Pantry/TEFAP,2025-04-30,6.0,0.0,0.0,29.0,35.0
+Community of Caring Diabetic - FP,01266,Erie,Food Pantry/TEFAP,2025-06-30,11.0,0.0,0.0,23.0,34.0
+Conneaut Valley - FP,01539,Crawford,Food Pantry/TEFAP,2024-07-31,199.0,141.0,173.0,137.0,477.0
+Conneaut Valley - FP,01539,Crawford,Food Pantry/TEFAP,2024-08-31,209.0,143.0,4.0,136.0,488.0
+Conneaut Valley - FP,01539,Crawford,Food Pantry/TEFAP,2024-09-30,216.0,140.0,6.0,140.0,496.0
+Conneaut Valley - FP,01539,Crawford,Food Pantry/TEFAP,2024-10-31,221.0,143.0,4.0,142.0,506.0
+Conneaut Valley - FP,01539,Crawford,Food Pantry/TEFAP,2024-11-30,221.0,146.0,10.0,135.0,502.0
+Conneaut Valley - FP,01539,Crawford,Food Pantry/TEFAP,2024-12-31,212.0,138.0,6.0,130.0,480.0
+Conneaut Valley - FP,01539,Crawford,Food Pantry/TEFAP,2025-01-31,238.0,148.0,8.0,139.0,525.0
+Conneaut Valley - FP,01539,Crawford,Food Pantry/TEFAP,2025-02-28,222.0,139.0,3.0,140.0,501.0
+Conneaut Valley - FP,01539,Crawford,Food Pantry/TEFAP,2025-03-31,223.0,139.0,6.0,143.0,505.0
+Conneaut Valley - FP,01539,Crawford,Food Pantry/TEFAP,2025-04-30,213.0,146.0,5.0,134.0,493.0
+Conneaut Valley - FP,01539,Crawford,Food Pantry/TEFAP,2025-05-31,236.0,166.0,2.0,139.0,541.0
+Conneaut Valley - FP,01539,Crawford,Food Pantry/TEFAP,2025-06-30,245.0,167.0,2.0,148.0,560.0
+Cornerstone Erie Liberty Community Church - FP,01696,Erie,Food Pantry/TEFAP,2024-07-31,37.0,36.0,8.0,4.0,77.0
+Cornerstone Erie Liberty Community Church - FP,01696,Erie,Food Pantry/TEFAP,2024-08-31,14.0,30.0,0.0,1.0,45.0
+Cornerstone Erie Liberty Community Church - FP,01696,Erie,Food Pantry/TEFAP,2024-09-30,38.0,67.0,8.0,5.0,110.0
+Cornerstone Erie Liberty Community Church - FP,01696,Erie,Food Pantry/TEFAP,2024-10-31,28.0,38.0,5.0,6.0,72.0
+Cornerstone Erie Liberty Community Church - FP,01696,Erie,Food Pantry/TEFAP,2024-11-30,29.0,32.0,4.0,3.0,64.0
+Cornerstone Erie Liberty Community Church - FP,01696,Erie,Food Pantry/TEFAP,2024-12-31,16.0,6.0,2.0,3.0,25.0
+Cornerstone Erie Liberty Community Church - FP,01696,Erie,Food Pantry/TEFAP,2025-01-31,65.0,98.0,7.0,3.0,166.0
+Cornerstone Erie Liberty Community Church - FP,01696,Erie,Food Pantry/TEFAP,2025-02-28,33.0,51.0,0.0,6.0,90.0
+Cornerstone Erie Liberty Community Church - FP,01696,Erie,Food Pantry/TEFAP,2025-03-31,48.0,80.0,3.0,8.0,136.0
+Cornerstone Erie Liberty Community Church - FP,01696,Erie,Food Pantry/TEFAP,2025-04-30,67.0,107.0,11.0,6.0,180.0
+Cornerstone Erie Liberty Community Church - FP,01696,Erie,Food Pantry/TEFAP,2025-05-31,47.0,63.0,5.0,10.0,120.0
+Cornerstone Erie Liberty Community Church - FP,01696,Erie,Food Pantry/TEFAP,2025-06-30,32.0,40.0,2.0,9.0,81.0
+Corry - SHFB MOBILE,10700,Erie,Produce Express,2024-07-31,116.0,41.0,113.0,90.0,247.0
+Corry - SHFB MOBILE,10700,Erie,Produce Express,2024-08-31,64.0,18.0,17.0,53.0,135.0
+Corry - SHFB MOBILE,10700,Erie,Produce Express,2024-09-30,80.0,23.0,9.0,56.0,159.0
+Corry - SHFB MOBILE,10700,Erie,Produce Express,2024-10-31,96.0,40.0,6.0,70.0,206.0
+Corry - SHFB MOBILE,10700,Erie,Produce Express,2024-11-30,204.0,76.0,15.0,168.0,224.0
+Corry - SHFB MOBILE,10700,Erie,Produce Express,2025-01-31,66.0,20.0,5.0,66.0,152.0
+Corry - SHFB MOBILE,10700,Erie,Produce Express,2025-02-28,93.0,31.0,9.0,83.0,207.0
+Corry - SHFB MOBILE,10700,Erie,Produce Express,2025-03-31,90.0,29.0,14.0,94.0,213.0
+Corry - SHFB MOBILE,10700,Erie,Produce Express,2025-04-30,96.0,46.0,17.0,95.0,237.0
+Corry - SHFB MOBILE,10700,Erie,Produce Express,2025-05-31,101.0,38.0,5.0,96.0,235.0
+Corry - SHFB MOBILE,10700,Erie,Produce Express,2025-06-30,100.0,47.0,7.0,84.0,231.0
+Corry Area - FP,01027,Erie,Food Pantry/TEFAP,2024-07-31,133.0,60.0,172.0,149.0,342.0
+Corry Area - FP,01027,Erie,Food Pantry/TEFAP,2024-08-31,122.0,65.0,65.0,144.0,332.0
+Corry Area - FP,01027,Erie,Food Pantry/TEFAP,2024-09-30,140.0,66.0,18.0,148.0,354.0
+Corry Area - FP,01027,Erie,Food Pantry/TEFAP,2024-10-31,162.0,76.0,12.0,159.0,397.0
+Corry Area - FP,01027,Erie,Food Pantry/TEFAP,2024-11-30,165.0,87.0,17.0,167.0,419.0
+Corry Area - FP,01027,Erie,Food Pantry/TEFAP,2024-12-31,185.0,97.0,13.0,163.0,445.0
+Corry Area - FP,01027,Erie,Food Pantry/TEFAP,2025-01-31,136.0,67.0,7.0,144.0,347.0
+Corry Area - FP,01027,Erie,Food Pantry/TEFAP,2025-02-28,175.0,77.0,10.0,144.0,396.0
+Corry Area - FP,01027,Erie,Food Pantry/TEFAP,2025-03-31,188.0,89.0,13.0,175.0,453.0
+Corry Area - FP,01027,Erie,Food Pantry/TEFAP,2025-04-30,187.0,78.0,6.0,158.0,423.0
+Corry Area - FP,01027,Erie,Food Pantry/TEFAP,2025-05-31,169.0,56.0,4.0,155.0,380.0
+Corry Area - FP,01027,Erie,Food Pantry/TEFAP,2025-06-30,172.0,62.0,0.0,152.0,386.0
+Corry Area High School - SCHOOL PANTRY,09756,Erie,School Pantry,2024-10-31,0.0,19.0,0.0,0.0,0.0
+Corry Area High School - SCHOOL PANTRY,09756,Erie,School Pantry,2024-11-30,0.0,22.0,0.0,0.0,0.0
+Corry Area High School - SCHOOL PANTRY,09756,Erie,School Pantry,2024-12-31,0.0,11.0,0.0,0.0,0.0
+Corry Area High School - SCHOOL PANTRY,09756,Erie,School Pantry,2025-01-31,0.0,14.0,0.0,0.0,0.0
+Corry Area High School - SCHOOL PANTRY,09756,Erie,School Pantry,2025-02-28,0.0,11.0,0.0,0.0,0.0
+Corry Area High School - SCHOOL PANTRY,09756,Erie,School Pantry,2025-03-31,0.0,14.0,0.0,0.0,0.0
+Corry Area High School - SCHOOL PANTRY,09756,Erie,School Pantry,2025-04-30,0.0,20.0,0.0,0.0,0.0
+Corry Area High School - SCHOOL PANTRY,09756,Erie,School Pantry,2025-05-31,0.0,22.0,0.0,0.0,0.0
+Door Dash - SHFB,10715,Erie,Produce Express,2024-07-31,42.0,8.0,46.0,16.0,66.0
+Door Dash - SHFB,10715,Erie,Produce Express,2024-08-31,53.0,16.0,6.0,17.0,86.0
+Door Dash - SHFB,10715,Erie,Produce Express,2024-09-30,146.0,38.0,16.0,38.0,222.0
+Door Dash - SHFB,10715,Erie,Produce Express,2024-10-31,83.0,23.0,1.0,21.0,127.0
+Door Dash - SHFB,10715,Erie,Produce Express,2024-11-30,82.0,23.0,2.0,23.0,128.0
+Door Dash - SHFB,10715,Erie,Produce Express,2024-12-31,84.0,23.0,0.0,22.0,129.0
+Door Dash - SHFB,10715,Erie,Produce Express,2025-01-31,80.0,23.0,0.0,21.0,124.0
+Door Dash - SHFB,10715,Erie,Produce Express,2025-02-28,83.0,23.0,0.0,23.0,129.0
+Door Dash - SHFB,10715,Erie,Produce Express,2025-03-31,80.0,22.0,2.0,22.0,124.0
+Door Dash - SHFB,10715,Erie,Produce Express,2025-04-30,80.0,75.0,0.0,22.0,177.0
+Door Dash - SHFB,10715,Erie,Produce Express,2025-05-31,80.0,22.0,0.0,22.0,124.0
+Door Dash - SHFB,10715,Erie,Produce Express,2025-06-30,88.0,24.0,0.0,24.0,136.0
+East Middle School - SCHOOL PANTRY,09753,Erie,School Pantry,2024-10-31,0.0,26.0,0.0,0.0,0.0
+East Middle School - SCHOOL PANTRY,09753,Erie,School Pantry,2024-11-30,0.0,21.0,0.0,0.0,0.0
+East Middle School - SCHOOL PANTRY,09753,Erie,School Pantry,2024-12-31,0.0,21.0,0.0,0.0,0.0
+East Middle School - SCHOOL PANTRY,09753,Erie,School Pantry,2025-01-31,0.0,27.0,0.0,0.0,0.0
+East Middle School - SCHOOL PANTRY,09753,Erie,School Pantry,2025-02-28,0.0,39.0,0.0,0.0,0.0
+East Middle School - SCHOOL PANTRY,09753,Erie,School Pantry,2025-03-31,0.0,30.0,0.0,0.0,0.0
+East Middle School - SCHOOL PANTRY,09753,Erie,School Pantry,2025-04-30,0.0,30.0,0.0,0.0,0.0
+East Middle School - SCHOOL PANTRY,09753,Erie,School Pantry,2025-05-31,0.0,30.0,0.0,0.0,0.0
+Eastbrook Apartments - SHFB MOBILE,10710,Erie,Produce Express,2024-07-31,156.0,219.0,81.0,11.0,386.0
+Eastbrook Apartments - SHFB MOBILE,10710,Erie,Produce Express,2024-08-31,147.0,173.0,0.0,0.0,320.0
+Eastbrook Apartments - SHFB MOBILE,10710,Erie,Produce Express,2024-09-30,171.0,221.0,0.0,0.0,392.0
+Eastbrook Apartments - SHFB MOBILE,10710,Erie,Produce Express,2024-12-31,180.0,243.0,21.0,6.0,429.0
+Eastbrook Apartments - SHFB MOBILE,10710,Erie,Produce Express,2025-01-31,106.0,152.0,3.0,7.0,265.0
+Eastbrook Apartments - SHFB MOBILE,10710,Erie,Produce Express,2025-02-28,126.0,199.0,7.0,7.0,332.0
+Eastbrook Apartments - SHFB MOBILE,10710,Erie,Produce Express,2025-03-31,136.0,189.0,10.0,8.0,333.0
+Eastbrook Apartments - SHFB MOBILE,10710,Erie,Produce Express,2025-04-30,136.0,189.0,10.0,8.0,333.0
+Eastbrook Apartments - SHFB MOBILE,10710,Erie,Produce Express,2025-05-31,13.0,27.0,0.0,0.0,40.0
+Eastminster Church - SHFB MOBILE,10800,Erie,Produce Express,2024-07-31,125.0,132.0,93.0,49.0,306.0
+Eastminster Church - SHFB MOBILE,10800,Erie,Produce Express,2024-08-31,98.0,101.0,36.0,41.0,240.0
+Eastminster Church - SHFB MOBILE,10800,Erie,Produce Express,2024-09-30,217.0,224.0,34.0,40.0,481.0
+Eastminster Church - SHFB MOBILE,10800,Erie,Produce Express,2024-10-31,177.0,212.0,18.0,42.0,431.0
+Eastminster Church - SHFB MOBILE,10800,Erie,Produce Express,2024-11-30,134.0,153.0,0.0,21.0,308.0
+Eastminster Church - SHFB MOBILE,10800,Erie,Produce Express,2025-01-31,54.0,69.0,14.0,21.0,144.0
+Eastminster Church - SHFB MOBILE,10800,Erie,Produce Express,2025-02-28,60.0,67.0,5.0,20.0,147.0
+Eastminster Church - SHFB MOBILE,10800,Erie,Produce Express,2025-03-31,139.0,146.0,30.0,32.0,317.0
+Eastminster Church - SHFB MOBILE,10800,Erie,Produce Express,2025-04-30,145.0,156.0,18.0,28.0,329.0
+Eastminster Church - SHFB MOBILE,10800,Erie,Produce Express,2025-05-31,114.0,122.0,3.0,27.0,263.0
+Eastminster Church - SHFB MOBILE,10800,Erie,Produce Express,2025-06-30,134.0,153.0,15.0,30.0,317.0
+Edinboro Emergency - FP,01030,Erie,Food Pantry/TEFAP,2024-07-31,300.0,174.0,19.0,138.0,849.0
+Edinboro Emergency - FP,01030,Erie,Food Pantry/TEFAP,2024-08-31,356.0,216.0,23.0,146.0,990.0
+Edinboro Emergency - FP,01030,Erie,Food Pantry/TEFAP,2024-09-30,351.0,213.0,18.0,129.0,950.0
+Edinboro Emergency - FP,01030,Erie,Food Pantry/TEFAP,2024-10-31,371.0,263.0,23.0,148.0,1062.0
+Edinboro Emergency - FP,01030,Erie,Food Pantry/TEFAP,2024-11-30,399.0,292.0,16.0,150.0,1129.0
+Edinboro Emergency - FP,01030,Erie,Food Pantry/TEFAP,2024-12-31,365.0,270.0,9.0,130.0,1027.0
+Edinboro Emergency - FP,01030,Erie,Food Pantry/TEFAP,2025-01-31,338.0,197.0,10.0,130.0,665.0
+Edinboro Emergency - FP,01030,Erie,Food Pantry/TEFAP,2025-02-28,278.0,166.0,6.0,119.0,563.0
+Edinboro Emergency - FP,01030,Erie,Food Pantry/TEFAP,2025-03-31,314.0,181.0,9.0,131.0,626.0
+Edinboro Emergency - FP,01030,Erie,Food Pantry/TEFAP,2025-04-30,278.0,174.0,4.0,123.0,575.0
+Edinboro Emergency - FP,01030,Erie,Food Pantry/TEFAP,2025-05-31,311.0,203.0,14.0,129.0,643.0
+Edinboro Emergency - FP,01030,Erie,Food Pantry/TEFAP,2025-06-30,289.0,170.0,4.0,126.0,585.0
+Elk Valley - SCHOOL PANTRY,09766,Erie,School Pantry,2024-07-31,0.0,82.0,0.0,0.0,0.0
+Elk Valley - SCHOOL PANTRY,09766,Erie,School Pantry,2024-08-31,0.0,78.0,0.0,0.0,0.0
+Elk Valley - SCHOOL PANTRY,09766,Erie,School Pantry,2024-10-31,0.0,126.0,0.0,0.0,0.0
+Elk Valley - SCHOOL PANTRY,09766,Erie,School Pantry,2024-11-30,0.0,95.0,0.0,0.0,0.0
+Elk Valley - SCHOOL PANTRY,09766,Erie,School Pantry,2024-12-31,0.0,100.0,0.0,0.0,0.0
+Elk Valley - SCHOOL PANTRY,09766,Erie,School Pantry,2025-01-31,0.0,97.0,0.0,0.0,0.0
+Elk Valley - SCHOOL PANTRY,09766,Erie,School Pantry,2025-02-28,0.0,97.0,0.0,0.0,0.0
+Elk Valley - SCHOOL PANTRY,09766,Erie,School Pantry,2025-03-31,0.0,87.0,0.0,0.0,0.0
+Elk Valley - SCHOOL PANTRY,09766,Erie,School Pantry,2025-04-30,0.0,89.0,0.0,0.0,0.0
+Elk Valley - SCHOOL PANTRY,09766,Erie,School Pantry,2025-05-31,0.0,87.0,0.0,0.0,0.0
+Ella Cochran,01084,Erie,Food Pantry/TEFAP,2024-07-31,113.0,90.0,120.0,91.0,294.0
+Ella Cochran,01084,Erie,Food Pantry/TEFAP,2024-08-31,92.0,69.0,27.0,75.0,271.0
+Ella Cochran,01084,Erie,Food Pantry/TEFAP,2024-09-30,132.0,105.0,12.0,103.0,341.0
+Ella Cochran,01084,Erie,Food Pantry/TEFAP,2024-10-31,148.0,122.0,13.0,106.0,376.0
+Ella Cochran,01084,Erie,Food Pantry/TEFAP,2024-11-30,134.0,161.0,8.0,114.0,409.0
+Ella Cochran,01084,Erie,Food Pantry/TEFAP,2024-12-31,150.0,131.0,0.0,111.0,389.0
+Ella Cochran,01084,Erie,Food Pantry/TEFAP,2025-01-31,194.0,161.0,9.0,130.0,485.0
+Ella Cochran,01084,Erie,Food Pantry/TEFAP,2025-02-28,195.0,161.0,2.0,132.0,488.0
+Ella Cochran,01084,Erie,Food Pantry/TEFAP,2025-03-31,131.0,98.0,6.0,107.0,336.0
+Ella Cochran,01084,Erie,Food Pantry/TEFAP,2025-04-30,126.0,91.0,5.0,103.0,316.0
+Ella Cochran,01084,Erie,Food Pantry/TEFAP,2025-05-31,128.0,96.0,5.0,106.0,330.0
+Ella Cochran,01084,Erie,Food Pantry/TEFAP,2025-06-30,131.0,96.0,7.0,107.0,334.0
+Elmwood Avenue Presbyterian Church - FP,01654,Erie,Food Pantry/TEFAP,2024-07-31,40.0,22.0,4.0,23.0,85.0
+Elmwood Avenue Presbyterian Church - FP,01654,Erie,Food Pantry/TEFAP,2024-08-31,43.0,26.0,0.0,23.0,92.0
+Elmwood Avenue Presbyterian Church - FP,01654,Erie,Food Pantry/TEFAP,2024-09-30,46.0,24.0,3.0,27.0,97.0
+Elmwood Avenue Presbyterian Church - FP,01654,Erie,Food Pantry/TEFAP,2024-10-31,58.0,33.0,7.0,27.0,117.0
+Elmwood Avenue Presbyterian Church - FP,01654,Erie,Food Pantry/TEFAP,2024-11-30,65.0,34.0,8.0,35.0,134.0
+Elmwood Avenue Presbyterian Church - FP,01654,Erie,Food Pantry/TEFAP,2024-12-31,52.0,31.0,2.0,33.0,116.0
+Elmwood Avenue Presbyterian Church - FP,01654,Erie,Food Pantry/TEFAP,2025-01-31,41.0,22.0,1.0,28.0,91.0
+Elmwood Avenue Presbyterian Church - FP,01654,Erie,Food Pantry/TEFAP,2025-02-28,42.0,28.0,3.0,25.0,95.0
+Elmwood Avenue Presbyterian Church - FP,01654,Erie,Food Pantry/TEFAP,2025-03-31,61.0,43.0,8.0,25.0,129.0
+Elmwood Avenue Presbyterian Church - FP,01654,Erie,Food Pantry/TEFAP,2025-04-30,53.0,24.0,3.0,26.0,104.0
+Elmwood Avenue Presbyterian Church - FP,01654,Erie,Food Pantry/TEFAP,2025-05-31,74.0,80.0,4.0,28.0,174.0
+Elmwood Avenue Presbyterian Church - FP,01654,Erie,Food Pantry/TEFAP,2025-06-30,64.0,44.0,2.0,27.0,135.0
+Emergency Food Box Donations,12008,Erie,Food Pantry/TEFAP,2024-08-31,18.0,7.0,10.0,1.0,26.0
+Emergency Food Box Donations,12008,Erie,Food Pantry/TEFAP,2024-09-30,21.0,28.0,14.0,2.0,51.0
+Emergency Food Box Donations,12008,Erie,Food Pantry/TEFAP,2024-10-31,37.0,29.0,22.0,4.0,70.0
+Emergency Food Box Donations,12008,Erie,Food Pantry/TEFAP,2024-11-30,16.0,16.0,11.0,2.0,34.0
+Emergency Food Box Donations,12008,Erie,Food Pantry/TEFAP,2024-12-31,27.0,17.0,17.0,2.0,46.0
+Emergency Food Box Donations,12008,Erie,Food Pantry/TEFAP,2025-01-31,22.0,18.0,13.0,4.0,44.0
+Emmaus Ministries - FP,01031,Erie,Food Pantry/TEFAP,2024-07-31,636.0,441.0,106.0,242.0,1319.0
+Emmaus Ministries - FP,01031,Erie,Food Pantry/TEFAP,2024-08-31,641.0,535.0,106.0,208.0,1384.0
+Emmaus Ministries - FP,01031,Erie,Food Pantry/TEFAP,2024-09-30,673.0,512.0,104.0,208.0,1393.0
+Emmaus Ministries - FP,01031,Erie,Food Pantry/TEFAP,2024-10-31,681.0,577.0,93.0,219.0,1477.0
+Emmaus Ministries - FP,01031,Erie,Food Pantry/TEFAP,2024-11-30,743.0,589.0,96.0,211.0,1543.0
+Emmaus Ministries - FP,01031,Erie,Food Pantry/TEFAP,2024-12-31,477.0,395.0,27.0,156.0,1028.0
+Emmaus Ministries - FP,01031,Erie,Food Pantry/TEFAP,2025-01-31,568.0,452.0,67.0,180.0,1200.0
+Emmaus Ministries - FP,01031,Erie,Food Pantry/TEFAP,2025-02-28,561.0,475.0,50.0,175.0,1211.0
+Emmaus Ministries - FP,01031,Erie,Food Pantry/TEFAP,2025-03-31,600.0,511.0,80.0,190.0,1301.0
+Emmaus Ministries - FP,01031,Erie,Food Pantry/TEFAP,2025-04-30,637.0,508.0,78.0,162.0,1307.0
+Emmaus Ministries - FP,01031,Erie,Food Pantry/TEFAP,2025-05-31,618.0,520.0,44.0,170.0,1308.0
+Emmaus Ministries - FP,01031,Erie,Food Pantry/TEFAP,2025-06-30,645.0,510.0,81.0,158.0,1313.0
+Emmaus Ministries Kids Cafe - SK,03493,Erie,Kids Cafe,2024-12-31,0.0,0.0,0.0,0.0,7.0
+Erie - Military Share,10086,Erie,Produce Express,2024-07-31,45.0,17.0,79.0,91.0,153.0
+Erie - Military Share,10086,Erie,Produce Express,2024-08-31,24.0,12.0,15.0,4.0,40.0
+Erie - Military Share,10086,Erie,Produce Express,2024-09-30,63.0,28.0,107.0,115.0,207.0
+Erie - Military Share,10086,Erie,Produce Express,2024-10-31,34.0,68.0,13.0,212.0,314.0
+Erie - Military Share,10086,Erie,Produce Express,2024-11-30,78.0,29.0,8.0,104.0,211.0
+Erie - Military Share,10086,Erie,Produce Express,2024-12-31,50.0,27.0,5.0,66.0,143.0
+Erie - Military Share,10086,Erie,Produce Express,2025-02-28,42.0,21.0,5.0,121.0,184.0
+Erie - Military Share,10086,Erie,Produce Express,2025-03-31,70.0,34.0,0.0,113.0,193.0
+Erie - Military Share,10086,Erie,Produce Express,2025-04-30,69.0,21.0,5.0,117.0,207.0
+Erie - Military Share,10086,Erie,Produce Express,2025-05-31,75.0,29.0,0.0,0.0,0.0
+Erie - Military Share,10086,Erie,Produce Express,2025-06-30,56.0,18.0,2.0,101.0,175.0
+Erie High School - SCHOOL PANTRY,09750,Erie,School Pantry,2024-10-31,0.0,17.0,0.0,0.0,0.0
+Erie High School - SCHOOL PANTRY,09750,Erie,School Pantry,2024-11-30,0.0,37.0,0.0,0.0,0.0
+Erie High School - SCHOOL PANTRY,09750,Erie,School Pantry,2024-12-31,0.0,29.0,0.0,0.0,0.0
+Erie High School - SCHOOL PANTRY,09750,Erie,School Pantry,2025-01-31,0.0,38.0,0.0,0.0,0.0
+Erie High School - SCHOOL PANTRY,09750,Erie,School Pantry,2025-02-28,0.0,41.0,0.0,0.0,0.0
+Erie High School - SCHOOL PANTRY,09750,Erie,School Pantry,2025-03-31,0.0,37.0,0.0,0.0,0.0
+Erie High School - SCHOOL PANTRY,09750,Erie,School Pantry,2025-04-30,0.0,45.0,0.0,0.0,0.0
+Erie High School - SCHOOL PANTRY,09750,Erie,School Pantry,2025-05-31,0.0,45.0,0.0,0.0,0.0
+Fairview High School - SCHOOL PANTRY,09784,Erie,School Pantry,2024-10-31,0.0,10.0,0.0,0.0,0.0
+Fairview High School - SCHOOL PANTRY,09784,Erie,School Pantry,2024-11-30,0.0,10.0,0.0,0.0,0.0
+Fairview High School - SCHOOL PANTRY,09784,Erie,School Pantry,2024-12-31,0.0,10.0,0.0,0.0,0.0
+Fairview High School - SCHOOL PANTRY,09784,Erie,School Pantry,2025-01-31,0.0,10.0,0.0,0.0,0.0
+Fairview High School - SCHOOL PANTRY,09784,Erie,School Pantry,2025-02-28,0.0,10.0,0.0,0.0,0.0
+Fairview High School - SCHOOL PANTRY,09784,Erie,School Pantry,2025-03-31,0.0,12.0,0.0,0.0,0.0
+Fairview High School - SCHOOL PANTRY,09784,Erie,School Pantry,2025-04-30,0.0,10.0,0.0,0.0,0.0
+Fairview High School - SCHOOL PANTRY,09784,Erie,School Pantry,2025-05-31,0.0,10.0,0.0,0.0,0.0
+Fairview Middle School  - SCHOOL PANTRY,09783,Erie,School Pantry,2024-10-31,0.0,20.0,0.0,0.0,0.0
+Fairview Middle School  - SCHOOL PANTRY,09783,Erie,School Pantry,2024-11-30,0.0,20.0,0.0,0.0,0.0
+Fairview Middle School  - SCHOOL PANTRY,09783,Erie,School Pantry,2024-12-31,0.0,20.0,0.0,0.0,0.0
+Fairview Middle School  - SCHOOL PANTRY,09783,Erie,School Pantry,2025-01-31,0.0,20.0,0.0,0.0,0.0
+Fairview Middle School  - SCHOOL PANTRY,09783,Erie,School Pantry,2025-02-28,0.0,20.0,0.0,0.0,0.0
+Fairview Middle School  - SCHOOL PANTRY,09783,Erie,School Pantry,2025-03-31,0.0,22.0,0.0,0.0,0.0
+Fairview Middle School  - SCHOOL PANTRY,09783,Erie,School Pantry,2025-04-30,0.0,25.0,0.0,0.0,0.0
+Fairview Middle School  - SCHOOL PANTRY,09783,Erie,School Pantry,2025-05-31,0.0,25.0,0.0,0.0,0.0
+Fairview Presbyterian - FP,01527,Erie,Food Pantry/TEFAP,2024-07-31,101.0,89.0,62.0,40.0,230.0
+Fairview Presbyterian - FP,01527,Erie,Food Pantry/TEFAP,2024-08-31,108.0,85.0,25.0,46.0,239.0
+Fairview Presbyterian - FP,01527,Erie,Food Pantry/TEFAP,2024-09-30,112.0,87.0,11.0,42.0,241.0
+Fairview Presbyterian - FP,01527,Erie,Food Pantry/TEFAP,2024-10-31,112.0,84.0,8.0,43.0,239.0
+Fairview Presbyterian - FP,01527,Erie,Food Pantry/TEFAP,2024-11-30,135.0,102.0,9.0,49.0,286.0
+Fairview Presbyterian - FP,01527,Erie,Food Pantry/TEFAP,2024-12-31,124.0,83.0,4.0,44.0,251.0
+Fairview Presbyterian - FP,01527,Erie,Food Pantry/TEFAP,2025-01-31,116.0,92.0,4.0,39.0,247.0
+Fairview Presbyterian - FP,01527,Erie,Food Pantry/TEFAP,2025-02-28,95.0,67.0,5.0,49.0,211.0
+Fairview Presbyterian - FP,01527,Erie,Food Pantry/TEFAP,2025-03-31,98.0,73.0,3.0,46.0,217.0
+Fairview Presbyterian - FP,01527,Erie,Food Pantry/TEFAP,2025-04-30,114.0,82.0,3.0,53.0,249.0
+Fairview Presbyterian - FP,01527,Erie,Food Pantry/TEFAP,2025-05-31,114.0,86.0,5.0,52.0,252.0
+Fairview Presbyterian - FP,01527,Erie,Food Pantry/TEFAP,2025-06-30,109.0,86.0,1.0,46.0,241.0
+Federated Church - FP,06021,Erie,Produce Express,2024-07-31,68.0,26.0,2.0,57.0,151.0
+Federated Church - FP,06021,Erie,Produce Express,2024-08-31,62.0,23.0,1.0,65.0,149.0
+Federated Church - FP,06021,Erie,Produce Express,2024-09-30,88.0,42.0,4.0,52.0,182.0
+Federated Church - FP,06021,Erie,Produce Express,2024-10-31,65.0,32.0,85.0,68.0,165.0
+Federated Church - FP,06021,Erie,Produce Express,2024-11-30,69.0,37.0,3.0,76.0,182.0
+Federated Church - FP,06021,Erie,Produce Express,2025-01-31,57.0,32.0,4.0,65.0,154.0
+Federated Church - FP,06021,Erie,Produce Express,2025-02-28,71.0,33.0,5.0,67.0,171.0
+Federated Church - FP,06021,Erie,Produce Express,2025-03-31,85.0,38.0,2.0,52.0,175.0
+Federated Church - FP,06021,Erie,Produce Express,2025-04-30,71.0,44.0,0.0,64.0,179.0
+Federated Church - FP,06021,Erie,Produce Express,2025-05-31,54.0,33.0,2.0,58.0,145.0
+Federated Church - FP,06021,Erie,Produce Express,2025-06-30,49.0,29.0,2.0,54.0,132.0
+First Alliance Church - FP,01544,Erie,Food Pantry/TEFAP,2024-07-31,41.0,26.0,36.0,26.0,93.0
+First Alliance Church - FP,01544,Erie,Food Pantry/TEFAP,2024-08-31,26.0,15.0,6.0,26.0,67.0
+First Alliance Church - FP,01544,Erie,Food Pantry/TEFAP,2024-09-30,26.0,11.0,3.0,26.0,63.0
+First Alliance Church - FP,01544,Erie,Food Pantry/TEFAP,2024-10-31,36.0,11.0,13.0,31.0,78.0
+First Alliance Church - FP,01544,Erie,Food Pantry/TEFAP,2024-11-30,34.0,15.0,4.0,28.0,77.0
+First Alliance Church - FP,01544,Erie,Food Pantry/TEFAP,2024-12-31,31.0,16.0,1.0,20.0,67.0
+First Alliance Church - FP,01544,Erie,Food Pantry/TEFAP,2025-01-31,26.0,10.0,1.0,21.0,57.0
+First Alliance Church - FP,01544,Erie,Food Pantry/TEFAP,2025-02-28,31.0,16.0,2.0,29.0,76.0
+First Alliance Church - FP,01544,Erie,Food Pantry/TEFAP,2025-03-31,30.0,13.0,3.0,30.0,73.0
+First Alliance Church - FP,01544,Erie,Food Pantry/TEFAP,2025-04-30,31.0,10.0,2.0,33.0,74.0
+First Alliance Church - FP,01544,Erie,Food Pantry/TEFAP,2025-05-31,39.0,17.0,6.0,33.0,89.0
+First Alliance Church - FP,01544,Erie,Food Pantry/TEFAP,2025-06-30,36.0,20.0,9.0,30.0,86.0
+Gannon University,01820,Erie,Food Pantry/No TEFAP,2025-03-31,149.0,0.0,63.0,0.0,149.0
+Gannon University,01820,Erie,Food Pantry/No TEFAP,2025-04-30,140.0,0.0,0.0,0.0,140.0
+Gannon University,01820,Erie,Food Pantry/No TEFAP,2025-05-31,70.0,0.0,0.0,0.0,70.0
+Gannon University,01820,Erie,Food Pantry/No TEFAP,2025-06-30,31.0,0.0,0.0,0.0,31.0
+Girard High School - SCHOOL PANTRY,09782,Erie,School Pantry,2024-10-31,0.0,25.0,0.0,0.0,0.0
+Girard High School - SCHOOL PANTRY,09782,Erie,School Pantry,2024-11-30,0.0,24.0,0.0,0.0,0.0
+Girard High School - SCHOOL PANTRY,09782,Erie,School Pantry,2024-12-31,0.0,18.0,0.0,0.0,0.0
+Girard High School - SCHOOL PANTRY,09782,Erie,School Pantry,2025-01-31,0.0,24.0,0.0,0.0,0.0
+Girard High School - SCHOOL PANTRY,09782,Erie,School Pantry,2025-02-28,0.0,24.0,0.0,0.0,0.0
+Girard High School - SCHOOL PANTRY,09782,Erie,School Pantry,2025-03-31,0.0,17.0,0.0,0.0,0.0
+Girard High School - SCHOOL PANTRY,09782,Erie,School Pantry,2025-04-30,0.0,22.0,0.0,0.0,0.0
+Girard High School - SCHOOL PANTRY,09782,Erie,School Pantry,2025-05-31,0.0,20.0,0.0,0.0,0.0
+Glenwood Methodist Church,01656,Erie,Food Pantry/TEFAP,2024-07-31,93.0,46.0,103.0,60.0,199.0
+Glenwood Methodist Church,01656,Erie,Food Pantry/TEFAP,2024-08-31,64.0,53.0,27.0,61.0,178.0
+Glenwood Methodist Church,01656,Erie,Food Pantry/TEFAP,2024-09-30,119.0,62.0,26.0,56.0,237.0
+Glenwood Methodist Church,01656,Erie,Food Pantry/TEFAP,2024-10-31,116.0,62.0,21.0,63.0,241.0
+Glenwood Methodist Church,01656,Erie,Food Pantry/TEFAP,2024-11-30,127.0,63.0,16.0,51.0,241.0
+Glenwood Methodist Church,01656,Erie,Food Pantry/TEFAP,2024-12-31,70.0,40.0,3.0,42.0,152.0
+Glenwood Methodist Church,01656,Erie,Food Pantry/TEFAP,2025-01-31,107.0,60.0,10.0,48.0,215.0
+Glenwood Methodist Church,01656,Erie,Food Pantry/TEFAP,2025-02-28,94.0,56.0,4.0,51.0,201.0
+Glenwood Methodist Church,01656,Erie,Food Pantry/TEFAP,2025-03-31,95.0,57.0,13.0,56.0,208.0
+Glenwood Methodist Church,01656,Erie,Food Pantry/TEFAP,2025-04-30,96.0,56.0,7.0,53.0,205.0
+Glenwood Methodist Church,01656,Erie,Food Pantry/TEFAP,2025-05-31,60.0,38.0,2.0,44.0,142.0
+Glenwood Methodist Church,01656,Erie,Food Pantry/TEFAP,2025-06-30,131.0,68.0,10.0,78.0,277.0
+Harborcreek Youth Services - O.S.N.E.-YR,04058,Erie,Non-Emerg. Meal/Snack,2025-01-31,0.0,0.0,0.0,0.0,55.0
+Heavenly Pentecostal Mission - FP,01501,Erie,Food Pantry/TEFAP,2024-07-31,28.0,18.0,0.0,6.0,52.0
+Heavenly Pentecostal Mission - FP,01501,Erie,Food Pantry/TEFAP,2024-08-31,30.0,19.0,1.0,6.0,55.0
+Heavenly Pentecostal Mission - FP,01501,Erie,Food Pantry/TEFAP,2024-09-30,29.0,19.0,2.0,7.0,55.0
+Heavenly Pentecostal Mission - FP,01501,Erie,Food Pantry/TEFAP,2024-10-31,28.0,19.0,1.0,7.0,54.0
+Heavenly Pentecostal Mission - FP,01501,Erie,Food Pantry/TEFAP,2024-11-30,32.0,19.0,1.0,10.0,61.0
+Heavenly Pentecostal Mission - FP,01501,Erie,Food Pantry/TEFAP,2024-12-31,30.0,17.0,2.0,10.0,57.0
+Heavenly Pentecostal Mission - FP,01501,Erie,Food Pantry/TEFAP,2025-01-31,34.0,17.0,1.0,12.0,63.0
+Heavenly Pentecostal Mission - FP,01501,Erie,Food Pantry/TEFAP,2025-02-28,34.0,17.0,0.0,13.0,64.0
+Heavenly Pentecostal Mission - FP,01501,Erie,Food Pantry/TEFAP,2025-03-31,29.0,18.0,1.0,13.0,60.0
+Heavenly Pentecostal Mission - FP,01501,Erie,Food Pantry/TEFAP,2025-04-30,34.0,18.0,0.0,13.0,65.0
+Heavenly Pentecostal Mission - FP,01501,Erie,Food Pantry/TEFAP,2025-05-31,28.0,17.0,0.0,12.0,57.0
+Heavenly Pentecostal Mission - FP,01501,Erie,Food Pantry/TEFAP,2025-06-30,30.0,17.0,0.0,13.0,60.0
+Home House of Erie - FP,01690,Erie,Food Pantry/TEFAP,2024-07-31,1510.0,1232.0,0.0,172.0,304.0
+Home House of Erie - FP,01690,Erie,Food Pantry/TEFAP,2024-08-31,1336.0,1139.0,0.0,216.0,143.0
+Home House of Erie - FP,01690,Erie,Food Pantry/TEFAP,2024-09-30,1379.0,1085.0,0.0,218.0,2682.0
+Home House of Erie - FP,01690,Erie,Food Pantry/TEFAP,2024-10-31,1494.0,1153.0,0.0,210.0,2857.0
+Home House of Erie - FP,01690,Erie,Food Pantry/TEFAP,2024-11-30,1464.0,1227.0,0.0,200.0,2891.0
+Home House of Erie - FP,01690,Erie,Food Pantry/TEFAP,2024-12-31,939.0,851.0,0.0,151.0,1941.0
+Home House of Erie - FP,01690,Erie,Food Pantry/TEFAP,2025-01-31,1318.0,1465.0,0.0,200.0,2983.0
+Home House of Erie - FP,01690,Erie,Food Pantry/TEFAP,2025-02-28,1437.0,1524.0,0.0,207.0,3271.0
+Home House of Erie - FP,01690,Erie,Food Pantry/TEFAP,2025-03-31,1646.0,1442.0,0.0,376.0,3464.0
+Home House of Erie - FP,01690,Erie,Food Pantry/TEFAP,2025-04-30,781.0,993.0,54.0,108.0,1882.0
+Home House of Erie - FP,01690,Erie,Food Pantry/TEFAP,2025-05-31,597.0,923.0,0.0,148.0,1668.0
+Home House of Erie - FP,01690,Erie,Food Pantry/TEFAP,2025-06-30,1265.0,1401.0,0.0,94.0,3601.0
+Iroquois High School - SCHOOL PANTRY,09757,Erie,School Pantry,2024-07-31,0.0,45.0,0.0,0.0,0.0
+Iroquois High School - SCHOOL PANTRY,09757,Erie,School Pantry,2024-08-31,0.0,45.0,0.0,0.0,0.0
+Iroquois High School - SCHOOL PANTRY,09757,Erie,School Pantry,2024-10-31,0.0,80.0,0.0,0.0,0.0
+Iroquois High School - SCHOOL PANTRY,09757,Erie,School Pantry,2024-11-30,0.0,82.0,0.0,0.0,0.0
+Iroquois High School - SCHOOL PANTRY,09757,Erie,School Pantry,2024-12-31,0.0,81.0,0.0,0.0,0.0
+Iroquois High School - SCHOOL PANTRY,09757,Erie,School Pantry,2025-01-31,0.0,81.0,0.0,0.0,0.0
+Iroquois High School - SCHOOL PANTRY,09757,Erie,School Pantry,2025-02-28,0.0,77.0,0.0,0.0,0.0
+Iroquois High School - SCHOOL PANTRY,09757,Erie,School Pantry,2025-03-31,0.0,79.0,0.0,0.0,0.0
+Iroquois High School - SCHOOL PANTRY,09757,Erie,School Pantry,2025-04-30,0.0,77.0,0.0,0.0,0.0
+Iroquois High School - SCHOOL PANTRY,09757,Erie,School Pantry,2025-05-31,0.0,73.0,0.0,0.0,0.0
+Islamic Association of Erie - FP,01782,Erie,Food Pantry/TEFAP,2024-07-31,1648.0,678.0,0.0,73.0,2399.0
+Islamic Association of Erie - FP,01782,Erie,Food Pantry/TEFAP,2024-08-31,1722.0,678.0,0.0,73.0,2473.0
+Islamic Association of Erie - FP,01782,Erie,Food Pantry/TEFAP,2024-09-30,1710.0,678.0,0.0,73.0,2461.0
+Islamic Association of Erie - FP,01782,Erie,Food Pantry/TEFAP,2024-10-31,1734.0,678.0,0.0,73.0,2485.0
+Islamic Association of Erie - FP,01782,Erie,Food Pantry/TEFAP,2024-11-30,1909.0,678.0,0.0,73.0,2660.0
+Islamic Association of Erie - FP,01782,Erie,Food Pantry/TEFAP,2024-12-31,634.0,678.0,0.0,73.0,1385.0
+Islamic Association of Erie - FP,01782,Erie,Food Pantry/TEFAP,2025-01-31,709.0,678.0,0.0,73.0,1460.0
+Islamic Association of Erie - FP,01782,Erie,Food Pantry/TEFAP,2025-02-28,1710.0,678.0,0.0,73.0,2461.0
+Islamic Association of Erie - FP,01782,Erie,Food Pantry/TEFAP,2025-03-31,1909.0,678.0,0.0,73.0,2660.0
+Islamic Association of Erie - FP,01782,Erie,Food Pantry/TEFAP,2025-04-30,1796.0,678.0,0.0,73.0,2546.0
+Islamic Association of Erie - FP,01782,Erie,Food Pantry/TEFAP,2025-05-31,1991.0,678.0,0.0,73.0,2742.0
+Islamic Association of Erie - FP,01782,Erie,Food Pantry/TEFAP,2025-06-30,1633.0,674.0,0.0,73.0,2380.0
+John F Kennedy Kids Cafe - SK,03505,Erie,Kids Cafe,2024-07-31,0.0,0.0,0.0,0.0,45.0
+John F Kennedy Kids Cafe - SK,03505,Erie,Kids Cafe,2024-09-30,0.0,0.0,0.0,0.0,75.0
+John F Kennedy Kids Cafe - SK,03505,Erie,Kids Cafe,2025-02-28,0.0,0.0,0.0,0.0,573.0
+John F Kennedy Kids Cafe - SK,03505,Erie,Kids Cafe,2025-03-31,0.0,0.0,0.0,0.0,700.0
+John F Kennedy Kids Cafe - SK,03505,Erie,Kids Cafe,2025-04-30,0.0,0.0,0.0,0.0,175.0
+John F Kennedy Kids Cafe - SK,03505,Erie,Kids Cafe,2025-05-31,0.0,0.0,0.0,0.0,200.0
+John F Kennedy Kids Cafe - SK,03505,Erie,Kids Cafe,2025-06-30,0.0,0.0,0.0,0.0,300.0
+John Horan Garden Apartments - SHFB MOBILE,10708,Erie,Produce Express,2024-07-31,168.0,121.0,93.0,8.0,297.0
+John Horan Garden Apartments - SHFB MOBILE,10708,Erie,Produce Express,2024-08-31,176.0,112.0,0.0,0.0,288.0
+John Horan Garden Apartments - SHFB MOBILE,10708,Erie,Produce Express,2024-09-30,188.0,123.0,0.0,0.0,311.0
+John Horan Garden Apartments - SHFB MOBILE,10708,Erie,Produce Express,2024-12-31,119.0,79.0,26.0,4.0,202.0
+John Horan Garden Apartments - SHFB MOBILE,10708,Erie,Produce Express,2025-01-31,131.0,10.0,10.0,4.0,145.0
+John Horan Garden Apartments - SHFB MOBILE,10708,Erie,Produce Express,2025-02-28,145.0,104.0,16.0,4.0,253.0
+John Horan Garden Apartments - SHFB MOBILE,10708,Erie,Produce Express,2025-03-31,176.0,129.0,8.0,4.0,309.0
+John Horan Garden Apartments - SHFB MOBILE,10708,Erie,Produce Express,2025-04-30,149.0,107.0,6.0,2.0,258.0
+John Horan Garden Apartments - SHFB MOBILE,10708,Erie,Produce Express,2025-05-31,15.0,17.0,11.0,1.0,33.0
+Kearsarge Area - FP,01071,Erie,Food Pantry/TEFAP,2024-07-31,68.0,58.0,48.0,32.0,158.0
+Kearsarge Area - FP,01071,Erie,Food Pantry/TEFAP,2024-08-31,76.0,66.0,6.0,28.0,170.0
+Kearsarge Area - FP,01071,Erie,Food Pantry/TEFAP,2024-09-30,80.0,64.0,13.0,35.0,179.0
+Kearsarge Area - FP,01071,Erie,Food Pantry/TEFAP,2024-10-31,96.0,64.0,14.0,42.0,202.0
+Kearsarge Area - FP,01071,Erie,Food Pantry/TEFAP,2024-11-30,110.0,111.0,4.0,43.0,264.0
+Kearsarge Area - FP,01071,Erie,Food Pantry/TEFAP,2024-12-31,86.0,79.0,2.0,34.0,199.0
+Kearsarge Area - FP,01071,Erie,Food Pantry/TEFAP,2025-01-31,94.0,87.0,4.0,31.0,212.0
+Kearsarge Area - FP,01071,Erie,Food Pantry/TEFAP,2025-02-28,83.0,80.0,3.0,31.0,194.0
+Kearsarge Area - FP,01071,Erie,Food Pantry/TEFAP,2025-03-31,79.0,73.0,1.0,32.0,184.0
+Kearsarge Area - FP,01071,Erie,Food Pantry/TEFAP,2025-04-30,77.0,64.0,2.0,34.0,175.0
+Kearsarge Area - FP,01071,Erie,Food Pantry/TEFAP,2025-05-31,39.0,75.0,2.0,70.0,184.0
+Kearsarge Area - FP,01071,Erie,Food Pantry/TEFAP,2025-06-30,83.0,64.0,6.0,34.0,181.0
+Linesville Area - FP,01524,Crawford,Food Pantry/TEFAP,2024-07-31,31.0,16.0,44.0,39.0,86.0
+Linesville Area - FP,01524,Crawford,Food Pantry/TEFAP,2024-08-31,33.0,9.0,8.0,42.0,84.0
+Linesville Area - FP,01524,Crawford,Food Pantry/TEFAP,2024-09-30,41.0,11.0,8.0,45.0,97.0
+Linesville Area - FP,01524,Crawford,Food Pantry/TEFAP,2024-10-31,38.0,6.0,2.0,44.0,88.0
+Linesville Area - FP,01524,Crawford,Food Pantry/TEFAP,2024-11-30,43.0,23.0,8.0,52.0,118.0
+Linesville Area - FP,01524,Crawford,Food Pantry/TEFAP,2024-12-31,35.0,15.0,1.0,50.0,100.0
+Linesville Area - FP,01524,Crawford,Food Pantry/TEFAP,2025-01-31,31.0,11.0,2.0,38.0,80.0
+Linesville Area - FP,01524,Crawford,Food Pantry/TEFAP,2025-02-28,38.0,13.0,1.0,45.0,96.0
+Linesville Area - FP,01524,Crawford,Food Pantry/TEFAP,2025-03-31,29.0,5.0,1.0,40.0,74.0
+Linesville Area - FP,01524,Crawford,Food Pantry/TEFAP,2025-04-30,36.0,11.0,4.0,50.0,97.0
+Linesville Area - FP,01524,Crawford,Food Pantry/TEFAP,2025-05-31,40.0,11.0,3.0,51.0,102.0
+Linesville Area - FP,01524,Crawford,Food Pantry/TEFAP,2025-06-30,28.0,9.0,1.0,46.0,83.0
+Lowville - FP,01140,Erie,Food Pantry/TEFAP,2024-07-31,42.0,18.0,1.0,18.0,78.0
+Lowville - FP,01140,Erie,Food Pantry/TEFAP,2024-08-31,40.0,19.0,1.0,20.0,79.0
+Lowville - FP,01140,Erie,Food Pantry/TEFAP,2024-09-30,42.0,24.0,3.0,23.0,89.0
+Lowville - FP,01140,Erie,Food Pantry/TEFAP,2024-10-31,46.0,22.0,6.0,23.0,91.0
+Lowville - FP,01140,Erie,Food Pantry/TEFAP,2024-11-30,55.0,35.0,2.0,26.0,116.0
+Lowville - FP,01140,Erie,Food Pantry/TEFAP,2024-12-31,48.0,30.0,0.0,22.0,101.0
+Lowville - FP,01140,Erie,Food Pantry/TEFAP,2025-01-31,45.0,22.0,2.0,23.0,90.0
+Lowville - FP,01140,Erie,Food Pantry/TEFAP,2025-02-28,34.0,21.0,0.0,24.0,79.0
+Lowville - FP,01140,Erie,Food Pantry/TEFAP,2025-03-31,41.0,21.0,2.0,20.0,82.0
+Lowville - FP,01140,Erie,Food Pantry/TEFAP,2025-04-30,29.0,19.0,0.0,30.0,78.0
+Lowville - FP,01140,Erie,Food Pantry/TEFAP,2025-05-31,44.0,29.0,1.0,20.0,93.0
+Lowville - FP,01140,Erie,Food Pantry/TEFAP,2025-06-30,43.0,26.0,5.0,23.0,92.0
+MHEDS,01304,Erie,Food Pantry/TEFAP,2024-07-31,46.0,66.0,49.0,19.0,133.0
+MHEDS,01304,Erie,Food Pantry/TEFAP,2024-08-31,38.0,55.0,12.0,15.0,111.0
+MHEDS,01304,Erie,Food Pantry/TEFAP,2024-09-30,40.0,56.0,3.0,17.0,117.0
+MHEDS,01304,Erie,Food Pantry/TEFAP,2024-10-31,48.0,59.0,0.0,16.0,131.0
+MHEDS,01304,Erie,Food Pantry/TEFAP,2024-11-30,38.0,55.0,0.0,15.0,112.0
+MHEDS,01304,Erie,Food Pantry/TEFAP,2024-12-31,40.0,59.0,0.0,11.0,114.0
+MHEDS,01304,Erie,Food Pantry/TEFAP,2025-01-31,40.0,58.0,0.0,10.0,112.0
+MHEDS,01304,Erie,Food Pantry/TEFAP,2025-02-28,48.0,59.0,2.0,16.0,131.0
+MHEDS,01304,Erie,Food Pantry/TEFAP,2025-03-31,51.0,64.0,2.0,16.0,141.0
+MHEDS,01304,Erie,Food Pantry/TEFAP,2025-04-30,42.0,65.0,2.0,19.0,130.0
+MHEDS,01304,Erie,Food Pantry/TEFAP,2025-05-31,50.0,61.0,0.0,20.0,139.0
+MHEDS,01304,Erie,Food Pantry/TEFAP,2025-06-30,46.0,54.0,0.0,20.0,128.0
+Martin Luther King Center - FP,01078,Erie,Food Pantry/TEFAP,2024-07-31,26.0,16.0,24.0,13.0,55.0
+Martin Luther King Center - FP,01078,Erie,Food Pantry/TEFAP,2024-08-31,38.0,16.0,15.0,18.0,72.0
+Martin Luther King Center - FP,01078,Erie,Food Pantry/TEFAP,2024-09-30,46.0,18.0,17.0,20.0,84.0
+Martin Luther King Center - FP,01078,Erie,Food Pantry/TEFAP,2024-10-31,74.0,49.0,27.0,38.0,161.0
+Martin Luther King Center - FP,01078,Erie,Food Pantry/TEFAP,2024-11-30,61.0,43.0,23.0,20.0,124.0
+Martin Luther King Center - FP,01078,Erie,Food Pantry/TEFAP,2024-12-31,29.0,21.0,6.0,17.0,67.0
+Martin Luther King Center - FP,01078,Erie,Food Pantry/TEFAP,2025-01-31,51.0,36.0,8.0,17.0,104.0
+Martin Luther King Center - FP,01078,Erie,Food Pantry/TEFAP,2025-02-28,46.0,19.0,14.0,22.0,87.0
+Martin Luther King Center - FP,01078,Erie,Food Pantry/TEFAP,2025-03-31,54.0,24.0,12.0,21.0,99.0
+Martin Luther King Center - FP,01078,Erie,Food Pantry/TEFAP,2025-04-30,69.0,39.0,15.0,29.0,137.0
+Martin Luther King Center - FP,01078,Erie,Food Pantry/TEFAP,2025-05-31,75.0,47.0,19.0,23.0,145.0
+Martin Luther King Center - FP,01078,Erie,Food Pantry/TEFAP,2025-06-30,55.0,25.0,12.0,15.0,95.0
+McKean Area Food Pantry,01435,Erie,Food Pantry/TEFAP,2025-03-31,21.0,14.0,13.0,7.0,42.0
+McKean Area Food Pantry,01435,Erie,Food Pantry/TEFAP,2025-04-30,42.0,28.0,20.0,28.0,98.0
+McKean Area Food Pantry,01435,Erie,Food Pantry/TEFAP,2025-05-31,49.0,33.0,21.0,21.0,103.0
+McKean Area Food Pantry,01435,Erie,Food Pantry/TEFAP,2025-06-30,51.0,33.0,18.0,37.0,121.0
+Meadville - SHFB MOBILE,10711,Crawford,Produce Express,2024-07-31,91.0,63.0,133.0,107.0,261.0
+Meadville - SHFB MOBILE,10711,Crawford,Produce Express,2024-08-31,73.0,38.0,47.0,88.0,199.0
+Meadville - SHFB MOBILE,10711,Crawford,Produce Express,2024-09-30,65.0,40.0,15.0,78.0,183.0
+Meadville - SHFB MOBILE,10711,Crawford,Produce Express,2024-10-31,65.0,40.0,15.0,79.0,184.0
+Meadville - SHFB MOBILE,10711,Crawford,Produce Express,2024-11-30,107.0,69.0,23.0,108.0,284.0
+Meadville - SHFB MOBILE,10711,Crawford,Produce Express,2024-12-31,81.0,45.0,0.0,81.0,207.0
+Meadville - SHFB MOBILE,10711,Crawford,Produce Express,2025-01-31,82.0,44.0,11.0,71.0,197.0
+Meadville - SHFB MOBILE,10711,Crawford,Produce Express,2025-02-28,100.0,60.0,13.0,93.0,253.0
+Meadville - SHFB MOBILE,10711,Crawford,Produce Express,2025-03-31,100.0,60.0,13.0,94.0,254.0
+Meadville - SHFB MOBILE,10711,Crawford,Produce Express,2025-04-30,118.0,76.0,9.0,124.0,318.0
+Meadville - SHFB MOBILE,10711,Crawford,Produce Express,2025-05-31,94.0,54.0,17.0,103.0,251.0
+Meadville - SHFB MOBILE,10711,Crawford,Produce Express,2025-06-30,83.0,33.0,4.0,107.0,223.0
+Meadville Family YMCA-Childcare,04589,Crawford,Non-Emerg. Meal/Snack,2024-08-31,0.0,0.0,0.0,0.0,249.0
+Meadville Family YMCA-Childcare,04589,Crawford,Non-Emerg. Meal/Snack,2024-09-30,0.0,0.0,0.0,0.0,180.0
+Meadville Family YMCA-Childcare,04589,Crawford,Non-Emerg. Meal/Snack,2024-10-31,0.0,0.0,0.0,0.0,185.0
+Meadville Family YMCA-Childcare,04589,Crawford,Non-Emerg. Meal/Snack,2024-11-30,0.0,0.0,0.0,0.0,331.0
+Meadville Family YMCA-Childcare,04589,Crawford,Non-Emerg. Meal/Snack,2024-12-31,0.0,0.0,0.0,0.0,185.0
+Meadville Family YMCA-Childcare,04589,Crawford,Non-Emerg. Meal/Snack,2025-01-31,0.0,0.0,0.0,0.0,322.0
+Meadville Family YMCA-Childcare,04589,Crawford,Non-Emerg. Meal/Snack,2025-03-31,0.0,0.0,0.0,0.0,167.0
+Meadville Family YMCA-Childcare,04589,Crawford,Non-Emerg. Meal/Snack,2025-04-30,0.0,0.0,0.0,0.0,176.0
+Mercy Anchor Community Center FP,01810,Erie,Food Pantry/TEFAP,2024-07-31,249.0,316.0,148.0,28.0,593.0
+Mercy Anchor Community Center FP,01810,Erie,Food Pantry/TEFAP,2024-08-31,286.0,348.0,78.0,26.0,660.0
+Mercy Anchor Community Center FP,01810,Erie,Food Pantry/TEFAP,2024-09-30,289.0,317.0,59.0,26.0,632.0
+Mercy Anchor Community Center FP,01810,Erie,Food Pantry/TEFAP,2024-10-31,276.0,332.0,50.0,29.0,637.0
+Mercy Anchor Community Center FP,01810,Erie,Food Pantry/TEFAP,2024-11-30,369.0,424.0,58.0,28.0,822.0
+Mercy Anchor Community Center FP,01810,Erie,Food Pantry/TEFAP,2024-12-31,185.0,241.0,35.0,17.0,443.0
+Mercy Anchor Community Center FP,01810,Erie,Food Pantry/TEFAP,2025-01-31,315.0,418.0,59.0,18.0,751.0
+Mercy Anchor Community Center FP,01810,Erie,Food Pantry/TEFAP,2025-02-28,286.0,333.0,29.0,6.0,625.0
+Mercy Anchor Community Center FP,01810,Erie,Food Pantry/TEFAP,2025-03-31,298.0,398.0,40.0,11.0,702.0
+Mercy Anchor Community Center FP,01810,Erie,Food Pantry/TEFAP,2025-04-30,385.0,475.0,57.0,15.0,875.0
+Mercy Anchor Community Center FP,01810,Erie,Food Pantry/TEFAP,2025-05-31,402.0,518.0,66.0,19.0,939.0
+Mercy Anchor Community Center FP,01810,Erie,Food Pantry/TEFAP,2025-06-30,378.0,497.0,37.0,16.0,891.0
+Mercy Market- Mercyhurst University,01819,Erie,Food Pantry/No TEFAP,2025-02-28,0.0,0.0,0.0,0.0,15.0
+Mercy Market- Mercyhurst University,01819,Erie,Food Pantry/No TEFAP,2025-03-31,0.0,0.0,0.0,0.0,15.0
+Mercy Market- Mercyhurst University,01819,Erie,Food Pantry/No TEFAP,2025-04-30,0.0,0.0,0.0,0.0,29.0
+Neighborhood Watch #13 Snoops,01533,Erie,Food Pantry/TEFAP,2024-07-31,33.0,15.0,0.0,12.0,60.0
+Neighborhood Watch #13 Snoops,01533,Erie,Food Pantry/TEFAP,2024-08-31,16.0,18.0,0.0,20.0,52.0
+Neighborhood Watch #13 Snoops,01533,Erie,Food Pantry/TEFAP,2024-09-30,35.0,10.0,0.0,14.0,0.0
+Neighborhood Watch #13 Snoops,01533,Erie,Food Pantry/TEFAP,2024-10-31,26.0,8.0,0.0,14.0,48.0
+Neighborhood Watch #13 Snoops,01533,Erie,Food Pantry/TEFAP,2024-11-30,21.0,10.0,0.0,16.0,47.0
+Neighborhood Watch #13 Snoops,01533,Erie,Food Pantry/TEFAP,2024-12-31,18.0,3.0,0.0,10.0,31.0
+Neighborhood Watch #13 Snoops,01533,Erie,Food Pantry/TEFAP,2025-01-31,14.0,9.0,0.0,14.0,37.0
+Neighborhood Watch #13 Snoops,01533,Erie,Food Pantry/TEFAP,2025-02-28,11.0,0.0,0.0,13.0,24.0
+Neighborhood Watch #13 Snoops,01533,Erie,Food Pantry/TEFAP,2025-03-31,15.0,9.0,0.0,12.0,36.0
+Neighborhood Watch #13 Snoops,01533,Erie,Food Pantry/TEFAP,2025-04-30,20.0,5.0,0.0,10.0,35.0
+Neighborhood Watch #13 Snoops,01533,Erie,Food Pantry/TEFAP,2025-05-31,13.0,6.0,0.0,14.0,33.0
+Neighborhood Watch #13 Snoops,01533,Erie,Food Pantry/TEFAP,2025-06-30,19.0,2.0,0.0,21.0,42.0
+North East - SHFB MOBILE,10706,Erie,Produce Express,2024-07-31,96.0,59.0,137.0,107.0,262.0
+North East - SHFB MOBILE,10706,Erie,Produce Express,2024-08-31,76.0,49.0,11.0,93.0,218.0
+North East - SHFB MOBILE,10706,Erie,Produce Express,2024-09-30,113.0,77.0,17.0,116.0,306.0
+North East - SHFB MOBILE,10706,Erie,Produce Express,2024-10-31,110.0,89.0,10.0,110.0,309.0
+North East - SHFB MOBILE,10706,Erie,Produce Express,2024-11-30,128.0,88.0,3.0,116.0,332.0
+North East - SHFB MOBILE,10706,Erie,Produce Express,2024-12-31,92.0,68.0,2.0,85.0,245.0
+North East - SHFB MOBILE,10706,Erie,Produce Express,2025-01-31,85.0,52.0,0.0,73.0,210.0
+North East - SHFB MOBILE,10706,Erie,Produce Express,2025-02-28,120.0,80.0,9.0,103.0,303.0
+North East - SHFB MOBILE,10706,Erie,Produce Express,2025-03-31,109.0,75.0,8.0,101.0,285.0
+North East - SHFB MOBILE,10706,Erie,Produce Express,2025-04-30,96.0,65.0,9.0,102.0,263.0
+North East - SHFB MOBILE,10706,Erie,Produce Express,2025-05-31,74.0,49.0,3.0,91.0,214.0
+North East - SHFB MOBILE,10706,Erie,Produce Express,2025-06-30,100.0,68.0,4.0,100.0,268.0
+North East High School  - SCHOOL PANTRY,09785,Erie,School Pantry,2024-10-31,0.0,10.0,0.0,0.0,0.0
+North East High School  - SCHOOL PANTRY,09785,Erie,School Pantry,2024-11-30,0.0,8.0,0.0,0.0,0.0
+North East High School  - SCHOOL PANTRY,09785,Erie,School Pantry,2024-12-31,0.0,7.0,0.0,0.0,0.0
+North East High School  - SCHOOL PANTRY,09785,Erie,School Pantry,2025-01-31,0.0,10.0,0.0,0.0,0.0
+North East High School  - SCHOOL PANTRY,09785,Erie,School Pantry,2025-02-28,0.0,7.0,0.0,0.0,0.0
+North East High School  - SCHOOL PANTRY,09785,Erie,School Pantry,2025-03-31,0.0,8.0,0.0,0.0,0.0
+North East High School  - SCHOOL PANTRY,09785,Erie,School Pantry,2025-04-30,0.0,4.0,0.0,0.0,0.0
+North East High School  - SCHOOL PANTRY,09785,Erie,School Pantry,2025-05-31,0.0,4.0,0.0,0.0,0.0
+North East Middle School - SCHOOL PANTRY,09789,Erie,School Pantry,2024-07-31,0.0,9.0,0.0,0.0,0.0
+North East Middle School - SCHOOL PANTRY,09789,Erie,School Pantry,2024-08-31,0.0,9.0,0.0,0.0,0.0
+North East Middle School - SCHOOL PANTRY,09789,Erie,School Pantry,2024-10-31,0.0,7.0,0.0,0.0,0.0
+North East Middle School - SCHOOL PANTRY,09789,Erie,School Pantry,2024-11-30,0.0,7.0,0.0,0.0,0.0
+North East Middle School - SCHOOL PANTRY,09789,Erie,School Pantry,2024-12-31,0.0,7.0,0.0,0.0,0.0
+North East Middle School - SCHOOL PANTRY,09789,Erie,School Pantry,2025-01-31,0.0,4.0,0.0,0.0,0.0
+North East Middle School - SCHOOL PANTRY,09789,Erie,School Pantry,2025-02-28,0.0,5.0,0.0,0.0,0.0
+North East Middle School - SCHOOL PANTRY,09789,Erie,School Pantry,2025-03-31,0.0,4.0,0.0,0.0,0.0
+North East Middle School - SCHOOL PANTRY,09789,Erie,School Pantry,2025-04-30,0.0,5.0,0.0,0.0,0.0
+North East Middle School - SCHOOL PANTRY,09789,Erie,School Pantry,2025-05-31,0.0,5.0,0.0,0.0,0.0
+Northwestern - FP,01082,Erie,Food Pantry/TEFAP,2024-07-31,248.0,137.0,222.0,151.0,536.0
+Northwestern - FP,01082,Erie,Food Pantry/TEFAP,2024-08-31,361.0,205.0,9.0,198.0,763.0
+Northwestern - FP,01082,Erie,Food Pantry/TEFAP,2024-09-30,283.0,154.0,237.0,146.0,583.0
+Northwestern - FP,01082,Erie,Food Pantry/TEFAP,2024-10-31,257.0,136.0,11.0,147.0,540.0
+Northwestern - FP,01082,Erie,Food Pantry/TEFAP,2024-11-30,311.0,193.0,13.0,165.0,669.0
+Northwestern - FP,01082,Erie,Food Pantry/TEFAP,2024-12-31,484.0,299.0,10.0,217.0,1000.0
+Northwestern - FP,01082,Erie,Food Pantry/TEFAP,2025-01-31,403.0,246.0,3.0,187.0,836.0
+Northwestern - FP,01082,Erie,Food Pantry/TEFAP,2025-02-28,411.0,247.0,3.0,188.0,846.0
+Northwestern - FP,01082,Erie,Food Pantry/TEFAP,2025-03-31,249.0,143.0,6.0,139.0,531.0
+Northwestern - FP,01082,Erie,Food Pantry/TEFAP,2025-04-30,270.0,170.0,11.0,152.0,592.0
+Northwestern - FP,01082,Erie,Food Pantry/TEFAP,2025-05-31,260.0,144.0,12.0,139.0,543.0
+Northwestern - FP,01082,Erie,Food Pantry/TEFAP,2025-06-30,267.0,150.0,10.0,147.0,563.0
+Northwestern High School - SCHOOL PANTRY,09791,Erie,School Pantry,2024-10-31,0.0,10.0,0.0,0.0,0.0
+Northwestern High School - SCHOOL PANTRY,09791,Erie,School Pantry,2024-11-30,0.0,10.0,0.0,0.0,0.0
+Northwestern High School - SCHOOL PANTRY,09791,Erie,School Pantry,2024-12-31,0.0,10.0,0.0,0.0,0.0
+Northwestern High School - SCHOOL PANTRY,09791,Erie,School Pantry,2025-01-31,0.0,10.0,0.0,0.0,0.0
+Northwestern High School - SCHOOL PANTRY,09791,Erie,School Pantry,2025-02-28,0.0,10.0,0.0,0.0,0.0
+Northwestern High School - SCHOOL PANTRY,09791,Erie,School Pantry,2025-03-31,0.0,10.0,0.0,0.0,0.0
+Northwestern High School - SCHOOL PANTRY,09791,Erie,School Pantry,2025-04-30,0.0,10.0,0.0,0.0,0.0
+Northwestern High School - SCHOOL PANTRY,09791,Erie,School Pantry,2025-05-31,0.0,10.0,0.0,0.0,0.0
+Oil Valley - FP,01473,Crawford,Food Pantry/TEFAP,2024-07-31,95.0,57.0,3.0,36.0,188.0
+Oil Valley - FP,01473,Crawford,Food Pantry/TEFAP,2024-08-31,101.0,64.0,0.0,41.0,206.0
+Oil Valley - FP,01473,Crawford,Food Pantry/TEFAP,2024-09-30,115.0,41.0,3.0,45.0,201.0
+Oil Valley - FP,01473,Crawford,Food Pantry/TEFAP,2024-10-31,117.0,73.0,5.0,49.0,239.0
+Oil Valley - FP,01473,Crawford,Food Pantry/TEFAP,2024-11-30,114.0,78.0,4.0,49.0,241.0
+Oil Valley - FP,01473,Crawford,Food Pantry/TEFAP,2024-12-31,113.0,72.0,2.0,45.0,230.0
+Oil Valley - FP,01473,Crawford,Food Pantry/TEFAP,2025-01-31,88.0,83.0,1.0,41.0,212.0
+Oil Valley - FP,01473,Crawford,Food Pantry/TEFAP,2025-02-28,100.0,72.0,0.0,42.0,214.0
+Oil Valley - FP,01473,Crawford,Food Pantry/TEFAP,2025-03-31,129.0,80.0,2.0,48.0,257.0
+Oil Valley - FP,01473,Crawford,Food Pantry/TEFAP,2025-04-30,106.0,70.0,0.0,41.0,217.0
+Oil Valley - FP,01473,Crawford,Food Pantry/TEFAP,2025-05-31,114.0,83.0,1.0,44.0,241.0
+Oil Valley - FP,01473,Crawford,Food Pantry/TEFAP,2025-06-30,121.0,83.0,1.0,47.0,251.0
+Order Ahead - SHFB,1001337,Erie,Food Pantry/TEFAP,2024-07-31,23.0,6.0,11.0,0.0,29.0
+Order Ahead - SHFB,1001337,Erie,Food Pantry/TEFAP,2024-08-31,23.0,4.0,0.0,0.0,35.0
+Order Ahead - SHFB,1001337,Erie,Food Pantry/TEFAP,2024-09-30,23.0,4.0,2.0,1.0,28.0
+Order Ahead - SHFB,1001337,Erie,Food Pantry/TEFAP,2024-10-31,23.0,4.0,1.0,2.0,29.0
+Order Ahead - SHFB,1001337,Erie,Food Pantry/TEFAP,2024-11-30,26.0,8.0,1.0,2.0,36.0
+Order Ahead - SHFB,1001337,Erie,Food Pantry/TEFAP,2024-12-31,23.0,14.0,2.0,0.0,37.0
+Order Ahead - SHFB,1001337,Erie,Food Pantry/TEFAP,2025-01-31,30.0,11.0,2.0,3.0,44.0
+Order Ahead - SHFB,1001337,Erie,Food Pantry/TEFAP,2025-02-28,28.0,9.0,0.0,6.0,43.0
+Order Ahead - SHFB,1001337,Erie,Food Pantry/TEFAP,2025-03-31,30.0,7.0,0.0,6.0,43.0
+Order Ahead - SHFB,1001337,Erie,Food Pantry/TEFAP,2025-04-30,30.0,3.0,0.0,4.0,37.0
+Order Ahead - SHFB,1001337,Erie,Food Pantry/TEFAP,2025-05-31,27.0,3.0,0.0,5.0,35.0
+Order Ahead - SHFB,1001337,Erie,Food Pantry/TEFAP,2025-06-30,22.0,3.0,0.0,4.0,29.0
+Our Lady of Mt Carmel / St Lukes - FP,01294,Erie,Food Pantry/TEFAP,2024-07-31,56.0,46.0,71.0,64.0,166.0
+Our Lady of Mt Carmel / St Lukes - FP,01294,Erie,Food Pantry/TEFAP,2024-08-31,54.0,35.0,10.0,53.0,142.0
+Our Lady of Mt Carmel / St Lukes - FP,01294,Erie,Food Pantry/TEFAP,2024-09-30,52.0,35.0,3.0,54.0,141.0
+Our Lady of Mt Carmel / St Lukes - FP,01294,Erie,Food Pantry/TEFAP,2024-10-31,55.0,32.0,10.0,53.0,140.0
+Our Lady of Mt Carmel / St Lukes - FP,01294,Erie,Food Pantry/TEFAP,2024-11-30,59.0,46.0,4.0,60.0,165.0
+Our Lady of Mt Carmel / St Lukes - FP,01294,Erie,Food Pantry/TEFAP,2024-12-31,39.0,25.0,1.0,52.0,116.0
+Our Lady of Mt Carmel / St Lukes - FP,01294,Erie,Food Pantry/TEFAP,2025-01-31,41.0,24.0,2.0,50.0,115.0
+Our Lady of Mt Carmel / St Lukes - FP,01294,Erie,Food Pantry/TEFAP,2025-02-28,42.0,27.0,4.0,53.0,120.0
+Our Lady of Mt Carmel / St Lukes - FP,01294,Erie,Food Pantry/TEFAP,2025-03-31,36.0,27.0,4.0,59.0,121.0
+Our Lady of Mt Carmel / St Lukes - FP,01294,Erie,Food Pantry/TEFAP,2025-04-30,43.0,23.0,9.0,64.0,130.0
+Our Lady of Mt Carmel / St Lukes - FP,01294,Erie,Food Pantry/TEFAP,2025-05-31,46.0,31.0,3.0,58.0,135.0
+Our Lady of Mt Carmel / St Lukes - FP,01294,Erie,Food Pantry/TEFAP,2025-06-30,44.0,30.0,2.0,59.0,133.0
+Perseus House - Andromeda ITU-O.S.N.E.-YR,04472,Erie,Non-Emerg. Meal/Snack,2024-07-31,0.0,0.0,0.0,0.0,15.0
+Perseus House - Andromeda ITU-O.S.N.E.-YR,04472,Erie,Non-Emerg. Meal/Snack,2024-09-30,0.0,0.0,0.0,0.0,18.0
+Perseus House - Andromeda RTF - YR,04232,Erie,Non-Emerg. Meal/Snack,2024-07-31,0.0,0.0,0.0,0.0,14.0
+Perseus House - Andromeda RTF - YR,04232,Erie,Non-Emerg. Meal/Snack,2024-08-31,0.0,0.0,0.0,0.0,14.0
+Perseus House - Andromeda RTF - YR,04232,Erie,Non-Emerg. Meal/Snack,2024-09-30,0.0,0.0,0.0,0.0,4.0
+Perseus House - Andromeda RTF - YR,04232,Erie,Non-Emerg. Meal/Snack,2024-10-31,0.0,0.0,0.0,0.0,2.0
+Perseus House - Andromeda RTF - YR,04232,Erie,Non-Emerg. Meal/Snack,2024-11-30,0.0,0.0,0.0,0.0,11.0
+Perseus House - Andromeda RTF - YR,04232,Erie,Non-Emerg. Meal/Snack,2024-12-31,0.0,0.0,0.0,0.0,11.0
+Perseus House - Andromeda RTF - YR,04232,Erie,Non-Emerg. Meal/Snack,2025-01-31,0.0,0.0,0.0,0.0,1.0
+Perseus House - Andromeda RTF - YR,04232,Erie,Non-Emerg. Meal/Snack,2025-02-28,0.0,0.0,0.0,0.0,10.0
+Perseus House - Andromeda RTF - YR,04232,Erie,Non-Emerg. Meal/Snack,2025-03-31,0.0,0.0,0.0,0.0,2.0
+Perseus House - Andromeda RTF - YR,04232,Erie,Non-Emerg. Meal/Snack,2025-04-30,0.0,0.0,0.0,0.0,2.0
+Perseus House - Andromeda RTF - YR,04232,Erie,Non-Emerg. Meal/Snack,2025-05-31,0.0,0.0,0.0,0.0,2.0
+Perseus House - Andromeda RTF - YR,04232,Erie,Non-Emerg. Meal/Snack,2025-06-30,0.0,0.0,0.0,0.0,1.0
+Perseus House - Boys Enhanced RTF - YR,04615,Erie,Non-Emerg. Meal/Snack,2024-07-31,0.0,0.0,0.0,0.0,6.0
+Perseus House - Boys Enhanced RTF - YR,04615,Erie,Non-Emerg. Meal/Snack,2024-08-31,0.0,0.0,0.0,0.0,6.0
+Perseus House - Boys Enhanced RTF - YR,04615,Erie,Non-Emerg. Meal/Snack,2024-09-30,0.0,0.0,0.0,0.0,6.0
+Perseus House - Boys Enhanced RTF - YR,04615,Erie,Non-Emerg. Meal/Snack,2024-10-31,0.0,0.0,0.0,0.0,6.0
+Perseus House - Boys Enhanced RTF - YR,04615,Erie,Non-Emerg. Meal/Snack,2024-11-30,0.0,0.0,0.0,0.0,6.0
+Perseus House - Boys Enhanced RTF - YR,04615,Erie,Non-Emerg. Meal/Snack,2025-01-31,0.0,0.0,0.0,0.0,5.0
+Perseus House - Boys Enhanced RTF - YR,04615,Erie,Non-Emerg. Meal/Snack,2025-02-28,0.0,0.0,0.0,0.0,5.0
+Perseus House - Boys Enhanced RTF - YR,04615,Erie,Non-Emerg. Meal/Snack,2025-03-31,0.0,0.0,0.0,0.0,5.0
+Perseus House - Boys Enhanced RTF - YR,04615,Erie,Non-Emerg. Meal/Snack,2025-04-30,0.0,0.0,0.0,0.0,6.0
+Perseus House - Boys Enhanced RTF - YR,04615,Erie,Non-Emerg. Meal/Snack,2025-05-31,0.0,0.0,0.0,0.0,6.0
+Perseus House - Boys Enhanced RTF - YR,04615,Erie,Non-Emerg. Meal/Snack,2025-06-30,0.0,0.0,0.0,0.0,6.0
+RCCG-Redeemed Christian Church of God,01475,Erie,Food Pantry/TEFAP,2024-07-31,1.0,0.0,1.0,0.0,1.0
+RCCG-Redeemed Christian Church of God,01475,Erie,Food Pantry/TEFAP,2024-08-31,3.0,0.0,3.0,0.0,3.0
+RCCG-Redeemed Christian Church of God,01475,Erie,Food Pantry/TEFAP,2025-03-31,22.0,0.0,0.0,0.0,0.0
+RCCG-Redeemed Christian Church of God,01475,Erie,Food Pantry/TEFAP,2025-05-31,28.0,28.0,0.0,1.0,0.0
+RCCG-Redeemed Christian Church of God,01475,Erie,Food Pantry/TEFAP,2025-06-30,10.0,4.0,0.0,0.0,21.0
+Rice Avenue Middle School - SCHOOL PANTRY,09758,Erie,School Pantry,2024-07-31,0.0,10.0,0.0,0.0,0.0
+Rice Avenue Middle School - SCHOOL PANTRY,09758,Erie,School Pantry,2024-08-31,0.0,10.0,0.0,0.0,0.0
+Rice Avenue Middle School - SCHOOL PANTRY,09758,Erie,School Pantry,2024-10-31,0.0,9.0,0.0,0.0,0.0
+Rice Avenue Middle School - SCHOOL PANTRY,09758,Erie,School Pantry,2024-11-30,0.0,10.0,0.0,0.0,0.0
+Rice Avenue Middle School - SCHOOL PANTRY,09758,Erie,School Pantry,2024-12-31,0.0,6.0,0.0,0.0,0.0
+Rice Avenue Middle School - SCHOOL PANTRY,09758,Erie,School Pantry,2025-01-31,0.0,6.0,0.0,0.0,0.0
+Rice Avenue Middle School - SCHOOL PANTRY,09758,Erie,School Pantry,2025-02-28,0.0,5.0,0.0,0.0,0.0
+Rice Avenue Middle School - SCHOOL PANTRY,09758,Erie,School Pantry,2025-03-31,0.0,5.0,0.0,0.0,0.0
+Rice Avenue Middle School - SCHOOL PANTRY,09758,Erie,School Pantry,2025-04-30,0.0,8.0,0.0,0.0,0.0
+Rice Avenue Middle School - SCHOOL PANTRY,09758,Erie,School Pantry,2025-05-31,0.0,8.0,0.0,0.0,0.0
+SECOND HARVEST COOKING CLASSES,04782,Erie,Food Pantry/No TEFAP,2024-08-31,7.0,7.0,13.0,10.0,15.0
+SECOND HARVEST COOKING CLASSES,04782,Erie,Food Pantry/No TEFAP,2024-10-31,3.0,3.0,3.0,2.0,3.0
+SERENITY RESOURCE & RECOVERY,01811,Erie,Food Pantry/TEFAP,2025-01-31,0.0,0.0,4.0,0.0,0.0
+SERENITY RESOURCE & RECOVERY,01811,Erie,Food Pantry/TEFAP,2025-02-28,0.0,0.0,4.0,0.0,0.0
+SERENITY RESOURCE & RECOVERY,01811,Erie,Food Pantry/TEFAP,2025-03-31,0.0,0.0,4.0,0.0,0.0
+SERENITY RESOURCE & RECOVERY,01811,Erie,Food Pantry/TEFAP,2025-04-30,0.0,0.0,4.0,0.0,0.0
+SERENITY RESOURCE & RECOVERY,01811,Erie,Food Pantry/TEFAP,2025-05-31,72.0,67.0,139.0,7.0,146.0
+SERENITY RESOURCE & RECOVERY,01811,Erie,Food Pantry/TEFAP,2025-06-30,80.0,70.0,145.0,15.0,165.0
+Sacred Heart - FP,01167,Erie,Food Pantry/TEFAP,2024-07-31,70.0,65.0,0.0,36.0,171.0
+Sacred Heart - FP,01167,Erie,Food Pantry/TEFAP,2024-08-31,74.0,74.0,5.0,34.0,182.0
+Sacred Heart - FP,01167,Erie,Food Pantry/TEFAP,2024-09-30,73.0,60.0,5.0,34.0,167.0
+Sacred Heart - FP,01167,Erie,Food Pantry/TEFAP,2024-10-31,87.0,67.0,10.0,33.0,187.0
+Sacred Heart - FP,01167,Erie,Food Pantry/TEFAP,2024-11-30,112.0,95.0,5.0,34.0,241.0
+Sacred Heart - FP,01167,Erie,Food Pantry/TEFAP,2024-12-31,95.0,81.0,0.0,28.0,204.0
+Sacred Heart - FP,01167,Erie,Food Pantry/TEFAP,2025-01-31,51.0,52.0,0.0,25.0,128.0
+Sacred Heart - FP,01167,Erie,Food Pantry/TEFAP,2025-02-28,58.0,59.0,11.0,37.0,154.0
+Sacred Heart - FP,01167,Erie,Food Pantry/TEFAP,2025-03-31,64.0,69.0,15.0,40.0,173.0
+Sacred Heart - FP,01167,Erie,Food Pantry/TEFAP,2025-04-30,78.0,82.0,20.0,39.0,169.0
+Sacred Heart - FP,01167,Erie,Food Pantry/TEFAP,2025-05-31,97.0,90.0,7.0,42.0,229.0
+Sacred Heart - FP,01167,Erie,Food Pantry/TEFAP,2025-06-30,90.0,92.0,9.0,43.0,225.0
+Salvation Army Corry - FP,01685,Erie,Food Pantry/TEFAP,2024-07-31,291.0,216.0,5.0,126.0,633.0
+Salvation Army Corry - FP,01685,Erie,Food Pantry/TEFAP,2024-08-31,346.0,250.0,0.0,76.0,672.0
+Salvation Army Corry - FP,01685,Erie,Food Pantry/TEFAP,2024-09-30,343.0,142.0,0.0,69.0,554.0
+Salvation Army Corry - FP,01685,Erie,Food Pantry/TEFAP,2024-10-31,370.0,176.0,0.0,43.0,589.0
+Salvation Army Corry - FP,01685,Erie,Food Pantry/TEFAP,2024-11-30,484.0,259.0,4.0,155.0,898.0
+Salvation Army Corry - FP,01685,Erie,Food Pantry/TEFAP,2024-12-31,282.0,520.0,4.0,88.0,520.0
+Salvation Army Corry - FP,01685,Erie,Food Pantry/TEFAP,2025-01-31,332.0,227.0,0.0,90.0,649.0
+Salvation Army Corry - FP,01685,Erie,Food Pantry/TEFAP,2025-02-28,343.0,157.0,0.0,94.0,594.0
+Salvation Army Corry - FP,01685,Erie,Food Pantry/TEFAP,2025-03-31,435.0,284.0,0.0,150.0,869.0
+Salvation Army Corry - FP,01685,Erie,Food Pantry/TEFAP,2025-04-30,489.0,323.0,0.0,229.0,1041.0
+Salvation Army Corry - FP,01685,Erie,Food Pantry/TEFAP,2025-05-31,401.0,319.0,10.0,205.0,925.0
+Salvation Army Corry - FP,01685,Erie,Food Pantry/TEFAP,2025-06-30,430.0,356.0,4.0,216.0,1007.0
+Salvation Army Meadville - FP,01554,Crawford,Food Pantry/TEFAP,2024-07-31,139.0,74.0,116.0,46.0,259.0
+Salvation Army Meadville - FP,01554,Crawford,Food Pantry/TEFAP,2024-08-31,122.0,72.0,20.0,45.0,239.0
+Salvation Army Meadville - FP,01554,Crawford,Food Pantry/TEFAP,2024-09-30,155.0,108.0,63.0,55.0,318.0
+Salvation Army Meadville - FP,01554,Crawford,Food Pantry/TEFAP,2024-10-31,0.0,0.0,27.0,0.0,0.0
+Salvation Army Meadville - FP,01554,Crawford,Food Pantry/TEFAP,2024-11-30,131.0,106.0,27.0,47.0,284.0
+Salvation Army Meadville - FP,01554,Crawford,Food Pantry/TEFAP,2024-12-31,95.0,62.0,20.0,30.0,187.0
+Salvation Army Meadville - FP,01554,Crawford,Food Pantry/TEFAP,2025-01-31,152.0,93.0,23.0,50.0,295.0
+Salvation Army Meadville - FP,01554,Crawford,Food Pantry/TEFAP,2025-02-28,119.0,89.0,18.0,35.0,243.0
+Salvation Army Meadville - FP,01554,Crawford,Food Pantry/TEFAP,2025-03-31,91.0,50.0,9.0,35.0,176.0
+Salvation Army Meadville - FP,01554,Crawford,Food Pantry/TEFAP,2025-04-30,134.0,79.0,29.0,49.0,260.0
+Salvation Army Meadville - FP,01554,Crawford,Food Pantry/TEFAP,2025-05-31,158.0,107.0,26.0,49.0,309.0
+Salvation Army Meadville - FP,01554,Crawford,Food Pantry/TEFAP,2025-06-30,123.0,76.0,20.0,40.0,239.0
+Salvation Army Social Services,01039,Erie,Food Pantry/TEFAP,2024-07-31,582.0,428.0,456.0,221.0,1231.0
+Salvation Army Social Services,01039,Erie,Food Pantry/TEFAP,2024-08-31,655.0,445.0,242.0,274.0,1374.0
+Salvation Army Social Services,01039,Erie,Food Pantry/TEFAP,2024-09-30,782.0,611.0,152.0,294.0,1690.0
+Salvation Army Social Services,01039,Erie,Food Pantry/TEFAP,2024-10-31,806.0,694.0,193.0,407.0,1751.0
+Salvation Army Social Services,01039,Erie,Food Pantry/TEFAP,2024-11-30,747.0,626.0,160.0,275.0,1648.0
+Salvation Army Social Services,01039,Erie,Food Pantry/TEFAP,2024-12-31,83.0,106.0,17.0,31.0,220.0
+Salvation Army Social Services,01039,Erie,Food Pantry/TEFAP,2025-01-31,523.0,436.0,88.0,202.0,1161.0
+Salvation Army Social Services,01039,Erie,Food Pantry/TEFAP,2025-02-28,527.0,433.0,51.0,217.0,1180.0
+Salvation Army Social Services,01039,Erie,Food Pantry/TEFAP,2025-03-31,611.0,458.0,100.0,234.0,1300.0
+Salvation Army Social Services,01039,Erie,Food Pantry/TEFAP,2025-04-30,540.0,397.0,61.0,208.0,1144.0
+Salvation Army Social Services,01039,Erie,Food Pantry/TEFAP,2025-05-31,594.0,468.0,67.0,231.0,1289.0
+Salvation Army Social Services,01039,Erie,Food Pantry/TEFAP,2025-06-30,736.0,596.0,102.0,258.0,1596.0
+Second Baptist Church - FP,01488,Erie,Food Pantry/TEFAP,2024-09-30,49.0,44.0,35.0,5.0,98.0
+Second Baptist Church - FP,01488,Erie,Food Pantry/TEFAP,2024-10-31,34.0,27.0,14.0,6.0,67.0
+Second Baptist Church - FP,01488,Erie,Food Pantry/TEFAP,2024-11-30,54.0,49.0,27.0,32.0,135.0
+Second Baptist Church - FP,01488,Erie,Food Pantry/TEFAP,2024-12-31,67.0,32.0,26.0,12.0,111.0
+Second Baptist Church - FP,01488,Erie,Food Pantry/TEFAP,2025-01-31,56.0,43.0,13.0,24.0,123.0
+Second Baptist Church - FP,01488,Erie,Food Pantry/TEFAP,2025-02-28,45.0,35.0,11.0,38.0,118.0
+Second Baptist Church - FP,01488,Erie,Food Pantry/TEFAP,2025-03-31,69.0,76.0,68.0,45.0,190.0
+Second Baptist Church - FP,01488,Erie,Food Pantry/TEFAP,2025-04-30,57.0,51.0,11.0,31.0,139.0
+Second Baptist Church - FP,01488,Erie,Food Pantry/TEFAP,2025-05-31,40.0,41.0,24.0,54.0,134.0
+Second Baptist Church - FP,01488,Erie,Food Pantry/TEFAP,2025-06-30,77.0,70.0,36.0,94.0,184.0
+Shiloh Baptist - FP,01369,Erie,Food Pantry/TEFAP,2024-07-31,46.0,40.0,36.0,16.0,102.0
+Shiloh Baptist - FP,01369,Erie,Food Pantry/TEFAP,2024-09-30,56.0,46.0,10.0,21.0,123.0
+Shiloh Baptist - FP,01369,Erie,Food Pantry/TEFAP,2024-10-31,52.0,40.0,8.0,18.0,110.0
+Shiloh Baptist - FP,01369,Erie,Food Pantry/TEFAP,2024-11-30,65.0,55.0,0.0,21.0,141.0
+Shiloh Baptist - FP,01369,Erie,Food Pantry/TEFAP,2024-12-31,37.0,46.0,3.0,13.0,96.0
+Shiloh Baptist - FP,01369,Erie,Food Pantry/TEFAP,2025-01-31,37.0,32.0,2.0,11.0,80.0
+Shiloh Baptist - FP,01369,Erie,Food Pantry/TEFAP,2025-02-28,53.0,44.0,11.0,16.0,113.0
+Shiloh Baptist - FP,01369,Erie,Food Pantry/TEFAP,2025-03-31,61.0,41.0,6.0,20.0,122.0
+Shiloh Baptist - FP,01369,Erie,Food Pantry/TEFAP,2025-04-30,57.0,48.0,7.0,21.0,126.0
+Shiloh Baptist - FP,01369,Erie,Food Pantry/TEFAP,2025-05-31,31.0,17.0,0.0,13.0,61.0
+Shiloh Baptist - FP,01369,Erie,Food Pantry/TEFAP,2025-06-30,69.0,57.0,9.0,22.0,148.0
+Sister Pascal - FP,01104,Erie,Food Pantry/TEFAP,2024-07-31,140.0,109.0,115.0,117.0,365.0
+Sister Pascal - FP,01104,Erie,Food Pantry/TEFAP,2024-08-31,123.0,108.0,38.0,108.0,337.0
+Sister Pascal - FP,01104,Erie,Food Pantry/TEFAP,2024-09-30,135.0,103.0,17.0,117.0,352.0
+Sister Pascal - FP,01104,Erie,Food Pantry/TEFAP,2024-10-31,144.0,125.0,19.0,125.0,385.0
+Sister Pascal - FP,01104,Erie,Food Pantry/TEFAP,2024-11-30,116.0,104.0,16.0,115.0,315.0
+Sister Pascal - FP,01104,Erie,Food Pantry/TEFAP,2024-12-31,122.0,100.0,1.0,113.0,333.0
+Sister Pascal - FP,01104,Erie,Food Pantry/TEFAP,2025-01-31,105.0,75.0,6.0,100.0,280.0
+Sister Pascal - FP,01104,Erie,Food Pantry/TEFAP,2025-02-28,115.0,84.0,2.0,97.0,296.0
+Sister Pascal - FP,01104,Erie,Food Pantry/TEFAP,2025-03-31,148.0,109.0,13.0,113.0,368.0
+Sister Pascal - FP,01104,Erie,Food Pantry/TEFAP,2025-04-30,111.0,127.0,8.0,160.0,389.0
+Sister Pascal - FP,01104,Erie,Food Pantry/TEFAP,2025-05-31,170.0,122.0,27.0,110.0,399.0
+Sister Pascal - FP,01104,Erie,Food Pantry/TEFAP,2025-06-30,171.0,136.0,18.0,113.0,420.0
+St Andrew Church - FP,01187,Erie,Food Pantry/TEFAP,2024-07-31,125.0,61.0,113.0,63.0,249.0
+St Andrew Church - FP,01187,Erie,Food Pantry/TEFAP,2024-08-31,133.0,70.0,27.0,69.0,272.0
+St Andrew Church - FP,01187,Erie,Food Pantry/TEFAP,2024-09-30,117.0,60.0,27.0,63.0,240.0
+St Andrew Church - FP,01187,Erie,Food Pantry/TEFAP,2024-10-31,134.0,78.0,14.0,73.0,285.0
+St Andrew Church - FP,01187,Erie,Food Pantry/TEFAP,2024-11-30,151.0,86.0,22.0,76.0,313.0
+St Andrew Church - FP,01187,Erie,Food Pantry/TEFAP,2024-12-31,120.0,66.0,8.0,68.0,254.0
+St Andrew Church - FP,01187,Erie,Food Pantry/TEFAP,2025-01-31,78.0,38.0,4.0,44.0,160.0
+St Andrew Church - FP,01187,Erie,Food Pantry/TEFAP,2025-02-28,95.0,51.0,6.0,59.0,205.0
+St Andrew Church - FP,01187,Erie,Food Pantry/TEFAP,2025-03-31,106.0,62.0,9.0,71.0,239.0
+St Andrew Church - FP,01187,Erie,Food Pantry/TEFAP,2025-04-30,143.0,88.0,11.0,73.0,304.0
+St Andrew Church - FP,01187,Erie,Food Pantry/TEFAP,2025-05-31,103.0,47.0,6.0,76.0,226.0
+St Andrew Church - FP,01187,Erie,Food Pantry/TEFAP,2025-06-30,109.0,65.0,7.0,65.0,239.0
+St Ann Church (at Holy Family Church) FP,01092,Erie,Food Pantry/TEFAP,2024-07-31,56.0,32.0,49.0,38.0,126.0
+St Ann Church (at Holy Family Church) FP,01092,Erie,Food Pantry/TEFAP,2024-08-31,55.0,29.0,4.0,17.0,101.0
+St Ann Church (at Holy Family Church) FP,01092,Erie,Food Pantry/TEFAP,2024-09-30,43.0,21.0,0.0,15.0,79.0
+St Ann Church (at Holy Family Church) FP,01092,Erie,Food Pantry/TEFAP,2024-10-31,59.0,35.0,9.0,19.0,113.0
+St Ann Church (at Holy Family Church) FP,01092,Erie,Food Pantry/TEFAP,2024-11-30,52.0,30.0,0.0,34.0,116.0
+St Ann Church (at Holy Family Church) FP,01092,Erie,Food Pantry/TEFAP,2024-12-31,48.0,35.0,0.0,40.0,123.0
+St Ann Church (at Holy Family Church) FP,01092,Erie,Food Pantry/TEFAP,2025-01-31,55.0,28.0,2.0,32.0,115.0
+St Ann Church (at Holy Family Church) FP,01092,Erie,Food Pantry/TEFAP,2025-02-28,58.0,24.0,1.0,28.0,110.0
+St Ann Church (at Holy Family Church) FP,01092,Erie,Food Pantry/TEFAP,2025-05-31,52.0,29.0,1.0,30.0,111.0
+St Ann Church (at Holy Family Church) FP,01092,Erie,Food Pantry/TEFAP,2025-06-30,47.0,27.0,4.0,29.0,103.0
+St Boniface Church - FP,01190,Erie,Food Pantry/TEFAP,2024-07-31,57.0,27.0,0.0,20.0,104.0
+St Boniface Church - FP,01190,Erie,Food Pantry/TEFAP,2024-08-31,49.0,25.0,0.0,20.0,94.0
+St Boniface Church - FP,01190,Erie,Food Pantry/TEFAP,2024-09-30,49.0,25.0,2.0,20.0,94.0
+St Boniface Church - FP,01190,Erie,Food Pantry/TEFAP,2024-10-31,55.0,37.0,2.0,19.0,111.0
+St Boniface Church - FP,01190,Erie,Food Pantry/TEFAP,2024-11-30,55.0,37.0,1.0,20.0,112.0
+St Boniface Church - FP,01190,Erie,Food Pantry/TEFAP,2024-12-31,55.0,37.0,0.0,20.0,112.0
+St Boniface Church - FP,01190,Erie,Food Pantry/TEFAP,2025-01-31,55.0,37.0,0.0,20.0,112.0
+St Boniface Church - FP,01190,Erie,Food Pantry/TEFAP,2025-02-28,55.0,37.0,1.0,20.0,112.0
+St Boniface Church - FP,01190,Erie,Food Pantry/TEFAP,2025-03-31,56.0,36.0,0.0,19.0,111.0
+St Boniface Church - FP,01190,Erie,Food Pantry/TEFAP,2025-04-30,56.0,36.0,0.0,21.0,113.0
+St Boniface Church - FP,01190,Erie,Food Pantry/TEFAP,2025-05-31,50.0,34.0,1.0,19.0,103.0
+St Boniface Church - FP,01190,Erie,Food Pantry/TEFAP,2025-06-30,53.0,35.0,0.0,19.0,102.0
+St George Church - FP,01096,Erie,Food Pantry/TEFAP,2024-07-31,71.0,69.0,56.0,29.0,169.0
+St George Church - FP,01096,Erie,Food Pantry/TEFAP,2024-08-31,68.0,63.0,4.0,31.0,162.0
+St George Church - FP,01096,Erie,Food Pantry/TEFAP,2024-09-30,68.0,63.0,0.0,29.0,160.0
+St George Church - FP,01096,Erie,Food Pantry/TEFAP,2024-10-31,68.0,63.0,1.0,32.0,163.0
+St George Church - FP,01096,Erie,Food Pantry/TEFAP,2024-11-30,65.0,62.0,2.0,34.0,161.0
+St George Church - FP,01096,Erie,Food Pantry/TEFAP,2024-12-31,69.0,63.0,3.0,36.0,168.0
+St George Church - FP,01096,Erie,Food Pantry/TEFAP,2025-01-31,71.0,69.0,1.0,36.0,176.0
+St George Church - FP,01096,Erie,Food Pantry/TEFAP,2025-02-28,71.0,69.0,0.0,36.0,176.0
+St George Church - FP,01096,Erie,Food Pantry/TEFAP,2025-03-31,75.0,70.0,2.0,34.0,179.0
+St George Church - FP,01096,Erie,Food Pantry/TEFAP,2025-04-30,74.0,68.0,3.0,33.0,175.0
+St George Church - FP,01096,Erie,Food Pantry/TEFAP,2025-05-31,78.0,70.0,0.0,32.0,180.0
+St George Church - FP,01096,Erie,Food Pantry/TEFAP,2025-06-30,77.0,70.0,0.0,31.0,178.0
+St James Church - FP,01329,Erie,Food Pantry/No TEFAP,2024-07-31,22.0,22.0,0.0,6.0,50.0
+St James Church - FP,01329,Erie,Food Pantry/No TEFAP,2024-08-31,22.0,22.0,0.0,5.0,49.0
+St James Church - FP,01329,Erie,Food Pantry/No TEFAP,2024-09-30,24.0,24.0,2.0,5.0,53.0
+St James Church - FP,01329,Erie,Food Pantry/No TEFAP,2024-10-31,21.0,21.0,1.0,5.0,47.0
+St James Church - FP,01329,Erie,Food Pantry/No TEFAP,2024-11-30,26.0,21.0,3.0,8.0,55.0
+St James Church - FP,01329,Erie,Food Pantry/No TEFAP,2024-12-31,20.0,22.0,1.0,5.0,47.0
+St James Church - FP,01329,Erie,Food Pantry/No TEFAP,2025-01-31,18.0,21.0,0.0,5.0,44.0
+St James Church - FP,01329,Erie,Food Pantry/No TEFAP,2025-02-28,20.0,20.0,0.0,5.0,45.0
+St James Church - FP,01329,Erie,Food Pantry/No TEFAP,2025-03-31,16.0,16.0,0.0,5.0,37.0
+St James Church - FP,01329,Erie,Food Pantry/No TEFAP,2025-04-30,16.0,16.0,0.0,4.0,36.0
+St James Church - FP,01329,Erie,Food Pantry/No TEFAP,2025-05-31,17.0,22.0,1.0,5.0,44.0
+St James Church - FP,01329,Erie,Food Pantry/No TEFAP,2025-06-30,16.0,16.0,0.0,5.0,37.0
+St James Food Cupboard - FP,01561,Crawford,Food Pantry/TEFAP,2024-07-31,78.0,26.0,71.0,36.0,140.0
+St James Food Cupboard - FP,01561,Crawford,Food Pantry/TEFAP,2024-08-31,51.0,19.0,2.0,24.0,90.0
+St James Food Cupboard - FP,01561,Crawford,Food Pantry/TEFAP,2024-09-30,88.0,16.0,3.0,23.0,127.0
+St James Food Cupboard - FP,01561,Crawford,Food Pantry/TEFAP,2024-10-31,74.0,15.0,12.0,30.0,119.0
+St James Food Cupboard - FP,01561,Crawford,Food Pantry/TEFAP,2024-11-30,51.0,20.0,4.0,34.0,70.0
+St James Food Cupboard - FP,01561,Crawford,Food Pantry/TEFAP,2024-12-31,55.0,17.0,2.0,40.0,112.0
+St James Food Cupboard - FP,01561,Crawford,Food Pantry/TEFAP,2025-01-31,50.0,11.0,5.0,26.0,87.0
+St James Food Cupboard - FP,01561,Crawford,Food Pantry/TEFAP,2025-02-28,59.0,11.0,3.0,33.0,103.0
+St James Food Cupboard - FP,01561,Crawford,Food Pantry/TEFAP,2025-03-31,57.0,12.0,2.0,34.0,102.0
+St James Food Cupboard - FP,01561,Crawford,Food Pantry/TEFAP,2025-04-30,63.0,16.0,4.0,39.0,118.0
+St James Food Cupboard - FP,01561,Crawford,Food Pantry/TEFAP,2025-05-31,55.0,15.0,5.0,37.0,107.0
+St James Food Cupboard - FP,01561,Crawford,Food Pantry/TEFAP,2025-06-30,50.0,10.0,3.0,36.0,96.0
+St Johns Lutheran Church - FP,01512,Erie,Food Pantry/TEFAP,2024-07-31,12.0,2.0,0.0,9.0,23.0
+St Johns Lutheran Church - FP,01512,Erie,Food Pantry/TEFAP,2024-09-30,17.0,3.0,0.0,15.0,35.0
+St Johns Lutheran Church - FP,01512,Erie,Food Pantry/TEFAP,2024-11-30,20.0,8.0,6.0,16.0,44.0
+St Johns Lutheran Church - FP,01512,Erie,Food Pantry/TEFAP,2025-01-31,17.0,4.0,2.0,12.0,33.0
+St Johns Lutheran Church - FP,01512,Erie,Food Pantry/TEFAP,2025-03-31,18.0,1.0,2.0,17.0,36.0
+St Johns Lutheran Church - FP,01512,Erie,Food Pantry/TEFAP,2025-05-31,17.0,3.0,1.0,17.0,37.0
+St Joseph Bread of Life Church - FP,01535,Erie,Food Pantry/TEFAP,2024-07-31,48.0,8.0,33.0,48.0,104.0
+St Joseph Bread of Life Church - FP,01535,Erie,Food Pantry/TEFAP,2024-08-31,23.0,3.0,8.0,29.0,55.0
+St Joseph Bread of Life Church - FP,01535,Erie,Food Pantry/TEFAP,2024-09-30,25.0,5.0,4.0,24.0,54.0
+St Joseph Bread of Life Church - FP,01535,Erie,Food Pantry/TEFAP,2024-10-31,24.0,3.0,4.0,22.0,49.0
+St Joseph Bread of Life Church - FP,01535,Erie,Food Pantry/TEFAP,2024-11-30,33.0,2.0,3.0,27.0,62.0
+St Joseph Bread of Life Church - FP,01535,Erie,Food Pantry/TEFAP,2024-12-31,28.0,0.0,2.0,18.0,46.0
+St Joseph Bread of Life Church - FP,01535,Erie,Food Pantry/TEFAP,2025-01-31,29.0,3.0,2.0,19.0,51.0
+St Joseph Bread of Life Church - FP,01535,Erie,Food Pantry/TEFAP,2025-02-28,20.0,2.0,1.0,20.0,42.0
+St Joseph Bread of Life Church - FP,01535,Erie,Food Pantry/TEFAP,2025-03-31,33.0,7.0,4.0,24.0,64.0
+St Joseph Bread of Life Church - FP,01535,Erie,Food Pantry/TEFAP,2025-04-30,26.0,10.0,1.0,23.0,59.0
+St Joseph Bread of Life Church - FP,01535,Erie,Food Pantry/TEFAP,2025-05-31,25.0,0.0,2.0,25.0,50.0
+St Joseph Bread of Life Church - FP,01535,Erie,Food Pantry/TEFAP,2025-06-30,20.0,2.0,3.0,18.0,47.0
+St Martin Center - FP,01101,Erie,Food Pantry/TEFAP,2024-07-31,1325.0,1418.0,918.0,368.0,3111.0
+St Martin Center - FP,01101,Erie,Food Pantry/TEFAP,2024-08-31,1268.0,1262.0,327.0,352.0,2882.0
+St Martin Center - FP,01101,Erie,Food Pantry/TEFAP,2024-09-30,1249.0,1309.0,217.0,335.0,2893.0
+St Martin Center - FP,01101,Erie,Food Pantry/TEFAP,2024-10-31,1546.0,1547.0,261.0,365.0,3458.0
+St Martin Center - FP,01101,Erie,Food Pantry/TEFAP,2024-11-30,1525.0,1530.0,135.0,370.0,3425.0
+St Martin Center - FP,01101,Erie,Food Pantry/TEFAP,2024-12-31,958.0,938.0,77.0,261.0,2159.0
+St Martin Center - FP,01101,Erie,Food Pantry/TEFAP,2025-01-31,1523.0,1513.0,104.0,312.0,3348.0
+St Martin Center - FP,01101,Erie,Food Pantry/TEFAP,2025-02-28,1296.0,1225.0,95.0,266.0,2787.0
+St Martin Center - FP,01101,Erie,Food Pantry/TEFAP,2025-03-31,1439.0,1318.0,62.0,320.0,3700.0
+St Martin Center - FP,01101,Erie,Food Pantry/TEFAP,2025-04-30,1423.0,1400.0,132.0,301.0,3124.0
+St Martin Center - FP,01101,Erie,Food Pantry/TEFAP,2025-05-31,1446.0,1296.0,69.0,294.0,3036.0
+St Martin Center - FP,01101,Erie,Food Pantry/TEFAP,2025-06-30,1385.0,1406.0,69.0,305.0,3096.0
+St Paul Roman Catholic Church - FP,01105,Erie,Food Pantry/TEFAP,2024-07-31,43.0,11.0,6.0,20.0,74.0
+St Paul Roman Catholic Church - FP,01105,Erie,Food Pantry/TEFAP,2024-08-31,32.0,14.0,5.0,9.0,55.0
+St Paul Roman Catholic Church - FP,01105,Erie,Food Pantry/TEFAP,2024-09-30,43.0,16.0,4.0,13.0,72.0
+St Paul Roman Catholic Church - FP,01105,Erie,Food Pantry/TEFAP,2024-10-31,54.0,15.0,15.0,19.0,88.0
+St Paul Roman Catholic Church - FP,01105,Erie,Food Pantry/TEFAP,2024-11-30,37.0,14.0,9.0,14.0,65.0
+St Paul Roman Catholic Church - FP,01105,Erie,Food Pantry/TEFAP,2024-12-31,36.0,17.0,5.0,7.0,60.0
+St Paul Roman Catholic Church - FP,01105,Erie,Food Pantry/TEFAP,2025-01-31,30.0,10.0,3.0,4.0,44.0
+St Paul Roman Catholic Church - FP,01105,Erie,Food Pantry/TEFAP,2025-02-28,46.0,15.0,4.0,8.0,69.0
+St Paul Roman Catholic Church - FP,01105,Erie,Food Pantry/TEFAP,2025-03-31,44.0,13.0,5.0,10.0,67.0
+St Paul Roman Catholic Church - FP,01105,Erie,Food Pantry/TEFAP,2025-04-30,42.0,11.0,4.0,9.0,62.0
+St Paul Roman Catholic Church - FP,01105,Erie,Food Pantry/TEFAP,2025-05-31,33.0,8.0,6.0,5.0,46.0
+St Paul Roman Catholic Church - FP,01105,Erie,Food Pantry/TEFAP,2025-06-30,50.0,29.0,15.0,13.0,92.0
+St Paul's Lutheran Church- FP (Erie),01445,Erie,Food Pantry/TEFAP,2024-08-31,2.0,0.0,4.0,0.0,0.0
+St Paul's Lutheran Church- FP (Erie),01445,Erie,Food Pantry/TEFAP,2024-09-30,10.0,7.0,8.0,4.0,21.0
+St Paul's Lutheran Church- FP (Erie),01445,Erie,Food Pantry/TEFAP,2024-10-31,16.0,17.0,3.0,4.0,37.0
+St Paul's Lutheran Church- FP (Erie),01445,Erie,Food Pantry/TEFAP,2024-11-30,27.0,19.0,6.0,7.0,53.0
+St Paul's Lutheran Church- FP (Erie),01445,Erie,Food Pantry/TEFAP,2024-12-31,17.0,17.0,2.0,4.0,38.0
+St Paul's Lutheran Church- FP (Erie),01445,Erie,Food Pantry/TEFAP,2025-01-31,20.0,15.0,0.0,5.0,40.0
+St Paul's Lutheran Church- FP (Erie),01445,Erie,Food Pantry/TEFAP,2025-02-28,17.0,14.0,0.0,5.0,36.0
+St Paul's Lutheran Church- FP (Erie),01445,Erie,Food Pantry/TEFAP,2025-03-31,20.0,16.0,4.0,12.0,48.0
+St Paul's Lutheran Church- FP (Erie),01445,Erie,Food Pantry/TEFAP,2025-04-30,22.0,17.0,0.0,8.0,47.0
+St Paul's Lutheran Church- FP (Erie),01445,Erie,Food Pantry/TEFAP,2025-05-31,24.0,21.0,3.0,9.0,54.0
+St Paul's Lutheran Church- FP (Erie),01445,Erie,Food Pantry/TEFAP,2025-06-30,29.0,20.0,4.0,4.0,53.0
+St Pauls Lutheran Church - FP,06058,Crawford,Produce Express,2024-07-31,61.0,31.0,1.0,56.0,148.0
+St Pauls Lutheran Church - FP,06058,Crawford,Produce Express,2024-09-30,0.0,0.0,3.0,0.0,0.0
+St Pauls Lutheran Church - FP,06058,Crawford,Produce Express,2024-11-30,58.0,31.0,3.0,55.0,0.0
+St Pauls Lutheran Church - FP,06058,Crawford,Produce Express,2024-12-31,0.0,0.0,4.0,0.0,0.0
+St Pauls Lutheran Church - FP,06058,Crawford,Produce Express,2025-01-31,0.0,0.0,2.0,0.0,0.0
+St Pauls Lutheran Church - FP,06058,Crawford,Produce Express,2025-02-28,0.0,0.0,2.0,0.0,0.0
+St Pauls Lutheran Church - FP,06058,Crawford,Produce Express,2025-05-31,0.0,0.0,2.0,0.0,0.0
+St Pauls Lutheran Church - FP,06058,Crawford,Produce Express,2025-06-30,0.0,0.0,2.0,0.0,0.0
+St Vincent Healthy Food Center -FP,01697,Erie,Food Pantry/No TEFAP,2024-07-31,189.0,86.0,17.0,112.0,387.0
+St Vincent Healthy Food Center -FP,01697,Erie,Food Pantry/No TEFAP,2024-08-31,95.0,53.0,15.0,55.0,206.0
+St Vincent Healthy Food Center -FP,01697,Erie,Food Pantry/No TEFAP,2024-09-30,90.0,41.0,11.0,44.0,175.0
+St Vincent Healthy Food Center -FP,01697,Erie,Food Pantry/No TEFAP,2024-10-31,117.0,57.0,8.0,67.0,241.0
+St Vincent Healthy Food Center -FP,01697,Erie,Food Pantry/No TEFAP,2024-11-30,119.0,46.0,8.0,60.0,230.0
+St Vincent Healthy Food Center -FP,01697,Erie,Food Pantry/No TEFAP,2024-12-31,106.0,58.0,8.0,53.0,217.0
+St Vincent Healthy Food Center -FP,01697,Erie,Food Pantry/No TEFAP,2025-01-31,126.0,55.0,12.0,81.0,262.0
+St Vincent Healthy Food Center -FP,01697,Erie,Food Pantry/No TEFAP,2025-02-28,95.0,46.0,9.0,61.0,208.0
+St Vincent Healthy Food Center -FP,01697,Erie,Food Pantry/No TEFAP,2025-03-31,113.0,40.0,9.0,79.0,232.0
+St Vincent Healthy Food Center -FP,01697,Erie,Food Pantry/No TEFAP,2025-04-30,123.0,60.0,14.0,76.0,259.0
+St Vincent Healthy Food Center -FP,01697,Erie,Food Pantry/No TEFAP,2025-05-31,130.0,57.0,11.0,87.0,274.0
+St Vincent Healthy Food Center -FP,01697,Erie,Food Pantry/No TEFAP,2025-06-30,121.0,55.0,14.0,72.0,255.0
+Strong Vincent Middle School - SCHOOL PANTRY,09760,Erie,School Pantry,2024-10-31,0.0,79.0,0.0,0.0,0.0
+Strong Vincent Middle School - SCHOOL PANTRY,09760,Erie,School Pantry,2024-11-30,0.0,79.0,0.0,0.0,0.0
+Strong Vincent Middle School - SCHOOL PANTRY,09760,Erie,School Pantry,2024-12-31,0.0,80.0,0.0,0.0,0.0
+Strong Vincent Middle School - SCHOOL PANTRY,09760,Erie,School Pantry,2025-01-31,0.0,80.0,0.0,0.0,0.0
+Strong Vincent Middle School - SCHOOL PANTRY,09760,Erie,School Pantry,2025-02-28,0.0,80.0,0.0,0.0,0.0
+Strong Vincent Middle School - SCHOOL PANTRY,09760,Erie,School Pantry,2025-03-31,0.0,80.0,0.0,0.0,0.0
+Strong Vincent Middle School - SCHOOL PANTRY,09760,Erie,School Pantry,2025-04-30,0.0,80.0,0.0,0.0,0.0
+Strong Vincent Middle School - SCHOOL PANTRY,09760,Erie,School Pantry,2025-05-31,0.0,80.0,0.0,0.0,0.0
+Summit Community - FP,01119,Erie,Food Pantry/TEFAP,2024-07-31,54.0,31.0,48.0,43.0,128.0
+Summit Community - FP,01119,Erie,Food Pantry/TEFAP,2024-08-31,59.0,32.0,7.0,50.0,141.0
+Summit Community - FP,01119,Erie,Food Pantry/TEFAP,2024-09-30,57.0,32.0,0.0,50.0,139.0
+Summit Community - FP,01119,Erie,Food Pantry/TEFAP,2024-10-31,67.0,33.0,8.0,57.0,157.0
+Summit Community - FP,01119,Erie,Food Pantry/TEFAP,2024-11-30,70.0,36.0,5.0,62.0,168.0
+Summit Community - FP,01119,Erie,Food Pantry/TEFAP,2024-12-31,76.0,39.0,4.0,62.0,177.0
+Summit Community - FP,01119,Erie,Food Pantry/TEFAP,2025-01-31,59.0,22.0,4.0,52.0,133.0
+Summit Community - FP,01119,Erie,Food Pantry/TEFAP,2025-02-28,68.0,27.0,0.0,54.0,149.0
+Summit Community - FP,01119,Erie,Food Pantry/TEFAP,2025-03-31,64.0,16.0,0.0,49.0,129.0
+Summit Community - FP,01119,Erie,Food Pantry/TEFAP,2025-04-30,55.0,16.0,0.0,40.0,111.0
+Summit Community - FP,01119,Erie,Food Pantry/TEFAP,2025-05-31,35.0,18.0,2.0,39.0,96.0
+Summit Community - FP,01119,Erie,Food Pantry/TEFAP,2025-06-30,59.0,14.0,0.0,50.0,123.0
+Supportive Living Services - Group Home,04411,Erie,Non-Emerg. Meal/Snack,2024-07-31,0.0,0.0,0.0,0.0,6.0
+Supportive Living Services - Group Home,04412,Erie,Non-Emerg. Meal/Snack,2024-07-31,0.0,0.0,0.0,0.0,5.0
+Supportive Living Services - Group Home,04413,Erie,Non-Emerg. Meal/Snack,2024-07-31,0.0,0.0,0.0,0.0,6.0
+Supportive Living Services - Group Home,04420,Erie,Non-Emerg. Meal/Snack,2024-07-31,0.0,0.0,0.0,0.0,6.0
+Supportive Living Services - Group Home,04481,Erie,Non-Emerg. Meal/Snack,2024-07-31,0.0,0.0,0.0,0.0,6.0
+Supportive Living Services - Group Home,04534,Erie,Non-Emerg. Meal/Snack,2024-07-31,0.0,0.0,0.0,0.0,4.0
+Supportive Living Services - Group Home,04542,Erie,Non-Emerg. Meal/Snack,2024-07-31,0.0,0.0,0.0,0.0,6.0
+Supportive Living Services - Group Home,04558,Erie,Non-Emerg. Meal/Snack,2024-07-31,0.0,0.0,0.0,0.0,7.0
+Supportive Living Services - Group Home,04569,Erie,Non-Emerg. Meal/Snack,2024-07-31,0.0,0.0,0.0,0.0,4.0
+Supportive Living Services - Group Home,04570,Erie,Non-Emerg. Meal/Snack,2024-07-31,0.0,0.0,0.0,0.0,6.0
+Supportive Living Services - Group Home,04633,Erie,Non-Emerg. Meal/Snack,2024-07-31,0.0,0.0,0.0,0.0,5.0
+Supportive Living Services - Group Home,04634,Erie,Non-Emerg. Meal/Snack,2024-07-31,0.0,0.0,0.0,0.0,6.0
+Supportive Living Services - Group Home,04411,Erie,Non-Emerg. Meal/Snack,2024-08-31,0.0,0.0,0.0,0.0,4.0
+Supportive Living Services - Group Home,04412,Erie,Non-Emerg. Meal/Snack,2024-08-31,0.0,0.0,0.0,0.0,5.0
+Supportive Living Services - Group Home,04413,Erie,Non-Emerg. Meal/Snack,2024-08-31,0.0,0.0,0.0,0.0,6.0
+Supportive Living Services - Group Home,04420,Erie,Non-Emerg. Meal/Snack,2024-08-31,0.0,0.0,0.0,0.0,7.0
+Supportive Living Services - Group Home,04456,Erie,Non-Emerg. Meal/Snack,2024-08-31,0.0,0.0,0.0,0.0,6.0
+Supportive Living Services - Group Home,04481,Erie,Non-Emerg. Meal/Snack,2024-08-31,0.0,0.0,0.0,0.0,6.0
+Supportive Living Services - Group Home,04534,Erie,Non-Emerg. Meal/Snack,2024-08-31,0.0,0.0,0.0,0.0,5.0
+Supportive Living Services - Group Home,04542,Erie,Non-Emerg. Meal/Snack,2024-08-31,0.0,0.0,0.0,0.0,6.0
+Supportive Living Services - Group Home,04543,Erie,Non-Emerg. Meal/Snack,2024-08-31,0.0,0.0,0.0,0.0,5.0
+Supportive Living Services - Group Home,04558,Erie,Non-Emerg. Meal/Snack,2024-08-31,0.0,0.0,0.0,0.0,7.0
+Supportive Living Services - Group Home,04569,Erie,Non-Emerg. Meal/Snack,2024-08-31,0.0,0.0,0.0,0.0,4.0
+Supportive Living Services - Group Home,04570,Erie,Non-Emerg. Meal/Snack,2024-08-31,0.0,0.0,0.0,0.0,6.0
+Supportive Living Services - Group Home,04633,Erie,Non-Emerg. Meal/Snack,2024-08-31,0.0,0.0,0.0,0.0,5.0
+Supportive Living Services - Group Home,04634,Erie,Non-Emerg. Meal/Snack,2024-08-31,0.0,0.0,0.0,0.0,6.0
+Supportive Living Services - Group Home,04411,Erie,Non-Emerg. Meal/Snack,2024-09-30,0.0,0.0,0.0,0.0,3.0
+Supportive Living Services - Group Home,04412,Erie,Non-Emerg. Meal/Snack,2024-09-30,0.0,0.0,0.0,0.0,5.0
+Supportive Living Services - Group Home,04413,Erie,Non-Emerg. Meal/Snack,2024-09-30,0.0,0.0,0.0,0.0,6.0
+Supportive Living Services - Group Home,04420,Erie,Non-Emerg. Meal/Snack,2024-09-30,0.0,0.0,0.0,0.0,5.0
+Supportive Living Services - Group Home,04456,Erie,Non-Emerg. Meal/Snack,2024-09-30,0.0,0.0,0.0,0.0,6.0
+Supportive Living Services - Group Home,04481,Erie,Non-Emerg. Meal/Snack,2024-09-30,0.0,0.0,0.0,0.0,6.0
+Supportive Living Services - Group Home,04534,Erie,Non-Emerg. Meal/Snack,2024-09-30,0.0,0.0,0.0,0.0,5.0
+Supportive Living Services - Group Home,04542,Erie,Non-Emerg. Meal/Snack,2024-09-30,0.0,0.0,0.0,0.0,6.0
+Supportive Living Services - Group Home,04543,Erie,Non-Emerg. Meal/Snack,2024-09-30,0.0,0.0,0.0,0.0,5.0
+Supportive Living Services - Group Home,04558,Erie,Non-Emerg. Meal/Snack,2024-09-30,0.0,0.0,0.0,0.0,7.0
+Supportive Living Services - Group Home,04569,Erie,Non-Emerg. Meal/Snack,2024-09-30,0.0,0.0,0.0,0.0,6.0
+Supportive Living Services - Group Home,04570,Erie,Non-Emerg. Meal/Snack,2024-09-30,0.0,0.0,0.0,0.0,6.0
+Supportive Living Services - Group Home,04633,Erie,Non-Emerg. Meal/Snack,2024-09-30,0.0,0.0,0.0,0.0,5.0
+Supportive Living Services - Group Home,04634,Erie,Non-Emerg. Meal/Snack,2024-09-30,0.0,0.0,0.0,0.0,6.0
+Supportive Living Services - Group Home,04411,Erie,Non-Emerg. Meal/Snack,2024-10-31,0.0,0.0,0.0,0.0,5.0
+Supportive Living Services - Group Home,04412,Erie,Non-Emerg. Meal/Snack,2024-10-31,0.0,0.0,0.0,0.0,5.0
+Supportive Living Services - Group Home,04413,Erie,Non-Emerg. Meal/Snack,2024-10-31,0.0,0.0,0.0,0.0,6.0
+Supportive Living Services - Group Home,04420,Erie,Non-Emerg. Meal/Snack,2024-10-31,0.0,0.0,0.0,0.0,7.0
+Supportive Living Services - Group Home,04481,Erie,Non-Emerg. Meal/Snack,2024-10-31,0.0,0.0,0.0,0.0,6.0
+Supportive Living Services - Group Home,04542,Erie,Non-Emerg. Meal/Snack,2024-10-31,0.0,0.0,0.0,0.0,6.0
+Supportive Living Services - Group Home,04543,Erie,Non-Emerg. Meal/Snack,2024-10-31,0.0,0.0,0.0,0.0,5.0
+Supportive Living Services - Group Home,04558,Erie,Non-Emerg. Meal/Snack,2024-10-31,0.0,0.0,0.0,0.0,7.0
+Supportive Living Services - Group Home,04569,Erie,Non-Emerg. Meal/Snack,2024-10-31,0.0,0.0,0.0,0.0,5.0
+Supportive Living Services - Group Home,04570,Erie,Non-Emerg. Meal/Snack,2024-10-31,0.0,0.0,0.0,0.0,6.0
+Supportive Living Services - Group Home,04633,Erie,Non-Emerg. Meal/Snack,2024-10-31,0.0,0.0,0.0,0.0,5.0
+Supportive Living Services - Group Home,04634,Erie,Non-Emerg. Meal/Snack,2024-10-31,0.0,0.0,0.0,0.0,6.0
+Supportive Living Services - Group Home,04411,Erie,Non-Emerg. Meal/Snack,2024-11-30,0.0,0.0,0.0,0.0,5.0
+Supportive Living Services - Group Home,04412,Erie,Non-Emerg. Meal/Snack,2024-11-30,0.0,0.0,0.0,0.0,450.0
+Supportive Living Services - Group Home,04413,Erie,Non-Emerg. Meal/Snack,2024-11-30,0.0,0.0,0.0,0.0,6.0
+Supportive Living Services - Group Home,04420,Erie,Non-Emerg. Meal/Snack,2024-11-30,0.0,0.0,0.0,0.0,7.0
+Supportive Living Services - Group Home,04456,Erie,Non-Emerg. Meal/Snack,2024-11-30,0.0,0.0,0.0,0.0,6.0
+Supportive Living Services - Group Home,04481,Erie,Non-Emerg. Meal/Snack,2024-11-30,0.0,0.0,0.0,0.0,6.0
+Supportive Living Services - Group Home,04542,Erie,Non-Emerg. Meal/Snack,2024-11-30,0.0,0.0,0.0,0.0,6.0
+Supportive Living Services - Group Home,04558,Erie,Non-Emerg. Meal/Snack,2024-11-30,0.0,0.0,0.0,0.0,6.0
+Supportive Living Services - Group Home,04633,Erie,Non-Emerg. Meal/Snack,2024-11-30,0.0,0.0,0.0,0.0,5.0
+Supportive Living Services - Group Home,04634,Erie,Non-Emerg. Meal/Snack,2024-11-30,0.0,0.0,0.0,0.0,6.0
+Supportive Living Services - Group Home,04411,Erie,Non-Emerg. Meal/Snack,2024-12-31,0.0,0.0,0.0,0.0,6.0
+Supportive Living Services - Group Home,04420,Erie,Non-Emerg. Meal/Snack,2024-12-31,0.0,0.0,0.0,0.0,744.0
+Supportive Living Services - Group Home,04558,Erie,Non-Emerg. Meal/Snack,2024-12-31,0.0,0.0,0.0,0.0,5.0
+TEST AGENCY for pol,99999,Erie,Food Pantry/TEFAP,2024-07-31,70.0,0.0,0.0,0.0,0.0
+Thursday Group - SHFB MOBILE,10703 - C,Erie,Food Pantry/TEFAP,2024-07-31,190.0,179.0,128.0,61.0,430.0
+Thursday Group - SHFB MOBILE,10703 - C,Erie,Food Pantry/TEFAP,2024-08-31,217.0,217.0,23.0,63.0,497.0
+Thursday Group - SHFB MOBILE,10703 - C,Erie,Food Pantry/TEFAP,2024-09-30,186.0,187.0,19.0,65.0,438.0
+Thursday Group - SHFB MOBILE,10703 - C,Erie,Food Pantry/TEFAP,2024-10-31,210.0,215.0,19.0,77.0,502.0
+Thursday Group - SHFB MOBILE,10703 - C,Erie,Food Pantry/TEFAP,2024-11-30,244.0,241.0,21.0,95.0,580.0
+Thursday Group - SHFB MOBILE,10703 - C,Erie,Food Pantry/TEFAP,2024-12-31,166.0,156.0,1.0,60.0,382.0
+Thursday Group - SHFB MOBILE,10703 - C,Erie,Food Pantry/TEFAP,2025-01-31,52.0,74.0,3.0,29.0,155.0
+Thursday Group - SHFB MOBILE,10703 - C,Erie,Food Pantry/TEFAP,2025-02-28,220.0,224.0,18.0,74.0,518.0
+Thursday Group - SHFB MOBILE,10703 - C,Erie,Food Pantry/TEFAP,2025-03-31,194.0,188.0,7.0,74.0,456.0
+Thursday Group - SHFB MOBILE,10703 - C,Erie,Food Pantry/TEFAP,2025-04-30,557.0,236.0,13.0,84.0,557.0
+Thursday Group - SHFB MOBILE,10703 - C,Erie,Food Pantry/TEFAP,2025-05-31,225.0,220.0,5.0,79.0,524.0
+Thursday Group - SHFB MOBILE,10703 - C,Erie,Food Pantry/TEFAP,2025-06-30,136.0,126.0,1.0,69.0,331.0
+Trinity Evangelical Lutheran Church - FP,01604,Crawford,Food Pantry/TEFAP,2024-07-31,0.0,0.0,23.0,0.0,0.0
+Trinity Evangelical Lutheran Church - FP,01604,Crawford,Food Pantry/TEFAP,2024-08-31,9.0,2.0,15.0,23.0,34.0
+Trinity Evangelical Lutheran Church - FP,01604,Crawford,Food Pantry/TEFAP,2024-09-30,23.0,18.0,15.0,30.0,71.0
+Trinity Evangelical Lutheran Church - FP,01604,Crawford,Food Pantry/TEFAP,2024-10-31,20.0,19.0,14.0,29.0,68.0
+Trinity Evangelical Lutheran Church - FP,01604,Crawford,Food Pantry/TEFAP,2024-11-30,23.0,24.0,10.0,27.0,74.0
+Trinity Evangelical Lutheran Church - FP,01604,Crawford,Food Pantry/TEFAP,2024-12-31,17.0,16.0,6.0,32.0,65.0
+Trinity Evangelical Lutheran Church - FP,01604,Crawford,Food Pantry/TEFAP,2025-01-31,15.0,6.0,5.0,15.0,36.0
+Trinity Evangelical Lutheran Church - FP,01604,Crawford,Food Pantry/TEFAP,2025-02-28,11.0,3.0,1.0,23.0,37.0
+Trinity Evangelical Lutheran Church - FP,01604,Crawford,Food Pantry/TEFAP,2025-03-31,27.0,26.0,6.0,19.0,72.0
+Trinity Evangelical Lutheran Church - FP,01604,Crawford,Food Pantry/TEFAP,2025-04-30,33.0,10.0,6.0,17.0,50.0
+Trinity Evangelical Lutheran Church - FP,01604,Crawford,Food Pantry/TEFAP,2025-05-31,10.0,9.0,6.0,21.0,40.0
+Trinity Evangelical Lutheran Church - FP,01604,Crawford,Food Pantry/TEFAP,2025-06-30,17.0,12.0,8.0,31.0,70.0
+Tuesday Group - SHFB MOBILE,10703-A,Erie,Food Pantry/TEFAP,2024-07-31,154.0,104.0,130.0,77.0,335.0
+Tuesday Group - SHFB MOBILE,10703-A,Erie,Food Pantry/TEFAP,2024-08-31,125.0,79.0,11.0,60.0,264.0
+Tuesday Group - SHFB MOBILE,10703-A,Erie,Food Pantry/TEFAP,2024-09-30,154.0,92.0,19.0,69.0,315.0
+Tuesday Group - SHFB MOBILE,10703-A,Erie,Food Pantry/TEFAP,2024-10-31,156.0,84.0,16.0,66.0,306.0
+Tuesday Group - SHFB MOBILE,10703-A,Erie,Food Pantry/TEFAP,2024-11-30,200.0,139.0,25.0,84.0,423.0
+Tuesday Group - SHFB MOBILE,10703-A,Erie,Food Pantry/TEFAP,2024-12-31,152.0,106.0,11.0,70.0,328.0
+Tuesday Group - SHFB MOBILE,10703-A,Erie,Food Pantry/TEFAP,2025-01-31,112.0,61.0,8.0,48.0,221.0
+Tuesday Group - SHFB MOBILE,10703-A,Erie,Food Pantry/TEFAP,2025-02-28,179.0,113.0,16.0,81.0,373.0
+Tuesday Group - SHFB MOBILE,10703-A,Erie,Food Pantry/TEFAP,2025-03-31,185.0,106.0,12.0,74.0,365.0
+Tuesday Group - SHFB MOBILE,10703-A,Erie,Food Pantry/TEFAP,2025-04-30,157.0,82.0,8.0,71.0,310.0
+Tuesday Group - SHFB MOBILE,10703-A,Erie,Food Pantry/TEFAP,2025-05-31,75.0,75.0,12.0,67.0,279.0
+Tuesday Group - SHFB MOBILE,10703-A,Erie,Food Pantry/TEFAP,2025-06-30,301.0,143.0,3.0,127.0,571.0
+Union City - FP,01340,Erie,Food Pantry/TEFAP,2024-07-31,165.0,122.0,136.0,68.0,355.0
+Union City - FP,01340,Erie,Food Pantry/TEFAP,2024-08-31,142.0,86.0,11.0,69.0,297.0
+Union City - FP,01340,Erie,Food Pantry/TEFAP,2024-09-30,132.0,83.0,12.0,76.0,291.0
+Union City - FP,01340,Erie,Food Pantry/TEFAP,2024-10-31,160.0,108.0,17.0,69.0,337.0
+Union City - FP,01340,Erie,Food Pantry/TEFAP,2024-11-30,189.0,113.0,18.0,89.0,391.0
+Union City - FP,01340,Erie,Food Pantry/TEFAP,2024-12-31,142.0,88.0,6.0,67.0,297.0
+Union City - FP,01340,Erie,Food Pantry/TEFAP,2025-01-31,136.0,89.0,5.0,59.0,284.0
+Union City - FP,01340,Erie,Food Pantry/TEFAP,2025-02-28,104.0,70.0,3.0,59.0,233.0
+Union City - FP,01340,Erie,Food Pantry/TEFAP,2025-03-31,118.0,87.0,6.0,63.0,268.0
+Union City - FP,01340,Erie,Food Pantry/TEFAP,2025-04-30,129.0,79.0,4.0,59.0,267.0
+Union City - FP,01340,Erie,Food Pantry/TEFAP,2025-05-31,133.0,73.0,5.0,58.0,264.0
+Union City - FP,01340,Erie,Food Pantry/TEFAP,2025-06-30,139.0,91.0,7.0,62.0,292.0
+Union City - SHFB MOBILE,10702,Erie,Produce Express,2024-07-31,78.0,44.0,72.0,46.0,168.0
+Union City - SHFB MOBILE,10702,Erie,Produce Express,2024-08-31,73.0,44.0,24.0,56.0,173.0
+Union City - SHFB MOBILE,10702,Erie,Produce Express,2024-09-30,82.0,43.0,12.0,51.0,176.0
+Union City - SHFB MOBILE,10702,Erie,Produce Express,2024-10-31,62.0,62.0,6.0,3.0,91.0
+Union City - SHFB MOBILE,10702,Erie,Produce Express,2024-11-30,81.0,34.0,0.0,58.0,173.0
+Union City - SHFB MOBILE,10702,Erie,Produce Express,2024-12-31,93.0,48.0,23.0,68.0,209.0
+Union City - SHFB MOBILE,10702,Erie,Produce Express,2025-01-31,129.0,61.0,15.0,72.0,262.0
+Union City - SHFB MOBILE,10702,Erie,Produce Express,2025-03-31,69.0,31.0,11.0,48.0,148.0
+Union City - SHFB MOBILE,10702,Erie,Produce Express,2025-04-30,63.0,21.0,0.0,28.0,112.0
+Union City - SHFB MOBILE,10702,Erie,Produce Express,2025-05-31,75.0,32.0,2.0,40.0,147.0
+Union City - SHFB MOBILE,10702,Erie,Produce Express,2025-06-30,70.0,37.0,7.0,50.0,157.0
+Union City Full Gospel Church - FP,01599,Erie,Food Pantry/TEFAP,2024-07-31,4.0,0.0,0.0,18.0,22.0
+Union City Full Gospel Church - FP,01599,Erie,Food Pantry/TEFAP,2024-08-31,2.0,0.0,0.0,19.0,21.0
+Union City Full Gospel Church - FP,01599,Erie,Food Pantry/TEFAP,2024-09-30,4.0,0.0,18.0,20.0,24.0
+Union City Full Gospel Church - FP,01599,Erie,Food Pantry/TEFAP,2024-10-31,4.0,0.0,0.0,19.0,23.0
+Union City Full Gospel Church - FP,01599,Erie,Food Pantry/TEFAP,2024-11-30,4.0,0.0,1.0,24.0,28.0
+Union City Full Gospel Church - FP,01599,Erie,Food Pantry/TEFAP,2024-12-31,4.0,0.0,0.0,22.0,26.0
+Union City Full Gospel Church - FP,01599,Erie,Food Pantry/TEFAP,2025-01-31,1.0,0.0,0.0,17.0,18.0
+Union City Full Gospel Church - FP,01599,Erie,Food Pantry/TEFAP,2025-02-28,6.0,0.0,0.0,18.0,24.0
+Union City Full Gospel Church - FP,01599,Erie,Food Pantry/TEFAP,2025-03-31,4.0,0.0,0.0,17.0,21.0
+Union City Full Gospel Church - FP,01599,Erie,Food Pantry/TEFAP,2025-04-30,5.0,0.0,0.0,18.0,23.0
+Union City Full Gospel Church - FP,01599,Erie,Food Pantry/TEFAP,2025-05-31,5.0,0.0,0.0,18.0,23.0
+Union City Full Gospel Church - FP,01599,Erie,Food Pantry/TEFAP,2025-06-30,5.0,0.0,0.0,18.0,23.0
+United Faith Fellowship COG - FP,01570,Crawford,Food Pantry/TEFAP,2024-07-31,24.0,21.0,25.0,17.0,62.0
+United Faith Fellowship COG - FP,01570,Crawford,Food Pantry/TEFAP,2024-08-31,25.0,13.0,10.0,21.0,59.0
+United Faith Fellowship COG - FP,01570,Crawford,Food Pantry/TEFAP,2024-09-30,25.0,16.0,9.0,16.0,57.0
+United Faith Fellowship COG - FP,01570,Crawford,Food Pantry/TEFAP,2024-10-31,26.0,15.0,11.0,28.0,69.0
+United Faith Fellowship COG - FP,01570,Crawford,Food Pantry/TEFAP,2024-11-30,51.0,53.0,16.0,28.0,132.0
+United Faith Fellowship COG - FP,01570,Crawford,Food Pantry/TEFAP,2024-12-31,31.0,22.0,4.0,24.0,77.0
+United Faith Fellowship COG - FP,01570,Crawford,Food Pantry/TEFAP,2025-01-31,13.0,13.0,3.0,18.0,44.0
+United Faith Fellowship COG - FP,01570,Crawford,Food Pantry/TEFAP,2025-03-31,25.0,18.0,2.0,28.0,71.0
+United Faith Fellowship COG - FP,01570,Crawford,Food Pantry/TEFAP,2025-04-30,24.0,22.0,1.0,21.0,67.0
+United Faith Fellowship COG - FP,01570,Crawford,Food Pantry/TEFAP,2025-05-31,31.0,20.0,5.0,17.0,66.0
+United Faith Fellowship COG - FP,01570,Crawford,Food Pantry/TEFAP,2025-06-30,26.0,22.0,6.0,18.0,66.0
+Victory Family Church- FP,01607,Crawford,Food Pantry/TEFAP,2024-07-31,485.0,290.0,397.0,174.0,949.0
+Victory Family Church- FP,01607,Crawford,Food Pantry/TEFAP,2024-08-31,395.0,232.0,138.0,192.0,819.0
+Victory Family Church- FP,01607,Crawford,Food Pantry/TEFAP,2024-09-30,472.0,180.0,117.0,188.0,840.0
+Victory Family Church- FP,01607,Crawford,Food Pantry/TEFAP,2024-10-31,421.0,251.0,76.0,191.0,863.0
+Victory Family Church- FP,01607,Crawford,Food Pantry/TEFAP,2024-11-30,387.0,231.0,79.0,172.0,790.0
+Victory Family Church- FP,01607,Crawford,Food Pantry/TEFAP,2024-12-31,532.0,304.0,47.0,208.0,1042.0
+Victory Family Church- FP,01607,Crawford,Food Pantry/TEFAP,2025-01-31,427.0,207.0,48.0,165.0,799.0
+Victory Family Church- FP,01607,Crawford,Food Pantry/TEFAP,2025-02-28,422.0,239.0,50.0,177.0,838.0
+Victory Family Church- FP,01607,Crawford,Food Pantry/TEFAP,2025-03-31,422.0,239.0,50.0,177.0,838.0
+Victory Family Church- FP,01607,Crawford,Food Pantry/TEFAP,2025-04-30,451.0,266.0,34.0,186.0,903.0
+Victory Family Church- FP,01607,Crawford,Food Pantry/TEFAP,2025-05-31,451.0,266.0,34.0,186.0,903.0
+Victory Family Church- FP,01607,Crawford,Food Pantry/TEFAP,2025-06-30,491.0,264.0,41.0,191.0,946.0
+Waterford - FP,01139,Erie,Food Pantry/TEFAP,2024-07-31,48.0,36.0,50.0,32.0,116.0
+Waterford - FP,01139,Erie,Food Pantry/TEFAP,2024-08-31,93.0,81.0,24.0,46.0,220.0
+Waterford - FP,01139,Erie,Food Pantry/TEFAP,2024-09-30,84.0,91.0,9.0,42.0,217.0
+Waterford - FP,01139,Erie,Food Pantry/TEFAP,2024-10-31,96.0,96.0,4.0,48.0,240.0
+Waterford - FP,01139,Erie,Food Pantry/TEFAP,2024-11-30,117.0,101.0,13.0,53.0,271.0
+Waterford - FP,01139,Erie,Food Pantry/TEFAP,2024-12-31,134.0,120.0,6.0,51.0,305.0
+Waterford - FP,01139,Erie,Food Pantry/TEFAP,2025-01-31,86.0,70.0,6.0,40.0,196.0
+Waterford - FP,01139,Erie,Food Pantry/TEFAP,2025-02-28,94.0,66.0,7.0,38.0,198.0
+Waterford - FP,01139,Erie,Food Pantry/TEFAP,2025-03-31,99.0,90.0,4.0,44.0,233.0
+Waterford - FP,01139,Erie,Food Pantry/TEFAP,2025-04-30,79.0,58.0,3.0,43.0,180.0
+Waterford - FP,01139,Erie,Food Pantry/TEFAP,2025-05-31,101.0,91.0,6.0,51.0,243.0
+Waterford - FP,01139,Erie,Food Pantry/TEFAP,2025-06-30,102.0,105.0,7.0,52.0,259.0
+Wednesday Group - SHFB MOBILE,10703-B,Erie,Food Pantry/TEFAP,2024-07-31,267.0,247.0,159.0,62.0,576.0
+Wednesday Group - SHFB MOBILE,10703-B,Erie,Food Pantry/TEFAP,2024-08-31,282.0,259.0,49.0,70.0,611.0
+Wednesday Group - SHFB MOBILE,10703-B,Erie,Food Pantry/TEFAP,2024-09-30,264.0,245.0,18.0,63.0,572.0
+Wednesday Group - SHFB MOBILE,10703-B,Erie,Food Pantry/TEFAP,2024-10-31,228.0,211.0,19.0,66.0,505.0
+Wednesday Group - SHFB MOBILE,10703-B,Erie,Food Pantry/TEFAP,2024-11-30,262.0,249.0,17.0,58.0,569.0
+Wednesday Group - SHFB MOBILE,10703-B,Erie,Food Pantry/TEFAP,2024-12-31,23.0,23.0,1.0,5.0,51.0
+Wednesday Group - SHFB MOBILE,10703-B,Erie,Food Pantry/TEFAP,2025-01-31,83.0,100.0,1.0,16.0,199.0
+Wednesday Group - SHFB MOBILE,10703-B,Erie,Food Pantry/TEFAP,2025-02-28,286.0,268.0,20.0,54.0,608.0
+Wednesday Group - SHFB MOBILE,10703-B,Erie,Food Pantry/TEFAP,2025-03-31,252.0,297.0,20.0,53.0,602.0
+Wednesday Group - SHFB MOBILE,10703-B,Erie,Food Pantry/TEFAP,2025-04-30,234.0,259.0,15.0,69.0,562.0
+Wednesday Group - SHFB MOBILE,10703-B,Erie,Food Pantry/TEFAP,2025-05-31,262.0,277.0,9.0,63.0,602.0
+Wednesday Group - SHFB MOBILE,10703-B,Erie,Food Pantry/TEFAP,2025-06-30,210.0,238.0,5.0,59.0,507.0
+Wesleyville Interfaith - FP,01163,Erie,Food Pantry/TEFAP,2024-07-31,89.0,63.0,89.0,62.0,214.0
+Wesleyville Interfaith - FP,01163,Erie,Food Pantry/TEFAP,2024-08-31,96.0,69.0,22.0,59.0,224.0
+Wesleyville Interfaith - FP,01163,Erie,Food Pantry/TEFAP,2024-09-30,90.0,62.0,14.0,56.0,208.0
+Wesleyville Interfaith - FP,01163,Erie,Food Pantry/TEFAP,2024-10-31,105.0,58.0,17.0,60.0,223.0
+Wesleyville Interfaith - FP,01163,Erie,Food Pantry/TEFAP,2024-11-30,112.0,62.0,19.0,65.0,239.0
+Wesleyville Interfaith - FP,01163,Erie,Food Pantry/TEFAP,2024-12-31,106.0,34.0,5.0,63.0,203.0
+Wesleyville Interfaith - FP,01163,Erie,Food Pantry/TEFAP,2025-01-31,80.0,40.0,6.0,54.0,174.0
+Wesleyville Interfaith - FP,01163,Erie,Food Pantry/TEFAP,2025-02-28,65.0,27.0,51.0,65.0,157.0
+Wesleyville Interfaith - FP,01163,Erie,Food Pantry/TEFAP,2025-03-31,62.0,30.0,24.0,53.0,145.0
+Wesleyville Interfaith - FP,01163,Erie,Food Pantry/TEFAP,2025-04-30,64.0,37.0,9.0,44.0,145.0
+Wesleyville Interfaith - FP,01163,Erie,Food Pantry/TEFAP,2025-05-31,83.0,34.0,11.0,60.0,177.0
+Wesleyville Interfaith - FP,01163,Erie,Food Pantry/TEFAP,2025-06-30,93.0,46.0,13.0,55.0,194.0
+West Millcreek - FP,01126,Erie,Food Pantry/TEFAP,2024-07-31,165.0,152.0,174.0,115.0,432.0
+West Millcreek - FP,01126,Erie,Food Pantry/TEFAP,2024-08-31,158.0,141.0,23.0,99.0,398.0
+West Millcreek - FP,01126,Erie,Food Pantry/TEFAP,2024-09-30,156.0,147.0,31.0,93.0,396.0
+West Millcreek - FP,01126,Erie,Food Pantry/TEFAP,2024-10-31,163.0,148.0,11.0,100.0,411.0
+West Millcreek - FP,01126,Erie,Food Pantry/TEFAP,2024-11-30,178.0,168.0,22.0,108.0,454.0
+West Millcreek - FP,01126,Erie,Food Pantry/TEFAP,2024-12-31,159.0,169.0,10.0,74.0,404.0
+West Millcreek - FP,01126,Erie,Food Pantry/TEFAP,2025-01-31,187.0,172.0,22.0,116.0,475.0
+West Millcreek - FP,01126,Erie,Food Pantry/TEFAP,2025-02-28,172.0,192.0,11.0,90.0,454.0
+West Millcreek - FP,01126,Erie,Food Pantry/TEFAP,2025-03-31,206.0,219.0,25.0,104.0,529.0
+West Millcreek - FP,01126,Erie,Food Pantry/TEFAP,2025-04-30,177.0,193.0,11.0,98.0,468.0
+West Millcreek - FP,01126,Erie,Food Pantry/TEFAP,2025-05-31,197.0,207.0,16.0,96.0,503.0
+West Millcreek - FP,01126,Erie,Food Pantry/TEFAP,2025-06-30,166.0,163.0,16.0,88.0,417.0
+Wilson Middle School - SCHOOL PANTRY,09752,Erie,School Pantry,2024-07-31,0.0,4.0,0.0,0.0,0.0
+Wilson Middle School - SCHOOL PANTRY,09752,Erie,School Pantry,2024-08-31,0.0,5.0,0.0,0.0,0.0
+Wilson Middle School - SCHOOL PANTRY,09752,Erie,School Pantry,2024-10-31,0.0,21.0,0.0,0.0,0.0
+Wilson Middle School - SCHOOL PANTRY,09752,Erie,School Pantry,2024-11-30,0.0,21.0,0.0,0.0,0.0
+Wilson Middle School - SCHOOL PANTRY,09752,Erie,School Pantry,2024-12-31,0.0,15.0,0.0,0.0,0.0
+Wilson Middle School - SCHOOL PANTRY,09752,Erie,School Pantry,2025-01-31,0.0,7.0,0.0,0.0,0.0
+Wilson Middle School - SCHOOL PANTRY,09752,Erie,School Pantry,2025-02-28,0.0,9.0,0.0,0.0,0.0
+Wilson Middle School - SCHOOL PANTRY,09752,Erie,School Pantry,2025-03-31,0.0,12.0,0.0,0.0,0.0
+Wilson Middle School - SCHOOL PANTRY,09752,Erie,School Pantry,2025-04-30,0.0,11.0,0.0,0.0,0.0
+Wilson Middle School - SCHOOL PANTRY,09752,Erie,School Pantry,2025-05-31,0.0,13.0,0.0,0.0,0.0
+Women's Care Center- Downtown Office,05245,Erie,Non-Emerg. Meal/Snack,2025-01-31,0.0,0.0,0.0,0.0,28.0
+Women's Care Center- Downtown Office,05245,Erie,Non-Emerg. Meal/Snack,2025-02-28,0.0,0.0,0.0,0.0,25.0
+Women's Care Center- Downtown Office,05245,Erie,Non-Emerg. Meal/Snack,2025-03-31,0.0,0.0,0.0,0.0,31.0
+Women's Care Center- Downtown Office,05245,Erie,Non-Emerg. Meal/Snack,2025-04-30,0.0,0.0,0.0,0.0,19.0
+Women's Care Center- Downtown Office,05245,Erie,Non-Emerg. Meal/Snack,2025-05-31,0.0,0.0,0.0,0.0,20.0
+Women's Care Center- Downtown Office,05245,Erie,Non-Emerg. Meal/Snack,2025-06-30,0.0,0.0,0.0,0.0,43.0
+Women's Care Center- Peach Street,05246,Erie,Non-Emerg. Meal/Snack,2024-09-30,0.0,0.0,0.0,0.0,12.0
+Womens Care Center Education Program,05016,Erie,Non-Emerg. Meal/Snack,2024-07-31,0.0,0.0,0.0,0.0,14.0
+Womens Care Center Education Program,05016,Erie,Non-Emerg. Meal/Snack,2024-08-31,0.0,0.0,0.0,0.0,35.0
+Womens Care Center Education Program,05016,Erie,Non-Emerg. Meal/Snack,2024-09-30,0.0,0.0,0.0,0.0,52.0
+Womens Care Center Education Program,05016,Erie,Non-Emerg. Meal/Snack,2024-10-31,0.0,0.0,0.0,0.0,53.0
+Womens Care Center Education Program,05016,Erie,Non-Emerg. Meal/Snack,2025-01-31,0.0,0.0,0.0,0.0,50.0
+Womens Care Center Education Program,05016,Erie,Non-Emerg. Meal/Snack,2025-03-31,0.0,0.0,0.0,0.0,40.0
+Womens Care Center Education Program,05016,Erie,Non-Emerg. Meal/Snack,2025-06-30,0.0,0.0,0.0,0.0,40.0
+Zem Zem - SHFB MOBILE,10703-D,Erie,Food Pantry/TEFAP,2024-07-31,105.0,69.0,108.0,68.0,242.0
+Zem Zem - SHFB MOBILE,10703-D,Erie,Food Pantry/TEFAP,2024-08-31,111.0,72.0,16.0,72.0,255.0
+Zem Zem - SHFB MOBILE,10703-D,Erie,Food Pantry/TEFAP,2024-09-30,123.0,60.0,25.0,74.0,257.0
+Zem Zem - SHFB MOBILE,10703-D,Erie,Food Pantry/TEFAP,2024-10-31,119.0,68.0,18.0,68.0,255.0
+Zem Zem - SHFB MOBILE,10703-D,Erie,Food Pantry/TEFAP,2024-11-30,138.0,74.0,8.0,67.0,279.0
+Zem Zem - SHFB MOBILE,10703-D,Erie,Food Pantry/TEFAP,2024-12-31,101.0,62.0,4.0,61.0,224.0
+Zem Zem - SHFB MOBILE,10703-D,Erie,Food Pantry/TEFAP,2025-01-31,93.0,55.0,0.0,44.0,192.0
+Zem Zem - SHFB MOBILE,10703-D,Erie,Food Pantry/TEFAP,2025-02-28,90.0,56.0,6.0,48.0,194.0
+Zem Zem - SHFB MOBILE,10703-D,Erie,Food Pantry/TEFAP,2025-03-31,155.0,99.0,15.0,64.0,318.0
+Zem Zem - SHFB MOBILE,10703-D,Erie,Food Pantry/TEFAP,2025-04-30,131.0,77.0,18.0,74.0,282.0
+Zem Zem - SHFB MOBILE,10703-D,Erie,Food Pantry/TEFAP,2025-05-31,114.0,66.0,12.0,63.0,243.0
+Zem Zem - SHFB MOBILE,10703-D,Erie,Food Pantry/TEFAP,2025-06-30,119.0,68.0,11.0,66.0,253.0
