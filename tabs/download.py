@@ -5,11 +5,12 @@ from lib.exports import (
     build_pantry_export,
     build_poi_export,
     build_data_dictionary,
+    build_zcta_export,
     AI_CONTEXT,
 )
 
 
-def render(census, sh_data, demographics, cdc_places, food_atlas, poi_stats, pois, strat_df, pantry_monthly, pantry_index):
+def render(census, sh_data, demographics, cdc_places, food_atlas, poi_stats, pois, strat_df, pantry_monthly, pantry_index, zcta_data):
     st.header("Download Data")
     st.markdown(
         "Download the full Erie & Crawford County dataset for use in your own analysis "
@@ -22,6 +23,7 @@ def render(census, sh_data, demographics, cdc_places, food_atlas, poi_stats, poi
     pantry_monthly_export, pantry_index_export = build_pantry_export(pantry_monthly, pantry_index)
     poi_export_df = build_poi_export(pois)
     dict_df = build_data_dictionary()
+    zcta_df = build_zcta_export(zcta_data)
 
     # ── Download UI ───────────────────────────────────────────────────────────
     st.markdown("---")
@@ -45,7 +47,27 @@ def render(census, sh_data, demographics, cdc_places, food_atlas, poi_stats, poi
 
     st.markdown("---")
 
-    # Row 2 — Community services POI file
+    # Row 2 — ZIP Code summary
+    col1, col2 = st.columns([2, 1])
+    with col1:
+        st.markdown("#### ZIP Code Summary")
+        st.caption(
+            f"{zcta_df['zip_code'].nunique()} ZIP codes · 5 ACS variables · "
+            "Income, poverty, rent burden, no vehicle, education · "
+            "2019–2023 · Does not include health, food access, or POI data"
+        )
+    with col2:
+        st.download_button(
+            label="Download CSV",
+            data=zcta_df.to_csv(index=False).encode("utf-8"),
+            file_name="erie_crawford_zip_summary.csv",
+            mime="text/csv",
+            use_container_width=True,
+        )
+
+    st.markdown("---")
+
+    # Row 3 — Community services POI file
     col1, col2 = st.columns([2, 1])
     with col1:
         st.markdown("#### Community Services — Point of Interest Data")

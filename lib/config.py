@@ -40,6 +40,16 @@ all_variables = {
     "% Asian": "pct_asian",
 }
 
+# Demographic variables — used by the Demographics tab and to exclude from Economic tab selector
+DEMOGRAPHIC_VARS = {
+    "Total Population":     "total_population",
+    "Median Age":           "median_age",
+    "% White Non-Hispanic": "pct_white_non_hispanic",
+    "% Black":              "pct_black",
+    "% Hispanic":           "pct_hispanic",
+    "% Asian":              "pct_asian",
+}
+
 HIGHER_IS_BETTER = {
     "median_household_income": True,
     "poverty_rate": False,

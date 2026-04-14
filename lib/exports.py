@@ -276,6 +276,17 @@ def build_poi_export(pois):
     return raw[keep + ["snap_eligible"]]
 
 
+def build_zcta_export(zcta_data):
+    df = zcta_data.copy()
+    id_cols = ["zcta", "area_name", "county_name", "year"]
+    data_cols = ["median_household_income", "poverty_rate", "rent_burden_rate",
+                 "no_vehicle_rate", "bachelors_rate"]
+    keep = [c for c in id_cols + data_cols if c in df.columns]
+    df = df[keep].sort_values(["county_name", "zcta"]).reset_index(drop=True)
+    df = df.rename(columns={"zcta": "zip_code"})
+    return df
+
+
 def build_data_dictionary():
     rows = [
         # Identity

@@ -5,6 +5,7 @@ from lib.config import data_dictionary
 from lib.helpers import get_benchmark_row, get_available_vars
 
 import tabs.about as tab_about_mod
+import tabs.demographics as tab_demographics_mod
 import tabs.economic as tab_economic_mod
 import tabs.transit as tab_transit_mod
 import tabs.food_access as tab_food_access_mod
@@ -52,7 +53,7 @@ year = st.sidebar.selectbox("Year", [2023, 2022, 2021, 2020, 2019])
 st.sidebar.markdown("---")
 geography = st.sidebar.radio(
     "Geography",
-    ["Tract", "Zip Code", "County"],
+    ["Zip Code", "Tract", "County"],
     horizontal=True
 )
 
@@ -149,12 +150,15 @@ benchmark_row = get_benchmark_row(
 available_vars = get_available_vars(geography, merged)
 
 # ── TABS ──────────────────────────────────────────────────
-tab_about, tab_econ, tab_transit, tab_food, tab_health, tab_services, tab_query, tab_insights, tab_download, tab_dict = st.tabs([
-    "About", "Economic", "Transit", "Food Access", "Health", "Services", "Query Tool", "Insights", "Download", "Data Dictionary"
+tab_about, tab_demographics, tab_econ, tab_transit, tab_food, tab_health, tab_services, tab_query, tab_insights, tab_download, tab_dict = st.tabs([
+    "About", "Demographics", "Economic", "Transit", "Food Access", "Health", "Services", "Query Tool", "Insights", "Download", "Data Dictionary"
 ])
 
 with tab_about:
     tab_about_mod.render(demographics, benchmarks_counties, year)
+
+with tab_demographics:
+    tab_demographics_mod.render(merged, demographics, geography, year)
 
 with tab_econ:
     tab_economic_mod.render(
@@ -188,7 +192,7 @@ with tab_insights:
 with tab_download:
     tab_download_mod.render(
         census, sh_data, demographics, cdc_places, food_atlas,
-        poi_stats, pois, strat_df, pantry_monthly, pantry_index
+        poi_stats, pois, strat_df, pantry_monthly, pantry_index, zcta_data
     )
 
 with tab_dict:

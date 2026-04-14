@@ -4,7 +4,7 @@ import pandas as pd
 import json
 import plotly.graph_objects as go
 
-from lib.config import all_variables, HIGHER_IS_BETTER, TRACT_ONLY_VARS, MAP_STYLE, VIEW_STATE, TOOLTIP_STYLE
+from lib.config import all_variables, HIGHER_IS_BETTER, TRACT_ONLY_VARS, DEMOGRAPHIC_VARS, MAP_STYLE, VIEW_STATE, TOOLTIP_STYLE
 from lib.helpers import value_to_color, get_benchmark_value, format_value, diff_string, render_detail_panel
 
 
@@ -53,8 +53,10 @@ def render(merged, census, zcta_data, gdf_tracts, gdf_zctas,
         # ══════════════════════════════════════════════════════
         if econ_view == "Snapshot":
             st.subheader("Economic Indicators")
+            _demo_cols = set(DEMOGRAPHIC_VARS.values())
             econ_vars = {k: v for k, v in all_variables.items()
-                         if v not in TRACT_ONLY_VARS or geography == "Tract"}
+                         if v not in _demo_cols
+                         and (v not in TRACT_ONLY_VARS or geography == "Tract")}
             selected_layer = st.selectbox(
                 "Variable", list(econ_vars.keys()), key="econ_layer"
             )
