@@ -86,16 +86,18 @@ HIGHER_IS_BETTER = {
 }
 
 TRACT_ONLY_VARS = {
-    "food_insecurity_rate", "unemployment_rate", "disability_rate",
-    "homeownership_rate", "stop_count", "total_daily_visits", "nearest_stop_miles",
-    "diabetes_rate", "high_bp_rate", "depression_rate", "obesity_rate",
-    "smoking_rate", "no_insurance_rate", "poor_mental_health_rate",
-    "poor_physical_health_rate", "asthma_rate", "heart_disease_rate",
-    "stroke_rate", "copd_rate", "physical_inactivity_rate", "sleep_deprivation_rate",
+    # Second Harvest model estimates — tract only, no ZCTA equivalent
+    "food_insecurity_rate", "disability_rate",
+    # Transit — EMTA service area is tract-level aggregated
+    "stop_count", "total_daily_visits", "nearest_stop_miles",
+    # USDA Food Atlas — published at tract level only
     "food_desert_1_10", "food_desert_vehicle", "low_income_tract",
     "low_access_pop", "low_access_low_income_pop",
-    "total_population", "median_age",
-    "pct_white_non_hispanic", "pct_black", "pct_hispanic", "pct_asian",
+    # NOTE: unemployment_rate, homeownership_rate, total_population, median_age,
+    # pct_* demographic vars, and all CDC PLACES health vars are now available at
+    # ZIP level via fetch_zcta_data.py and fetch_cdc_places_zcta.py.
+    # They are intentionally NOT listed here so they appear in ZIP/County selectors
+    # when the corresponding data columns exist in the merged dataframe.
 }
 
 # ── DATA DICTIONARY ────────────────────────────────────────

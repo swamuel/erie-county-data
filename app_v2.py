@@ -22,7 +22,8 @@ st.set_page_config(page_title="Erie & Crawford County Data", layout="wide")
 (census, sh_data, shapes, stops, pantries,
  benchmarks_national, benchmarks_pa, benchmarks_erie,
  benchmarks_counties, transit_stats, zcta_data,
- cdc_places, food_atlas, demographics, pois, poi_stats) = load_data()
+ cdc_places, food_atlas, demographics, pois, poi_stats,
+ cdc_places_zcta) = load_data()
 
 gdf_tracts, gdf_counties, gdf_zctas = load_boundaries()
 strat_df = load_stratification_data()
@@ -127,6 +128,10 @@ elif geography == "Zip Code":
     gdf_zctas_copy = gdf_zctas.copy()
     gdf_zctas_copy["ZCTA5CE20"] = gdf_zctas_copy["ZCTA5CE20"].astype(str).str.zfill(5)
     merged = gdf_zctas_copy.merge(zcta_year, left_on="ZCTA5CE20", right_on="zcta", how="left")
+    # Merge CDC PLACES health data at ZCTA level (if available)
+    if len(cdc_places_zcta.columns) > 1:
+        merged = merged.merge(cdc_places_zcta, left_on="ZCTA5CE20", right_on="zcta", how="left")
+        merged = merged.loc[:, ~merged.columns.duplicated()]
     geo_id_col = "ZCTA5CE20"
     geo_name_col = "area_name"
     merged["display_name"] = merged["area_name"].fillna("Unknown") + " (" + merged["ZCTA5CE20"] + ")"
