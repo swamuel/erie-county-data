@@ -11,11 +11,17 @@ from lib.helpers import value_to_color
 def render(merged, demographics, geography, year):
     st.subheader("Demographics")
 
-    if geography != "Tract":
-        st.info(
-            "Detailed demographic breakdowns (population, age, race/ethnicity) are only available "
-            "at the **Census Tract** level. Switch Geography to **Tract** in the sidebar to use this tab."
-        )
+    geo_id_col = {"Tract": "TRACTCE", "Zip Code": "ZCTA5CE20", "County": "COUNTYFP"}[geography]
+    geo_label  = {"Tract": "Tract", "Zip Code": "ZIP Code", "County": "County"}[geography]
+
+    if geography == "County":
+        st.info("Detailed demographic breakdowns are not available at the County level. Switch to Tract or Zip Code.")
+        return
+
+    # Only show variables that exist in the merged data
+    available_demo_vars = {k: v for k, v in DEMOGRAPHIC_VARS.items() if v in merged.columns}
+    if not available_demo_vars:
+        st.info(f"Demographic data is not yet available for {geo_label} geography.")
         return
 
     # ── Variable selector & summary metrics ───────────────────────────────────
@@ -23,9 +29,9 @@ def render(merged, demographics, geography, year):
 
     with col_controls:
         selected_label = st.selectbox(
-            "Variable", list(DEMOGRAPHIC_VARS.keys()), key="demo_layer"
+            "Variable", list(available_demo_vars.keys()), key="demo_layer"
         )
-        column = DEMOGRAPHIC_VARS[selected_label]
+        column = available_demo_vars[selected_label]
 
         st.markdown("---")
 
@@ -33,24 +39,24 @@ def render(merged, demographics, geography, year):
         if len(valid) > 0:
             if column == "total_population":
                 st.metric("Total Population", f"{int(valid.sum()):,}")
-                st.metric("Largest tract", f"{int(valid.max()):,}")
-                st.metric("Smallest tract", f"{int(valid.min()):,}")
+                st.metric(f"Largest {geo_label.lower()}", f"{int(valid.max()):,}")
+                st.metric(f"Smallest {geo_label.lower()}", f"{int(valid.min()):,}")
             elif column == "median_age":
                 st.metric("Mean Median Age", f"{valid.mean():.1f}")
-                st.metric("Oldest tract", f"{valid.max():.1f}")
-                st.metric("Youngest tract", f"{valid.min():.1f}")
+                st.metric(f"Oldest {geo_label.lower()}", f"{valid.max():.1f}")
+                st.metric(f"Youngest {geo_label.lower()}", f"{valid.min():.1f}")
             else:
                 st.metric(f"Mean {selected_label}", f"{valid.mean():.1f}%")
-                st.metric("Highest tract", f"{valid.max():.1f}%")
-                st.metric("Lowest tract", f"{valid.min():.1f}%")
+                st.metric(f"Highest {geo_label.lower()}", f"{valid.max():.1f}%")
+                st.metric(f"Lowest {geo_label.lower()}", f"{valid.min():.1f}%")
 
         st.markdown("---")
-        st.markdown("**Explore a Tract**")
+        st.markdown(f"**Explore a {geo_label}**")
         geo_options = ["None"] + sorted(merged["display_name"].dropna().tolist())
-        selected_display = st.selectbox("Select tract", geo_options, key="demo_geo_select")
+        selected_display = st.selectbox(f"Select {geo_label.lower()}", geo_options, key="demo_geo_select")
         if selected_display != "None":
             sel_row = merged[merged["display_name"] == selected_display].iloc[0]
-            st.session_state.selected_geo = sel_row["TRACTCE"]
+            st.session_state.selected_geo = sel_row[geo_id_col]
             st.session_state.selected_geo_name = selected_display
 
     # ── Choropleth map ─────────────────────────────────────────────────────────
@@ -64,7 +70,7 @@ def render(merged, demographics, geography, year):
             )
         )
 
-        map_cols = ["geometry", "color", "display_name", "TRACTCE", column]
+        map_cols = ["geometry", "color", "display_name", geo_id_col, column]
         map_cols = [c for c in map_cols if c in merged_demo.columns]
         demo_json = json.loads(merged_demo[map_cols].to_json())
 
@@ -90,18 +96,9 @@ def render(merged, demographics, geography, year):
 
     # ── Race/Ethnicity breakdown chart ─────────────────────────────────────────
     st.markdown("---")
-    st.subheader("Race & Ethnicity by Tract")
-    st.caption(f"Top 20 tracts by population — {year} ACS 5-year estimates.")
+    st.subheader(f"Race & Ethnicity by {geo_label}")
+    st.caption(f"Top 20 {geo_label.lower()}s by population — {year} ACS 5-year estimates.")
 
-    demo_year = demographics[demographics["year"] == year].copy()
-    race_cols_raw = {
-        "white_non_hispanic": "White Non-Hispanic",
-        "black_alone":        "Black or African American",
-        "hispanic_latino":    "Hispanic or Latino",
-        "asian_alone":        "Asian",
-        "other_race":         "Other / Multiracial",
-    }
-    # fall back to pct columns if raw counts aren't available
     race_cols_pct = {
         "pct_white_non_hispanic": "White Non-Hispanic",
         "pct_black":              "Black or African American",
@@ -109,13 +106,20 @@ def render(merged, demographics, geography, year):
         "pct_asian":              "Asian",
         "pct_other":              "Other / Multiracial",
     }
+    race_cols_raw = {
+        "white_non_hispanic": "White Non-Hispanic",
+        "black_alone":        "Black or African American",
+        "hispanic_latino":    "Hispanic or Latino",
+        "asian_alone":        "Asian",
+        "other_race":         "Other / Multiracial",
+    }
 
-    use_raw = all(c in demo_year.columns for c in race_cols_raw)
-    use_pct = all(c in demo_year.columns for c in race_cols_pct)
-
-    if not use_raw and not use_pct:
-        st.info("Race/ethnicity breakdown not available in demographics data.")
-    else:
+    # For Tract geography use the separate demographics CSV (has raw counts);
+    # for ZIP geography use the merged GeoDataFrame (has pct columns from zcta_data).
+    if geography == "Tract":
+        demo_year = demographics[demographics["year"] == year].copy()
+        use_raw = all(c in demo_year.columns for c in race_cols_raw)
+        use_pct = not use_raw and all(c in demo_year.columns for c in race_cols_pct)
         if "total_population" in demo_year.columns:
             demo_year = demo_year.sort_values("total_population", ascending=False).head(20)
         if "tract_code" in demo_year.columns:
@@ -124,13 +128,22 @@ def render(merged, demographics, geography, year):
             demo_year["tract_label"] = demo_year["TRACTCE"].astype(str).str.zfill(6)
         else:
             demo_year["tract_label"] = demo_year.index.astype(str)
-
-        # Use NAMELSAD labels from merged if we can join
         tract_names = merged[["TRACTCE", "display_name"]].drop_duplicates()
         demo_year = demo_year.merge(
             tract_names, left_on="tract_label", right_on="TRACTCE", how="left"
         )
         demo_year["label"] = demo_year["display_name"].fillna(demo_year["tract_label"])
+    else:
+        # Use merged directly — zcta_data pct columns already joined
+        demo_year = merged.copy()
+        use_raw = False
+        use_pct = all(c in demo_year.columns for c in race_cols_pct)
+        if "total_population" in demo_year.columns:
+            demo_year = demo_year.sort_values("total_population", ascending=False).head(20)
+        demo_year["label"] = demo_year["display_name"]
+
+    if not use_raw and not use_pct:
+        st.info("Race/ethnicity breakdown not available in demographics data.")
 
         fig = go.Figure()
         RACE_COLORS = {
@@ -182,11 +195,11 @@ def render(merged, demographics, geography, year):
 
     # ── Summary table ──────────────────────────────────────────────────────────
     st.markdown("---")
-    st.subheader("All Tracts — Demographic Summary")
-    table_cols = ["display_name"] + [c for c in DEMOGRAPHIC_VARS.values() if c in merged.columns]
+    st.subheader(f"All {geo_label}s — Demographic Summary")
+    table_cols = ["display_name"] + [c for c in available_demo_vars.values() if c in merged.columns]
     table = merged[table_cols].dropna(subset=["display_name"]).copy()
-    table = table.rename(columns={"display_name": "Tract"})
-    table = table.rename(columns={v: k for k, v in DEMOGRAPHIC_VARS.items() if v in table.columns})
+    table = table.rename(columns={"display_name": geo_label})
+    table = table.rename(columns={v: k for k, v in available_demo_vars.items() if v in table.columns})
     table = table.sort_values("Total Population", ascending=False).reset_index(drop=True) \
         if "Total Population" in table.columns else table
     table.index += 1
