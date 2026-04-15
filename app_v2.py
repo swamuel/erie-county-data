@@ -197,7 +197,8 @@ with tab_insights:
 with tab_download:
     tab_download_mod.render(
         census, sh_data, demographics, cdc_places, food_atlas,
-        poi_stats, pois, strat_df, pantry_monthly, pantry_index, zcta_data
+        poi_stats, pois, strat_df, pantry_monthly, pantry_index, zcta_data,
+        cdc_places_zcta
     )
 
 with tab_dict:

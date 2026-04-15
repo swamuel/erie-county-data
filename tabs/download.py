@@ -10,7 +10,7 @@ from lib.exports import (
 )
 
 
-def render(census, sh_data, demographics, cdc_places, food_atlas, poi_stats, pois, strat_df, pantry_monthly, pantry_index, zcta_data):
+def render(census, sh_data, demographics, cdc_places, food_atlas, poi_stats, pois, strat_df, pantry_monthly, pantry_index, zcta_data, cdc_places_zcta=None):
     st.header("Download Data")
     st.markdown(
         "Download the full Erie & Crawford County dataset for use in your own analysis "
@@ -23,7 +23,7 @@ def render(census, sh_data, demographics, cdc_places, food_atlas, poi_stats, poi
     pantry_monthly_export, pantry_index_export = build_pantry_export(pantry_monthly, pantry_index)
     poi_export_df = build_poi_export(pois)
     dict_df = build_data_dictionary()
-    zcta_df = build_zcta_export(zcta_data)
+    zcta_df = build_zcta_export(zcta_data, cdc_places_zcta)
 
     # ── Download UI ───────────────────────────────────────────────────────────
     st.markdown("---")
@@ -52,9 +52,9 @@ def render(census, sh_data, demographics, cdc_places, food_atlas, poi_stats, poi
     with col1:
         st.markdown("#### ZIP Code Summary")
         st.caption(
-            f"{zcta_df['zip_code'].nunique()} ZIP codes · 5 ACS variables · "
-            "Income, poverty, rent burden, no vehicle, education · "
-            "2019–2023 · Does not include health, food access, or POI data"
+            f"{zcta_df['zip_code'].nunique()} ZIP codes · {len(zcta_df.columns) - 4} variables · "
+            "ACS economics, demographics, race/ethnicity · CDC PLACES health outcomes · "
+            "2019–2023 ACS · 2023 CDC PLACES"
         )
     with col2:
         st.download_button(
