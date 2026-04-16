@@ -23,7 +23,7 @@ st.set_page_config(page_title="Erie & Crawford County Data", layout="wide")
  benchmarks_national, benchmarks_pa, benchmarks_erie,
  benchmarks_counties, transit_stats, zcta_data,
  cdc_places, food_atlas, demographics, pois, poi_stats,
- cdc_places_zcta) = load_data()
+ cdc_places_zcta, zcta_poi_stats) = load_data()
 
 gdf_tracts, gdf_counties, gdf_zctas = load_boundaries()
 strat_df = load_stratification_data()
@@ -132,6 +132,10 @@ elif geography == "Zip Code":
     if len(cdc_places_zcta.columns) > 1:
         merged = merged.merge(cdc_places_zcta, left_on="ZCTA5CE20", right_on="zcta", how="left")
         merged = merged.loc[:, ~merged.columns.duplicated()]
+    # Merge POI counts and nearest distances at ZCTA level (if available)
+    if len(zcta_poi_stats.columns) > 1:
+        merged = merged.merge(zcta_poi_stats, on="ZCTA5CE20", how="left")
+        merged = merged.loc[:, ~merged.columns.duplicated()]
     geo_id_col = "ZCTA5CE20"
     geo_name_col = "area_name"
     merged["display_name"] = merged["area_name"].fillna("Unknown") + " (" + merged["ZCTA5CE20"] + ")"
@@ -198,7 +202,7 @@ with tab_download:
     tab_download_mod.render(
         census, sh_data, demographics, cdc_places, food_atlas,
         poi_stats, pois, strat_df, pantry_monthly, pantry_index, zcta_data,
-        cdc_places_zcta
+        cdc_places_zcta, zcta_poi_stats
     )
 
 with tab_dict:

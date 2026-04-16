@@ -10,7 +10,7 @@ from lib.exports import (
 )
 
 
-def render(census, sh_data, demographics, cdc_places, food_atlas, poi_stats, pois, strat_df, pantry_monthly, pantry_index, zcta_data, cdc_places_zcta=None):
+def render(census, sh_data, demographics, cdc_places, food_atlas, poi_stats, pois, strat_df, pantry_monthly, pantry_index, zcta_data, cdc_places_zcta=None, zcta_poi_stats=None):
     st.header("Download Data")
     st.markdown(
         "Download the full Erie & Crawford County dataset for use in your own analysis "
@@ -23,7 +23,7 @@ def render(census, sh_data, demographics, cdc_places, food_atlas, poi_stats, poi
     pantry_monthly_export, pantry_index_export = build_pantry_export(pantry_monthly, pantry_index)
     poi_export_df = build_poi_export(pois)
     dict_df = build_data_dictionary()
-    zcta_df = build_zcta_export(zcta_data, cdc_places_zcta)
+    zcta_df = build_zcta_export(zcta_data, cdc_places_zcta, zcta_poi_stats)
 
     # ── Download UI ───────────────────────────────────────────────────────────
     st.markdown("---")

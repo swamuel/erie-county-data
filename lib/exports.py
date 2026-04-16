@@ -276,11 +276,14 @@ def build_poi_export(pois):
     return raw[keep + ["snap_eligible"]]
 
 
-def build_zcta_export(zcta_data, cdc_places_zcta=None):
+def build_zcta_export(zcta_data, cdc_places_zcta=None, zcta_poi_stats=None):
     import pandas as pd
 
+    # Use the most recent year only for the download
     df = zcta_data.copy()
     df["zcta"] = df["zcta"].astype(str).str.zfill(5)
+    latest_year = df["year"].max()
+    df = df[df["year"] == latest_year].copy()
 
     # Merge CDC PLACES health data if available
     if cdc_places_zcta is not None and len(cdc_places_zcta.columns) > 1:
@@ -288,12 +291,21 @@ def build_zcta_export(zcta_data, cdc_places_zcta=None):
         health["zcta"] = health["zcta"].astype(str).str.zfill(5)
         df = df.merge(health, on="zcta", how="left")
 
-    id_cols   = ["zcta", "area_name", "county_name", "year"]
-    acs_cols  = ["median_household_income", "poverty_rate", "rent_burden_rate",
-                 "no_vehicle_rate", "bachelors_rate", "unemployment_rate",
-                 "homeownership_rate", "total_population", "median_age"]
-    demo_cols = ["pct_white_non_hispanic", "pct_black", "pct_hispanic",
-                 "pct_asian", "pct_other"]
+    # Merge POI counts and nearest distances if available
+    if zcta_poi_stats is not None and len(zcta_poi_stats.columns) > 1:
+        poi = zcta_poi_stats.copy()
+        poi["ZCTA5CE20"] = poi["ZCTA5CE20"].astype(str).str.zfill(5)
+        # Drop raw meter columns — keep only human-readable _miles columns
+        poi = poi[[c for c in poi.columns if not c.endswith("_m") or c.endswith("_miles")]]
+        df = df.merge(poi, left_on="zcta", right_on="ZCTA5CE20", how="left")
+        df = df.drop(columns=["ZCTA5CE20"], errors="ignore")
+
+    id_cols     = ["zcta", "area_name", "county_name", "year"]
+    acs_cols    = ["median_household_income", "poverty_rate", "rent_burden_rate",
+                   "no_vehicle_rate", "bachelors_rate", "unemployment_rate",
+                   "homeownership_rate", "total_population", "median_age"]
+    demo_cols   = ["pct_white_non_hispanic", "pct_black", "pct_hispanic",
+                   "pct_asian", "pct_other"]
     health_cols = ["diabetes_rate", "high_bp_rate", "depression_rate",
                    "obesity_rate", "smoking_rate", "no_insurance_rate",
                    "poor_mental_health_rate", "poor_physical_health_rate",
@@ -302,8 +314,11 @@ def build_zcta_export(zcta_data, cdc_places_zcta=None):
                    "physical_inactivity_rate", "binge_drinking_rate",
                    "arthritis_rate", "high_cholesterol_rate", "cancer_rate",
                    "poor_general_health_rate"]
+    poi_cols    = [c for c in df.columns
+                   if c.startswith("count_") or c.endswith("_miles")]
 
-    keep = [c for c in id_cols + acs_cols + demo_cols + health_cols if c in df.columns]
+    keep = [c for c in id_cols + acs_cols + demo_cols + health_cols + poi_cols
+            if c in df.columns]
     df = df[keep].sort_values(["county_name", "zcta"]).reset_index(drop=True)
     df = df.rename(columns={"zcta": "zip_code"})
     return df
