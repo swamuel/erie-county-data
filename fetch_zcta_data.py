@@ -56,6 +56,7 @@ COUNTY_LOOKUP = {
 }
 
 variables = {
+    # Economic (original)
     "B19013_001E": "median_household_income",
     "B17001_002E": "poverty_population",
     "B17001_001E": "poverty_total",
@@ -64,7 +65,21 @@ variables = {
     "B25070_010E": "rent_burdened",
     "B25070_001E": "rent_total",
     "B08201_002E": "no_vehicle_households",
-    "B08201_001E": "vehicle_total"
+    "B08201_001E": "vehicle_total",
+    # Demographics
+    "B01003_001E": "total_population",
+    "B01002_001E": "median_age",
+    "B03002_003E": "white_non_hispanic",  # White alone, not Hispanic/Latino
+    "B03002_001E": "race_total",
+    "B02001_003E": "black_alone",
+    "B03003_003E": "hispanic_latino",
+    "B02001_005E": "asian_alone",
+    # Employment (ACS civilian labor force)
+    "B23025_005E": "unemployed",
+    "B23025_003E": "labor_force",
+    # Homeownership
+    "B25003_002E": "owner_occupied",
+    "B25003_001E": "housing_units",
 }
 
 get_vars = "NAME," + ",".join(variables.keys())
@@ -94,7 +109,6 @@ for year in years:
         continue
 
     data = response.json()
-
     df = pd.DataFrame(data[1:], columns=data[0])
     df = df.rename(columns=variables)
     df = df.rename(columns={"zip code tabulation area": "zcta"})
@@ -106,29 +120,58 @@ for year in years:
         df[col] = pd.to_numeric(df[col], errors="coerce")
         df[col] = df[col].replace(-666666666, pd.NA)
 
-    df["poverty_rate"] = (df["poverty_population"] / df["poverty_total"] * 100).round(1)
-    df["bachelors_rate"] = (df["bachelors_degree"] / df["education_total"] * 100).round(1)
-    df["rent_burden_rate"] = (df["rent_burdened"] / df["rent_total"] * 100).round(1)
-    df["no_vehicle_rate"] = (df["no_vehicle_households"] / df["vehicle_total"] * 100).round(1)
+    # Derived rates — economic
+    df["poverty_rate"]      = (df["poverty_population"] / df["poverty_total"] * 100).round(1)
+    df["bachelors_rate"]    = (df["bachelors_degree"] / df["education_total"] * 100).round(1)
+    df["rent_burden_rate"]  = (df["rent_burdened"] / df["rent_total"] * 100).round(1)
+    df["no_vehicle_rate"]   = (df["no_vehicle_households"] / df["vehicle_total"] * 100).round(1)
 
-    df = df.drop(columns=["poverty_population", "poverty_total",
-                           "bachelors_degree", "education_total",
-                           "rent_burdened", "rent_total",
-                           "no_vehicle_households", "vehicle_total"])
+    # Derived rates — demographics
+    df["pct_white_non_hispanic"] = (df["white_non_hispanic"] / df["total_population"] * 100).round(1)
+    df["pct_black"]              = (df["black_alone"] / df["total_population"] * 100).round(1)
+    df["pct_hispanic"]           = (df["hispanic_latino"] / df["total_population"] * 100).round(1)
+    df["pct_asian"]              = (df["asian_alone"] / df["total_population"] * 100).round(1)
+    df["pct_other"]              = (
+        100 - df["pct_white_non_hispanic"] - df["pct_black"]
+            - df["pct_hispanic"] - df["pct_asian"]
+    ).round(1).clip(lower=0)
 
-    df["year"] = year
-    df["area_name"] = df["zcta"].map(ZCTA_LIST)
+    # Derived rates — employment & housing
+    df["unemployment_rate"]  = (df["unemployed"] / df["labor_force"] * 100).round(1)
+    df["homeownership_rate"] = (df["owner_occupied"] / df["housing_units"] * 100).round(1)
+
+    # Drop raw count columns
+    drop_cols = [
+        "poverty_population", "poverty_total",
+        "bachelors_degree", "education_total",
+        "rent_burdened", "rent_total",
+        "no_vehicle_households", "vehicle_total",
+        "white_non_hispanic", "race_total",
+        "black_alone", "hispanic_latino", "asian_alone",
+        "unemployed", "labor_force",
+        "owner_occupied", "housing_units",
+        "NAME",
+    ]
+    df = df.drop(columns=[c for c in drop_cols if c in df.columns])
+
+    df["year"]        = year
+    df["area_name"]   = df["zcta"].map(ZCTA_LIST)
     df["county_name"] = df["zcta"].map(COUNTY_LOOKUP)
+    df["state"]       = "PA"
 
     all_years.append(df)
-    print(f"{year} done — {len(df)} ZCTAs")
+    print(f"{year} done — {len(df)} ZCTAs, {len(df.columns)} columns")
 
 final = pd.concat(all_years, ignore_index=True)
 final["zcta"] = final["zcta"].astype(str).str.zfill(5)
 
 print(f"\nTotal rows: {len(final)}")
+print(f"Columns: {final.columns.tolist()}")
 print(final.groupby(["county_name", "year"]).size())
-print(final[["zcta", "area_name", "county_name", "year", "median_household_income", "poverty_rate"]].head(10))
+print(final[["zcta", "area_name", "county_name", "year",
+             "median_household_income", "poverty_rate",
+             "total_population", "pct_white_non_hispanic",
+             "unemployment_rate"]].head(10))
 
 final.to_csv("data/raw/zcta_data.csv", index=False)
 print("\nSaved to data/raw/zcta_data.csv")
