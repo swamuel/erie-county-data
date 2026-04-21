@@ -25,7 +25,8 @@ warnings.filterwarnings("ignore")
 
 # ── CONSTANTS ─────────────────────────────────────────────
 PA_LAT_MAX  = 42.27
-ERIE_FIPS   = ["049", "039"]
+from lib.constants import FIPS_LIST
+ERIE_FIPS   = FIPS_LIST  # All 11 NW PA counties
 TIGER_URL   = "https://www2.census.gov/geo/tiger/TIGER2023/TRACT/tl_2023_42_tract.zip"
 CRS_METRIC  = "EPSG:32617"
 CRS_GEO     = "EPSG:4326"
@@ -126,8 +127,10 @@ snap = snap[snap["lat"] != 0].copy()
 
 # Standardize columns to match OSM schema
 snap["primary_category"] = "Food & Grocery"
-snap["type"]             = snap["store_type"].fillna(snap["store_type_raw"].fillna(""))
-snap["subtype"]          = snap["store_type"].fillna(snap["store_type_raw"].fillna(""))
+_snap_type               = snap.get("store_type", snap.get("store_type_raw", "")).fillna("")
+snap["type"]             = _snap_type
+snap["subtype"]          = _snap_type
+snap["store_type"]       = _snap_type
 snap["snap_eligible"]    = True
 snap["geocode_source"]   = "usda_snap"
 
@@ -179,7 +182,7 @@ print(f"  {df['TRACTCE'].isna().sum()} outside tract boundaries")
 # ── STEP 5: SAVE CLEAN POI FILE ───────────────────────────
 out_pois = "data/raw/erie_pois.csv"
 df.to_csv(out_pois, index=False)
-print(f"\nSaved → {out_pois} ({len(df)} records)")
+print(f"\nSaved: {out_pois} ({len(df)} records)")
 
 # ── STEP 6: TRACT-LEVEL COUNTS ────────────────────────────
 print("\n" + "=" * 55)
@@ -277,7 +280,7 @@ for key, (pcat, ptype) in other_cats.items():
 # ── STEP 8: SAVE STATS ────────────────────────────────────
 out_stats = "data/processed/tract_poi_stats.csv"
 stats.to_csv(out_stats, index=False)
-print(f"\nSaved → {out_stats} ({len(stats)} tracts × {len(stats.columns)} columns)")
+print(f"\nSaved: {out_stats} ({len(stats)} tracts x {len(stats.columns)} columns)")
 
 # Preview
 print("\nFarthest tracts from nearest full-service grocery:")

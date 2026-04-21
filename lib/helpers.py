@@ -36,6 +36,12 @@ def get_benchmark_row(selected_benchmark, compare_county, year,
         return benchmarks_pa[benchmarks_pa["year"] == year]
     elif selected_benchmark == "Erie County":
         return benchmarks_erie[benchmarks_erie["year"] == year]
+    elif selected_benchmark in benchmarks_counties["name"].unique().tolist():
+        # Any in-region county selected directly as a benchmark
+        return benchmarks_counties[
+            (benchmarks_counties["year"] == year) &
+            (benchmarks_counties["name"] == selected_benchmark)
+        ]
     elif selected_benchmark == "Compare to Another PA County":
         return benchmarks_counties[
             (benchmarks_counties["year"] == year) &

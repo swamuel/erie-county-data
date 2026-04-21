@@ -43,7 +43,7 @@ def render(merged, pois, benchmark_row, geography):
         st.markdown("### What's Near Me?")
         st.caption("Find services within a set distance of any address.")
 
-        svc_address_input = st.text_input("Address", placeholder="e.g. 1341 W 26th St, Erie, PA",
+        svc_address_input = st.text_input("Address", placeholder="e.g. 814 Market St, Meadville, PA",
                                           label_visibility="collapsed", key="svc_address")
         rb1, rb2 = st.columns([2, 1])
         with rb1:
@@ -226,9 +226,9 @@ def render(merged, pois, benchmark_row, geography):
         st.caption(f"**{total_svc_pts}** points visible — {svc_view}")
 
         svc_view_state = pdk.ViewState(
-            latitude=st.session_state.svc_search_lat or 41.95,
-            longitude=st.session_state.svc_search_lon or -80.15,
-            zoom=13 if st.session_state.svc_search_lat else 8.5,
+            latitude=st.session_state.svc_search_lat or VIEW_STATE.latitude,
+            longitude=st.session_state.svc_search_lon or VIEW_STATE.longitude,
+            zoom=13 if st.session_state.svc_search_lat else VIEW_STATE.zoom,
             pitch=0,
         )
 

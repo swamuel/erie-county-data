@@ -53,25 +53,34 @@ def load_data():
 def load_boundaries():
     tract_url = "https://www2.census.gov/geo/tiger/TIGER2023/TRACT/tl_2023_42_tract.zip"
     tracts = gpd.read_file(tract_url)
-    tracts = tracts[tracts["COUNTYFP"].isin(["049", "039"])]
+    from lib.constants import FIPS_LIST
+    import pandas as _pd
+    from pathlib import Path as _Path
+
+    tracts = tracts[tracts["COUNTYFP"].isin(FIPS_LIST)]
     tracts = tracts[tracts["TRACTCE"] != "990000"]
 
     county_url = "https://www2.census.gov/geo/tiger/TIGER2023/COUNTY/tl_2023_us_county.zip"
     counties = gpd.read_file(county_url)
     counties = counties[
-        (counties["COUNTYFP"].isin(["049", "039"])) &
+        (counties["COUNTYFP"].isin(FIPS_LIST)) &
         (counties["STATEFP"] == "42")
     ]
 
     zcta_url = "https://www2.census.gov/geo/tiger/TIGER2023/ZCTA520/tl_2023_us_zcta520.zip"
-    zcta_list = [str(z).zfill(5) for z in [
-        16110, 16111, 16131, 16134, 16314, 16316, 16327, 16328, 16335,
-        16354, 16360, 16403, 16404, 16406, 16422, 16424, 16432, 16433,
-        16434, 16435, 16440, 16401, 16407, 16410, 16411, 16412, 16413,
-        16415, 16417, 16421, 16423, 16426, 16427, 16428, 16430, 16438,
-        16441, 16442, 16443, 16501, 16502, 16503, 16504, 16505, 16506,
-        16507, 16508, 16509, 16510, 16511, 16563
-    ]]
+    zcta_cache = _Path("data/raw/region_zctas.csv")
+    if zcta_cache.exists():
+        zcta_list = _pd.read_csv(zcta_cache, dtype={"zcta": str})["zcta"].str.zfill(5).tolist()
+    else:
+        # Fallback to Erie+Crawford until fetch_zcta_data.py has been run
+        zcta_list = [str(z).zfill(5) for z in [
+            16110, 16111, 16131, 16134, 16314, 16316, 16327, 16328, 16335,
+            16354, 16360, 16403, 16404, 16406, 16422, 16424, 16432, 16433,
+            16434, 16435, 16440, 16401, 16407, 16410, 16411, 16412, 16413,
+            16415, 16417, 16421, 16423, 16426, 16427, 16428, 16430, 16438,
+            16441, 16442, 16443, 16501, 16502, 16503, 16504, 16505, 16506,
+            16507, 16508, 16509, 16510, 16511, 16563
+        ]]
     zctas = gpd.read_file(zcta_url)
     zctas = zctas[zctas["ZCTA5CE20"].isin(zcta_list)]
 

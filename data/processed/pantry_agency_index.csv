@@ -1,4 +1,29 @@
 agency_name,agency_ref,county,program_type,first_month,last_month,total_individuals_served,months_reported
+BP - Woodland Elementary - SHBP,02096,Cameron,BackPacks,2024-10-31,2025-05-31,0.0,8
+Cameron County Community - FP,01632,Cameron,Food Pantry/TEFAP,2024-07-31,2025-06-30,4898.0,12
+DEMO Food Pantry,DEMOAGENCY,Cameron,Food Pantry/TEFAP,2024-10-31,2024-10-31,5.0,1
+Food for the Soul,01630,Cameron,Food Pantry/TEFAP,2024-07-31,2025-06-30,2000.0,12
+BP - North Clarion Elementary - SHBP,02115,Clarion,BackPacks,2024-10-31,2025-05-31,0.0,8
+Clarion First United Methodist Church - FP,01671,Clarion,Food Pantry/TEFAP,2024-07-31,2025-06-30,2377.0,12
+Cornerstone Church of God - FP,01651,Clarion,Food Pantry/TEFAP,2024-07-31,2025-06-30,685.0,12
+First Presbyterian Church of Clarion - FP,01699,Clarion,Food Pantry/TEFAP,2024-07-31,2025-06-30,1502.0,12
+Keystone Smiles Learning Center - O.S.N.E. -At Risk School,04515,Clarion,Non-Emerg. Meal/Snack,2024-07-31,2025-06-30,1334.0,12
+Knox Clarion County Food Distribution,01688,Clarion,Food Pantry/TEFAP,2024-07-31,2025-06-30,3540.0,12
+North Clarion High School  - SCHOOL PANTRY,09787,Clarion,School Pantry,2024-10-31,2025-05-31,0.0,8
+Redbank Valley - FP,01516,Clarion,Food Pantry/TEFAP,2024-07-31,2025-06-30,2558.0,12
+Scenic Rivers YMCA Clarion,01678,Clarion,Food Pantry/TEFAP,2025-02-28,2025-06-30,724.0,5
+Share-A-Care - FP,01659,Clarion,Food Pantry/TEFAP,2024-07-31,2025-06-30,727.0,12
+Strattanville United Methodist Church - FP,07025,Clarion,Produce Express,2024-07-31,2025-06-30,1791.0,12
+Zion Jesus - FP,01479,Clarion,Food Pantry/TEFAP,2024-07-31,2025-06-30,3100.0,12
+BP - DuBois Area Middle School - SHBP,02094,Clearfield,BackPacks,2024-07-31,2025-05-31,0.0,10
+BP - Wasson Elementary - SHBP,02099,Clearfield,BackPacks,2024-10-31,2025-05-31,0.0,8
+Clearfield - Military Share,10098,Clearfield,Produce Express,2024-07-31,2025-05-31,696.0,6
+Clearfield Ministerium - FP,01639,Clearfield,Food Pantry/TEFAP,2024-07-31,2025-06-30,6804.0,12
+DuBois Area - FP,01645,Clearfield,Food Pantry/TEFAP,2024-07-31,2025-01-31,0.0,7
+DuBois Area High School - SCHOOL PANTRY,09755,Clearfield,School Pantry,2024-10-31,2025-05-31,0.0,8
+Living Bread Ministries - FP,01594,Clearfield,Food Pantry/TEFAP,2024-07-31,2025-06-30,5616.0,12
+New Life Center - FP,01689,Clearfield,Food Pantry/No TEFAP,2024-07-31,2025-06-30,1556.0,11
+Salvation Army DuBois,01606,Clearfield,Food Pantry/TEFAP,2024-07-31,2025-06-30,4552.0,12
 Associated Charities - FP,01431,Crawford,Food Pantry/TEFAP,2024-07-31,2025-06-30,6923.0,12
 BP - Cochranton Elementary - SHBP,02118,Crawford,BackPacks,2024-10-31,2025-05-31,0.0,8
 BP - First District Elementary - SHBP,02117,Crawford,BackPacks,2024-10-31,2025-05-31,0.0,8
@@ -19,6 +44,16 @@ St Pauls Lutheran Church - FP,06058,Crawford,Produce Express,2024-07-31,2025-06-
 Trinity Evangelical Lutheran Church - FP,01604,Crawford,Food Pantry/TEFAP,2024-07-31,2025-06-30,617.0,12
 United Faith Fellowship COG - FP,01570,Crawford,Food Pantry/TEFAP,2024-07-31,2025-06-30,770.0,11
 Victory Family Church- FP,01607,Crawford,Food Pantry/TEFAP,2024-07-31,2025-06-30,10530.0,12
+BP - Fox Township Elementary - SHBP,02090,Elk,BackPacks,2024-07-31,2025-05-31,0.0,10
+BP - St Marys Elementary - SHBP,02086,Elk,BackPacks,2024-07-31,2025-05-31,0.0,10
+Christian Food Bank - FP,01662,Elk,Food Pantry/TEFAP,2024-07-31,2025-06-30,5968.0,12
+Helping Hand - FP,01491,Elk,Food Pantry/TEFAP,2024-07-31,2025-06-30,1865.0,12
+Johnsonburg Area High School - SCHOOL PANTRY,09781,Elk,School Pantry,2024-10-31,2025-05-31,0.0,8
+Keystone Rural Health Food Consortia Food Pantry,01818,Elk,Food Pantry/No TEFAP,2024-07-31,2025-06-30,373.0,9
+Ridgway - FP,06084,Elk,Produce Express,2024-07-31,2025-06-30,2004.0,12
+Ridgway - SCHOOL PANTRY,09780,Elk,School Pantry,2024-10-31,2025-05-31,0.0,8
+Salvation Army Ridgway - FP,01490,Elk,Food Pantry/TEFAP,2024-07-31,2025-06-30,2126.0,12
+St Marys Area High School - SCHOOL PANTRY,09788,Elk,School Pantry,2024-10-31,2025-05-31,0.0,8
 Adagio Health FP - Erie,01807,Erie,Food Pantry/No TEFAP,2025-06-30,2025-06-30,3.0,1
 BP - Asbury Elementary - SHBP,02087,Erie,BackPacks,2024-07-31,2025-05-31,0.0,10
 BP - Belle Valley School - SHBP,02081,Erie,BackPacks,2024-07-31,2025-05-31,0.0,10
@@ -158,3 +193,70 @@ Women's Care Center- Downtown Office,05245,Erie,Non-Emerg. Meal/Snack,2025-01-31
 Women's Care Center- Peach Street,05246,Erie,Non-Emerg. Meal/Snack,2024-09-30,2024-09-30,12.0,1
 Womens Care Center Education Program,05016,Erie,Non-Emerg. Meal/Snack,2024-07-31,2025-06-30,284.0,7
 Zem Zem - SHFB MOBILE,10703-D,Erie,Food Pantry/TEFAP,2024-07-31,2025-06-30,2994.0,12
+BP - East Forest Elementary - SHBP,02080,Forest,BackPacks,2024-10-31,2025-05-31,0.0,8
+BP - West Forest Elementary - SHBP,02051,Forest,BackPacks,2024-10-31,2025-05-31,0.0,7
+North Clarion/Marienville - FP,01525,Forest,Food Pantry/TEFAP,2024-07-31,2025-06-30,696.0,12
+Western Forest County - FP,01551,Forest,Food Pantry/TEFAP,2024-07-31,2025-06-30,1114.0,12
+BP - Hickory Grove - SHBP,02092,Jefferson,BackPacks,2024-10-31,2025-05-31,0.0,8
+BP - Pinecreek Elementary - SHBP,02083,Jefferson,BackPacks,2024-10-31,2025-05-31,0.0,8
+Brookville Area - FP,01012,Jefferson,Food Pantry/TEFAP,2024-07-31,2025-06-30,7653.0,12
+Cross Town Punxy - FP,01595,Jefferson,Food Pantry/TEFAP,2024-07-31,2025-06-30,3859.0,12
+Falls Creek Helping Hands - FP,01802,Jefferson,Food Pantry/TEFAP,2024-07-31,2025-06-30,558.0,12
+Jefferson - Military Share,10097,Jefferson,Produce Express,2024-08-31,2025-06-30,1222.0,5
+Reynoldsville Aid Helping Hands. - FP,01564,Jefferson,Food Pantry/TEFAP,2024-07-31,2025-06-30,1763.0,12
+Reynoldsville Area - FP,01603,Jefferson,Food Pantry/TEFAP,2024-07-31,2025-05-31,3330.0,10
+BP - Kane Elementary - SHBP,02079,Mckean,BackPacks,2024-10-31,2025-06-30,0.0,9
+Church of the Ascension - FP,06047,Mckean,Produce Express,2024-07-31,2025-06-30,2514.0,12
+Destinations Bradford - FP,01657,Mckean,Food Pantry/TEFAP,2024-07-31,2025-06-30,3450.0,12
+Duke Center United Methodist Church - FP,01801,Mckean,Food Pantry/TEFAP,2024-07-31,2025-06-30,2971.0,12
+Evergreen Elm,04772,Mckean,Non-Emerg. Meal/Snack,2024-08-31,2025-06-30,159.0,11
+Gathered from the Grove - FP,01676,Mckean,Food Pantry/TEFAP,2024-07-31,2025-06-30,1871.0,11
+Kane Area - FP,01598,Mckean,Food Pantry/TEFAP,2024-07-31,2025-06-30,3151.0,12
+Kane Area Community Center,04771,Mckean,Non-Emerg. Meal/Snack,2024-07-31,2025-06-30,1322.0,12
+Mount Jewett Hunger Project,01814,Mckean,Food Pantry/TEFAP,2024-07-31,2025-06-30,292.0,12
+Port Allegany - FP,01730,Mckean,Food Pantry/TEFAP,2024-07-31,2025-06-30,1173.0,11
+Salvation Army Bradford - FP,01566,Mckean,Food Pantry/TEFAP,2024-07-31,2025-06-30,2278.0,12
+Smethport- FP Christian Community Services,01684,Mckean,Food Pantry/TEFAP,2024-07-31,2025-06-30,1562.0,12
+St Elizabeth of Hungary - FP,07024,Mckean,Produce Express,2024-08-31,2025-06-30,1198.0,6
+YWCA Bradford - FP,01646,Mckean,Food Pantry/TEFAP,2024-07-31,2024-07-31,60.0,1
+Adagio Health FP- Venango,01809,Venango,Food Pantry/No TEFAP,2024-07-31,2024-07-31,0.0,1
+BP - Central Elementary School - SHBP,02095,Venango,BackPacks,2024-10-31,2025-05-31,0.0,8
+BP - Hasson Heights - SHBP,02058,Venango,BackPacks,2024-10-31,2025-05-31,0.0,8
+BP - Sandycreek Elementary - SHBP,02110,Venango,BackPacks,2024-07-31,2025-05-31,0.0,10
+BP - Victory Elementary - SHBP,02109,Venango,BackPacks,2024-07-31,2025-05-31,0.0,10
+Chapel on the Hill - FP,07004,Venango,Produce Express,2024-07-31,2025-05-31,231.0,5
+Community Services of Venango State Grant,01025,Venango,Food Pantry/No TEFAP,2024-07-31,2024-10-31,2262.0,4
+Cranberry Area - FP,01562,Venango,Food Pantry/TEFAP,2024-08-31,2025-06-30,4414.0,11
+Cranberry Jr/Sr High School - SCHOOL PANTRY,09790,Venango,School Pantry,2024-07-31,2025-05-31,0.0,10
+Franklin - Military Share,10095,Venango,Produce Express,2024-07-31,2025-06-30,4136.0,11
+OIL CITY COMMUNITY SERVICES OF VENANGO,01026,Venango,Food Pantry/TEFAP,2024-07-31,2025-06-30,11707.0,12
+Oil City Middle School - SCHOOL PANTRY,09744,Venango,School Pantry,2024-09-30,2025-05-31,0.0,9
+Pleasantville Methodist Church - FP,07020,Venango,Produce Express,2024-07-31,2025-06-30,1094.0,12
+ROCKY GROVE COMMUNITY SERVICES OF VENANGO,01617,Venango,Food Pantry/TEFAP,2024-07-31,2025-06-30,3454.0,12
+St Elizabeth Center - FP,01442,Venango,Food Pantry/TEFAP,2024-07-31,2025-06-30,4271.0,12
+St John Episcopal Church - FP,01540,Venango,Food Pantry/TEFAP,2024-07-31,2025-06-30,5262.0,12
+St Patrick Church - FP,01534,Venango,Food Pantry/TEFAP,2024-07-31,2025-06-30,2337.0,11
+The Crossing Free Methodist Church - FP,01503,Venango,Food Pantry/TEFAP,2024-07-31,2025-06-30,956.0,12
+BP - Eisenhower Elementary School - SHBP,02077,Warren,BackPacks,2024-10-31,2025-04-30,0.0,7
+BP - Sheffield Area Elementary - SHBP,02070,Warren,BackPacks,2024-10-31,2025-05-31,0.0,8
+BP - Tidioute Community Charter School - SHBP,02075,Warren,BackPacks,2024-10-31,2025-05-31,0.0,8
+BP - Warren Area Elementary - SHBP,02076,Warren,BackPacks,2024-10-31,2025-05-31,0.0,8
+BP - Youngsville Elementary - SHBP,02071,Warren,BackPacks,2024-10-31,2025-05-31,0.0,8
+Beatty Warren Middle School - SCHOOL PANTRY,09745,Warren,School Pantry,2024-10-31,2025-06-30,0.0,8
+Eisenhower Middle/High School - SCHOOL PANTRY,09743,Warren,School Pantry,2024-10-31,2025-05-31,0.0,8
+First Church of the Nazarene - FP,01358,Warren,Food Pantry/TEFAP,2024-07-31,2025-06-30,2169.0,12
+First Lutheran Church  - FP,07008,Warren,Produce Express,2024-07-31,2025-06-30,2498.0,12
+Free Methodist Church - FP,07010,Warren,Produce Express,2024-08-31,2025-06-30,1529.0,6
+Holy Archangels Orthodox Foundation Food Pantry,01816,Warren,Food Pantry/TEFAP,2024-07-31,2025-05-31,58.0,8
+Otterbein Global Methodist Church - FP,07016,Warren,Produce Express,2024-07-31,2025-05-31,647.0,6
+Salvation Army Warren - FP,01265,Warren,Food Pantry/TEFAP,2025-01-31,2025-05-31,666.0,3
+Sheffield Area - FP,01216,Warren,Food Pantry/TEFAP,2024-07-31,2025-06-30,1828.0,12
+Sheffield Area Middle/High School - SCHOOL PANTRY,09678,Warren,School Pantry,2024-10-31,2025-05-31,0.0,8
+Sugar Grove Free Methodist Church,01609,Warren,Food Pantry/TEFAP,2024-07-31,2025-06-30,2324.0,12
+Tidioute Fire Hall - SHFB MOBILE,10704,Warren,Produce Express,2024-08-31,2025-06-30,624.0,6
+Warren - Military Share,10091,Warren,Produce Express,2024-08-31,2025-06-30,892.0,6
+Warren - SHFB MOBILE,10707,Warren,Food Pantry/TEFAP,2024-07-31,2025-06-30,1518.0,9
+Warren Area High School - SCHOOL PANTRY,09746,Warren,School Pantry,2024-07-31,2025-04-30,0.0,10
+Women's Care Center - Warren,05978,Warren,Non-Emerg. Meal/Snack,2024-07-31,2024-07-31,39.0,1
+Youngsville 2nd Street FP,01526,Warren,Food Pantry/TEFAP,2024-07-31,2025-06-30,5173.0,12
+Youngsville High School - SCHOOL PANTRY,09742,Warren,School Pantry,2024-09-30,2025-05-31,0.0,9

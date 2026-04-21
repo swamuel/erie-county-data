@@ -122,17 +122,20 @@ def render(merged, pantries, pantry_monthly, pantry_index, benchmark_row, geogra
     st.caption("Monthly reporting data from Second Harvest Food Bank partner agencies.")
 
     # ── County filter ─────────────────────────────────────────────────────────────
-    pantry_county = st.radio(
+    available_pantry_counties = sorted(pantry_index["county"].dropna().unique().tolist())
+    selected_pantry_counties = st.multiselect(
         "Filter by county",
-        options=["Erie", "Crawford", "Both"],
-        horizontal=True,
+        options=available_pantry_counties,
+        default=available_pantry_counties,
         key="pantry_county_filter"
     )
 
-    if pantry_county == "Both":
-        filtered_index = pantry_index.copy()
+    if selected_pantry_counties:
+        filtered_index = pantry_index[pantry_index["county"].isin(selected_pantry_counties)]
     else:
-        filtered_index = pantry_index[pantry_index["county"] == pantry_county]
+        filtered_index = pantry_index.copy()
+
+    show_county_tag = len(selected_pantry_counties) != 1
 
     # ── Build grouped dropdown options ────────────────────────────────────────────
     options = ["— Select a pantry or program —"]
@@ -146,7 +149,7 @@ def render(merged, pantries, pantry_monthly, pantry_index, benchmark_row, geogra
         options.append(header)
         option_keys.append(None)
         for _, row in group.iterrows():
-            county_tag = f" ({row['county']})" if pantry_county == "Both" else ""
+            county_tag = f" ({row['county']})" if show_county_tag else ""
             label = f"  {row['agency_name']}{county_tag}"
             options.append(label)
             option_keys.append((row["agency_ref"], row["program_type"]))

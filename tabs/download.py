@@ -13,7 +13,7 @@ from lib.exports import (
 def render(census, sh_data, demographics, cdc_places, food_atlas, poi_stats, pois, strat_df, pantry_monthly, pantry_index, zcta_data, cdc_places_zcta=None, zcta_poi_stats=None):
     st.header("Download Data")
     st.markdown(
-        "Download the full Erie & Crawford County dataset for use in your own analysis "
+        "Download the full Northwest PA regional dataset for use in your own analysis "
         "or to upload to an AI assistant for insight generation. All files include only "
         "the most recent available data year per variable."
     )
@@ -40,7 +40,7 @@ def render(census, sh_data, demographics, cdc_places, food_atlas, poi_stats, poi
         st.download_button(
             label="Download CSV",
             data=combined_df.to_csv(index=False).encode("utf-8"),
-            file_name="erie_crawford_combined.csv",
+            file_name="nwpa_combined.csv",
             mime="text/csv",
             use_container_width=True,
         )
@@ -60,7 +60,7 @@ def render(census, sh_data, demographics, cdc_places, food_atlas, poi_stats, poi
         st.download_button(
             label="Download CSV",
             data=zcta_df.to_csv(index=False).encode("utf-8"),
-            file_name="erie_crawford_zip_summary.csv",
+            file_name="nwpa_zip_summary.csv",
             mime="text/csv",
             use_container_width=True,
         )
@@ -77,11 +77,17 @@ def render(census, sh_data, demographics, cdc_places, food_atlas, poi_stats, poi
             "Each point assigned to census tract for spatial analysis · "
             "USDA SNAP + OpenStreetMap"
         )
+        st.warning(
+            "**In progress:** SNAP food retailer data now covers all 11 counties. "
+            "Health, civic, and social service locations (OpenStreetMap) are currently "
+            "limited to Erie and Crawford counties — full regional coverage coming soon.",
+            icon="🚧",
+        )
     with col2:
         st.download_button(
             label="Download CSV",
             data=poi_export_df.to_csv(index=False).encode("utf-8"),
-            file_name="erie_crawford_pois_clean.csv",
+            file_name="nwpa_pois_clean.csv",
             mime="text/csv",
             use_container_width=True,
         )
@@ -101,7 +107,7 @@ def render(census, sh_data, demographics, cdc_places, food_atlas, poi_stats, poi
         st.download_button(
             label="Download CSV",
             data=pantry_monthly_export.to_csv(index=False).encode("utf-8"),
-            file_name="erie_crawford_pantry_monthly.csv",
+            file_name="nwpa_pantry_monthly.csv",
             mime="text/csv",
             use_container_width=True,
         )
@@ -139,7 +145,7 @@ def render(census, sh_data, demographics, cdc_places, food_atlas, poi_stats, poi
         st.download_button(
             label="Download TXT",
             data=AI_CONTEXT.encode("utf-8"),
-            file_name="erie_crawford_ai_context.txt",
+            file_name="nwpa_ai_context.txt",
             mime="text/plain",
             use_container_width=True,
         )

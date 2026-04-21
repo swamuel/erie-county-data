@@ -1,28 +1,39 @@
 """
 fetch_cdc_places_zcta.py
 Pulls CDC PLACES 2023 release health estimates at the ZCTA (ZIP code) level
-for Erie and Crawford County ZIP codes.
+for the Second Harvest NW PA service region (11 counties).
 
 Uses the GIS-friendly wide format dataset (one row per ZCTA):
   https://data.cdc.gov/resource/c7b2-4ecy.json
+
+ZCTAs are discovered dynamically via fetch_zcta_data.discover_region_zctas().
+Run fetch_zcta_data.py first if data/raw/region_zctas.csv doesn't exist.
 """
 
 import requests
 import pandas as pd
+from pathlib import Path
 
 OUTPUT_PATH = "data/raw/cdc_places_zcta.csv"
 
-ZCTA_LIST = [
-    # Crawford County
-    "16110", "16111", "16131", "16134", "16314", "16316", "16327", "16328",
-    "16335", "16354", "16360", "16403", "16404", "16406", "16422", "16424",
-    "16432", "16433", "16434", "16435", "16440",
-    # Erie County
-    "16401", "16407", "16410", "16411", "16412", "16413", "16415", "16417",
-    "16421", "16423", "16426", "16427", "16428", "16430", "16438", "16441",
-    "16442", "16443", "16501", "16502", "16503", "16504", "16505", "16506",
-    "16507", "16508", "16509", "16510", "16511", "16563",
-]
+# Load ZCTA list from cache (created by fetch_zcta_data.py)
+ZCTA_CACHE = Path("data/raw/region_zctas.csv")
+if ZCTA_CACHE.exists():
+    _zcta_df  = pd.read_csv(ZCTA_CACHE, dtype={"zcta": str})
+    ZCTA_LIST = _zcta_df["zcta"].str.zfill(5).tolist()
+    print(f"Using {len(ZCTA_LIST)} ZCTAs from {ZCTA_CACHE}")
+else:
+    print("WARNING: region_zctas.csv not found. Run fetch_zcta_data.py first.")
+    print("Falling back to Erie+Crawford hardcoded list.")
+    ZCTA_LIST = [
+        "16110","16111","16131","16134","16314","16316","16327","16328",
+        "16335","16354","16360","16403","16404","16406","16422","16424",
+        "16432","16433","16434","16435","16440","16401","16407","16410",
+        "16411","16412","16413","16415","16417","16421","16423","16426",
+        "16427","16428","16430","16438","16441","16442","16443","16501",
+        "16502","16503","16504","16505","16506","16507","16508","16509",
+        "16510","16511","16563",
+    ]
 
 # Column renames: GIS-friendly _crudeprev names → app-friendly names
 RENAME = {

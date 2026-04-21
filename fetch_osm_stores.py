@@ -1,6 +1,6 @@
 """
 fetch_osm_stores.py — Pull food retail locations from OpenStreetMap
-for Erie and Crawford County, PA via the Overpass API.
+for the Second Harvest NW PA 11-county region via the Overpass API.
 
 Outputs to data/raw/osm_stores_raw.csv for review before merging
 with erie_grocery_stores.csv.
@@ -13,8 +13,9 @@ import pandas as pd
 import time
 
 # ── BOUNDING BOX ──────────────────────────────────────────
-# Covers Erie + Crawford County with a small margin
-BBOX = "41.49,-80.52,42.27,-79.68"
+# Covers all 11 NW PA counties (Cameron east edge to Erie/Crawford west edge,
+# Clearfield south edge to Erie north edge)
+BBOX = "40.85,-80.52,42.27,-77.45"
 
 OVERPASS_URL = "https://overpass-api.de/api/interpreter"
 
@@ -104,7 +105,7 @@ def build_query():
         f'way["shop"="{s}"]({BBOX});' for s in shop_types
     )
     return f"""
-[out:json][timeout:60];
+[out:json][timeout:180][maxsize:536870912];
 (
   {node_queries}
   {way_queries}
@@ -114,10 +115,19 @@ out center body;
 
 
 def fetch_osm():
-    print("Querying Overpass API...")
     query = build_query()
-    response = requests.get(OVERPASS_URL, params={"data": query}, timeout=90)
-    response.raise_for_status()
+    for attempt in range(1, 4):
+        print(f"Querying Overpass API (attempt {attempt})...")
+        try:
+            response = requests.post(OVERPASS_URL, data={"data": query}, timeout=240)
+            response.raise_for_status()
+        except Exception as e:
+            if attempt < 3:
+                print(f"  Error: {e} — retrying in 30s...")
+                time.sleep(30)
+                continue
+            raise
+        break
     data = response.json()
     print(f"  {len(data['elements'])} elements returned")
     return data["elements"]

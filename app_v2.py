@@ -16,7 +16,8 @@ import tabs.insights as tab_insights_mod
 import tabs.download as tab_download_mod
 import tabs.data_dictionary as tab_dict_mod
 
-st.set_page_config(page_title="Erie & Crawford County Data", layout="wide")
+from lib.constants import COUNTY_FIPS, COUNTY_NAMES, APP_TITLE
+st.set_page_config(page_title=APP_TITLE, layout="wide")
 
 # ── LOAD DATA ─────────────────────────────────────────────
 (census, sh_data, shapes, stops, pantries,
@@ -44,7 +45,7 @@ if "svc_search_results" not in st.session_state:
     st.session_state.svc_search_results = None
 
 # ── SIDEBAR ───────────────────────────────────────────────
-st.sidebar.title("Erie & Crawford County Data")
+st.sidebar.title(APP_TITLE)
 
 mode = st.sidebar.radio("Mode", ["Simple", "Advanced"], horizontal=True)
 
@@ -61,7 +62,7 @@ geography = st.sidebar.radio(
 st.sidebar.markdown("---")
 st.sidebar.subheader("Benchmark")
 
-benchmark_options = ["National", "Pennsylvania", "Erie County", "Compare to Another PA County"]
+benchmark_options = ["National", "Pennsylvania", "Erie County", "Crawford County", "Compare to Another PA County"]
 selected_benchmark = st.sidebar.selectbox("Compare against", benchmark_options)
 
 compare_county = None
@@ -138,15 +139,19 @@ elif geography == "Zip Code":
         merged = merged.loc[:, ~merged.columns.duplicated()]
     geo_id_col = "ZCTA5CE20"
     geo_name_col = "area_name"
-    merged["display_name"] = merged["area_name"].fillna("Unknown") + " (" + merged["ZCTA5CE20"] + ")"
+    _county_short = merged["county_name"].fillna("").astype(str).str.replace(" County", "", regex=False).str.strip()
+    _zip_col = merged["ZCTA5CE20"].astype(str)
+    _name = merged["area_name"].astype(str).where(
+        merged["area_name"].astype(str) != _zip_col, _county_short
+    ).fillna(_county_short)
+    merged["display_name"] = _name + " (" + _zip_col + ")"
 
 elif geography == "County":
     county_data = benchmarks_counties[
         (benchmarks_counties["year"] == year) &
-        (benchmarks_counties["name"].isin(["Erie County", "Crawford County"]))
+        (benchmarks_counties["name"].isin(COUNTY_NAMES))
     ].copy()
-    county_fips_map = {"Erie County": "049", "Crawford County": "039"}
-    county_data["COUNTYFP"] = county_data["name"].map(county_fips_map)
+    county_data["COUNTYFP"] = county_data["name"].map(COUNTY_FIPS)
     merged = gdf_counties.merge(county_data, on="COUNTYFP", how="left")
     geo_id_col = "COUNTYFP"
     geo_name_col = "NAME"

@@ -22,7 +22,16 @@ CRS_GEO    = "EPSG:4326"
 POI_PATH   = "data/raw/erie_pois.csv"
 OUT_PATH   = "data/processed/zcta_poi_stats.csv"
 
-ZCTA_LIST = [str(z).zfill(5) for z in [
+# Load ZCTA list from cache produced by fetch_zcta_data.py
+from pathlib import Path
+import pandas as _zcta_pd
+_zcta_cache = Path("data/raw/region_zctas.csv")
+if _zcta_cache.exists():
+    ZCTA_LIST = _zcta_pd.read_csv(_zcta_cache, dtype={"zcta": str})["zcta"].str.zfill(5).tolist()
+    print(f"Using {len(ZCTA_LIST)} ZCTAs from cache")
+else:
+    # Fallback: Erie+Crawford only until fetch_zcta_data.py has been run
+    ZCTA_LIST = [str(z).zfill(5) for z in [
     16110, 16111, 16131, 16134, 16314, 16316, 16327, 16328, 16335,
     16354, 16360, 16403, 16404, 16406, 16422, 16424, 16432, 16433,
     16434, 16435, 16440, 16401, 16407, 16410, 16411, 16412, 16413,
@@ -165,7 +174,7 @@ for key, (pcat, ptype) in NEAREST_CATS.items():
 
 # ── Save ──────────────────────────────────────────────────────────────────────
 stats.to_csv(OUT_PATH, index=False)
-print(f"\nSaved → {OUT_PATH} ({len(stats)} ZCTAs × {len(stats.columns)} columns)")
+print(f"\nSaved: {OUT_PATH} ({len(stats)} ZCTAs x {len(stats.columns)} columns)")
 print("\nTop ZCTAs by grocery count:")
 print(stats[["ZCTA5CE20", "count_grocery_any", "nearest_grocery_full_miles"]]
       .sort_values("count_grocery_any", ascending=False).head(10).to_string(index=False))

@@ -11,7 +11,8 @@ API_KEY   = os.getenv("CENSUS_API_KEY")
 OUT       = Path("data/raw/income_stratification.csv")
 YEARS     = [2019, 2020, 2021, 2022, 2023]
 STATE     = "42"       # Pennsylvania
-COUNTIES  = ["049", "039"]  # Erie, Crawford
+from lib.constants import FIPS_LIST, FIPS_TO_NAME
+COUNTIES  = FIPS_LIST  # All 11 NW PA counties
 
 # ── B19001 variables — household income brackets ──────────────────────────────
 # B19001_001E = Total households
@@ -84,8 +85,8 @@ for year in YEARS:
             record["county_fips"] = county
             all_rows.append(record)
 
-        county_name = "Erie" if county == "049" else "Crawford"
-        print(f"  ✓ {year} {county_name} — {len(rows)} tracts")
+        county_name = FIPS_TO_NAME.get(county, county)
+        print(f"  {year} {county_name} -- {len(rows)} tracts")
         time.sleep(0.1)
 
 # ── Build DataFrame ───────────────────────────────────────────────────────────
@@ -98,7 +99,7 @@ df = df.rename(columns=BAND_VARS)
 df["geoid"] = STATE + df["county_fips"] + df["tract"]
 
 # Add county name
-df["county"] = df["county_fips"].map({"049": "Erie", "039": "Crawford"})
+df["county"] = df["county_fips"].map(FIPS_TO_NAME)
 
 # Cast band columns to numeric
 band_cols = list(BAND_VARS.values())
@@ -119,7 +120,7 @@ df = df.sort_values(["county", "geoid", "year"]).reset_index(drop=True)
 OUT.parent.mkdir(parents=True, exist_ok=True)
 df.to_csv(OUT, index=False)
 
-print(f"\n✓ Saved {len(df):,} rows → {OUT}")
+print(f"\nDone: Saved {len(df):,} rows to {OUT}")
 print(f"  Years: {sorted(df['year'].unique().tolist())}")
 print(f"  Tracts per county:")
 print(df.groupby(["county", "year"])["geoid"].count().unstack().to_string())

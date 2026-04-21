@@ -314,6 +314,7 @@ LAYER_CONFIG = {
 
 # ── MAP CONSTANTS ─────────────────────────────────────────
 MAP_STYLE = "https://basemaps.cartocdn.com/gl/positron-gl-style/style.json"
-VIEW_STATE = pdk.ViewState(latitude=41.95, longitude=-80.15, zoom=8.5, pitch=0)
+# Centered on the 11-county NW PA region (Erie NW corner, Clearfield SE corner)
+VIEW_STATE = pdk.ViewState(latitude=41.5, longitude=-79.2, zoom=7, pitch=0)
 TOOLTIP_STYLE = {"backgroundColor": "steelblue", "color": "white",
                  "fontSize": "12px", "padding": "10px"}

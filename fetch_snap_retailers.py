@@ -1,6 +1,6 @@
 """
 fetch_snap_retailers.py — Pull currently authorized SNAP retailers for
-Erie and Crawford County, PA from the USDA FNS ArcGIS REST API.
+the Second Harvest NW PA 11-county region from the USDA FNS ArcGIS REST API.
 
 No API key required. Data is updated monthly by USDA.
 
@@ -20,11 +20,19 @@ BASE_URL = (
     "arcgis/rest/services/snap_retailers/FeatureServer/0/query"
 )
 
-# Pennsylvania FIPS county codes for Erie (039049) and Crawford (039039)
-# The API filters by State and County fields
+# All 11 counties in the Second Harvest NW PA service region
 TARGETS = [
-    {"State": "PA", "County": "ERIE"},
+    {"State": "PA", "County": "CAMERON"},
+    {"State": "PA", "County": "CLARION"},
+    {"State": "PA", "County": "CLEARFIELD"},
     {"State": "PA", "County": "CRAWFORD"},
+    {"State": "PA", "County": "ELK"},
+    {"State": "PA", "County": "ERIE"},
+    {"State": "PA", "County": "FOREST"},
+    {"State": "PA", "County": "JEFFERSON"},
+    {"State": "PA", "County": "MCKEAN"},
+    {"State": "PA", "County": "VENANGO"},
+    {"State": "PA", "County": "WARREN"},
 ]
 
 # Store type codes from USDA SNAP authorization categories
@@ -178,14 +186,43 @@ def main():
         time.sleep(0.5)
 
     if not all_records:
-        # Fallback — try downloading the national CSV and filtering
-        print("\nArcGIS API returned no results — trying national CSV download...")
-        print("Visit https://www.fns.usda.gov/snap/retailer-locator and download")
-        print("the CSV manually, save as data/raw/snap_retailers_national.csv,")
-        print("then re-run this script.")
-        return
-
-    df = clean_records(all_records)
+        national_csv = "data/raw/snap_retailers_national.csv"
+        import os
+        if not os.path.exists(national_csv):
+            print("\nArcGIS API returned no results. Download the national CSV from")
+            print("https://www.fns.usda.gov/snap/retailer-locator, save as")
+            print(f"{national_csv}, then re-run this script.")
+            return
+        print(f"\nArcGIS API returned no results — falling back to {national_csv}...")
+        nat = pd.read_csv(national_csv, dtype=str, low_memory=False)
+        nat.columns = [c.strip().lower().replace(" ", "_") for c in nat.columns]
+        county_names = [t["County"].title() for t in TARGETS]
+        nat = nat[
+            (nat.get("state", nat.get("st", pd.Series())).str.upper() == "PA") &
+            (nat.get("county", pd.Series()).str.upper().isin([t["County"] for t in TARGETS]))
+        ].copy()
+        nat["lat"] = pd.to_numeric(nat.get("latitude", nat.get("lat")), errors="coerce")
+        nat["lon"] = pd.to_numeric(nat.get("longitude", nat.get("lon")), errors="coerce")
+        nat["store_type_raw"] = nat.get("store_type", nat.get("storetype", ""))
+        nat["category"] = nat["store_type_raw"].map(
+            lambda x: STORE_TYPE_MAP.get(str(x).strip(), ("Food & Grocery", "unknown"))[0]
+        )
+        nat["tier"] = nat["store_type_raw"].map(
+            lambda x: STORE_TYPE_MAP.get(str(x).strip(), ("Food & Grocery", "unknown"))[1]
+        )
+        name_col = next((c for c in ["store_name", "storename", "name"] if c in nat.columns), None)
+        if name_col:
+            nat = nat.rename(columns={name_col: "name"})
+        nat["geocode_source"] = "usda_snap"
+        nat["address"] = nat.get("street_number", "").fillna("") + " " + nat.get("street_name", "").fillna("")
+        nat["zip"]   = nat.get("zip_code", nat.get("zip5", "")).fillna("")
+        keep = [c for c in ["name", "address", "county", "state", "zip",
+                             "lat", "lon", "category", "tier", "store_type_raw", "geocode_source"]
+                if c in nat.columns]
+        df = nat[keep].dropna(subset=["lat", "lon"]).reset_index(drop=True)
+        print(f"  {len(df)} records from national CSV for the 11-county region")
+    else:
+        df = clean_records(all_records)
     print(f"\n{len(df)} clean records after filtering")
 
     if len(df) == 0:
