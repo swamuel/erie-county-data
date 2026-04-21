@@ -27,7 +27,9 @@ API_KEY = os.getenv("CENSUS_API_KEY")
 OUTPUT_PATH = "data/raw/tract_demographics.csv"
 YEARS = [2019, 2020, 2021, 2022, 2023]
 STATE_FIPS = "42"
-COUNTY_FIPS = ["049", "039"]  # Erie, Crawford
+
+from lib.constants import FIPS_LIST
+COUNTY_FIPS = FIPS_LIST  # All 11 Second Harvest NW PA counties
 
 # ── ACS VARIABLES ─────────────────────────────────────────
 # B01003: Total population
@@ -160,7 +162,7 @@ print(df[["tract_code", "year", "total_population", "median_age",
           "pct_white_non_hispanic", "pct_black", "pct_hispanic"]].head(10).to_string())
 
 print("\nPopulation summary by county and year:")
-county_map = {"049": "Erie", "039": "Crawford"}
-df["county_name"] = df["county_fips"].map(county_map)
+from lib.constants import FIPS_TO_NAME
+df["county_name"] = df["county_fips"].map(FIPS_TO_NAME)
 summary = df.groupby(["county_name", "year"])["total_population"].sum().unstack()
 print(summary.to_string())

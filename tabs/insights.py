@@ -70,64 +70,58 @@ def render(merged, census, zcta_data, benchmarks_counties, benchmark_row, availa
 
     # ── COUNTY SUMMARY ───────────────────────────────────
     with ins2:
-        st.markdown("Side-by-side comparison of Erie and Crawford Counties on all available variables.")
+        from lib.constants import COUNTY_NAMES
+        st.markdown("Side-by-side comparison of all region counties on available variables.")
 
-        erie_bench = benchmarks_counties[
-            (benchmarks_counties["year"] == year) &
-            (benchmarks_counties["name"] == "Erie County")
-        ]
-        crawford_bench = benchmarks_counties[
-            (benchmarks_counties["year"] == year) &
-            (benchmarks_counties["name"] == "Crawford County")
-        ]
+        # Let user pick which counties to compare (default: all in region)
+        available_counties = sorted(
+            benchmarks_counties[benchmarks_counties["year"] == year]["name"].unique().tolist()
+        )
+        region_counties_in_data = [c for c in COUNTY_NAMES if c in available_counties]
+        selected_counties = st.multiselect(
+            "Counties to compare",
+            options=available_counties,
+            default=region_counties_in_data,
+            key="county_summary_select"
+        )
+
         ref_bench = benchmark_row
+        county_benches = {
+            c: benchmarks_counties[(benchmarks_counties["year"] == year) & (benchmarks_counties["name"] == c)]
+            for c in selected_counties
+        }
 
         summary_rows = []
         for label, col in available_vars.items():
-            erie_val = get_benchmark_value(erie_bench, col)
-            crawford_val = get_benchmark_value(crawford_bench, col)
+            row = {"Variable": label}
             ref_val = get_benchmark_value(ref_bench, col)
-            summary_rows.append({
-                "Variable": label,
-                "Erie County": format_value(erie_val, col),
-                "Crawford County": format_value(crawford_val, col),
-                f"Benchmark ({selected_benchmark})": format_value(ref_val, col),
-                "Erie vs Benchmark": diff_string(erie_val, ref_val) if ref_val else "—",
-                "Crawford vs Benchmark": diff_string(crawford_val, ref_val) if ref_val else "—",
-            })
+            for c, cb in county_benches.items():
+                val = get_benchmark_value(cb, col)
+                row[c] = format_value(val, col)
+            row[f"Benchmark ({selected_benchmark})"] = format_value(ref_val, col)
+            summary_rows.append(row)
 
         summary_df = pd.DataFrame(summary_rows)
         st.dataframe(summary_df, use_container_width=True, hide_index=True)
 
-        # Headline metrics for Erie
+        # Headline metrics for each selected county
         st.markdown("---")
-        st.markdown("**Erie County Headlines**")
-        h1, h2, h3, h4 = st.columns(4)
-        for h_col, label, col, hib in [
-            (h1, "Median Income", "median_household_income", True),
-            (h2, "Poverty Rate", "poverty_rate", False),
-            (h3, "Rent Burden", "rent_burden_rate", False),
-            (h4, "No Vehicle", "no_vehicle_rate", False),
-        ]:
-            val = get_benchmark_value(erie_bench, col)
-            bval = get_benchmark_value(ref_bench, col)
-            diff = round(float(val) - float(bval), 1) if val and bval else None
-            h_col.metric(label, format_value(val, col), delta=diff,
-                         delta_color="normal" if hib else "inverse")
-
-        st.markdown("**Crawford County Headlines**")
-        h1b, h2b, h3b, h4b = st.columns(4)
-        for h_col, label, col, hib in [
-            (h1b, "Median Income", "median_household_income", True),
-            (h2b, "Poverty Rate", "poverty_rate", False),
-            (h3b, "Rent Burden", "rent_burden_rate", False),
-            (h4b, "No Vehicle", "no_vehicle_rate", False),
-        ]:
-            val = get_benchmark_value(crawford_bench, col)
-            bval = get_benchmark_value(ref_bench, col)
-            diff = round(float(val) - float(bval), 1) if val and bval else None
-            h_col.metric(label, format_value(val, col), delta=diff,
-                         delta_color="normal" if hib else "inverse")
+        headline_vars = [
+            ("Median Income", "median_household_income", True),
+            ("Poverty Rate", "poverty_rate", False),
+            ("Rent Burden", "rent_burden_rate", False),
+            ("No Vehicle", "no_vehicle_rate", False),
+        ]
+        for county_name in selected_counties[:4]:  # cap at 4 to keep UI clean
+            cb = county_benches[county_name]
+            st.markdown(f"**{county_name} Headlines**")
+            h_cols = st.columns(4)
+            for h_col, (label, col, hib) in zip(h_cols, headline_vars):
+                val = get_benchmark_value(cb, col)
+                bval = get_benchmark_value(ref_bench, col)
+                diff = round(float(val) - float(bval), 1) if val and bval else None
+                h_col.metric(label, format_value(val, col), delta=diff,
+                             delta_color="normal" if hib else "inverse")
 
     # ── TREND CHARTS ─────────────────────────────────────
     with ins3:
@@ -165,10 +159,10 @@ def render(merged, census, zcta_data, benchmarks_counties, benchmark_row, availa
             )
             ts_id = "display_name"
         else:
-            ts_data = pd.concat([
-                benchmarks_counties[benchmarks_counties["name"] == "Erie County"].assign(display_name="Erie County", county_name="Erie"),
-                benchmarks_counties[benchmarks_counties["name"] == "Crawford County"].assign(display_name="Crawford County", county_name="Crawford"),
-            ])
+            from lib.constants import COUNTY_NAMES
+            ts_data = benchmarks_counties[benchmarks_counties["name"].isin(COUNTY_NAMES)].copy()
+            ts_data["display_name"] = ts_data["name"]
+            ts_data["county_name"] = ts_data["name"]
             ts_id = "display_name"
 
         if trend_county:
@@ -190,14 +184,13 @@ def render(merged, census, zcta_data, benchmarks_counties, benchmark_row, availa
                         (benchmarks_counties["year"] == y) &
                         (benchmarks_counties["name"] == compare_county)
                     ]
-                elif selected_benchmark in ("Erie County", "Crawford County"):
+                elif selected_benchmark in benchmarks_counties["name"].unique().tolist():
                     br = benchmarks_counties[
                         (benchmarks_counties["year"] == y) &
                         (benchmarks_counties["name"] == selected_benchmark)
                     ]
                 else:
-                    # For National / Pennsylvania we only have the current year resolved;
-                    # fall back to Erie County benchmark as the nearest available series.
+                    # For National / Pennsylvania, fall back to Erie County as nearest available series
                     br = benchmarks_counties[
                         (benchmarks_counties["year"] == y) &
                         (benchmarks_counties["name"] == "Erie County")

@@ -27,8 +27,8 @@ OUTPUT_PATH = "data/raw/usda_food_atlas.csv"
 MANUAL_FILE = True
 TEMP_XLSX = "data/raw/FoodAccessResearchAtlasData2019.xlsx"
 
-# Erie County FIPS: 42049, Crawford County FIPS: 42039
-COUNTY_FIPS = ["42049", "42039"]
+from lib.constants import FIPS_LIST
+COUNTY_FIPS = ["42" + f for f in FIPS_LIST]  # All 11 NW PA counties
 
 # USDA direct download URL (may change with new releases)
 DOWNLOAD_URL = (
@@ -133,11 +133,11 @@ if tract_col is None:
 print(f"\nUsing tract column: {tract_col}")
 
 # ── FILTER TO ERIE AND CRAWFORD ───────────────────────────
-print(f"Filtering to Erie and Crawford counties...")
+print(f"Filtering to NW PA 11-county region...")
 df[tract_col] = df[tract_col].astype(str).str.zfill(11)
 df["county_fips"] = df[tract_col].str[:5]
 df = df[df["county_fips"].isin(COUNTY_FIPS)].copy()
-print(f"  Erie + Crawford rows: {len(df):,}")
+print(f"  NW PA region rows: {len(df):,}")
 
 # ── FILTER COLUMNS ────────────────────────────────────────
 available_vars = [v for v in VARIABLES if v in df.columns]

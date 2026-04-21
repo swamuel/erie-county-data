@@ -6,7 +6,8 @@ import pandas as pd
 import os
 
 OUTPUT_PATH = "data/raw/cdc_places_tract.csv"
-COUNTY_FIPS = ["42049", "42039"]
+from lib.constants import FIPS_LIST
+COUNTY_FIPS = ["42" + f for f in FIPS_LIST]  # All 11 NW PA counties
 
 url = (
     "https://data.cdc.gov/resource/em5e-5hvn.csv"
@@ -27,7 +28,7 @@ df["tract_geoid"] = df["locationname"].astype(str).str.zfill(11)
 df["county_fips"] = df["tract_geoid"].str[:5]
 df["tract_code"] = df["tract_geoid"].str[-6:]
 df = df[df["county_fips"].isin(COUNTY_FIPS)].copy()
-print(f"  Erie + Crawford rows: {len(df):,}")
+print(f"  NW PA region rows: {len(df):,}")
 
 df["data_value"] = pd.to_numeric(df["data_value"], errors="coerce")
 

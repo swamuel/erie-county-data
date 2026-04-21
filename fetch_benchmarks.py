@@ -1,5 +1,6 @@
 # Benchmark data from Census ACS 5-Year Estimates
 # Pulls national, state, and Erie County averages for 2019-2023
+# Erie County is kept as a named benchmark option in the app
 
 import requests
 import pandas as pd

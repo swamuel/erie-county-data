@@ -1,23 +1,28 @@
 import pandas as pd
 
 
-AI_CONTEXT = """# Erie & Crawford County Community Data — AI Context Document
+AI_CONTEXT = """# Northwest PA Community Data — AI Context Document
 
 ## About This Dataset
-This dataset was compiled from public sources by a community data project covering Erie County
-and Crawford County, Pennsylvania. It is designed to support analysis of economic conditions,
-health outcomes, food access, service accessibility, and food assistance needs at the census
-tract level.
+This dataset was compiled from public sources by a community data project covering the
+11-county Second Harvest Food Bank of Northwest PA service region: Cameron, Clarion,
+Clearfield, Crawford, Elk, Erie, Forest, Jefferson, McKean, Venango, and Warren counties.
+It is designed to support analysis of economic conditions, health outcomes, food access,
+service accessibility, and food assistance needs at the census tract level.
 
 All tract-level data reflects the most recent available year (typically 2023 for ACS and CDC
 data, 2020 for USDA food access data). The pantry file is monthly agency-level data from
 July 2024 through June 2025. The services/POI data reflects current locations as of 2024-2026.
 
+Note: Cameron and Forest counties have very small populations (~4,500 and ~7,000 residents).
+ACS estimates for these counties may be suppressed, have wide margins of error, or show as
+missing in tract-level views.
+
 ---
 
 ## Files Included
 
-### 1. erie_crawford_combined.csv
+### 1. nwpa_combined.csv
 One row per census tract. Contains variables from six sources joined on census tract GEOID.
 
 **Sources included:**
@@ -28,9 +33,9 @@ One row per census tract. Contains variables from six sources joined on census t
 - ACS B19001 — household income distribution by bracket (2023)
 - USDA SNAP + OpenStreetMap — service counts and proximity distances by tract
 
-### 2. erie_crawford_pantry_monthly.csv
+### 2. nwpa_pantry_monthly.csv
 One row per agency per month. Monthly reporting data from Second Harvest Food Bank of
-Northwest PA partner agencies in Erie and Crawford counties, July 2024 through June 2025.
+Northwest PA partner agencies across the 11-county region, July 2024 through June 2025.
 
 **Key fields:** agency_name, county, program_type, date, total_individuals, children, adults,
 seniors, new_households
@@ -38,7 +43,7 @@ seniors, new_households
 **Program types:** Food Pantry/TEFAP, Food Pantry/No TEFAP, Produce Express, BackPacks,
 School Pantry, Non-Emerg. Meal/Snack, Kids Cafe
 
-### 3. erie_crawford_pois_clean.csv
+### 3. nwpa_pois_clean.csv
 One row per point of interest (service location). Each POI is assigned to a census tract
 via spatial join, enabling linkage to tract-level demographics and outcomes.
 
@@ -63,7 +68,7 @@ Full variable definitions, sources, units, and years for every column in the com
 
 ### Identifying Need
 1. Which census tracts have the highest combined burden of poverty, food insecurity, and poor
-   health outcomes? Rank the top 10 most at-risk tracts across Erie and Crawford counties.
+   health outcomes? Rank the top 10 most at-risk tracts across the 11-county region.
 
 2. Which tracts have both high poverty rates and high uninsured rates? What does this suggest
    about healthcare access?
@@ -81,8 +86,8 @@ Full variable definitions, sources, units, and years for every column in the com
    What differences stand out?
 
 ### Food Access
-7. How many residents in Erie and Crawford counties live in census tracts classified as food
-   deserts? Which tracts are most affected?
+7. How many residents in the region live in census tracts classified as food deserts?
+   Which counties and tracts are most affected?
 
 8. Which tracts are low income but NOT classified as food deserts? What might explain adequate
    food access despite low income?
@@ -103,10 +108,10 @@ Full variable definitions, sources, units, and years for every column in the com
 13. Which program types serve the most children? The most seniors?
 
 ### County Comparisons
-14. How do Erie and Crawford counties compare on key economic and health indicators?
+14. How do counties across the region compare on key economic and health indicators?
 
-15. Are there patterns in Crawford County that differ meaningfully from Erie County, given
-    Crawford is more rural?
+15. Which rural counties (e.g., Cameron, Forest, Elk) show the most acute service access gaps
+    compared to Erie County?
 
 ### Spatial Access & Services
 16. Which census tracts have zero grocery stores and also have high food insecurity rates?
@@ -167,10 +172,10 @@ def build_combined_export(census, sh_data, demographics, cdc_places, food_atlas,
     ]
     acs = acs[[c for c in acs_cols if c in acs.columns]].copy()
     acs["tract_code"] = acs["tract_code"].astype(str).str.zfill(6)
-    county_fips_map = {"Erie County": "049", "Crawford County": "039"}
+    from lib.constants import COUNTY_FIPS
     acs["geoid"] = (
         "42" +
-        acs["county_name"].map(county_fips_map).fillna("000") +
+        acs["county_name"].map(COUNTY_FIPS).fillna("000") +
         acs["tract_code"]
     )
 

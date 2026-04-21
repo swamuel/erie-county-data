@@ -14,8 +14,11 @@ df.columns = [c.replace("Content.", "").strip() for c in df.columns]
 # Expected cols: Agency Name, Agency Ref, Effective Date, Value, County,
 #                Statistic Name, Statistic Group, Name
 
-# ── Filter to Erie + Crawford ─────────────────────────────────────────────────
-df = df[df["County"].str.upper().isin(["ERIE", "CRAWFORD"])].copy()
+# ── Filter to Second Harvest NW PA service region (11 counties) ───────────────
+from lib.constants import COUNTY_NAMES
+# COUNTY_NAMES are like "Erie County" — strip " County" to match raw data
+REGION_COUNTIES_UPPER = {n.replace(" County", "").upper() for n in COUNTY_NAMES}
+df = df[df["County"].str.upper().isin(REGION_COUNTIES_UPPER)].copy()
 
 # ── Parse date ───────────────────────────────────────────────────────────────
 df["date"] = pd.to_datetime(df["Effective Date"], format="%m/%d/%Y")
@@ -90,8 +93,8 @@ index_path   = OUT / "pantry_agency_index.csv"
 monthly.to_csv(monthly_path, index=False)
 index.to_csv(index_path, index=False)
 
-print(f"✓ pantry_agency_monthly.csv  — {len(monthly):,} rows")
-print(f"✓ pantry_agency_index.csv    — {len(index):,} agencies")
+print(f"Done: pantry_agency_monthly.csv  -- {len(monthly):,} rows")
+print(f"Done: pantry_agency_index.csv    -- {len(index):,} agencies")
 print()
 print("County breakdown:")
 print(index.groupby("county")["agency_name"].count().to_string())

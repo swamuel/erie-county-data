@@ -206,6 +206,8 @@ def render(merged, census, zcta_data, gdf_tracts, gdf_zctas,
                     bench_src = benchmarks_pa
                 elif selected_benchmark == "Erie County":
                     bench_src = benchmarks_erie
+                elif selected_benchmark in benchmarks_counties["name"].unique().tolist():
+                    bench_src = benchmarks_counties[benchmarks_counties["name"] == selected_benchmark]
                 else:
                     bench_src = benchmarks_counties[
                         benchmarks_counties["name"] == compare_county
@@ -387,10 +389,10 @@ def render(merged, census, zcta_data, gdf_tracts, gdf_zctas,
 
     strat_col1, strat_col2 = st.columns([2, 1])
     with strat_col1:
-        strat_county = st.radio(
+        available_strat_counties = sorted(strat_df["county"].dropna().unique().tolist()) if "county" in strat_df.columns else ["Erie"]
+        strat_county = st.selectbox(
             "County",
-            options=["Erie", "Crawford"],
-            horizontal=True,
+            options=available_strat_counties,
             key="strat_county"
         )
     with strat_col2:
