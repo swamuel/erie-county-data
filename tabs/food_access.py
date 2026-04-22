@@ -59,7 +59,7 @@ def render(merged, pantries, pantry_monthly, pantry_index, benchmark_row, geogra
         if show_food_deserts and geography == "Tract" and "food_desert_1_10" in merged_food.columns:
             desert_tracts = merged_food[merged_food["food_desert_1_10"] == 1]
             if len(desert_tracts) > 0:
-                desert_json = json.loads(desert_tracts.to_json())
+                desert_json = json.loads(desert_tracts[["geometry"]].to_json())
                 food_layers.append(pdk.Layer(
                     "GeoJsonLayer",
                     data=desert_json,
@@ -70,7 +70,8 @@ def render(merged, pantries, pantry_monthly, pantry_index, benchmark_row, geogra
                 ))
                 st.metric("Food desert tracts", len(desert_tracts))
 
-        food_json = json.loads(merged_food.to_json())
+        _food_cols = [c for c in ["geometry", "color", "display_name", food_color_col] if c in merged_food.columns]
+        food_json = json.loads(merged_food[_food_cols].to_json())
 
         if show_food_layer:
             food_layers.append(pdk.Layer(

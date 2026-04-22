@@ -65,26 +65,26 @@ def render(merged, shapes, stops, transit_stats, benchmark_row, geography, mode)
         )
 
         if geography == "Tract":
+            grey = [100, 100, 100, 60]
             if transit_tool == "Coverage Gap Finder" and transit_threshold_veh and transit_threshold_freq:
                 gap_mask = (
                     (merged_transit["no_vehicle_rate"] > transit_threshold_veh) &
                     (merged_transit["total_daily_visits"] < transit_threshold_freq)
-                )
+                ).tolist()
                 merged_transit = merged_transit.copy()
-                merged_transit["color"] = merged_transit.apply(
-                    lambda row: row["color"] if gap_mask[row.name] else [100, 100, 100, 60], axis=1
-                )
-                st.metric("Coverage gap tracts", int(gap_mask.sum()))
+                colors = merged_transit["color"].tolist()
+                merged_transit["color"] = [c if m else grey for c, m in zip(colors, gap_mask)]
+                st.metric("Coverage gap tracts", int(sum(gap_mask)))
 
             elif transit_tool == "Transit Desert Finder" and desert_threshold:
-                desert_mask = merged_transit["nearest_stop_miles"] > desert_threshold
+                desert_mask = (merged_transit["nearest_stop_miles"] > desert_threshold).tolist()
                 merged_transit = merged_transit.copy()
-                merged_transit["color"] = merged_transit.apply(
-                    lambda row: row["color"] if desert_mask[row.name] else [100, 100, 100, 60], axis=1
-                )
-                st.metric("Transit desert tracts", int(desert_mask.sum()))
+                colors = merged_transit["color"].tolist()
+                merged_transit["color"] = [c if m else grey for c, m in zip(colors, desert_mask)]
+                st.metric("Transit desert tracts", int(sum(desert_mask)))
 
-        transit_json = json.loads(merged_transit.to_json())
+        _transit_cols = [c for c in ["geometry", "color", "display_name", "no_vehicle_rate", "stop_count", "nearest_stop_miles", "total_daily_visits"] if c in merged_transit.columns]
+        transit_json = json.loads(merged_transit[_transit_cols].to_json())
 
         if show_no_vehicle:
             transit_layers.append(pdk.Layer(

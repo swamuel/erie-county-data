@@ -136,7 +136,8 @@ def render(merged, census, zcta_data, gdf_tracts, gdf_zctas,
                 m2.metric("Highest", format_value(valid_vals.max(), column))
                 m3.metric("Lowest", format_value(valid_vals.min(), column))
 
-            econ_json = json.loads(merged_econ.to_json())
+            _econ_cols = [c for c in ["geometry", "color", "display_name", column] if c in merged_econ.columns]
+            econ_json = json.loads(merged_econ[_econ_cols].to_json())
 
             st.pydeck_chart(pdk.Deck(
                 layers=[pdk.Layer(
