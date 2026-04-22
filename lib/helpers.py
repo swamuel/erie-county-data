@@ -1,6 +1,7 @@
 import pandas as pd
 import math
 import json
+import numpy as np
 import streamlit as st
 from lib.config import all_variables, TRACT_ONLY_VARS
 
@@ -117,6 +118,17 @@ def haversine_miles(lat1, lon1, lat2, lon2):
     dl = math.radians(lon2 - lon1)
     a = math.sin(dp/2)**2 + math.cos(p1) * math.cos(p2) * math.sin(dl/2)**2
     return R * 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
+
+
+def haversine_miles_vec(lat1, lon1, lat_arr, lon_arr):
+    """Vectorized haversine — lat_arr/lon_arr are array-like."""
+    R = 3958.8
+    p1 = np.radians(lat1)
+    p2 = np.radians(lat_arr)
+    dp = np.radians(lat_arr - lat1)
+    dl = np.radians(lon_arr - lon1)
+    a = np.sin(dp / 2) ** 2 + np.cos(p1) * np.cos(p2) * np.sin(dl / 2) ** 2
+    return R * 2 * np.arctan2(np.sqrt(a), np.sqrt(1 - a))
 
 
 def render_detail_panel(merged_df, column, selected_layer, geo_id_col, geography, benchmark_row):

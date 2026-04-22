@@ -4,7 +4,7 @@ import pandas as pd
 import json
 
 from lib.config import LAYER_CONFIG, MAP_STYLE, VIEW_STATE, TOOLTIP_STYLE, HIGHER_IS_BETTER
-from lib.helpers import geocode_address, haversine_miles, value_to_color, get_benchmark_value, format_value, render_detail_panel
+from lib.helpers import geocode_address, haversine_miles, haversine_miles_vec, value_to_color, get_benchmark_value, format_value, render_detail_panel
 
 
 def render(merged, pois, benchmark_row, geography):
@@ -72,8 +72,8 @@ def render(merged, pois, benchmark_row, geography):
                 st.session_state.svc_search_lon = slon
                 st.session_state.svc_search_label = slabel
                 nearby = pois.copy()
-                nearby["distance_miles"] = nearby.apply(
-                    lambda r: haversine_miles(slat, slon, r["lat"], r["lon"]), axis=1
+                nearby["distance_miles"] = haversine_miles_vec(
+                    slat, slon, nearby["lat"].values, nearby["lon"].values
                 )
                 nearby = nearby[nearby["distance_miles"] <= svc_radius].sort_values("distance_miles")
                 st.session_state.svc_search_results = nearby
@@ -123,7 +123,8 @@ def render(merged, pois, benchmark_row, geography):
                 line_width_min_pixels=1, pickable=False,
             ))
 
-        # POI scatter layers
+        # Build a single combined POI DataFrame — one ScatterplotLayer instead of N
+        poi_parts = []
         for subcat, layer_info in svc_active_layers.items():
             cfg = layer_info["cfg"]
             subtypes = layer_info["subtypes"]
@@ -138,46 +139,36 @@ def render(merged, pois, benchmark_row, geography):
                     if len(sub) == 0:
                         continue
                     sub["fill_color"] = [subtype_color] * len(sub)
-                    sub["snap_eligible"] = sub["snap_eligible"].apply(
-                        lambda x: "\u2713 SNAP/EBT accepted" if x else ""
-                    )
-                    svc_visible.append(sub)
-                    svc_layers.append(pdk.Layer(
-                        "ScatterplotLayer",
-                        data=sub[["name", "address", "lat", "lon", "fill_color", "type", "subtype", "snap_eligible"]],
-                        get_position=["lon", "lat"],
-                        get_radius=svc_point_size * 40,
-                        radius_min_pixels=svc_point_size,
-                        radius_max_pixels=svc_point_size * 4,
-                        get_fill_color="fill_color",
-                        get_line_color=[255, 255, 255, 160],
-                        line_width_min_pixels=1,
-                        stroked=True, pickable=True, auto_highlight=True,
-                    ))
+                    poi_parts.append(sub)
             else:
                 if len(subset) == 0:
                     continue
                 subset["fill_color"] = [cfg["color"]] * len(subset)
-                subset["snap_eligible"] = subset["snap_eligible"].apply(
-                    lambda x: "\u2713 SNAP/EBT accepted" if x else ""
-                )
-                svc_visible.append(subset)
-                svc_layers.append(pdk.Layer(
-                    "ScatterplotLayer",
-                    data=subset[["name", "address", "lat", "lon", "fill_color", "type", "subtype", "snap_eligible"]],
-                    get_position=["lon", "lat"],
-                    get_radius=svc_point_size * 40,
-                    radius_min_pixels=svc_point_size,
-                    radius_max_pixels=svc_point_size * 4,
-                    get_fill_color="fill_color",
-                    get_line_color=[255, 255, 255, 160],
-                    line_width_min_pixels=1,
-                    stroked=True, pickable=True, auto_highlight=True,
-                ))
+                poi_parts.append(subset)
+
+        if poi_parts:
+            combined = pd.concat(poi_parts, ignore_index=True)
+            combined["snap_eligible"] = combined["snap_eligible"].map(
+                {True: "\u2713 SNAP/EBT accepted", False: ""}
+            ).fillna("")
+            poi_display = combined[["name", "address", "lat", "lon", "fill_color", "type", "subtype", "snap_eligible"]]
+            svc_visible.append(combined[["lat", "lon"]])
+            svc_layers.append(pdk.Layer(
+                "ScatterplotLayer",
+                data=poi_display,
+                get_position=["lon", "lat"],
+                get_radius=svc_point_size * 40,
+                radius_min_pixels=svc_point_size,
+                radius_max_pixels=svc_point_size * 4,
+                get_fill_color="fill_color",
+                get_line_color=[255, 255, 255, 160],
+                line_width_min_pixels=1,
+                stroked=True, pickable=True, auto_highlight=True,
+            ))
 
         # Heatmap
         if svc_show_heatmap and svc_visible:
-            heat_df = pd.concat(svc_visible)[["lat", "lon"]].copy()
+            heat_df = pd.concat(svc_visible).copy()
             heat_df["weight"] = 1
             svc_layers.append(pdk.Layer(
                 "HeatmapLayer", data=heat_df,
@@ -222,7 +213,7 @@ def render(merged, pois, benchmark_row, geography):
                     unsafe_allow_html=True
                 )
 
-        total_svc_pts = sum(len(v) for v in svc_visible)
+        total_svc_pts = sum(len(v) for v in svc_visible) if svc_visible else 0
         st.caption(f"**{total_svc_pts}** points visible — {svc_view}")
 
         svc_view_state = pdk.ViewState(

@@ -77,7 +77,8 @@ def render(merged, benchmark_row, geography):
         else:
             merged_health = merged.assign(color=[[200, 200, 200, 140]] * len(merged))
 
-        health_json = json.loads(merged_health.to_json())
+        _health_cols = [c for c in ["geometry", "color", "display_name", health_col, "poverty_rate"] if c in merged_health.columns]
+        health_json = json.loads(merged_health[_health_cols].to_json())
 
         st.pydeck_chart(pdk.Deck(
             layers=[pdk.Layer(

@@ -13,7 +13,6 @@ Output:    data/processed/zcta_poi_stats.csv
 import pandas as pd
 import geopandas as gpd
 import numpy as np
-from shapely.geometry import Point
 import warnings
 warnings.filterwarnings("ignore")
 
@@ -78,8 +77,7 @@ df = pd.read_csv(POI_PATH)
 df = df.dropna(subset=["lat", "lon"])
 print(f"  {len(df):,} POIs loaded")
 
-geometry = [Point(row.lon, row.lat) for _, row in df.iterrows()]
-gdf_pois = gpd.GeoDataFrame(df.copy(), geometry=geometry, crs=CRS_GEO)
+gdf_pois = gpd.GeoDataFrame(df.copy(), geometry=gpd.points_from_xy(df["lon"], df["lat"]), crs=CRS_GEO)
 gdf_pois = gdf_pois.to_crs(CRS_METRIC)
 
 # ── Load ZCTA boundaries ──────────────────────────────────────────────────────
@@ -99,60 +97,65 @@ print(f"  {df['ZCTA5CE20'].isna().sum():,} POIs outside ZCTA boundaries")
 
 # ── ZCTA-level counts ─────────────────────────────────────────────────────────
 print("Computing counts per ZCTA...")
-rows = []
-for zcta in gdf_zctas["ZCTA5CE20"].unique():
-    row = {"ZCTA5CE20": zcta}
-    zcta_pois = df[df["ZCTA5CE20"] == zcta]
+zcta_ids = gdf_zctas["ZCTA5CE20"].unique()
+stats = pd.DataFrame({"ZCTA5CE20": zcta_ids})
 
-    for key, (pcat, ptype) in METRIC_CATEGORIES.items():
-        subset = zcta_pois[
-            (zcta_pois["primary_category"] == pcat) &
-            (zcta_pois["type"] == ptype)
-        ]
-        row[f"count_{key}"] = len(subset)
+count_df = (
+    df.groupby(["ZCTA5CE20", "primary_category", "type"], dropna=False)
+    .size().reset_index(name="n")
+)
+for key, (pcat, ptype) in METRIC_CATEGORIES.items():
+    mask = (count_df["primary_category"] == pcat) & (count_df["type"] == ptype)
+    sub = count_df[mask][["ZCTA5CE20", "n"]].rename(columns={"n": f"count_{key}"})
+    stats = stats.merge(sub, on="ZCTA5CE20", how="left")
+    stats[f"count_{key}"] = stats[f"count_{key}"].fillna(0).astype(int)
 
-    food = zcta_pois[zcta_pois["primary_category"] == "Food & Grocery"]
-    row["count_grocery_any"]    = len(food[food["type"].isin(FULL_SERVICE_TYPES)])
-    row["count_snap_retailers"] = int(zcta_pois["snap_eligible"].sum())
-    row["count_total_civic"]    = len(zcta_pois[
-        ~zcta_pois["type"].isin(["Place of Worship", "Emergency Services"])
-    ])
-    rows.append(row)
-
-stats = pd.DataFrame(rows)
+food_df = df[df["primary_category"] == "Food & Grocery"]
+full_service_counts = (
+    food_df[food_df["type"].isin(FULL_SERVICE_TYPES)]
+    .groupby("ZCTA5CE20").size().rename("count_grocery_any")
+)
+snap_counts = df[df["snap_eligible"].astype(bool)].groupby("ZCTA5CE20").size().rename("count_snap_retailers")
+civic_counts = (
+    df[~df["type"].isin(["Place of Worship", "Emergency Services"])]
+    .groupby("ZCTA5CE20").size().rename("count_total_civic")
+)
+stats = (stats
+    .merge(full_service_counts.reset_index(), on="ZCTA5CE20", how="left")
+    .merge(snap_counts.reset_index(), on="ZCTA5CE20", how="left")
+    .merge(civic_counts.reset_index(), on="ZCTA5CE20", how="left")
+)
+for col in ["count_grocery_any", "count_snap_retailers", "count_total_civic"]:
+    stats[col] = stats[col].fillna(0).astype(int)
 
 # ── Nearest distances from ZCTA centroid ─────────────────────────────────────
 print("Computing nearest distances from ZCTA centroids...")
-zctas_c = gdf_zctas[["ZCTA5CE20", "geometry"]].copy()
-zctas_c["centroid"] = zctas_c.geometry.centroid
+zcta_centroids = gdf_zctas[["ZCTA5CE20", "geometry"]].copy()
+zcta_centroids = zcta_centroids.set_geometry(zcta_centroids.geometry.centroid)
 
 # Nearest full-service grocery
 fs_pois = gdf_pois[
     (gdf_pois["primary_category"] == "Food & Grocery") &
     (gdf_pois["type"].isin(FULL_SERVICE_TYPES))
-].copy()
+][["geometry"]].copy()
 
-distances = []
-for _, z in zctas_c.iterrows():
-    ct = z["centroid"]
-    if ct is None or ct.is_empty or len(fs_pois) == 0:
-        distances.append(np.nan)
-    else:
-        distances.append(fs_pois.geometry.distance(ct).min())
+if len(fs_pois) > 0:
+    nearest = gpd.sjoin_nearest(
+        zcta_centroids, fs_pois, how="left", distance_col="nearest_grocery_full_m"
+    )[["ZCTA5CE20", "nearest_grocery_full_m"]].drop_duplicates("ZCTA5CE20")
+else:
+    nearest = zcta_centroids[["ZCTA5CE20"]].copy()
+    nearest["nearest_grocery_full_m"] = np.nan
 
-dist_df = pd.DataFrame({
-    "ZCTA5CE20": zctas_c["ZCTA5CE20"].values,
-    "nearest_grocery_full_m": distances
-})
-dist_df["nearest_grocery_full_miles"] = (dist_df["nearest_grocery_full_m"] / 1609.34).round(2)
-stats = stats.merge(dist_df, on="ZCTA5CE20", how="left")
-print(f"  nearest grocery: max {dist_df['nearest_grocery_full_miles'].max():.1f} mi")
+nearest["nearest_grocery_full_miles"] = (nearest["nearest_grocery_full_m"] / 1609.34).round(2)
+stats = stats.merge(nearest, on="ZCTA5CE20", how="left")
+print(f"  nearest grocery: max {nearest['nearest_grocery_full_miles'].max():.1f} mi")
 
 for key, (pcat, ptype) in NEAREST_CATS.items():
     cat_pois = gdf_pois[
         (gdf_pois["primary_category"] == pcat) &
         (gdf_pois["type"] == ptype)
-    ].copy()
+    ][["geometry"]].copy()
 
     col_m  = f"nearest_{key}_m"
     col_mi = f"nearest_{key}_miles"
@@ -162,12 +165,9 @@ for key, (pcat, ptype) in NEAREST_CATS.items():
         stats[col_mi] = np.nan
         continue
 
-    distances = []
-    for _, z in zctas_c.iterrows():
-        ct = z["centroid"]
-        distances.append(cat_pois.geometry.distance(ct).min() if ct and not ct.is_empty else np.nan)
-
-    d = pd.DataFrame({"ZCTA5CE20": zctas_c["ZCTA5CE20"].values, col_m: distances})
+    d = gpd.sjoin_nearest(
+        zcta_centroids, cat_pois, how="left", distance_col=col_m
+    )[["ZCTA5CE20", col_m]].drop_duplicates("ZCTA5CE20")
     d[col_mi] = (d[col_m] / 1609.34).round(2)
     stats = stats.merge(d, on="ZCTA5CE20", how="left")
     print(f"  nearest {key}: max {d[col_mi].max():.1f} mi")

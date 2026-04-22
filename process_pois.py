@@ -19,7 +19,6 @@ Outputs:  data/raw/erie_pois.csv
 import pandas as pd
 import geopandas as gpd
 import numpy as np
-from shapely.geometry import Point
 import warnings
 warnings.filterwarnings("ignore")
 
@@ -170,8 +169,7 @@ tracts = tracts[
 tracts = tracts.to_crs(CRS_METRIC)
 print(f"  {len(tracts)} tracts loaded")
 
-geometry = [Point(row.lon, row.lat) for _, row in df.iterrows()]
-gdf_pois = gpd.GeoDataFrame(df.copy(), geometry=geometry, crs=CRS_GEO)
+gdf_pois = gpd.GeoDataFrame(df.copy(), geometry=gpd.points_from_xy(df["lon"], df["lat"]), crs=CRS_GEO)
 gdf_pois = gdf_pois.to_crs(CRS_METRIC)
 
 joined = gpd.sjoin(gdf_pois, tracts[["TRACTCE", "geometry"]], how="left", predicate="within")
@@ -189,56 +187,60 @@ print("\n" + "=" * 55)
 print("STEP 5 — Tract-level metrics")
 print("=" * 55)
 tract_ids = tracts["TRACTCE"].unique()
-rows = []
+stats = pd.DataFrame({"TRACTCE": tract_ids})
 
-for tractce in tract_ids:
-    row = {"TRACTCE": tractce}
-    tract_pois = df[df["TRACTCE"] == tractce]
+# Count by (TRACTCE, primary_category, type) in one pass
+count_df = (
+    df.groupby(["TRACTCE", "primary_category", "type"], dropna=False)
+    .size().reset_index(name="n")
+)
+for key, (pcat, ptype) in METRIC_CATEGORIES.items():
+    mask = (count_df["primary_category"] == pcat) & (count_df["type"] == ptype)
+    sub = count_df[mask][["TRACTCE", "n"]].rename(columns={"n": f"count_{key}"})
+    stats = stats.merge(sub, on="TRACTCE", how="left")
+    stats[f"count_{key}"] = stats[f"count_{key}"].fillna(0).astype(int)
 
-    for key, (pcat, ptype) in METRIC_CATEGORIES.items():
-        subset = tract_pois[
-            (tract_pois["primary_category"] == pcat) &
-            (tract_pois["type"] == ptype)
-        ]
-        row[f"count_{key}"] = len(subset)
-
-    # Aggregate counts
-    food = tract_pois[tract_pois["primary_category"] == "Food & Grocery"]
-    row["count_grocery_any"]      = len(food[food["type"].isin(FULL_SERVICE_TYPES)])
-    row["count_snap_retailers"]   = int(tract_pois["snap_eligible"].sum())
-    row["count_total_civic"]      = len(tract_pois[
-        ~tract_pois["type"].isin(["Place of Worship", "Emergency Services"])
-    ])
-    rows.append(row)
-
-stats = pd.DataFrame(rows)
+# Aggregate counts
+food_df = df[df["primary_category"] == "Food & Grocery"]
+full_service_counts = (
+    food_df[food_df["type"].isin(FULL_SERVICE_TYPES)]
+    .groupby("TRACTCE").size().rename("count_grocery_any")
+)
+snap_counts = df[df["snap_eligible"].astype(bool)].groupby("TRACTCE").size().rename("count_snap_retailers")
+civic_counts = (
+    df[~df["type"].isin(["Place of Worship", "Emergency Services"])]
+    .groupby("TRACTCE").size().rename("count_total_civic")
+)
+stats = (stats
+    .merge(full_service_counts.reset_index(), on="TRACTCE", how="left")
+    .merge(snap_counts.reset_index(), on="TRACTCE", how="left")
+    .merge(civic_counts.reset_index(), on="TRACTCE", how="left")
+)
+for col in ["count_grocery_any", "count_snap_retailers", "count_total_civic"]:
+    stats[col] = stats[col].fillna(0).astype(int)
 
 # ── STEP 7: NEAREST DISTANCES ─────────────────────────────
 print("Computing nearest distances...")
-tracts_c = tracts[["TRACTCE", "geometry"]].copy()
-tracts_c["centroid"] = tracts_c.geometry.centroid
+tract_centroids = tracts[["TRACTCE", "geometry"]].copy()
+tract_centroids = tract_centroids.set_geometry(tract_centroids.geometry.centroid)
 
 # Nearest full-service grocery (any SNAP full-service type)
 fs_pois = gdf_pois[
     (gdf_pois["primary_category"] == "Food & Grocery") &
     (gdf_pois["type"].isin(FULL_SERVICE_TYPES))
-].copy()
+][["geometry"]].copy()
 
-distances = []
-for _, tr in tracts_c.iterrows():
-    ct = tr["centroid"]
-    if ct is None or ct.is_empty or len(fs_pois) == 0:
-        distances.append(np.nan)
-    else:
-        distances.append(fs_pois.geometry.distance(ct).min())
+if len(fs_pois) > 0:
+    nearest = gpd.sjoin_nearest(
+        tract_centroids, fs_pois, how="left", distance_col="nearest_grocery_full_m"
+    )[["TRACTCE", "nearest_grocery_full_m"]].drop_duplicates("TRACTCE")
+else:
+    nearest = tract_centroids[["TRACTCE"]].copy()
+    nearest["nearest_grocery_full_m"] = np.nan
 
-dist_df = pd.DataFrame({
-    "TRACTCE": tracts_c["TRACTCE"].values,
-    "nearest_grocery_full_m": distances
-})
-dist_df["nearest_grocery_full_miles"] = (dist_df["nearest_grocery_full_m"] / 1609.34).round(2)
-stats = stats.merge(dist_df, on="TRACTCE", how="left")
-print(f"  nearest grocery: max {dist_df['nearest_grocery_full_miles'].max():.1f} mi")
+nearest["nearest_grocery_full_miles"] = (nearest["nearest_grocery_full_m"] / 1609.34).round(2)
+stats = stats.merge(nearest, on="TRACTCE", how="left")
+print(f"  nearest grocery: max {nearest['nearest_grocery_full_miles'].max():.1f} mi")
 
 # Nearest for other key categories
 other_cats = {
@@ -254,7 +256,7 @@ for key, (pcat, ptype) in other_cats.items():
     cat_pois = gdf_pois[
         (gdf_pois["primary_category"] == pcat) &
         (gdf_pois["type"] == ptype)
-    ].copy()
+    ][["geometry"]].copy()
 
     col_m  = f"nearest_{key}_m"
     col_mi = f"nearest_{key}_miles"
@@ -264,15 +266,9 @@ for key, (pcat, ptype) in other_cats.items():
         stats[col_mi] = np.nan
         continue
 
-    distances = []
-    for _, tr in tracts_c.iterrows():
-        ct = tr["centroid"]
-        if ct is None or ct.is_empty:
-            distances.append(np.nan)
-        else:
-            distances.append(cat_pois.geometry.distance(ct).min())
-
-    d = pd.DataFrame({"TRACTCE": tracts_c["TRACTCE"].values, col_m: distances})
+    d = gpd.sjoin_nearest(
+        tract_centroids, cat_pois, how="left", distance_col=col_m
+    )[["TRACTCE", col_m]].drop_duplicates("TRACTCE")
     d[col_mi] = (d[col_m] / 1609.34).round(2)
     stats = stats.merge(d, on="TRACTCE", how="left")
     print(f"  nearest {key}: max {d[col_mi].max():.1f} mi")
