@@ -21,6 +21,7 @@ tracts = gpd.read_file(
 )
 tracts = tracts[tracts["COUNTYFP"].isin(FIPS_LIST)]
 tracts = tracts[tracts["TRACTCE"] != "990000"]
+tracts["geometry"] = tracts["geometry"].simplify(0.001, preserve_topology=True)
 tracts.to_parquet(OUT_DIR / "boundaries_tracts.parquet", index=False)
 print(f"  Saved {len(tracts)} tracts")
 
@@ -32,6 +33,7 @@ counties = counties[
     (counties["COUNTYFP"].isin(FIPS_LIST)) &
     (counties["STATEFP"] == STATE_FIPS)
 ]
+counties["geometry"] = counties["geometry"].simplify(0.001, preserve_topology=True)
 counties.to_parquet(OUT_DIR / "boundaries_counties.parquet", index=False)
 print(f"  Saved {len(counties)} counties")
 
@@ -47,6 +49,7 @@ zctas = gpd.read_file(
 )
 zctas = zctas[zctas["ZCTA5CE20"].isin(zcta_list)]
 zctas["ZCTA5CE20"] = zctas["ZCTA5CE20"].astype(str).str.zfill(5)
+zctas["geometry"] = zctas["geometry"].simplify(0.001, preserve_topology=True)
 zctas.to_parquet(OUT_DIR / "boundaries_zctas.parquet", index=False)
 print(f"  Saved {len(zctas)} ZCTAs")
 
