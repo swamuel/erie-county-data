@@ -90,6 +90,30 @@ def load_pantry_data():
     return monthly, index
 
 
+@st.cache_data
+def load_pantry_locations():
+    """Agency locations from process_agency_list.py — for Access & Equity overlays."""
+    path = "data/processed/pantry_locations.csv"
+    if pd.io.common.file_exists(path):
+        df = pd.read_csv(path, dtype={"agency_ref": str})
+        return df
+    return pd.DataFrame(columns=[
+        "agency_ref", "agency_name", "program_type", "county",
+        "address", "city", "postal_code", "lat", "lon", "is_pickup", "geocode_source",
+    ])
+
+
+@st.cache_data
+def load_zcta_access_stats():
+    """ZCTA-level access statistics from generate_zcta_access_stats.py — for Desert Analysis."""
+    path = "data/processed/zcta_access_stats.csv"
+    if pd.io.common.file_exists(path):
+        df = pd.read_csv(path, dtype={"ZCTA5CE20": str})
+        df["ZCTA5CE20"] = df["ZCTA5CE20"].str.zfill(5)
+        return df
+    return None
+
+
 @st.cache_resource
 def build_merged_tract(year):
     gdf_tracts, _, _ = load_boundaries()

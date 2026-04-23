@@ -3,7 +3,8 @@ import streamlit as st
 from lib.data_loader import (
     load_data, load_boundaries, load_stratification_data, load_pantry_data,
     load_transit_shapes, load_poi_data,
-    build_merged_tract, build_merged_zcta, build_merged_county
+    build_merged_tract, build_merged_zcta, build_merged_county,
+    load_pantry_locations, load_zcta_access_stats,
 )
 from lib.config import data_dictionary
 from lib.helpers import get_benchmark_row, get_available_vars
@@ -19,6 +20,8 @@ import tabs.query_tool as tab_query_tool_mod
 import tabs.insights as tab_insights_mod
 import tabs.download as tab_download_mod
 import tabs.data_dictionary as tab_dict_mod
+import tabs.access_equity as tab_access_equity_mod
+import tabs.desert_analysis as tab_desert_analysis_mod
 
 from lib.constants import COUNTY_FIPS, COUNTY_NAMES, APP_TITLE
 st.set_page_config(page_title=APP_TITLE, layout="wide")
@@ -97,8 +100,12 @@ benchmark_row = get_benchmark_row(
 available_vars = get_available_vars(geography, merged)
 
 # ── TABS ──────────────────────────────────────────────────
-tab_about, tab_demographics, tab_econ, tab_transit, tab_food, tab_health, tab_services, tab_query, tab_insights, tab_download, tab_dict = st.tabs([
-    "About", "Demographics", "Economic", "Transit", "Food Access", "Health", "Services", "Query Tool", "Insights", "Download", "Data Dictionary"
+(tab_about, tab_demographics, tab_econ, tab_transit, tab_food,
+ tab_access_equity, tab_desert_analysis,
+ tab_health, tab_services, tab_query, tab_insights, tab_download, tab_dict) = st.tabs([
+    "About", "Demographics", "Economic", "Transit", "Food Access",
+    "Access & Equity", "Desert Analysis",
+    "Health", "Services", "Query Tool", "Insights", "Download", "Data Dictionary",
 ])
 
 with tab_about:
@@ -121,6 +128,18 @@ with tab_transit:
 
 with tab_food:
     tab_food_access_mod.render(merged, pantries, pantry_monthly, pantry_index, benchmark_row, geography)
+
+with tab_access_equity:
+    pantry_locs = load_pantry_locations()
+    pois_ae, _ = load_poi_data()
+    _, stops_ae = load_transit_shapes()
+    merged_tract_2023 = build_merged_tract(2023)
+    tab_access_equity_mod.render(merged_tract_2023, pantry_locs, pois_ae, stops_ae)
+
+with tab_desert_analysis:
+    zcta_access = load_zcta_access_stats()
+    _, _, gdf_zctas_da = load_boundaries()
+    tab_desert_analysis_mod.render(zcta_access, gdf_zctas_da)
 
 with tab_health:
     tab_health_mod.render(merged, benchmark_row, geography)
