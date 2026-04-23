@@ -76,20 +76,17 @@ if selected_benchmark == "Compare to Another PA County":
 
 # ── DATA PREP ─────────────────────────────────────────────
 if geography == "Tract":
-    merged = build_merged_tract(
-        year, gdf_tracts, census, sh_data, transit_stats,
-        cdc_places, food_atlas, demographics
-    )
+    merged = build_merged_tract(year)
     geo_id_col = "TRACTCE"
     geo_name_col = "NAMELSAD"
 
 elif geography == "Zip Code":
-    merged = build_merged_zcta(year, gdf_zctas, zcta_data, cdc_places_zcta, zcta_poi_stats)
+    merged = build_merged_zcta(year)
     geo_id_col = "ZCTA5CE20"
     geo_name_col = "area_name"
 
 elif geography == "County":
-    merged = build_merged_county(year, gdf_counties, benchmarks_counties)
+    merged = build_merged_county(year)
     geo_id_col = "COUNTYFP"
     geo_name_col = "NAME"
 
