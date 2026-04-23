@@ -67,7 +67,7 @@ def load_poi_data():
     return pois, poi_stats
 
 
-@st.cache_data
+@st.cache_resource
 def load_boundaries():
     from pathlib import Path as _Path
     _root = _Path(__file__).resolve().parent.parent
@@ -90,25 +90,24 @@ def load_pantry_data():
     return monthly, index
 
 
-@st.cache_data
-def build_merged_tract(
-    year,
-    _gdf_tracts, _census, _sh_data, _transit_stats,
-    _cdc_places, _food_atlas, _demographics
-):
-    from lib.constants import COUNTY_FIPS, COUNTY_NAMES
-    df_year = _census[_census["year"] == year].copy()
-    sh_year = _sh_data[_sh_data["year"] == min(year, 2023)].copy()
+@st.cache_resource
+def build_merged_tract(year):
+    gdf_tracts, _, _ = load_boundaries()
+    (census, sh_data, _, _, _, _, _, transit_stats, _,
+     cdc_places, food_atlas, demographics, _, _) = load_data()
 
-    merged = _gdf_tracts.merge(df_year, left_on="TRACTCE", right_on="tract_code", how="left")
+    df_year = census[census["year"] == year].copy()
+    sh_year = sh_data[sh_data["year"] == min(year, 2023)].copy()
+
+    merged = gdf_tracts.merge(df_year, left_on="TRACTCE", right_on="tract_code", how="left")
     merged = merged.merge(
         sh_year[["tract_code", "food_insecurity_rate", "unemployment_rate",
                  "disability_rate", "homeownership_rate"]],
         left_on="TRACTCE", right_on="tract_code", how="left"
     )
-    merged = merged.merge(_transit_stats, on="TRACTCE", how="left")
+    merged = merged.merge(transit_stats, on="TRACTCE", how="left")
 
-    cdc_prep = _cdc_places.copy()
+    cdc_prep = cdc_places.copy()
     cdc_prep["TRACTCE"] = cdc_prep["tract_code"]
     cdc_drop = [c for c in ["tract_code", "county_fips", "countyname", "year", "tract_geoid"] if c in cdc_prep.columns]
     merged = merged.merge(
@@ -119,13 +118,13 @@ def build_merged_tract(
     atlas_cols = ["tract_code", "food_desert_1_10", "food_desert_half_10",
                   "food_desert_vehicle", "low_income_tract", "low_access_pop",
                   "low_access_low_income_pop", "atlas_poverty_rate", "urban_tract"]
-    atlas_cols = [c for c in atlas_cols if c in _food_atlas.columns]
+    atlas_cols = [c for c in atlas_cols if c in food_atlas.columns]
     merged = merged.merge(
-        _food_atlas[atlas_cols], left_on="TRACTCE", right_on="tract_code", how="left",
+        food_atlas[atlas_cols], left_on="TRACTCE", right_on="tract_code", how="left",
         suffixes=("", "_atlas")
     ).drop(columns=["tract_code_atlas", "tract_code"], errors="ignore")
 
-    demo_year = _demographics[_demographics["year"] == year].copy()
+    demo_year = demographics[demographics["year"] == year].copy()
     demo_keep = ["total_population", "median_age", "pct_white_non_hispanic",
                  "pct_black", "pct_hispanic", "pct_asian", "pct_other"]
     demo_keep = [c for c in demo_keep if c in demo_year.columns]
@@ -136,18 +135,22 @@ def build_merged_tract(
     return merged
 
 
-@st.cache_data
-def build_merged_zcta(year, _gdf_zctas, _zcta_data, _cdc_places_zcta, _zcta_poi_stats):
-    zcta_year = _zcta_data[_zcta_data["year"] == year].copy()
-    merged = _gdf_zctas.merge(zcta_year, left_on="ZCTA5CE20", right_on="zcta", how="left")
+@st.cache_resource
+def build_merged_zcta(year):
+    _, _, gdf_zctas = load_boundaries()
+    (_, _, _, _, _, _, _, _, zcta_data,
+     _, _, _, cdc_places_zcta, zcta_poi_stats) = load_data()
 
-    if len(_cdc_places_zcta.columns) > 1:
+    zcta_year = zcta_data[zcta_data["year"] == year].copy()
+    merged = gdf_zctas.merge(zcta_year, left_on="ZCTA5CE20", right_on="zcta", how="left")
+
+    if len(cdc_places_zcta.columns) > 1:
         merged = merged.merge(
-            _cdc_places_zcta, left_on="ZCTA5CE20", right_on="zcta", how="left", suffixes=("", "_cdc")
+            cdc_places_zcta, left_on="ZCTA5CE20", right_on="zcta", how="left", suffixes=("", "_cdc")
         ).drop(columns=["zcta"] + [c for c in merged.columns if c.endswith("_cdc")], errors="ignore")
 
-    if len(_zcta_poi_stats.columns) > 1:
-        merged = merged.merge(_zcta_poi_stats, on="ZCTA5CE20", how="left")
+    if len(zcta_poi_stats.columns) > 1:
+        merged = merged.merge(zcta_poi_stats, on="ZCTA5CE20", how="left")
 
     _county_short = merged["county_name"].fillna("").astype(str).str.replace(" County", "", regex=False).str.strip()
     _zip_col = merged["ZCTA5CE20"].astype(str)
@@ -158,14 +161,18 @@ def build_merged_zcta(year, _gdf_zctas, _zcta_data, _cdc_places_zcta, _zcta_poi_
     return merged
 
 
-@st.cache_data
-def build_merged_county(year, _gdf_counties, _benchmarks_counties):
+@st.cache_resource
+def build_merged_county(year):
     from lib.constants import COUNTY_FIPS, COUNTY_NAMES
-    county_data = _benchmarks_counties[
-        (_benchmarks_counties["year"] == year) &
-        (_benchmarks_counties["name"].isin(COUNTY_NAMES))
+    _, gdf_counties, _ = load_boundaries()
+    (_, _, _, _, _, _, benchmarks_counties, _, _,
+     _, _, _, _, _) = load_data()
+
+    county_data = benchmarks_counties[
+        (benchmarks_counties["year"] == year) &
+        (benchmarks_counties["name"].isin(COUNTY_NAMES))
     ].copy()
     county_data["COUNTYFP"] = county_data["name"].map(COUNTY_FIPS)
-    merged = _gdf_counties.merge(county_data, on="COUNTYFP", how="left")
+    merged = gdf_counties.merge(county_data, on="COUNTYFP", how="left")
     merged["display_name"] = merged["NAME"]
     return merged
