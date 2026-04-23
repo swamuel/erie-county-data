@@ -341,20 +341,22 @@ def render(zcta_access_stats, gdf_zctas):
     for col, label, direction in ALL_SLIDERS:
         if col in enabled_sliders_cols(enabled_sliders) and col in flagged_df.columns:
             display_cols.append(col)
-            direction_sym = ">" if direction == "gt" else "<"
             threshold = next(v for c, _, v in enabled_sliders if c == col)
-            flagged_df[f"_{col}_meets"] = (
-                (flagged_df[col] > threshold) if direction == "gt"
-                else (flagged_df[col] < threshold)
-            ).map({True: "✓", False: "✗"})
+            numeric_col = pd.to_numeric(flagged_df[col], errors="coerce")
+            meets = (numeric_col > threshold) if direction == "gt" else (numeric_col < threshold)
+            flagged_df[f"_{col}_meets"] = meets.map({True: "Yes", False: "No"}).fillna("—")
             display_cols.append(f"_{col}_meets")
 
-    # Round numeric columns
+    # Round numeric columns and clean types for Arrow serialization
     for col in display_cols:
-        if col in flagged_df.columns and pd.api.types.is_float_dtype(flagged_df[col]):
+        if col not in flagged_df.columns:
+            continue
+        if pd.api.types.is_float_dtype(flagged_df[col]):
             flagged_df[col] = flagged_df[col].round(2)
+        elif flagged_df[col].dtype == object:
+            flagged_df[col] = flagged_df[col].fillna("—").astype(str)
 
-    final_display = flagged_df[[c for c in display_cols if c in flagged_df.columns]]
+    final_display = flagged_df[[c for c in display_cols if c in flagged_df.columns]].reset_index(drop=True)
     rename_map = {
         "ZCTA5CE20":  "ZIP Code",
         "area_name":  "Area",
