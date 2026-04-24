@@ -139,7 +139,12 @@ with tab_access_equity:
 with tab_desert_analysis:
     zcta_access = load_zcta_access_stats()
     _, _, gdf_zctas_da = load_boundaries()
-    tab_desert_analysis_mod.render(zcta_access, gdf_zctas_da)
+    pantry_locs_da = load_pantry_locations()
+    pois_da, _ = load_poi_data()
+    _, stops_da = load_transit_shapes()
+    tab_desert_analysis_mod.render(
+        zcta_access, gdf_zctas_da, pantry_locs_da, pois_da, stops_da,
+    )
 
 with tab_health:
     tab_health_mod.render(merged, benchmark_row, geography)

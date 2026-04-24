@@ -11,6 +11,8 @@ import json
 import numpy as np
 
 from lib.config import MAP_STYLE, VIEW_STATE, TOOLTIP_STYLE
+from lib.service_overlays import build_service_layers
+from lib.pdf_export import build_desert_analysis_pdf
 
 # ── Slider definitions ────────────────────────────────────────────────────────
 
@@ -105,10 +107,14 @@ def _flag_zctas(df, enabled_sliders, logic):
     return combined.fillna(False)
 
 
-def render(zcta_access_stats, gdf_zctas):
+def render(zcta_access_stats, gdf_zctas,
+           pantry_locations=None, pois=None, transit_stops=None):
     """
     zcta_access_stats : DataFrame from zcta_access_stats.csv (or None)
     gdf_zctas         : GeoDataFrame with ZCTA boundaries
+    pantry_locations  : DataFrame from pantry_locations.csv (optional overlay)
+    pois              : DataFrame from erie_pois.csv (optional overlay)
+    transit_stops     : DataFrame from emta_stops.csv (optional overlay)
     """
 
     st.subheader("Desert Analysis")
@@ -272,9 +278,39 @@ def render(zcta_access_stats, gdf_zctas):
     if not enabled_sliders:
         st.info("Enable at least one threshold slider to begin flagging ZCTAs.")
 
-    # ── Map ───────────────────────────────────────────────────
+    # ── Service overlay toggles ───────────────────────────────
     st.markdown("---")
+    with st.expander("Service overlays — show actual locations on the map"):
+        ocol1, ocol2, ocol3 = st.columns(3)
+        with ocol1:
+            st.markdown("**Food**")
+            show_pantries = st.checkbox("Food pantries",      key="da_show_pantries")
+            show_snap     = st.checkbox("SNAP-eligible stores", key="da_show_snap")
+        with ocol2:
+            st.markdown("**Health**")
+            show_hospitals  = st.checkbox("Hospitals",  key="da_show_hospitals")
+            show_clinics    = st.checkbox("Clinics",    key="da_show_clinics")
+            show_pharmacies = st.checkbox("Pharmacies", key="da_show_pharmacies")
+        with ocol3:
+            st.markdown("**Civic & Transit**")
+            show_libraries    = st.checkbox("Libraries",         key="da_show_libraries")
+            show_comm_centers = st.checkbox("Community centers", key="da_show_comm_centers")
+            show_social_svc   = st.checkbox("Social services",   key="da_show_social_svc")
+            show_transit      = st.checkbox("Transit stops",     key="da_show_transit")
 
+    overlay_enabled = {
+        "pantries":     show_pantries,
+        "snap":         show_snap,
+        "hospitals":    show_hospitals,
+        "clinics":      show_clinics,
+        "pharmacies":   show_pharmacies,
+        "libraries":    show_libraries,
+        "comm_centers": show_comm_centers,
+        "social_svc":   show_social_svc,
+        "transit":      show_transit,
+    }
+
+    # ── Map ───────────────────────────────────────────────────
     # Merge flag into geometry
     if gdf_zctas is not None and len(gdf_zctas) > 0:
         gdf_map = gdf_zctas.merge(
@@ -312,8 +348,15 @@ def render(zcta_access_stats, gdf_zctas):
             pickable=True,
         )
 
+        overlay_layers = build_service_layers(
+            enabled=overlay_enabled,
+            pantry_locations=pantry_locations,
+            pois=pois,
+            transit_stops=transit_stops,
+        )
+
         st.pydeck_chart(pdk.Deck(
-            layers=[map_layer],
+            layers=[map_layer, *overlay_layers],
             initial_view_state=VIEW_STATE,
             tooltip={"html": tooltip_html, "style": TOOLTIP_STYLE},
             map_style=MAP_STYLE,
@@ -364,20 +407,67 @@ def render(zcta_access_stats, gdf_zctas):
     }
     for col, label, _ in ALL_SLIDERS:
         rename_map[col] = label
-        rename_map[f"_{col}_meets"] = "Meets?"
+        rename_map[f"_{col}_meets"] = f"Meets? ({label})"
 
     final_display = final_display.rename(columns=rename_map)
 
     st.dataframe(final_display, use_container_width=True, hide_index=True)
 
-    # Download button
+    # ── Download buttons ──────────────────────────────────────
+    label_by_col = {col: label for col, label, _ in ALL_SLIDERS}
+    enabled_slider_details = [
+        {
+            "col": col,
+            "label": label_by_col.get(col, col),
+            "direction": direction,
+            "threshold": val,
+        }
+        for col, direction, val in enabled_sliders
+    ]
+
+    dcol1, dcol2 = st.columns(2)
     csv_bytes = final_display.to_csv(index=False).encode("utf-8")
-    st.download_button(
+    dcol1.download_button(
         label=f"Download flagged ZCTAs ({n_flagged}) as CSV",
         data=csv_bytes,
         file_name="desert_analysis_flagged_zctas.csv",
         mime="text/csv",
+        use_container_width=True,
     )
+
+    with dcol2:
+        if st.button(
+            f"Build PDF report ({n_flagged} ZCTAs)",
+            key="da_build_pdf",
+            use_container_width=True,
+        ):
+            with st.spinner("Building PDF..."):
+                try:
+                    pdf_bytes = build_desert_analysis_pdf(
+                        flagged_df=final_display,
+                        df_filtered=df_filtered,
+                        gdf_zctas=gdf_zctas,
+                        enabled_slider_details=enabled_slider_details,
+                        logic=logic,
+                        summary={
+                            "n_flagged": n_flagged,
+                            "total_pop_flagged": total_pop_flagged,
+                            "n_counties": n_counties_flagged,
+                        },
+                    )
+                    st.session_state["da_pdf_bytes"] = pdf_bytes
+                except Exception as e:
+                    st.error(f"Failed to build PDF: {e}")
+
+        if st.session_state.get("da_pdf_bytes"):
+            st.download_button(
+                label="Download PDF report",
+                data=st.session_state["da_pdf_bytes"],
+                file_name="desert_analysis_report.pdf",
+                mime="application/pdf",
+                key="da_pdf_download",
+                use_container_width=True,
+            )
 
 
 def enabled_sliders_cols(enabled_sliders):
