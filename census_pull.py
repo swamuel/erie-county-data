@@ -1,10 +1,13 @@
 # Census ACS 5-Year Estimates, 2019-2023
-# Geography: Erie County, PA census tracts (state: 42, county: 049)
+# Geography: all PA counties in the Second Harvest NWPA service region,
+# defined centrally in lib/constants.py (state: 42).
 
 import requests
 import pandas as pd
 from dotenv import load_dotenv
 import os
+
+from lib.constants import COUNTY_FIPS
 
 load_dotenv()
 api_key = os.getenv("CENSUS_API_KEY")
@@ -24,10 +27,8 @@ variables = {
 get_vars = "NAME," + ",".join(variables.keys())
 
 years = [2019, 2020, 2021, 2022, 2023]
-counties = {
-    "049": "Erie County",
-    "039": "Crawford County"
-}
+# Pull all SHFB service-region counties (name -> fips in constants; flip here)
+counties = {fips: name for name, fips in COUNTY_FIPS.items()}
 
 all_years = []
 
