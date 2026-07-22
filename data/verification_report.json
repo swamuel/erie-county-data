@@ -1,0 +1,382 @@
+{
+  "generated_utc": "2026-07-22T01:11:29+00:00",
+  "source": "U.S. Census Bureau ACS 5-Year Estimates",
+  "years": [
+    2019,
+    2020,
+    2021,
+    2022,
+    2023
+  ],
+  "counties": [
+    "Cameron County",
+    "Clarion County",
+    "Clearfield County",
+    "Crawford County",
+    "Elk County",
+    "Erie County",
+    "Forest County",
+    "Jefferson County",
+    "McKean County",
+    "Venango County",
+    "Warren County"
+  ],
+  "network_checks": true,
+  "overall": "PASS",
+  "checks": [
+    {
+      "check": "economic \u00b7 median_household_income vs live API",
+      "status": "PASS",
+      "detail": "980 tract-years checked, 0 mismatch(es)",
+      "sample": []
+    },
+    {
+      "check": "economic \u00b7 poverty_rate vs live API",
+      "status": "PASS",
+      "detail": "980 tract-years checked, 0 mismatch(es)",
+      "sample": []
+    },
+    {
+      "check": "economic \u00b7 bachelors_rate vs live API",
+      "status": "PASS",
+      "detail": "980 tract-years checked, 0 mismatch(es)",
+      "sample": []
+    },
+    {
+      "check": "economic \u00b7 rent_burden_rate vs live API",
+      "status": "PASS",
+      "detail": "980 tract-years checked, 0 mismatch(es)",
+      "sample": []
+    },
+    {
+      "check": "economic \u00b7 no_vehicle_rate vs live API",
+      "status": "PASS",
+      "detail": "980 tract-years checked, 0 mismatch(es)",
+      "sample": []
+    },
+    {
+      "check": "demographics \u00b7 total_population vs live API",
+      "status": "PASS",
+      "detail": "980 tract-years checked, 0 mismatch(es)",
+      "sample": []
+    },
+    {
+      "check": "demographics \u00b7 median_age vs live API",
+      "status": "PASS",
+      "detail": "980 tract-years checked, 0 mismatch(es)",
+      "sample": []
+    },
+    {
+      "check": "demographics \u00b7 race_total vs live API",
+      "status": "PASS",
+      "detail": "980 tract-years checked, 0 mismatch(es)",
+      "sample": []
+    },
+    {
+      "check": "demographics \u00b7 white_non_hispanic vs live API",
+      "status": "PASS",
+      "detail": "980 tract-years checked, 0 mismatch(es)",
+      "sample": []
+    },
+    {
+      "check": "demographics \u00b7 black_alone vs live API",
+      "status": "PASS",
+      "detail": "980 tract-years checked, 0 mismatch(es)",
+      "sample": []
+    },
+    {
+      "check": "demographics \u00b7 asian_alone vs live API",
+      "status": "PASS",
+      "detail": "980 tract-years checked, 0 mismatch(es)",
+      "sample": []
+    },
+    {
+      "check": "demographics \u00b7 hispanic_latino vs live API",
+      "status": "PASS",
+      "detail": "980 tract-years checked, 0 mismatch(es)",
+      "sample": []
+    },
+    {
+      "check": "demographics \u00b7 pct_white_non_hispanic recompute",
+      "status": "PASS",
+      "detail": "980 populated tracts, 0 recompute mismatch(es)",
+      "sample": []
+    },
+    {
+      "check": "demographics \u00b7 pct_black recompute",
+      "status": "PASS",
+      "detail": "980 populated tracts, 0 recompute mismatch(es)",
+      "sample": []
+    },
+    {
+      "check": "demographics \u00b7 pct_hispanic recompute",
+      "status": "PASS",
+      "detail": "980 populated tracts, 0 recompute mismatch(es)",
+      "sample": []
+    },
+    {
+      "check": "demographics \u00b7 pct_asian recompute",
+      "status": "PASS",
+      "detail": "980 populated tracts, 0 recompute mismatch(es)",
+      "sample": []
+    },
+    {
+      "check": "master_tract \u00b7 median_household_income vs live API",
+      "status": "PASS",
+      "detail": "788 tract-years (shipped), 0 mismatch(es)",
+      "sample": []
+    },
+    {
+      "check": "master_tract \u00b7 poverty_rate vs live API",
+      "status": "PASS",
+      "detail": "788 tract-years (shipped), 0 mismatch(es)",
+      "sample": []
+    },
+    {
+      "check": "master_tract \u00b7 bachelors_rate vs live API",
+      "status": "PASS",
+      "detail": "788 tract-years (shipped), 0 mismatch(es)",
+      "sample": []
+    },
+    {
+      "check": "master_tract \u00b7 rent_burden_rate vs live API",
+      "status": "PASS",
+      "detail": "788 tract-years (shipped), 0 mismatch(es)",
+      "sample": []
+    },
+    {
+      "check": "master_tract \u00b7 no_vehicle_rate vs live API",
+      "status": "PASS",
+      "detail": "788 tract-years (shipped), 0 mismatch(es)",
+      "sample": []
+    },
+    {
+      "check": "master_tract \u00b7 total_population vs live API",
+      "status": "PASS",
+      "detail": "788 tract-years (shipped), 0 mismatch(es)",
+      "sample": []
+    },
+    {
+      "check": "master_tract \u00b7 median_age vs live API",
+      "status": "PASS",
+      "detail": "788 tract-years (shipped), 0 mismatch(es)",
+      "sample": []
+    },
+    {
+      "check": "master_tract \u00b7 snap_participation_rate vs live API",
+      "status": "PASS",
+      "detail": "788 tract-years (shipped), 0 mismatch(es)",
+      "sample": []
+    },
+    {
+      "check": "row reconciliation \u00b7 tract counts per county-year",
+      "status": "PASS",
+      "detail": "55 county-years; 0 with unexpected count diff (9900-series water tracts excluded by design)",
+      "sample": []
+    },
+    {
+      "check": "county benchmark \u00b7 median_household_income vs live API",
+      "status": "PASS",
+      "detail": "55 county-years checked, 0 mismatch(es)",
+      "sample": []
+    },
+    {
+      "check": "county benchmark \u00b7 poverty_rate vs live API",
+      "status": "PASS",
+      "detail": "55 county-years checked, 0 mismatch(es)",
+      "sample": []
+    },
+    {
+      "check": "master_zcta \u00b7 median_household_income vs live API",
+      "status": "PASS",
+      "detail": "970 ZCTA-years (shipped), 0 mismatch(es)",
+      "sample": []
+    },
+    {
+      "check": "master_zcta \u00b7 poverty_rate vs live API",
+      "status": "PASS",
+      "detail": "970 ZCTA-years (shipped), 0 mismatch(es)",
+      "sample": []
+    },
+    {
+      "check": "master_zcta \u00b7 bachelors_rate vs live API",
+      "status": "PASS",
+      "detail": "970 ZCTA-years (shipped), 0 mismatch(es)",
+      "sample": []
+    },
+    {
+      "check": "master_zcta \u00b7 rent_burden_rate vs live API",
+      "status": "PASS",
+      "detail": "970 ZCTA-years (shipped), 0 mismatch(es)",
+      "sample": []
+    },
+    {
+      "check": "master_zcta \u00b7 no_vehicle_rate vs live API",
+      "status": "PASS",
+      "detail": "970 ZCTA-years (shipped), 0 mismatch(es)",
+      "sample": []
+    },
+    {
+      "check": "master_zcta \u00b7 total_population vs live API",
+      "status": "PASS",
+      "detail": "970 ZCTA-years (shipped), 0 mismatch(es)",
+      "sample": []
+    },
+    {
+      "check": "master_zcta \u00b7 median_age vs live API",
+      "status": "PASS",
+      "detail": "970 ZCTA-years (shipped), 0 mismatch(es)",
+      "sample": []
+    },
+    {
+      "check": "master_zcta \u00b7 unemployment_rate vs live API",
+      "status": "PASS",
+      "detail": "970 ZCTA-years (shipped), 0 mismatch(es)",
+      "sample": []
+    },
+    {
+      "check": "master_zcta \u00b7 homeownership_rate vs live API",
+      "status": "PASS",
+      "detail": "970 ZCTA-years (shipped), 0 mismatch(es)",
+      "sample": []
+    },
+    {
+      "check": "master_zcta \u00b7 snap_participation_rate vs live API",
+      "status": "PASS",
+      "detail": "970 ZCTA-years (shipped), 0 mismatch(es)",
+      "sample": []
+    },
+    {
+      "check": "master_zcta \u00b7 pct_white_non_hispanic vs live API",
+      "status": "PASS",
+      "detail": "970 ZCTA-years (shipped), 0 mismatch(es)",
+      "sample": []
+    },
+    {
+      "check": "master_zcta \u00b7 pct_black vs live API",
+      "status": "PASS",
+      "detail": "970 ZCTA-years (shipped), 0 mismatch(es)",
+      "sample": []
+    },
+    {
+      "check": "master_zcta \u00b7 pct_hispanic vs live API",
+      "status": "PASS",
+      "detail": "970 ZCTA-years (shipped), 0 mismatch(es)",
+      "sample": []
+    },
+    {
+      "check": "master_zcta \u00b7 pct_asian vs live API",
+      "status": "PASS",
+      "detail": "970 ZCTA-years (shipped), 0 mismatch(es)",
+      "sample": []
+    },
+    {
+      "check": "benchmark National \u00b7 median_household_income vs live API",
+      "status": "PASS",
+      "detail": "5 years, 0 mismatch(es)",
+      "sample": []
+    },
+    {
+      "check": "benchmark National \u00b7 poverty_rate vs live API",
+      "status": "PASS",
+      "detail": "5 years, 0 mismatch(es)",
+      "sample": []
+    },
+    {
+      "check": "benchmark National \u00b7 bachelors_rate vs live API",
+      "status": "PASS",
+      "detail": "5 years, 0 mismatch(es)",
+      "sample": []
+    },
+    {
+      "check": "benchmark National \u00b7 rent_burden_rate vs live API",
+      "status": "PASS",
+      "detail": "5 years, 0 mismatch(es)",
+      "sample": []
+    },
+    {
+      "check": "benchmark National \u00b7 no_vehicle_rate vs live API",
+      "status": "PASS",
+      "detail": "5 years, 0 mismatch(es)",
+      "sample": []
+    },
+    {
+      "check": "benchmark Pennsylvania \u00b7 median_household_income vs live API",
+      "status": "PASS",
+      "detail": "5 years, 0 mismatch(es)",
+      "sample": []
+    },
+    {
+      "check": "benchmark Pennsylvania \u00b7 poverty_rate vs live API",
+      "status": "PASS",
+      "detail": "5 years, 0 mismatch(es)",
+      "sample": []
+    },
+    {
+      "check": "benchmark Pennsylvania \u00b7 bachelors_rate vs live API",
+      "status": "PASS",
+      "detail": "5 years, 0 mismatch(es)",
+      "sample": []
+    },
+    {
+      "check": "benchmark Pennsylvania \u00b7 rent_burden_rate vs live API",
+      "status": "PASS",
+      "detail": "5 years, 0 mismatch(es)",
+      "sample": []
+    },
+    {
+      "check": "benchmark Pennsylvania \u00b7 no_vehicle_rate vs live API",
+      "status": "PASS",
+      "detail": "5 years, 0 mismatch(es)",
+      "sample": []
+    },
+    {
+      "check": "benchmark Erie County \u00b7 median_household_income vs live API",
+      "status": "PASS",
+      "detail": "5 years, 0 mismatch(es)",
+      "sample": []
+    },
+    {
+      "check": "benchmark Erie County \u00b7 poverty_rate vs live API",
+      "status": "PASS",
+      "detail": "5 years, 0 mismatch(es)",
+      "sample": []
+    },
+    {
+      "check": "benchmark Erie County \u00b7 bachelors_rate vs live API",
+      "status": "PASS",
+      "detail": "5 years, 0 mismatch(es)",
+      "sample": []
+    },
+    {
+      "check": "benchmark Erie County \u00b7 rent_burden_rate vs live API",
+      "status": "PASS",
+      "detail": "5 years, 0 mismatch(es)",
+      "sample": []
+    },
+    {
+      "check": "benchmark Erie County \u00b7 no_vehicle_rate vs live API",
+      "status": "PASS",
+      "detail": "5 years, 0 mismatch(es)",
+      "sample": []
+    },
+    {
+      "check": "code integrity \u00b7 erie_tract_data.tract_code",
+      "status": "PASS",
+      "detail": "0 unpadded, 0 non-digit, 0 duplicate key(s)",
+      "sample": []
+    },
+    {
+      "check": "code integrity \u00b7 tract_demographics.tract_code",
+      "status": "PASS",
+      "detail": "0 unpadded, 0 non-digit, 0 duplicate key(s)",
+      "sample": []
+    },
+    {
+      "check": "code integrity \u00b7 zcta_data.zcta",
+      "status": "PASS",
+      "detail": "0 unpadded, 0 non-digit, 0 duplicate key(s)",
+      "sample": []
+    }
+  ]
+}

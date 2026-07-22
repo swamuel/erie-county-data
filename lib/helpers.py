@@ -28,6 +28,49 @@ def value_to_color(value, national_avg, reverse=False, spread=0.25):
     return [r, g, b, 180]
 
 
+def sequential_color(value, vmin, vmax):
+    """Soft single-hue sequential ramp (pale blue -> deep indigo).
+
+    Purely informative — carries no good/bad connotation. `vmin`/`vmax` should
+    bound the data range (e.g. 5th/95th percentile) so outliers don't wash it out.
+    """
+    if pd.isna(value) or vmin is None or vmax is None or vmax <= vmin:
+        return [225, 228, 235, 140]
+    t = max(0.0, min(1.0, (float(value) - vmin) / (vmax - vmin)))
+    # pale blue (236,242,250) -> deep indigo (39,58,120)
+    lo, hi = (236, 242, 250), (39, 58, 120)
+    r = int(lo[0] + (hi[0] - lo[0]) * t)
+    g = int(lo[1] + (hi[1] - lo[1]) * t)
+    b = int(lo[2] + (hi[2] - lo[2]) * t)
+    return [r, g, b, 190]
+
+
+def diverging_benchmark_color(value, benchmark, reverse=False, spread=0.25):
+    """Muted diverging ramp centered on `benchmark`: amber = worse than the
+    benchmark, light neutral = at it, steel-blue = better. `reverse=True` for
+    variables where lower is better (poverty, rent burden, etc.). No red/green.
+    """
+    if pd.isna(value) or benchmark is None or pd.isna(benchmark) or benchmark == 0:
+        return [225, 228, 235, 140]
+    low = benchmark * (1 - spread)
+    high = benchmark * (1 + spread)
+    if high == low:
+        return [238, 236, 231, 190]
+    t = max(0.0, min(1.0, (value - low) / (high - low)))
+    if reverse:
+        t = 1 - t                      # now t: 0 = worse, 0.5 = at benchmark, 1 = better
+    worse = (211, 150, 60)             # muted amber
+    mid = (238, 236, 231)              # light neutral
+    better = (66, 123, 165)            # muted steel blue
+    if t < 0.5:
+        f = t / 0.5
+        rgb = [int(worse[i] + (mid[i] - worse[i]) * f) for i in range(3)]
+    else:
+        f = (t - 0.5) / 0.5
+        rgb = [int(mid[i] + (better[i] - mid[i]) * f) for i in range(3)]
+    return rgb + [190]
+
+
 def get_benchmark_row(selected_benchmark, compare_county, year,
                       benchmarks_national, benchmarks_pa,
                       benchmarks_erie, benchmarks_counties):
@@ -37,16 +80,16 @@ def get_benchmark_row(selected_benchmark, compare_county, year,
         return benchmarks_pa[benchmarks_pa["year"] == year]
     elif selected_benchmark == "Erie County":
         return benchmarks_erie[benchmarks_erie["year"] == year]
+    elif selected_benchmark == "Compare to Another Regional County":
+        return benchmarks_counties[
+            (benchmarks_counties["year"] == year) &
+            (benchmarks_counties["name"] == compare_county)
+        ]
     elif selected_benchmark in benchmarks_counties["name"].unique().tolist():
         # Any in-region county selected directly as a benchmark
         return benchmarks_counties[
             (benchmarks_counties["year"] == year) &
             (benchmarks_counties["name"] == selected_benchmark)
-        ]
-    elif selected_benchmark == "Compare to Another PA County":
-        return benchmarks_counties[
-            (benchmarks_counties["year"] == year) &
-            (benchmarks_counties["name"] == compare_county)
         ]
     return benchmarks_national[benchmarks_national["year"] == year]
 
@@ -131,7 +174,8 @@ def haversine_miles_vec(lat1, lon1, lat_arr, lon_arr):
     return R * 2 * np.arctan2(np.sqrt(a), np.sqrt(1 - a))
 
 
-def render_detail_panel(merged_df, column, selected_layer, geo_id_col, geography, benchmark_row):
+def render_detail_panel(merged_df, column, selected_layer, geo_id_col, geography,
+                        benchmark_row, benchmark_label=None):
     geo_label = get_geo_label(geography)
 
     if st.session_state.selected_geo is None:
@@ -148,6 +192,8 @@ def render_detail_panel(merged_df, column, selected_layer, geo_id_col, geography
 
     row = geo_data.iloc[0]
     st.subheader(geo_name)
+    if benchmark_label:
+        st.caption(f"▲ / ▼ shows the difference vs **{benchmark_label}**.")
 
     m1, m2, m3, m4 = st.columns(4)
     for col_widget, var_label, var_col, higher_is_better in [
@@ -179,6 +225,7 @@ def render_detail_panel(merged_df, column, selected_layer, geo_id_col, geography
     # Trend chart
     # Variable table
     st.markdown(f"**All Variables — {geo_label} Detail**")
+    bench_col = benchmark_label or "Benchmark"
     table_rows = []
     for label, col in all_variables.items():
         if geography != "Tract" and col in TRACT_ONLY_VARS:
@@ -190,7 +237,7 @@ def render_detail_panel(merged_df, column, selected_layer, geo_id_col, geography
         table_rows.append({
             "Variable": label,
             f"This {geo_label}": format_value(val, col),
-            "Benchmark": format_value(bval, col) if bval is not None else "—",
+            bench_col: format_value(bval, col) if bval is not None else "—",
             "Difference": diff_string(val, bval) if bval is not None else "—"
         })
     if table_rows:

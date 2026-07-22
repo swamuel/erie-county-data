@@ -6,3 +6,21 @@ pantry_agency_index.csv
 pantry_agency_monthly.csv
 __pycache__/
 *.pyc
+
+# Claude Code local dir (contains worktrees + local settings — never publish)
+.claude/
+
+# Unused / superseded raw data (not needed by the app or pipeline)
+data/raw/AgencyList.csv
+data/raw/snap_retailers_pre_audit.csv
+
+# Verification harness API cache (build artifact; the report itself is committed)
+data/verification_api_cache.parquet
+data/verification_api_cache_zcta.parquet
+
+# Large raw pipeline inputs — not needed at runtime, kept locally only
+data/raw/snap_retailers_national.csv
+data/raw/FoodAccessResearchAtlasData2019.xlsx
+data/raw/snap_historical/
+NorthwestPA_MapPackage/
+SOURCES_AND_METHODOLOGY.docx

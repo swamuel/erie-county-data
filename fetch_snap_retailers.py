@@ -1,249 +1,153 @@
 """
-fetch_snap_retailers.py — Pull currently authorized SNAP retailers for
-the Second Harvest NW PA 11-county region from the USDA FNS ArcGIS REST API.
+fetch_snap_retailers.py — Build a currently-authorized SNAP retailer file
+for the Second Harvest NW PA 11-county region from USDA's published bulk
+SNAP Retailer Locator Data (2005-2025 vintage and successors).
 
-No API key required. Data is updated monthly by USDA.
+Why this script changed (history):
+    The original version of this script queried a USDA ArcGIS feature
+    service at services1.arcgis.com/RLQu0rK7h4kbsBq5/.../snap_retailers/
+    that has since been retired. Worse, when it was live it returned the
+    full historical record for the requested counties — every retailer
+    ever authorized, not the currently-authorized snapshot. That produced
+    1,540 rows for the 11-county NW PA region, of which only 626 were
+    actually still authorized as of late 2025.
 
-Outputs: data/raw/snap_retailers.csv
+    USDA's stable, official source is the bulk historical file at
+    https://www.fns.usda.gov/sites/default/files/resource-files/
+    snap-retailer-locator-data2005-2025.zip. Each row has Authorization
+    Date and End Date. End Date is blank (a literal space) for retailers
+    still authorized as of the file's compilation. This script downloads
+    that file, filters to the 11-county region and to End Date == blank,
+    and writes data/raw/snap_retailers.csv with the same schema the map
+    scripts expect plus an authorization_date column.
 
-Run with: python fetch_snap_retailers.py
+Outputs:
+    data/raw/snap_historical/snap_history.csv  (full national archive,
+        cached so we don't re-download the 24 MB zip every run)
+    data/raw/snap_retailers.csv  (regional active-only working file)
+
+Run with:
+    python fetch_snap_retailers.py
 """
+from pathlib import Path
+import io
+import zipfile
 
-import requests
 import pandas as pd
-import time
+import requests
 
-# ── USDA SNAP ArcGIS REST endpoint ────────────────────────
-# Feature layer: SNAP Retailer Location Data (currently authorized)
-BASE_URL = (
-    "https://services1.arcgis.com/RLQu0rK7h4kbsBq5/"
-    "arcgis/rest/services/snap_retailers/FeatureServer/0/query"
-)
+HIST_URL = ("https://www.fns.usda.gov/sites/default/files/resource-files/"
+            "snap-retailer-locator-data2005-2025.zip")
 
-# All 11 counties in the Second Harvest NW PA service region
-TARGETS = [
-    {"State": "PA", "County": "CAMERON"},
-    {"State": "PA", "County": "CLARION"},
-    {"State": "PA", "County": "CLEARFIELD"},
-    {"State": "PA", "County": "CRAWFORD"},
-    {"State": "PA", "County": "ELK"},
-    {"State": "PA", "County": "ERIE"},
-    {"State": "PA", "County": "FOREST"},
-    {"State": "PA", "County": "JEFFERSON"},
-    {"State": "PA", "County": "MCKEAN"},
-    {"State": "PA", "County": "VENANGO"},
-    {"State": "PA", "County": "WARREN"},
-]
+ROOT = Path(__file__).resolve().parent
+HIST_DIR = ROOT / "data" / "raw" / "snap_historical"
+HIST_CSV = HIST_DIR / "snap_history.csv"
+OUT_CSV  = ROOT / "data" / "raw" / "snap_retailers.csv"
 
-# Store type codes from USDA SNAP authorization categories
-# We'll keep all types but map them to readable labels
-STORE_TYPE_MAP = {
-    "Supermarket":                  ("Full-Service", "standard"),
-    "Large Grocery Store":          ("Full-Service", "standard"),
-    "Small Grocery Store":          ("Full-Service", "specialty"),
-    "Combination Grocery/Other":    ("Full-Service", "specialty"),
-    "Convenience Store":            ("Convenience & Fuel", "convenience"),
-    "Specialty Food Store":         ("Full-Service", "specialty"),
-    "Farmers' Market":              ("Food & Grocery", "farmers_market"),
-    "Wholesale Club Stores":        ("Big Box", "bigbox"),
-    "Delivery Route":               ("Other", "other"),
-    "Pharmacy":                     ("Health", "pharmacy"),
-    "Dollar Store":                 ("Discount Variety", "dollar"),
-    "Meat/Fish/Poultry Specialty":  ("Full-Service", "specialty"),
-    "Bakery":                       ("Full-Service", "specialty"),
-    "Produce/Vegetable Specialty":  ("Full-Service", "specialty"),
-    "Liquor/Beer/Wine Only":        ("Other", "other"),
-    "Military commissary":          ("Other", "other"),
+NW_PA_COUNTIES = {
+    "CAMERON", "CLARION", "CLEARFIELD", "CRAWFORD", "ELK",
+    "ERIE", "FOREST", "JEFFERSON", "MCKEAN", "VENANGO", "WARREN",
 }
 
-def fetch_county(state, county):
-    """Fetch all SNAP retailers for a given state/county using pagination."""
-    records = []
-    offset  = 0
-    page    = 1000  # max records per request
+# Maps USDA's Store Type values to a coarser (category, tier) pair that
+# the analytical map scripts use. Same mapping the prior version of this
+# script used so existing downstream code keeps working unchanged.
+STORE_TYPE_MAP = {
+    "Supermarket":                  ("Full-Service",       "standard"),
+    "Super Store":                  ("Full-Service",       "standard"),
+    "Large Grocery Store":          ("Full-Service",       "standard"),
+    "Medium Grocery Store":         ("Full-Service",       "standard"),
+    "Small Grocery Store":          ("Full-Service",       "specialty"),
+    "Combination Grocery/Other":    ("Full-Service",       "specialty"),
+    "Convenience Store":            ("Convenience & Fuel", "convenience"),
+    "Farmers' Market":              ("Food & Grocery",     "farmers_market"),
+    "Meat/Poultry Specialty":       ("Full-Service",       "specialty"),
+    "Bakery Specialty":             ("Full-Service",       "specialty"),
+    "Fruits/Veg Specialty":         ("Full-Service",       "specialty"),
+    "Seafood Specialty":            ("Full-Service",       "specialty"),
+    "Food Buying Co-op":            ("Food & Grocery",     "co_op"),
+    "Delivery Route":               ("Other",              "other"),
+    "Unknown":                      ("Other",              "unknown"),
+}
 
-    while True:
-        params = {
-            "where":        f"State='{state}' AND County='{county}'",
-            "outFields":    "*",
-            "f":            "json",
-            "resultOffset": offset,
-            "resultRecordCount": page,
-        }
-        try:
-            r = requests.get(BASE_URL, params=params, timeout=30)
-            r.raise_for_status()
-            data = r.json()
-        except Exception as e:
-            print(f"  Request error at offset {offset}: {e}")
-            break
 
-        features = data.get("features", [])
-        if not features:
-            break
+def download_historical_zip() -> Path:
+    """Download and unzip the USDA historical SNAP bulk file. Cached."""
+    HIST_DIR.mkdir(parents=True, exist_ok=True)
+    if HIST_CSV.exists():
+        print(f"Using cached {HIST_CSV} ({HIST_CSV.stat().st_size/1e6:.1f} MB)")
+        return HIST_CSV
 
-        for feat in features:
-            attrs = feat.get("attributes", {})
-            geom  = feat.get("geometry", {})
-            attrs["lon"] = geom.get("x")
-            attrs["lat"] = geom.get("y")
-            records.append(attrs)
+    print(f"Downloading USDA historical SNAP file from {HIST_URL} ...")
+    r = requests.get(HIST_URL, timeout=300)
+    r.raise_for_status()
+    with zipfile.ZipFile(io.BytesIO(r.content)) as zf:
+        members = zf.namelist()
+        if not members:
+            raise SystemExit("Downloaded ZIP contained no files.")
+        # USDA names the inner file with a long human-readable filename.
+        with zf.open(members[0]) as src, open(HIST_CSV, "wb") as dst:
+            dst.write(src.read())
+    print(f"Extracted to {HIST_CSV} ({HIST_CSV.stat().st_size/1e6:.1f} MB)")
+    return HIST_CSV
 
-        print(f"  Fetched {len(records)} records so far...")
 
-        if not data.get("exceededTransferLimit", False):
-            break
-        offset += page
-        time.sleep(0.3)
+def build_active_csv(hist_path: Path) -> pd.DataFrame:
+    df = pd.read_csv(hist_path, low_memory=False, dtype=str)
+    df.columns = [c.replace("﻿", "").strip() for c in df.columns]
 
-    return records
+    region = df[(df["State"] == "PA")
+                & (df["County"].str.upper().isin(NW_PA_COUNTIES))].copy()
+    print(f"All-time historical records in 11-county region: {len(region):,}")
 
-def clean_records(records):
-    df = pd.DataFrame(records)
+    # End Date is blank (literally a single space) for retailers whose
+    # authorization had not been withdrawn as of the file's compilation.
+    region["end_blank"] = region["End Date"].fillna("").str.strip() == ""
+    active = region[region["end_blank"]].copy()
+    print(f"Currently-authorized retailers: {len(active):,}")
 
-    if df.empty:
-        return df
+    active["category"] = active["Store Type"].map(
+        lambda x: STORE_TYPE_MAP.get(str(x).strip(), ("Food & Grocery", "unknown"))[0]
+    )
+    active["tier"] = active["Store Type"].map(
+        lambda x: STORE_TYPE_MAP.get(str(x).strip(), ("Food & Grocery", "unknown"))[1]
+    )
+    active["address"] = (
+        active["Street Number"].fillna("").astype(str).str.strip()
+        + " "
+        + active["Street Name"].fillna("").astype(str).str.strip()
+    ).str.strip()
 
-    # Normalize column names — ArcGIS returns uppercase
-    df.columns = [c.lower() for c in df.columns]
-
-    # Drop records with no coordinates
-    df = df.dropna(subset=["lat", "lon"])
-    df = df[df["lat"] != 0]
-
-    # Map store type to category/tier
-    type_col = None
-    for col in ["store_type", "storetype", "type"]:
-        if col in df.columns:
-            type_col = col
-            break
-
-    if type_col:
-        df["category"] = df[type_col].map(
-            lambda x: STORE_TYPE_MAP.get(str(x), ("Food & Grocery", "unknown"))[0]
-        )
-        df["tier"] = df[type_col].map(
-            lambda x: STORE_TYPE_MAP.get(str(x), ("Food & Grocery", "unknown"))[1]
-        )
-    else:
-        df["category"] = "Food & Grocery"
-        df["tier"]     = "unknown"
-
-    # Build clean address string
-    addr_parts = []
-    for part in ["address", "city", "state", "zip5"]:
-        if part in df.columns:
-            addr_parts.append(part)
-
-    if addr_parts:
-        df["full_address"] = df[addr_parts].fillna("").apply(
-            lambda r: ", ".join(str(v) for v in r if str(v).strip()), axis=1
-        )
-    else:
-        df["full_address"] = ""
-
-    # Select and rename key columns
-    keep = {
-        "store_name":   "name",
-        "storename":    "name",
-        "full_address": "address",
-        "county":       "county",
-        "state":        "state",
-        "zip5":         "zip",
-        "lat":          "lat",
-        "lon":          "lon",
-        "category":     "category",
-        "tier":         "tier",
-    }
-    if type_col:
-        keep[type_col] = "store_type_raw"
-
-    rename = {k: v for k, v in keep.items() if k in df.columns}
-    df = df.rename(columns=rename)
-
-    final_cols = ["name", "address", "county", "state", "zip",
-                  "lat", "lon", "category", "tier"]
-    if "store_type_raw" in df.columns:
-        final_cols.append("store_type_raw")
-
-    existing = [c for c in final_cols if c in df.columns]
-    df = df[existing].copy()
-    df["geocode_source"] = "usda_snap"
-
-    return df.reset_index(drop=True)
+    out = pd.DataFrame({
+        "name":               active["Store Name"].astype(str).str.strip(),
+        "address":            active["address"],
+        "county":             active["County"].astype(str).str.upper(),
+        "state":              active["State"],
+        "zip":                active["Zip Code"].astype(str).str.zfill(5),
+        "lat":                pd.to_numeric(active["Latitude"], errors="coerce"),
+        "lon":                pd.to_numeric(active["Longitude"], errors="coerce"),
+        "category":           active["category"],
+        "tier":               active["tier"],
+        "store_type_raw":     active["Store Type"],
+        "authorization_date": active["Authorization Date"],
+        "geocode_source":     "usda_historical_2005_2025",
+    })
+    out = out.dropna(subset=["lat", "lon"])
+    out = out[out["lat"] != 0].reset_index(drop=True)
+    return out
 
 
 def main():
-    all_records = []
+    hist = download_historical_zip()
+    active = build_active_csv(hist)
 
-    for target in TARGETS:
-        state  = target["State"]
-        county = target["County"]
-        print(f"\nFetching {county} County, {state}...")
-        records = fetch_county(state, county)
-        print(f"  {len(records)} raw records returned")
-        all_records.extend(records)
-        time.sleep(0.5)
+    print(f"\nFinal active-retailer CSV: {len(active):,} rows with valid coords")
+    print("\nBy USDA store_type:")
+    print(active["store_type_raw"].value_counts().to_string())
 
-    if not all_records:
-        national_csv = "data/raw/snap_retailers_national.csv"
-        import os
-        if not os.path.exists(national_csv):
-            print("\nArcGIS API returned no results. Download the national CSV from")
-            print("https://www.fns.usda.gov/snap/retailer-locator, save as")
-            print(f"{national_csv}, then re-run this script.")
-            return
-        print(f"\nArcGIS API returned no results — falling back to {national_csv}...")
-        nat = pd.read_csv(national_csv, dtype=str, low_memory=False)
-        nat.columns = [c.strip().lower().replace(" ", "_") for c in nat.columns]
-        county_names = [t["County"].title() for t in TARGETS]
-        nat = nat[
-            (nat.get("state", nat.get("st", pd.Series())).str.upper() == "PA") &
-            (nat.get("county", pd.Series()).str.upper().isin([t["County"] for t in TARGETS]))
-        ].copy()
-        nat["lat"] = pd.to_numeric(nat.get("latitude", nat.get("lat")), errors="coerce")
-        nat["lon"] = pd.to_numeric(nat.get("longitude", nat.get("lon")), errors="coerce")
-        nat["store_type_raw"] = nat.get("store_type", nat.get("storetype", ""))
-        nat["category"] = nat["store_type_raw"].map(
-            lambda x: STORE_TYPE_MAP.get(str(x).strip(), ("Food & Grocery", "unknown"))[0]
-        )
-        nat["tier"] = nat["store_type_raw"].map(
-            lambda x: STORE_TYPE_MAP.get(str(x).strip(), ("Food & Grocery", "unknown"))[1]
-        )
-        name_col = next((c for c in ["store_name", "storename", "name"] if c in nat.columns), None)
-        if name_col:
-            nat = nat.rename(columns={name_col: "name"})
-        nat["geocode_source"] = "usda_snap"
-        nat["address"] = nat.get("street_number", "").fillna("") + " " + nat.get("street_name", "").fillna("")
-        nat["zip"]   = nat.get("zip_code", nat.get("zip5", "")).fillna("")
-        keep = [c for c in ["name", "address", "county", "state", "zip",
-                             "lat", "lon", "category", "tier", "store_type_raw", "geocode_source"]
-                if c in nat.columns]
-        df = nat[keep].dropna(subset=["lat", "lon"]).reset_index(drop=True)
-        print(f"  {len(df)} records from national CSV for the 11-county region")
-    else:
-        df = clean_records(all_records)
-    print(f"\n{len(df)} clean records after filtering")
-
-    if len(df) == 0:
-        print("No records to save.")
-        return
-
-    # Summary
-    if "store_type_raw" in df.columns:
-        print("\nBy store type:")
-        print(df["store_type_raw"].value_counts().to_string())
-
-    print("\nBy tier:")
-    print(df["tier"].value_counts().to_string())
-
-    print("\nSample:")
-    print(df[["name", "address", "tier", "lat", "lon"]].head(10).to_string(index=False))
-
-    out = "data/raw/snap_retailers.csv"
-    df.to_csv(out, index=False)
-    print(f"\nSaved → {out}")
-    print("\nNext step: run process_pois.py to merge SNAP retailers into erie_pois.csv")
+    OUT_CSV.parent.mkdir(parents=True, exist_ok=True)
+    active.to_csv(OUT_CSV, index=False)
+    print(f"\nWrote {OUT_CSV}  ({OUT_CSV.stat().st_size/1024:.1f} KB)")
 
 
 if __name__ == "__main__":

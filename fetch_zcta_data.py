@@ -138,11 +138,14 @@ variables = {
     # Demographics
     "B01003_001E": "total_population",
     "B01002_001E": "median_age",
+    # Race/ethnicity — all from B03002 (Hispanic-origin by race) for a
+    # consistent NON-HISPANIC basis, matching the tract data. Using B02001
+    # (race alone, includes Hispanic) here previously overstated Black/Asian.
     "B03002_003E": "white_non_hispanic",
     "B03002_001E": "race_total",
-    "B02001_003E": "black_alone",
-    "B03003_003E": "hispanic_latino",
-    "B02001_005E": "asian_alone",
+    "B03002_004E": "black_alone",
+    "B03002_012E": "hispanic_latino",
+    "B03002_006E": "asian_alone",
     # Employment
     "B23025_005E": "unemployed",
     "B23025_003E": "labor_force",

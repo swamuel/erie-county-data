@@ -1,177 +1,100 @@
+"""
+Northwest PA Community Data — Streamlit app.
+
+Single entry point. Reads pre-validated flat masters (pipeline/build_masters.py)
+and joins each to its boundary exactly once (lib/data_loader.build_geo).
+Data accuracy is verified against the live Census API by pipeline/verify.py.
+"""
+
 import streamlit as st
-import folium
-from streamlit_folium import st_folium
-import pandas as pd
-import geopandas as gpd
 
-st.set_page_config(page_title="Erie County Data", layout="wide")
+from lib.constants import APP_TITLE, COUNTY_NAMES
+from lib.config import data_dictionary
+from lib.data_loader import (
+    load_masters, load_boundaries, load_snap, load_benchmarks, build_geo,
+)
+from lib.helpers import get_benchmark_row
 
-st.title("Erie County Community Data")
-st.markdown("Census tract level data for Erie County, PA")
+import tabs.about as tab_about
+import tabs.demographics as tab_demographics
+import tabs.economic as tab_economic
+import tabs.snap_retailers as tab_snap
+import tabs.download as tab_download
+import tabs.data_dictionary as tab_dict
 
-# Load data
-@st.cache_data
-def load_data():
-    census = pd.read_csv("data/raw/erie_tract_data.csv")
-    sh_data = pd.read_csv("data/raw/erie_food_insecurity.csv")
-    shapes = pd.read_csv("data/raw/emta_shapes.csv")
-    stops = pd.read_csv("data/raw/emta_stops.csv")
-    pantries = pd.read_csv("data/raw/ErieCountyFoodPantries.csv")
-    return census, sh_data, shapes, stops, pantries
+st.set_page_config(page_title=APP_TITLE, layout="wide")
 
-@st.cache_data
-def load_boundaries():
-    url = "https://www2.census.gov/geo/tiger/TIGER2023/TRACT/tl_2023_42_tract.zip"
-    gdf = gpd.read_file(url)
-    return gdf[gdf["COUNTYFP"] == "049"]
+YEARS = [2023, 2022, 2021, 2020]
 
-census, sh_data, shapes, stops, pantries = load_data()
-gdf = load_boundaries()
+# ── LOAD ──────────────────────────────────────────────────
+master_tract, master_zcta, master_county = load_masters()
+benchmarks_national, benchmarks_pa, benchmarks_erie, benchmarks_counties = load_benchmarks()
 
-# Sidebar
-st.sidebar.title("Controls")
+# ── SESSION STATE ─────────────────────────────────────────
+for k in ["selected_geo", "selected_geo_name",
+          "svc_search_lat", "svc_search_lon", "svc_search_label", "svc_search_results"]:
+    st.session_state.setdefault(k, None)
 
-year = st.sidebar.selectbox("Year", [2023, 2022, 2021, 2020, 2019])
+# ── SIDEBAR ───────────────────────────────────────────────
+st.sidebar.title(APP_TITLE)
+st.sidebar.caption("Second Harvest Food Bank of Northwest PA service region")
 
-census_layer = st.sidebar.selectbox("Census Layer", [
-    "median_household_income",
-    "poverty_rate",
-    "bachelors_rate",
-    "rent_burden_rate",
-    "no_vehicle_rate"
-], format_func=lambda x: {
-    "median_household_income": "Median Household Income",
-    "poverty_rate": "Poverty Rate (%)",
-    "bachelors_rate": "Bachelor's Degree (%)",
-    "rent_burden_rate": "Rent Burden Rate (%)",
-    "no_vehicle_rate": "No Vehicle Rate (%)"
-}[x])
+st.sidebar.markdown("---")
+year = st.sidebar.selectbox("Year", YEARS)
+geography = st.sidebar.radio("Geography", ["Zip Code", "Tract", "County"], horizontal=True)
 
-show_food_insecurity = st.sidebar.checkbox("Show Food Insecurity Layer", value=False)
-show_routes = st.sidebar.checkbox("Show EMTA Routes", value=True)
-show_stops = st.sidebar.checkbox("Show Bus Stops", value=False)
-show_pantries = st.sidebar.checkbox("Show Food Pantries", value=True)
+st.sidebar.markdown("---")
+st.sidebar.subheader("Benchmark")
+benchmark_options = ["National", "Pennsylvania", "Erie County",
+                     "Compare to Another Regional County"]
+selected_benchmark = st.sidebar.selectbox("Compare against", benchmark_options)
 
-# Filter data to selected year
-df_year = census[census["year"] == year].copy()
-df_year["tract_code"] = df_year["tract_code"].astype(str).str.zfill(6)
-
-sh_year = sh_data[sh_data["year"] == min(year, 2023)].copy()
-sh_year["tract_code"] = sh_year["tract_code"].astype(str).str.zfill(6)
-
-# Merge
-merged = gdf.merge(df_year[["tract_code", "median_household_income",
-                              "poverty_rate", "bachelors_rate",
-                              "rent_burden_rate", "no_vehicle_rate"]],
-                   left_on="TRACTCE", right_on="tract_code", how="left")
-
-merged = merged.merge(sh_year[["tract_code", "food_insecurity_rate",
-                                "unemployment_rate", "disability_rate",
-                                "homeownership_rate"]],
-                      left_on="TRACTCE", right_on="tract_code", how="left")
-
-merged = merged[merged["TRACTCE"] != "990000"]
-
-# Build map
-m = folium.Map(location=[42.1167, -80.0], zoom_start=11)
-
-# Census choropleth
-folium.Choropleth(
-    geo_data=merged,
-    data=merged,
-    columns=["TRACTCE", census_layer],
-    key_on="feature.properties.TRACTCE",
-    fill_color="RdYlGn" if census_layer == "median_household_income" else "RdYlGn_r",
-    fill_opacity=0.7,
-    line_opacity=0.2,
-    legend_name=census_layer.replace("_", " ").title(),
-    nan_fill_color="gray"
-).add_to(m)
-
-# Food insecurity layer
-if show_food_insecurity:
-    folium.Choropleth(
-        geo_data=merged,
-        data=merged,
-        columns=["TRACTCE", "food_insecurity_rate"],
-        key_on="feature.properties.TRACTCE",
-        fill_color="RdYlGn_r",
-        fill_opacity=0.7,
-        line_opacity=0.2,
-        legend_name="Food Insecurity Rate (%)",
-        nan_fill_color="gray"
-    ).add_to(m)
-
-# EMTA routes
-if show_routes:
-    for shape_id, group in shapes.groupby("shape_id"):
-        coords = list(zip(group["shape_pt_lat"], group["shape_pt_lon"]))
-        route_name = group["route_long_name"].iloc[0]
-        route_color = "#" + str(group["route_color"].iloc[0])
-        folium.PolyLine(
-            locations=coords,
-            color=route_color,
-            weight=2,
-            opacity=0.8,
-            tooltip=route_name
-        ).add_to(m)
-
-# Bus stops
-if show_stops:
-    for _, stop in stops.iterrows():
-        radius = max(3, min(10, stop["daily_visits"] / 15))
-        folium.CircleMarker(
-            location=[stop["stop_lat"], stop["stop_lon"]],
-            radius=radius,
-            color="#333333",
-            fill=True,
-            fill_color="#333333",
-            fill_opacity=0.6,
-            tooltip=(
-                f"{stop['stop_name']}<br>"
-                f"Daily visits: {int(stop['daily_visits'])}<br>"
-                f"First bus: {stop['first_service']}<br>"
-                f"Last bus: {stop['last_service']}"
-            )
-        ).add_to(m)
-
-# Food pantries
-if show_pantries:
-    for _, pantry in pantries.iterrows():
-        hours = pantry["Open"] if pd.notna(pantry["Open"]) else "Hours not available"
-        folium.Marker(
-            location=[pantry["lat"], pantry["lon"]],
-            tooltip=f"{pantry['PantryName']}<br>Hours: {hours}",
-            icon=folium.Icon(color="green", icon="cutlery", prefix="fa")
-        ).add_to(m)
-
-# Tooltip
-folium.GeoJson(
-    merged,
-    style_function=lambda x: {"fillOpacity": 0, "weight": 0},
-    tooltip=folium.GeoJsonTooltip(
-        fields=["NAMELSAD", "median_household_income",
-                "poverty_rate", "food_insecurity_rate",
-                "no_vehicle_rate"],
-        aliases=["Tract:", "Median Income:", "Poverty Rate:",
-                 "Food Insecurity %:", "No Vehicle %:"],
-        localize=True,
-        na_fields=True
+compare_county = None
+if selected_benchmark == "Compare to Another Regional County":
+    county_list = sorted(
+        benchmarks_counties[benchmarks_counties["name"].isin(COUNTY_NAMES)]["name"].unique().tolist()
     )
-).add_to(m)
+    compare_county = st.sidebar.selectbox("Select county", county_list)
 
-if show_routes:
-    ...
-if show_stops:
-    ...
-if show_pantries:
-    ...
+st.sidebar.markdown("---")
+st.sidebar.caption(
+    "Census figures are ACS 5-year estimates (2020–2023), verified against the "
+    "U.S. Census Bureau API. See the About tab for details."
+)
 
-# Render map
-st_folium(m, width=1200, height=600)
+# ── DATA PREP (single join per geography) ─────────────────
+merged = build_geo(geography, year)
+geo_id_col = {"Tract": "GEOID", "Zip Code": "ZCTA5CE20", "County": "GEOID"}[geography]
 
-# Data table
-st.subheader("Tract Level Data")
-display_cols = ["TRACTCE", "median_household_income", "poverty_rate",
-                "food_insecurity_rate", "no_vehicle_rate"]
-st.dataframe(merged[display_cols].sort_values("poverty_rate", ascending=False))
+benchmark_row = get_benchmark_row(
+    selected_benchmark, compare_county, year,
+    benchmarks_national, benchmarks_pa, benchmarks_erie, benchmarks_counties,
+)
+
+# ── TABS ──────────────────────────────────────────────────
+(t_about, t_demo, t_econ, t_snap, t_download, t_dict) = st.tabs([
+    "About", "Demographics", "Economic", "SNAP Retailers", "Download", "Data Dictionary",
+])
+
+with t_about:
+    tab_about.render(master_tract, benchmarks_counties, year)
+
+with t_demo:
+    tab_demographics.render(merged, master_tract, geography, year, geo_id_col)
+
+with t_econ:
+    tab_economic.render(
+        merged, master_tract, master_zcta, benchmarks_national, benchmarks_pa,
+        benchmarks_erie, benchmarks_counties, benchmark_row, geography, year,
+        selected_benchmark, compare_county, geo_id_col,
+    )
+
+with t_snap:
+    snap = load_snap()
+    tab_snap.render(merged, snap, benchmark_row, geography)
+
+with t_download:
+    tab_download.render(master_tract, master_zcta, master_county, load_snap())
+
+with t_dict:
+    tab_dict.render(data_dictionary)
