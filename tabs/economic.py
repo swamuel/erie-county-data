@@ -31,7 +31,7 @@ def render(merged, master_tract, master_zcta,
            benchmark_row, geography, year, selected_benchmark, compare_county,
            geo_id_col):
 
-    geo_label = {"Tract": "Tract", "Zip Code": "ZIP Code", "County": "County"}[geography]
+    geo_label = {"Tract": "Tract", "Zip Code": "ZIP Code"}[geography]
     benchmark_label = compare_county if selected_benchmark == "Compare to Another Regional County" else selected_benchmark
     col_controls, col_map = st.columns([1, 3])
 
@@ -62,8 +62,6 @@ def render(merged, master_tract, master_zcta,
         else:
             st.subheader("Change Over Time")
             st.caption("How did each area change relative to the benchmark?")
-            if geography == "County":
-                st.info("Change Over Time is not available at the County level.")
             GROWTH_VARS = {k: v for k, v in ECONOMIC_VARS.items()
                            if v not in TRACT_ONLY_VARS or geography == "Tract"}
             growth_var_label = st.selectbox("Variable", list(GROWTH_VARS.keys()), key="growth_var")
@@ -125,8 +123,8 @@ def render(merged, master_tract, master_zcta,
                                  benchmark_row, benchmark_label)
 
         else:
-            if geography == "County" or growth_start >= growth_end:
-                st.info("Select Tract or ZIP geography and a valid year range to view change over time.")
+            if growth_start >= growth_end:
+                st.info("Select a valid year range to view change over time.")
             else:
                 gdf_t, _, gdf_z = load_boundaries()
                 if geography == "Tract":

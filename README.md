@@ -11,12 +11,17 @@ and `pipeline/verify.py`.
 
 | Tab | What it shows |
 |-----|---------------|
-| **About** | Overview, data sources, limitations, regional population snapshot, data-verification badge |
+| **About** | Overview, data sources, limitations, regional population snapshot |
 | **Demographics** | Population, median age, and race/ethnicity by tract or ZIP, with a choropleth map |
-| **Economic** | Income, poverty, rent burden, no-vehicle, and education — snapshot maps, change-over-time, and household income stratification |
+| **Economic** | Income, poverty, rent burden, no-vehicle, and education — snapshot maps and change-over-time |
 | **SNAP Retailers** | USDA-authorized SNAP/EBT stores with coverage rings (1 mi urban / 10 mi rural), an address + radius search, and an optional poverty-rate context layer |
 | **Download** | CSV downloads of every dataset the app uses |
 | **Data Dictionary** | Definitions, sources, and caveats for every variable |
+
+The sidebar controls year (2020–2023), geography (**ZIP Code or Census Tract**), and the
+benchmark that map colors are anchored to (national, Pennsylvania, Erie County, or another
+county in the region). County-level ACS figures are still published as a CSV on the Download
+tab, but the app maps only tract and ZIP geographies.
 
 ## Running locally
 

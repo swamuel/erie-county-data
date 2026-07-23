@@ -41,7 +41,7 @@ st.sidebar.caption("Second Harvest Food Bank of Northwest PA service region")
 
 st.sidebar.markdown("---")
 year = st.sidebar.selectbox("Year", YEARS)
-geography = st.sidebar.radio("Geography", ["Zip Code", "Tract", "County"], horizontal=True)
+geography = st.sidebar.radio("Geography", ["Zip Code", "Tract"], horizontal=True)
 
 st.sidebar.markdown("---")
 st.sidebar.subheader("Benchmark")
@@ -64,7 +64,7 @@ st.sidebar.caption(
 
 # ── DATA PREP (single join per geography) ─────────────────
 merged = build_geo(geography, year)
-geo_id_col = {"Tract": "GEOID", "Zip Code": "ZCTA5CE20", "County": "GEOID"}[geography]
+geo_id_col = {"Tract": "GEOID", "Zip Code": "ZCTA5CE20"}[geography]
 
 benchmark_row = get_benchmark_row(
     selected_benchmark, compare_county, year,

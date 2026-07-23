@@ -73,8 +73,8 @@ def build_geo(geography, year):
     Exactly one merge on the globally-unique GEOID (or ZCTA), so no tract-code
     collisions and no row explosion.
     """
-    tract, zcta, county = load_masters()
-    gdf_t, gdf_c, gdf_z = load_boundaries()
+    tract, zcta, _ = load_masters()
+    gdf_t, _, gdf_z = load_boundaries()
 
     if geography == "Tract":
         m = tract[tract["year"] == year]
@@ -84,15 +84,10 @@ def build_geo(geography, year):
             + " — " + merged["county_name"].fillna("").astype(str).str.replace(" County", "", regex=False)
         )
 
-    elif geography == "Zip Code":
+    else:  # Zip Code
         m = zcta[zcta["year"] == year]
         merged = gdf_z.merge(m, on="ZCTA5CE20", how="left")
         name = merged["area_name"].fillna(merged["ZCTA5CE20"]).astype(str)
         merged["display_name"] = name + " (" + merged["ZCTA5CE20"] + ")"
-
-    else:  # County
-        m = county[county["year"] == year]
-        merged = gdf_c.merge(m, on="GEOID", how="left")
-        merged["display_name"] = merged["NAME"]
 
     return merged

@@ -31,12 +31,7 @@ RACE_PCT = {
 
 def render(merged, master_tract, geography, year, geo_id_col):
     st.subheader("Demographics")
-    geo_label = {"Tract": "Tract", "Zip Code": "ZIP Code", "County": "County"}[geography]
-
-    if geography == "County":
-        st.info("Detailed demographic breakdowns are not available at the County level. "
-                "Switch to Tract or ZIP Code.")
-        return
+    geo_label = {"Tract": "Tract", "Zip Code": "ZIP Code"}[geography]
 
     available = {k: v for k, v in DEMOGRAPHIC_VARS.items() if v in merged.columns}
     if not available:

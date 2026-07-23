@@ -122,7 +122,7 @@ def diff_string(tract_val, benchmark_val, col=None):
 
 
 def get_geo_label(geography):
-    return {"Tract": "Tract", "Zip Code": "ZIP Code", "County": "County"}[geography]
+    return {"Tract": "Tract", "Zip Code": "ZIP Code"}[geography]
 
 
 def get_available_vars(geography, merged_df):

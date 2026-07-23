@@ -20,7 +20,7 @@ def render(master_tract, benchmarks_counties, year):
         )
         st.subheader("How to Use It")
         st.markdown(
-            "**Geography** — Use the sidebar to switch between ZIP Code, Tract, and County views. "
+            "**Geography** — Use the sidebar to switch between ZIP Code and Tract views. "
             "Every tab updates to the selected geography.\n\n"
             "**Year** — Choose any year from 2020 to 2023. Figures are ACS 5-year estimates.\n\n"
             "**Benchmark** — Compare any area against national, Pennsylvania, Erie County, or another "
